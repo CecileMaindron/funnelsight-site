@@ -16,7 +16,7 @@ Possible values for `hierarchical_position`:
 - `hub` — distribution page toward specialized content (lists, organizes, doesn't target a specific keyword)
 - `cluster` — satellite page targeting a precise search intent, links up to the hub/pillar
 - `utility` — functional page (conversion, form...), outside SEO targeting
-- `off-flow` — hand-authored page outside the n8n generation flow, not part of the page families defined in funnelsight-page-template.md. Listed so duplicate and cannibalization checks still cover it. Not counted in the page count below.
+- `off-flow` — page that doesn't belong to any of the page families defined in funnelsight-page-template.md (e.g. the solution pages). Listed so duplicate and cannibalization checks still cover it. Not counted in the page count below.
 
 / | Funnelsight — growth analytics for marketing and revenue teams | core | both | PLG growth analytics platform | commercial / navigational | pillar | → /trial, /resources, /solutions/marketing, /solutions/sales, /solutions/customer-success ; ← global nav (all pages) | published
 /trial | Start your free trial: Funnelsight | core | both | (none — conversion page, out of SEO scope) | transactional | utility | ← global nav + CTA from every content page | published
