@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+</script>
+
+<script>
+  gtag('config', 'G-NG2EK7DNXQ');
+</script>
+<style>
+  /* Consent banner. Move into styles.css whenever convenient. */
+  .consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #14161F;
+    color: #FFFFFF;
+    padding: 16px;
+  }
+  .consent-banner .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .consent-banner p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  .consent-banner a { color: #FFFFFF; text-decoration: underline; }
+  .consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .consent-actions button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  #consent-accept { background: #FFFFFF; color: #14161F; }
+  #consent-decline { background: transparent; color: #FFFFFF; }
+</style>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnosing a drop in activation rate: Funnelsight</title>
+<meta name="description" content="Activation rate falling? Learn how to tell whether the cause is lead quality upstream or product friction downstream, with the segments to check first.">
+<link rel="canonical" href="https://funnelsight.dev/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Funnelsight">
+<meta property="og:title" content="Diagnosing a drop in activation rate: Funnelsight">
+<meta property="og:description" content="Activation rate falling? Learn how to tell whether the cause is lead quality upstream or product friction downstream, with the segments to check first.">
+<meta property="og:url" content="https://funnelsight.dev/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Diagnosing a drop in activation rate: Funnelsight">
+<meta name="twitter:description" content="Activation rate falling? Learn how to tell whether the cause is lead quality upstream or product friction downstream, with the segments to check first.">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+
+<div class="consent-banner" id="consent-banner">
+  <div class="wrap">
+    <p>We use Google Analytics to see which pages are useful. No ads, no data shared beyond this account. This is a demo site for a fictional company: no real visitor data is collected beyond this test.</p>
+    <div class="consent-actions">
+      <button id="consent-accept">Accept</button>
+      <button id="consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var CONSENT_KEY = 'fs_consent';
+  var stored = localStorage.getItem(CONSENT_KEY);
+  var banner = document.getElementById('consent-banner');
+
+  function setConsent(granted) {
+    gtag('consent', 'update', {
+      'analytics_storage': granted ? 'granted' : 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    localStorage.setItem(CONSENT_KEY, granted ? 'granted' : 'denied');
+    if (granted && !document.getElementById('ga-loader')) {
+      var s = document.createElement('script');
+      s.id = 'ga-loader';
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG2EK7DNXQ';
+      document.head.appendChild(s);
+    }
+    if (!granted) {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') === 0) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.funnelsight.dev';
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    }
+    if (banner) banner.style.display = 'none';
+  }
+
+  if (stored === 'granted' || stored === 'denied') {
+    setConsent(stored === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('consent-accept');
+  var declineBtn = document.getElementById('consent-decline');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent(true); });
+  if (declineBtn) declineBtn.addEventListener('click', function () { setConsent(false); });
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'consent-reopen' && banner) banner.style.display = 'flex';
+  });
+})();
+</script>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo">funnel<span>sight</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
+    <ul class="nav-links">
+      <li><a href="/#product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Solutions</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/solutions/marketing">For Marketing</a></li>
+          <li><a href="/solutions/sales">For Sales</a></li>
+          <li><a href="/solutions/customer-success">For Customer Success</a></li>
+        </ul>
+      </li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/trial">Start trial</a></li>
+    </ul>
+    <a href="/trial" class="nav-cta">Start free trial</a>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
+</div>
+
+<nav class="breadcrumb wrap" aria-label="Breadcrumb">
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Diagnosing a drop in activation rate: leads or product friction</span>
+</nav>
+
+<article class="article wrap">
+  <h1>Diagnosing a drop in activation rate: leads or product friction</h1>
+  <p class="lede-intro">Activation rate just dropped and the dashboard doesn't say why. Before changing anything in the product, check where the problem actually starts: in who's signing up, or in what happens after they do.</p>
+
+  <h2>The same symptom, two different causes</h2>
+  <p>A falling activation rate looks identical on a line chart whether the real issue is upstream or downstream. Upstream means the signups arriving this month are a worse fit than usual: a campaign brought in the wrong persona, a partner integration sent low-intent traffic, or a pricing change attracted people who were never going to complete setup. Downstream means the people arriving are fine, but something in the product got harder: a new onboarding step, a broken integration, a UI change that buried the action you count as activation.</p>
+  <p>Treating a lead-quality problem as a product problem wastes an engineering sprint. Treating a product problem as a lead-quality problem wastes a marketing budget reshuffle. The fix starts with telling the two apart, not with guessing.</p>
+
+  <h2>Segment before you diagnose</h2>
+  <p>A blended activation rate hides the answer. The first move is to split the drop by acquisition source and by signup cohort, then compare each segment's rate against its own historical baseline, not against the overall average.</p>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Segment activation rate (%) = (users in that segment who completed the activation event ÷ total new signups in that segment) × 100</p>
+  </div>
+  <p>If the drop is concentrated in one or two acquisition sources while the others hold steady, that points upstream: something changed in who's arriving from that channel. If the drop shows up evenly across every source and every cohort, including the ones that have historically converted well, that points downstream: something changed in the product experience itself, not in who's using it. This is the diagnostic value of keeping acquisition source, signup data and activation events in the same view rather than three separate exports that have to be stitched together by hand, which is the core idea behind our <a href="/playbooks/tracking-activation-metrics-plg-teams">activation tracking playbook</a>.</p>
+  <p>A second check worth running alongside the segment split: look at time-to-first-action within the activation flow itself. If users are starting the flow but stalling at the same step they used to complete quickly, that's a stronger product-friction signal than a broad activation number alone.</p>
+  <p>None of this requires a fully built-out segmentation model on day one. Start with the two or three acquisition sources that bring in the most volume and the most recent signup cohort, confirm the pattern there, then widen the check once you know which direction to look.</p>
+
+  <h2>What to do once you know the direction</h2>
+  <p>If the drop is upstream, the next step is a conversation with whoever owns that channel or campaign, using the segment data as the starting point rather than an assumption. If it's downstream, the next step is tracing the specific step in the activation flow where completion dropped, which usually means looking at feature-level adoption data rather than the activation event alone.</p>
+  <p>Either way, this diagnosis depends on activation already being defined as a single, consistent event across the team. A team still debating what counts as activation will struggle to tell a real drop from a definition drift.</p>
+
+  <div class="article-cta">
+    <p>See segmented activation data without exporting three reports by hand.</p>
+    <a href="/trial" class="btn-primary accent">Start free trial</a>
+  </div>
+
+  <div class="article-faq">
+    <details>
+      <summary>How fast should I expect to find the cause of an activation drop?</summary>
+      <p>It depends on how your data is already organized. If acquisition source, signups and activation events already live in one view, segmenting by source and cohort is usually a same-day check. If they're spread across separate tools, expect the first diagnosis to take longer simply because of the manual export and matching work.</p>
+    </details>
+    <details>
+      <summary>What if the drop is small and might just be noise?</summary>
+      <p>Compare the current period against a few prior periods of similar length before reacting, not just against last month. A one-week dip inside normal variance looks different from a sustained drop across several weeks once you look at more than two data points.</p>
+    </details>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How fast should I expect to find the cause of an activation drop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on how your data is already organized. If acquisition source, signups and activation events already live in one view, segmenting by source and cohort is usually a same-day check. If they're spread across separate tools, expect the first diagnosis to take longer simply because of the manual export and matching work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the drop is small and might just be noise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Compare the current period against a few prior periods of similar length before reacting, not just against last month. A one-week dip inside normal variance looks different from a sustained drop across several weeks once you look at more than two data points."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <section class="read-next" aria-label="Read next">
+    <a class="read-next-card" href="/playbooks/tracking-feature-adoption-plg-teams">
+      <span class="read-next-label">Read next</span>
+      <span class="read-next-title">Tracking feature adoption for PLG teams</span>
+    </a>
+  </section>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <span>Funnelsight, Nantes, France</span>
+      <span>© 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/CecileMaindron/funnelsight-site/blob/main/README.md" target="_blank" rel="noopener">Learn more about this project</a>
+      <a href="https://www.linkedin.com/in/cmaindron/" target="_blank" rel="noopener">Author</a>
+      <button type="button" class="footer-consent" id="consent-reopen">Cookie settings</button>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
