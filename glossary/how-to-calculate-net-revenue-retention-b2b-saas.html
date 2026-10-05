@@ -165,13 +165,31 @@
 
 <article class="article wrap">
   <h1>How to calculate net revenue retention (NRR)</h1>
-  <p class="lede-intro">Net revenue retention (NRR) measures the revenue you keep and grow from your existing customer base over a period, leaving new customer revenue out entirely. The formula: NRR = (starting revenue + expansion revenue − contraction revenue − churned revenue) ÷ starting revenue, expressed as a percentage. An NRR above 100% means expansion is outpacing losses, even before a single new logo is signed.</p>
+  <p class="lede-intro">Net revenue retention (NRR) measures the revenue you keep and grow from your existing customer base over a period, leaving new customer revenue out entirely. An NRR above 100% means expansion is outpacing losses, even before a single new logo is signed.</p>
+
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>NRR = (starting revenue + expansion revenue − contraction revenue − churned revenue) ÷ starting revenue × 100</p>
+  </div>
 
   <h2>Why NRR is different from churn rate</h2>
   <p>Churn rate tells you how much revenue you lost. NRR tells you the full picture: losses offset by growth from the same customers. A company can have real churn and still post a healthy NRR, if upsells and expansions from the accounts that stayed cover the gap. That's why B2B SaaS teams track both side by side rather than picking one. If churn rate is the metric you're missing, see how to <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">calculate churn rate for B2B SaaS</a>.</p>
 
+  <h2>Why a healthy NRR can still hide a problem</h2>
+  <p>NRR blends two different stories into one number: how much revenue you kept, and how much you grew from what you kept. A business losing a long tail of small accounts can still post a comfortably healthy NRR if a handful of large accounts are expanding fast enough to cover the gap. The number looks fine. The customer base underneath it might not be.</p>
+  <p>This is the same blind spot as reading churn without <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">separating self-serve from sales-assisted</a>: a single blended figure can't tell you which segment is actually struggling. The fix is similar too. Track gross revenue retention (GRR) alongside NRR: the same calculation, same period, same inputs, just with expansion left out entirely.</p>
+
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>GRR = (starting revenue − contraction revenue − churned revenue) ÷ starting revenue × 100</p>
+  </div>
+
+  <p>GRR can't go above 100%, since it only ever subtracts. If NRR is strong but GRR is falling, growth is covering for churn, not fixing it.</p>
+  <p>For a sense of where your own number lands: the <a href="https://www.thesaascfo.com/?p=308354" target="_blank" rel="noopener">2026 Benchmarkit B2B SaaS metrics report</a> put median GRR at 84%, with the top quartile closer to 90%. Treat that as a loose reference point, not a verdict. The report blends company stages and revenue bands into one median, the same way an unsegmented churn number blends self-serve and sales-assisted: a healthy GRR for an early-stage self-serve product and a healthy GRR for an enterprise sales-assisted one aren't the same number.</p>
+
   <h2>What counts as expansion and contraction</h2>
   <p>Expansion revenue covers anything that grows an existing account: seat upgrades, plan tier changes, add-on purchases. Contraction revenue covers the opposite, a downgrade or a reduction in seats that doesn't fully cancel the account. Churned revenue is the full loss from an account that cancels outright. Keeping these three buckets separate, rather than lumping everything into one "net change" number, is what makes NRR useful for diagnosing where the movement is actually coming from. This gets harder when self-serve accounts are involved: a customer already expanding through the product can still be sitting in your CRM under the wrong stage, which throws off the count before you've even started calculating. See <a href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">why self-serve revenue gets lost in your CRM</a> for how that mismatch happens.</p>
+  <p>Three details are easy to get wrong here. One-time fees, setup, implementation, professional services, don't belong in expansion or contraction: they're not recurring, so including them distorts the number depending on timing. A churned account should count the moment its revenue actually stops, not the moment it gives notice, the same precision question churn rate itself runs into when deciding what "lost" means. And if monthly and annual contracts are both in the mix, normalize them to the same period before comparing them: raw monthly figures next to raw annual ones understate or overstate the real movement, depending on which way the mix shifts.</p>
 
   <h2>Start simple, before building a full revenue model</h2>
   <p>You don't need a finance-grade system to get a first NRR number. A spreadsheet tracking monthly recurring revenue per customer, updated on a set schedule rather than in real time, is enough to start. Pick one plan tier or customer segment first instead of trying to cover every pricing scenario at once. The goal is a smaller, reliable starting point, not a rougher or less accurate one: the data behind the number still has to be correct, only its scope stays narrow at first.</p>
