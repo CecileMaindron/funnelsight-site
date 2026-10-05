@@ -397,6 +397,41 @@ footer a {
 .article h2 { font-size: 26px; margin: 40px 0 16px; }
 .article p { font-size: 16px; color: #2A2D3B; margin-bottom: 16px; }
 .article a:not(.btn-primary) { color: var(--indigo); text-decoration: underline; }
+
+/* Formula callout: isolates a calculation so it reads as something to
+   glance at or copy, not just a sentence in the flow of the text.
+   Left-aligned rather than centered so the "=" lines up across stacked
+   formulas (easier to check numerator/denominator/unit at a glance).
+   font-weight is explicit: only 600 and 700 of Space Grotesk are
+   self-hosted, so this used to render bold only via the browser's font
+   fallback. */
+.formula-box {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--indigo);
+  border-radius: 4px;
+  text-align: left;
+}
+.formula-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+.formula-box p {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+}
+.formula-box p + p { margin-top: 10px; }
+
 .article-cta {
   margin: 48px 0; padding: 32px;
   background: var(--white); border: 1px solid var(--line); border-radius: 8px;
