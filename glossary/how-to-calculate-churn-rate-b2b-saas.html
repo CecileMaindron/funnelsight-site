@@ -165,18 +165,46 @@
 
 <article class="article wrap">
   <h1>How to calculate churn rate for B2B SaaS</h1>
-  <p class="lede-intro">Customer churn rate is the percentage of customers you lose over a set period: divide the number of customers lost by the number you had at the start of that period, then multiply by 100. Revenue churn works the same way, but with MRR in place of customer counts.</p>
+  <p class="lede-intro">Customer churn rate is the number of customers lost during a period divided by the number of customers at the start of that period. Multiply the result by 100 to express it as a percentage. Revenue churn works the same way, but with MRR in place of customer counts.</p>
+
+  <div class="formula-box">
+    <p>Customer churn rate = (customers lost ÷ customers at the start of the period) × 100</p>
+    <p>Revenue churn rate = (MRR lost ÷ MRR at the start of the period) × 100</p>
+  </div>
 
   <h2>Logo churn vs. revenue churn</h2>
   <p>Logo churn counts customers. Revenue churn counts dollars. The two can move in different directions in the same month, and for B2B SaaS, that gap matters more than it looks.</p>
-  <p>If your smallest accounts churn at a higher rate than your largest ones, logo churn will look worse than revenue churn. That's common, and it isn't automatically a problem. Net revenue churn goes a step further: it subtracts expansion revenue (upgrades, seat growth) from what you lost, so a quarter with heavy downgrades but strong upsells can still show a healthy number. That's essentially the flip side of <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention</a>, and most B2B SaaS teams end up tracking both side by side rather than picking one. A single churn figure hides which story is actually happening underneath it.</p>
+  <p>If your smallest accounts churn at a higher rate than your largest ones, logo churn will look worse than revenue churn. That's common, and it isn't automatically a problem. Net revenue churn goes a step further: it subtracts expansion revenue (upgrades, seat growth) from what you lost, so a quarter with heavy downgrades but strong upsells can still show a healthy number.</p>
+
+  <div class="formula-box">
+    <p>Net revenue churn = (lost MRR − expansion MRR) ÷ starting MRR × 100</p>
+  </div>
+
+  <p>That's essentially the flip side of <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention</a>, and most B2B SaaS teams end up tracking both side by side rather than picking one. A single churn figure hides which story is actually happening underneath it.</p>
+
+  <h2>Decide what counts before you calculate</h2>
+  <p>Before any of this means something, you have to fix three things: who counts as a customer, whether self-serve and sales-assisted are tracked together or apart, and what period the number represents.</p>
+  <p>A free user leaving isn't churn by itself. Churn is normally measured against paying accounts, so a free user who never converts to paid shows up as a drop in your free-to-paid conversion rate, not as churn. The exception worth watching for is a freemium-forever model: if you're already counting free signups and free-to-paid conversions as funnel metrics, a paid account downgrading back to free is a real loss of revenue, and it's easy to miss if your churn definition only catches full cancellations.</p>
+  <p>Graduating to a richer product or tier isn't churn either, even though it can look like one in a dashboard that only tracks cancellations on the old plan. Exclude it or label it separately: a number that quietly mixes a real loss with a win tells you about neither.</p>
+  <p>Self-serve and sales-assisted rarely churn at the same rate. Blending them into one number hides whichever motion is actually struggling. Track them separately as the primary view, and keep a blended figure only for an executive rollup.</p>
+  <p>A monthly rate doesn't convert to an annual one by simple multiplication, and the two don't even call for the same formula. If you have a full year of data, calculate the annual rate directly, the same way as the monthly one, just over 12 months instead of one. If you only have a monthly number and need to estimate an annual rate before the year is out, the common shortcut assumes a constant rate on a fixed customer base:</p>
+
+  <div class="formula-box">
+    <p>Annualized churn rate ≈ 1 − (1 − monthly churn rate)^12</p>
+  </div>
+
+  <p>Treat it as an approximation, not a substitute for real annual data. On a growing customer base, the actual annual rate usually lands closer to the average of your monthly rates than to this compounded estimate.</p>
+
+  <h2>Why your first-month number needs context</h2>
+  <p>How much weight to put on a month-one cancellation depends on what the product actually does. A scheduling tool for a medical practice isn't something you sign up for to cover one week of appointments, so a customer churning a month in is very likely a real problem. A tool built to move data from one system to another is different: someone might run it once for a migration and never need it again, and that's not a failure to serve them, it's the job getting done.</p>
 
   <h2>Start simple, then refine</h2>
-  <p>You don't need every segment, every cohort, and every edge case covered before you calculate churn for the first time. Pick one period (monthly is the usual starting point for SaaS), one customer set, and run the formula on whatever data you already have in a spreadsheet or your billing tool's export.</p>
+  <p>You don't need every segment, every cohort, and every edge case covered before you calculate churn for the first time. Pick one period (monthly is the usual starting point for SaaS) and run the formula on whatever data you already have in a spreadsheet or your billing tool's export. If you run both self-serve and sales-assisted, start with self-serve alone: it's usually the simpler of the two to pull from a single billing export, and it keeps you from blending the two motions you just decided not to blend.</p>
   <p>What you shouldn't compromise on is the accuracy of that data. A narrower scope is fine; a churn number built on stale exports or guessed customer counts isn't. Get the basic calculation right on a small, accurate slice first, then expand to cohorts, segments, and automated recalculation as the process proves useful.</p>
 
   <h2>Where churn fits into your funnel view</h2>
   <p>Churn is the mirror image of retention: the customers you didn't keep. A dashboard that already tracks <a href="/features/activation-retention-dashboard-plg-teams">activation and retention</a> gives you most of the inputs a churn calculation needs, without a separate spreadsheet pass every month. Funnelsight brings usage data and CRM data into the same funnel view, so retention and churn read from the same source instead of two disconnected exports.</p>
+  <p>A churn number tells you how much you lost, not why. The clearest way to find out is still to ask: a short survey built into the cancellation flow catches a reason most canceling customers won't volunteer on a call, especially in self-serve. It also surfaces what a dashboard can't, like a competitor they switched to or a feature they needed and never found.</p>
 
   <div class="article-cta">
     <p>See retention and churn read from the same numbers, not two spreadsheets.</p>
