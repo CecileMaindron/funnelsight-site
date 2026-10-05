@@ -185,13 +185,16 @@
        visible FAQ without the JSON-LD. -->
 
   <!-- FILL: READ_NEXT -->
-  <!-- <section class="read-next" aria-label="Read next"> pointing to exactly one
-       existing published page (per content-memory.md). Prefer a target that closes
-       an existing "missing return link opportunity" flagged in content-memory.md for
-       this page's own family/topic over opening a new one-directional link; fall back
-       to the most topically relevant cluster page if no such gap exists. Never point
-       to a page that doesn't exist yet in content-memory.md, including the page being
-       created in this same call. Required on every page: do not omit this section. -->
+  <!-- Required on every page: exactly one link to an existing published page
+       (per content-memory.md). Target selection: see the priority order and
+       anti-loop check in instructions-generation.md. Use this exact markup:
+  <section class="read-next" aria-label="Read next">
+    <a class="read-next-card" href="/folder/slug">
+      <span class="read-next-label">Read next</span>
+      <span class="read-next-title">Target page H1</span>
+    </a>
+  </section>
+  -->
 </article>
 
 <footer>
