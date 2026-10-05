@@ -18,7 +18,7 @@ The pages that come out aren't bad. They're inconsistent. And once tone and stru
 
 ## The solution
 
-A single, auditable pipeline: keyword in, decision and page out, human review before anything ships. n8n orchestrates it. Claude decides whether a keyword earns a new page, and writes it if so. Nothing reaches GitHub without a person approving it first.
+A single, auditable pipeline: a monthly list of keywords in, a decision and a page out for each, human review before anything ships. n8n orchestrates it. Claude decides whether a keyword earns a new page, and writes it if so. Nothing reaches GitHub without a person approving it first.
 
 I'm a B2B growth marketer, not a software engineer. The engineering I don't have professional depth in (GitHub API calls, workflow orchestration) is where I worked with Claude as a collaborator. The process design, the editorial and brand constraints, the quality checks, and every call on what to automate versus keep manual: that part is mine.
 
@@ -26,13 +26,20 @@ I'm a B2B growth marketer, not a software engineer. The engineering I don't have
 
 ```mermaid
 flowchart LR
-    A[Keyword] --> B[Claude API call<br/>create / skip / duplicate]
+    L[Monthly keyword list] --> A[Next keyword]
+    A --> B[Claude API call<br/>create / skip / duplicate]
     B -->|skip or duplicate| C[Logged, no page created]
-    B -->|create| D[Slack review<br/>full page attached]
-    D -->|rejected, with comment| B
-    D -->|approved| E[GitHub PR<br/>page + memory + sitemap + token log]
+    B -->|create| V[Automated output checks]
+    V -->|check fails| X[Marked Failed<br/>alert, branch cleaned up]
+    V -->|checks pass| D[Slack review<br/>full page attached]
+    D -->|rejected, with comment| R[Needs Rework<br/>regenerated next run]
+    D -->|approved| E[GitHub PR<br/>page + memory + sitemap + token log + resources]
     E --> F[Human merge]
     F --> G[Live on Cloudflare Pages]
+    C --> A
+    X --> A
+    R --> A
+    G --> A
 ```
 See [`docs/architecture-decisions.md`](docs/architecture-decisions.md) for the reasoning behind these choices, and the trade-offs I'd reconsider if the project grew.
 
@@ -40,6 +47,16 @@ The actual n8n canvas, for scale:
 
 ![n8n workflow canvas](assets/n8n-canvas.png)
 
+The canvas is split into six colored zones:
+
+| Zone | What happens there |
+|---|---|
+| 1 · Intake (blue) | Monthly trigger or manual run. Reads the Keywords sheet and checks required fields. |
+| 2 · Loop and context (purple) | One keyword at a time. Re-reads the context files from GitHub at each iteration. |
+| 3 · Generation and checks (yellow) | One Claude call per keyword, output checks, cost logging. |
+| 4 · Content review (green) | Slack review of the full page. Skip and duplicate decisions are logged. |
+| 5 · Publication (orange) | Five files written to a branch one after another, pull request, human merge. |
+| 6 · Error path (red) | Cost logged, branch cleaned up, alert, row marked Failed, batch continues. |
 ## Site structure
 
 ```
@@ -69,15 +86,19 @@ Both the tag and the banner live in `page-shell.html`, so every new page starts 
 
 ## SEO content production
 
-Pages under `/playbooks/`, `/features/`, `/glossary/` and `/case-studies/` go through a flow combining n8n and the Claude API. One API call per keyword handles the publish/skip decision and the content generation. A human validates before anything publishes. The site's internal memory, sitemap and resource index update automatically, in the same pull request.
+Pages under `/playbooks/`, `/features/`, `/glossary/` and `/case-studies/` go through a flow combining n8n and the Claude API. Once a month, the workflow takes the new keywords from a Google Sheet and processes them one at a time: each keyword goes all the way to publication, or to a documented decision not to publish, before the next one starts. One API call per keyword handles the publish/skip decision and the content generation. A human validates before anything publishes.
+
+Claude writes only what needs judgment: the page, one new line for the site memory, and a resource card. The workflow builds the rest from the page's actual HTML (internal links, sitemap entry, return-link flags on the pages it links to) and inserts it into the existing files, in the same pull request. No file is ever rewritten in full.
 
 The prompt is where I spent the most time. It sets explicit brand and editorial constraints: no invented statistics, no named competitors, no AI-sounding phrasing. It also runs a structured decision process to avoid duplicate or cannibalizing content, and a self-check step that verifies internal links and FAQ content actually match the generated page before it ships.
 
 The duplicate-detection logic went through a real iteration. An early version compared keywords and search intent only, and let a page through that restated an existing feature under a different angle. It now also compares what the page would actually let a user do. That catches functional overlap a keyword-level check misses.
 
-Two reliability guardrails were added after real failures during testing, not designed in from day one:
-- the flow stops and flags for manual review if a response gets cut off, instead of auto-retrying
-- it logs token consumption per page, so cost drift is visible before it becomes a problem
+Several reliability guardrails were added after real failures, not designed in from day one:
+- a response that gets cut off is never published: the keyword is flagged for manual review instead of being retried
+- Claude's output is checked before review: valid filename, no existing page at that address, no leftover template placeholder, no link to a page that doesn't exist
+- a failing keyword doesn't stop the batch: it's marked Failed, the cost of the call is logged, any GitHub branch already created is deleted, the maintainer gets a Slack alert, and the next keyword starts
+- token consumption is logged for every API call, so cost drift is visible before it becomes a problem
 
 ## Human oversight and governance
 
@@ -85,7 +106,7 @@ Nothing reaches the live site without a human decision at two points.
 
 Claude's generation call can only propose `create`, `skip` or `duplicate`. It never publishes directly. A `create` proposal goes to a Slack review before anything is written to GitHub. If it's rejected, the reviewer's notes feed automatically into the next generation pass, instead of starting over from a blank prompt.
 
-Once approved, everything ships together in a single pull request: the new page, plus any update to the internal memory, sitemap and resource index. The automation opens the PR. A person merges it.
+Once approved, everything ships together in a single pull request: the new page, plus the update to the internal memory, sitemap and resource index. The automation opens the PR. A person merges it, then confirms in Slack that the page is live. If the page can't be published as is, the reviewer says why, and the keyword goes back for a new generation with that comment.
 
 ![Slack review, decision reasoning and token cost on a merged PR](assets/github-pr-detail.png)
 
