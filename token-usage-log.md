@@ -16,3 +16,4 @@ Token consumption tracking per page generation, to anticipate the need to raise 
 | 2026-09-25 | 22 | LTV:CAC ratio | 19967 | 5321 | 16000 | 0.333 |
 | 2026-09-25 | 23 | product qualified lead scoring feature | 12404 | 4949 | 16000 | 0.309 |
 | 2026-09-28 | 25 | referral rate tracking for PLG teams | 23637 | 13652 | 16000 | 0.853 |
+| 2026-10-05 | 30 | Diagnosing a drop in activation rate: leads or product friction | 62 | 5786 | 32000 | 0.181 |
