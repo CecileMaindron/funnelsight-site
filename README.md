@@ -95,7 +95,7 @@ The prompt is where I spent the most time. It sets explicit brand and editorial 
 The duplicate-detection logic went through a real iteration. An early version compared keywords and search intent only, and let a page through that restated an existing feature under a different angle. It now also compares what the page would actually let a user do. That catches functional overlap a keyword-level check misses.
 
 Several reliability guardrails were added after real failures, not designed in from day one:
-- a response that gets cut off is never published: the keyword is flagged for manual review instead of being retried
+- a response that gets cut off is never published: the keyword is marked Failed for manual review instead of being retried
 - Claude's output is checked before review: valid filename, no existing page at that address, no leftover template placeholder, no link to a page that doesn't exist
 - a failing keyword doesn't stop the batch: it's marked Failed, the cost of the call is logged, any GitHub branch already created is deleted, the maintainer gets a Slack alert, and the next keyword starts
 - token consumption is logged for every API call, so cost drift is visible before it becomes a problem
