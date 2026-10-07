@@ -141,3 +141,15 @@ Each entry covers one choice: what I decided, what I considered instead, and wha
 **Trade-off:** Visitors who decline become invisible to Google Analytics, and Google can no longer model them statistically. At this site's traffic level that modeling never kicked in anyway, so nothing visible was lost. Search Console, which covers search traffic, doesn't depend on the banner at all.
 
 **What would change my mind:** If I needed reliable traffic volumes that include visitors who decline, I'd add a cookieless analytics tool rather than go back to loading Google's script before consent.
+
+## Why code decides which statuses a page can get
+
+**Decision:** In the monthly report, Claude writes the note but doesn't choose freely between statuses. Code works out which ones each page can get (Protect, Refresh or Too early), and the workflow checks the note against them before saving it.
+
+**Context:** The first version put the metrics and the rules in the prompt and let Claude apply them. On the first test run, it marked two glossary pages Refresh at an average position around 80, and explained its choices with internal field names. Moving the rules into code fixed that. The second run then showed a gap in the rules themselves, with a page qualifying for Protect on only 2 impressions. Protect now requires at least 5.
+
+**Why:** A threshold is arithmetic, and code applies it the same way every time. The model is more useful where judgment is needed. It decides whether an overlap between two pages on the same search query is intended, picks the actions, and explains each status in plain words. Code now gives each page its refresh signals and a protect flag. Any note that gives Refresh without a signal, or Protect without the flag, is rejected.
+
+**Trade-off:** The rules are rigid. A page just under a threshold can't be promoted, even when a person would make that call. The thresholds were also set on a few weeks of data and may need tuning.
+
+**What would change my mind:** I wouldn't hand this decision back to the model. Once a few months of history exist, I'd check the thresholds against what actually happened to the pages.
