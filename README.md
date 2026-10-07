@@ -115,3 +115,13 @@ The repo's `main` branch is protected. No direct pushes are possible, a PR is re
 A separate log records every keyword the system processes, published or not: the decision, the reasoning, and the full generated text where relevant. Over time, that log shows which kinds of keywords get skipped or flagged as duplicates, and how often a first draft needs rework, not just the pages that made it to publication.
 
 `content-memory.md`, at the repo root, is the reference memory used to avoid duplicate content and keep internal linking consistent from page to page. The full process, the page templates, and the test and iteration log used to get there live in a separate Claude project, not in this repo.
+
+## Monthly performance report
+
+A second workflow closes the loop. Search Console says what a page earned. Only the workflow knows what it cost to make: API spend, dates, keywords rejected along the way. Once a month, the report puts the two side by side in a page inventory, in Google Sheets and Notion.
+
+One Claude call then writes a short performance note: three points for leadership, a status for each page (Protect, Refresh or Too early) with the numbers behind it, and two or three actions for the month.
+
+Same split as the generation flow: code computes, the model writes. Fixed rules in code decide which statuses a page can get, and the workflow rejects a note that breaks them before anything is saved. The note is a draft: the SEO specialist reviews it before it's shared with anyone.
+
+Search Console access is read-only, and Claude only receives aggregated metrics per page, never data about individual visitors.
