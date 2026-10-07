@@ -57,6 +57,7 @@ The canvas is split into six colored zones:
 | 4 · Content review (green) | Slack review of the full page. Skip and duplicate decisions are logged. |
 | 5 · Publication (orange) | Five files written to a branch one after another, pull request, human merge. |
 | 6 · Error path (red) | Cost logged, branch cleaned up, alert, row marked Failed, batch continues. |
+
 ## Site structure
 
 ```
@@ -80,13 +81,13 @@ The canvas is split into six colored zones:
 
 Static site, plain HTML and CSS. No framework, no build step. Deployed on Cloudflare Pages.
 
-JavaScript stays minimal: a submit-prevention safeguard on the (disabled) trial form, a Google Analytics 4 tag (manual `gtag.js` install, not Google Tag Manager, since a single tag doesn't need the extra layer), and a lightweight consent banner. Google's script only loads after a visitor explicitly accepts: until then, no request reaches Google. The choice is stored in `localStorage`, a "Cookie settings" link in the footer reopens the banner, and withdrawing consent clears the analytics cookies. Fonts are self-hosted for the same reason.
+JavaScript stays minimal. It covers a submit-prevention safeguard on the disabled trial form, a Google Analytics 4 tag and a lightweight consent banner. The tag is installed manually with `gtag.js` rather than through Google Tag Manager, which a single tag doesn't need. Google's script only loads after a visitor explicitly accepts, so no request reaches Google before that. The choice is stored in `localStorage`. A "Cookie settings" link in the footer reopens the banner, and withdrawing consent clears the analytics cookies. Fonts are self-hosted for the same reason.
 
 Both the tag and the banner live in `page-shell.html`, so every new page starts with them. Pages already published keep the version they were generated with, so any change to this block is also applied to every published page, and to the four core pages (`index.html`, `trial.html`, `resources.html`, `404.html`) that don't go through the shell.
 
 ## SEO content production
 
-Pages under `/playbooks/`, `/features/`, `/glossary/` and `/case-studies/` go through a flow combining n8n and the Claude API. Once a month, the workflow takes the new keywords from a Google Sheet and processes them one at a time: each keyword goes all the way to publication, or to a documented decision not to publish, before the next one starts. One API call per keyword handles the publish/skip decision and the content generation. A human validates before anything publishes.
+Pages under `/playbooks/`, `/features/`, `/glossary/` and `/case-studies/` go through a flow combining n8n and the Claude API. Once a month, the workflow takes the new keywords from a Google Sheet and processes them one at a time. Each keyword goes all the way to publication, or to a documented decision not to publish, before the next one starts. One API call per keyword handles the publish/skip decision and the content generation. A human validates before anything publishes.
 
 Claude writes only what needs judgment: the page, one new line for the site memory, and a resource card. The workflow builds the rest from the page's actual HTML (internal links, sitemap entry, return-link flags on the pages it links to) and inserts it into the existing files, in the same pull request. No file is ever rewritten in full.
 
@@ -97,7 +98,7 @@ The duplicate-detection logic went through a real iteration. An early version co
 Several reliability guardrails were added after real failures, not designed in from day one:
 - a response that gets cut off is never published: the keyword is marked Failed for manual review instead of being retried
 - Claude's output is checked before review: valid filename, no existing page at that address, no leftover template placeholder, no link to a page that doesn't exist
-- a failing keyword doesn't stop the batch: it's marked Failed, the cost of the call is logged, any GitHub branch already created is deleted, the maintainer gets a Slack alert, and the next keyword starts
+- a failing keyword doesn't stop the batch. It's marked Failed and the cost of the call is logged. Any GitHub branch already created is deleted, the maintainer gets a Slack alert, and the next keyword starts
 - token consumption is logged for every API call, so cost drift is visible before it becomes a problem
 
 ## Human oversight and governance
@@ -118,10 +119,10 @@ A separate log records every keyword the system processes, published or not: the
 
 ## Monthly performance report
 
-A second workflow closes the loop. Search Console says what a page earned. Only the workflow knows what it cost to make: API spend, dates, keywords rejected along the way. Once a month, the report puts the two side by side in a page inventory, in Google Sheets and Notion.
+A second workflow closes the loop. Search Console shows how each page performs in search, but not what it cost to produce, how long it took, or how many keywords were rejected along the way. The content workflow already logs all of that. Once a month, the report brings both sides together in one page inventory, kept in Google Sheets and synced to Notion.
 
-One Claude call then writes a short performance note: three points for leadership, a status for each page (Protect, Refresh or Too early) with the numbers behind it, and two or three actions for the month.
+One Claude call then writes a short performance note for the team. It opens with three points for leadership, gives each page a status (Protect, Refresh or Too early) with the numbers behind it, and proposes two or three actions for the month.
 
-Same split as the generation flow: code computes, the model writes. Fixed rules in code decide which statuses a page can get, and the workflow rejects a note that breaks them before anything is saved. The note is a draft: the SEO specialist reviews it before it's shared with anyone.
+As in content production, code does the computing and the model does the writing. Fixed rules in code decide which statuses each page can get, and the workflow rejects any note that breaks them before it's saved. The note stays a draft until the SEO specialist has reviewed it.
 
-Search Console access is read-only, and Claude only receives aggregated metrics per page, never data about individual visitors.
+Search Console access is read-only. Claude receives aggregated metrics per page, never data about individual visitors.
