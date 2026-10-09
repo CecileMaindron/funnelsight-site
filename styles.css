@@ -432,6 +432,58 @@ footer a {
 }
 .formula-box p + p { margin-top: 10px; }
 
+/* Numbered steps: for an ordered progression the reader should follow in
+   sequence (e.g. signals from broadest to most revealing). Same indigo
+   accent as the formula box; the thin connector line shows the order. */
+.step-list {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  counter-reset: step;
+}
+.step-list li {
+  position: relative;
+  padding: 0 0 24px 52px;
+  counter-increment: step;
+}
+.step-list li:last-child { padding-bottom: 0; }
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--indigo);
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.step-list li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 38px;
+  bottom: 6px;
+  width: 2px;
+  background: var(--line);
+}
+.step-list .step-title {
+  display: block;
+  margin-bottom: 4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--ink);
+}
+.article .step-list p { margin: 0; }
+
 .article-cta {
   margin: 48px 0; padding: 32px;
   background: var(--white); border: 1px solid var(--line); border-radius: 8px;
