@@ -165,11 +165,12 @@
 
 <article class="article wrap">
   <h1>User-level vs account-level analytics</h1>
-  <p class="lede-intro">User-level analytics tracks what one individual does in your product: logins, clicks, feature use. Account-level analytics rolls that activity up to the company or team that individual belongs to. In B2B, the buying decision is usually made at the account level, but the behavior that predicts it happens at the user level. You need both, connected, not one instead of the other.</p>
+  <p class="lede-intro">User-level analytics tracks what one individual does in your product: logins, clicks, feature use. Account-level analytics rolls that activity up to the company or team that individual belongs to. In many B2B products, the buying decision is made at the account level, but the behavior that predicts it happens at the user level. You need both, connected, not one instead of the other.</p>
 
   <h2>Why the distinction matters in B2B</h2>
   <p>A single user churning out of your product might mean nothing. A whole account going quiet, three seats stopped logging in, the admin hasn't touched a key feature in weeks, is a different signal entirely. If your dashboard only shows user-level numbers, you'll miss that pattern until the renewal conversation is already going badly.</p>
   <p>The reverse problem also happens. An account-only view can hide the fact that adoption is uneven inside the account: one power user carrying the whole usage number while four other seats never logged in. That account looks healthy in aggregate and isn't.</p>
+  <p>The picture changes when one admin or developer sets the tool up and the people who benefit from it never log in. User and account are then almost the same thing, so look at what that person puts in place and keeps running, such as a live integration.</p>
 
   <h2>How the two levels work together</h2>
   <p>Most B2B teams start by tracking individual actions: sign-ins, feature adoption, activation events. That's the user level. The useful step after that is grouping those same events by the account or company each user belongs to, so a marketing or growth team can see both views without switching tools or re-exporting data.</p>
@@ -177,7 +178,7 @@
   <p>If you're setting this up for the first time, start simple. Pick one segment, maybe your highest-tier accounts, and get the user-to-account rollup working there before trying to cover every plan type. A batch refresh once a day is enough to start; you don't need a live stream to get useful signal.</p>
 
   <h2>What to actually look at</h2>
-  <p>A practical starting point: for each account, how many distinct users were active in the last 7 or 14 days, and did that number go up or down. That single rollup catches the "one power user propping up a quiet account" problem without requiring a complex model. From there, teams doing <a href="/glossary/what-is-a-product-qualified-lead-pql">PQL scoring</a> typically feed account-level activity into the account's score, not just one user's, since the buying decision rarely rests on a single seat.</p>
+  <p>A practical starting point: for each account, how many distinct users were active in the last 7 or 14 days, and did that number go up or down. That single rollup catches the "one power user propping up a quiet account" problem without requiring a complex model. From there, teams doing <a href="/glossary/what-is-a-product-qualified-lead-pql">PQL scoring</a> typically feed account-level activity into the account's score, not just one user's, since a purchase often involves more than one person.</p>
 
   <div class="article-cta">
     <p>See user and account activity in the same dashboard, without stitching data together yourself.</p>
@@ -187,7 +188,7 @@
   <div class="article-faq">
     <details>
       <summary>Is account-level analytics only relevant for larger deals?</summary>
-      <p>No. Even a small self-serve account usually has more than one user once it's past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200.</p>
+      <p>No. Many small self-serve accounts have more than one user once they're past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200. If one person runs the tool for everyone else, user and account are nearly the same thing.</p>
     </details>
     <details>
       <summary>Do I need a data team to set up account-level rollups?</summary>
@@ -208,7 +209,7 @@
         "name": "Is account-level analytics only relevant for larger deals?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Even a small self-serve account usually has more than one user once it's past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200."
+          "text": "No. Many small self-serve accounts have more than one user once they're past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200. If one person runs the tool for everyone else, user and account are nearly the same thing."
         }
       },
       {
