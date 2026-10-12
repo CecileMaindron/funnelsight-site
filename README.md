@@ -138,7 +138,7 @@ The repo's `main` branch is protected. No direct pushes are possible, a PR is re
 
 A separate log records every keyword the system processes, published or not: the decision, the reasoning, and the full generated text where relevant. Over time, that log shows which kinds of keywords get skipped, flagged as duplicates or turned into edits, and how often a first draft needs rework, not just the pages that made it to publication.
 
-`content-memory.md`, at the repo root, is the reference memory used to avoid duplicate content and keep internal linking consistent from page to page. The prompts, page templates and product facts the workflows read live in a separate private repository, and the test and iteration log in a Claude project.
+`content-memory.md`, at the repo root, is the reference memory used to avoid duplicate content and keep internal linking consistent from page to page. The prompts, page templates and product facts the workflows read live in a separate private repository, and the test and iteration log in a Claude project. Every prompt change is run first on a fixed set of keywords whose right answer is already known, so a regression shows up before it reaches a real run.
 
 ## Monthly performance report
 
