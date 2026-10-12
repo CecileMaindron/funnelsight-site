@@ -18,7 +18,7 @@ The pages that come out aren't bad. They're inconsistent. And once tone and stru
 
 ## The solution
 
-A single, auditable pipeline: a monthly list of keywords in, a decision for each, human review before anything ships. n8n orchestrates it. For every keyword, Claude decides whether it deserves a new page, a better version of an existing one, or nothing at all, and then does the writing. Nothing reaches GitHub without a person approving it first.
+A single, auditable pipeline: a monthly list of keywords in, a decision for each, human review before anything ships. n8n orchestrates it. For every keyword, Claude decides whether it deserves a new page, a better version of an existing one, or nothing at all, and then does the writing. Nothing reaches GitHub without a person approving it first. The SEO specialist no longer writes pages. Their job is to pick the keywords and review what comes out, and the person who maintains the workflow only steps in when something fails.
 
 I'm a B2B growth marketer, not a software engineer. The engineering I don't have professional depth in (GitHub API calls, workflow orchestration) is where I worked with Claude as a collaborator. The process design, the editorial and brand constraints, the quality checks, and every call on what to automate versus keep manual: that part is mine.
 
@@ -101,7 +101,9 @@ Pages under `/playbooks/`, `/features/`, `/glossary/` and `/case-studies/` go th
 
 Claude writes only what needs judgment: the page, one new line for the site memory, and a resource card. The workflow builds the rest from the page's actual HTML (internal links, sitemap entry, return-link flags on the pages it links to) and inserts it into the existing files, in the same pull request. No file is ever rewritten in full.
 
-The prompt is where I spent the most time. It sets explicit brand and editorial constraints: no invented statistics, no named competitors, no AI-sounding phrasing. It also runs a structured decision process to avoid duplicate or cannibalizing content, and a self-check step that verifies internal links and FAQ content actually match the generated page before it ships.
+Cost was a design constraint from the start. The model is chosen for the balance between writing quality and price, not because it's the most capable one available. Each call has a capped output length, the reference files that don't change from one keyword to the next are cached, and the API account runs under a spending cap. Letting code build what Claude used to rewrite in full roughly halved the cost of a page. Token use is logged for every call, and the monthly report puts what each page cost next to what it earned.
+
+The prompt is where I spent the most time. It sets explicit brand and editorial constraints: no invented statistics, no named competitors, no AI-sounding phrasing. It also runs a structured decision process to avoid duplicate or cannibalizing content, and a self-check step that verifies internal links and FAQ content actually match the generated page before it ships. It works alongside a short set of reference files, re-read before every keyword: product facts Claude isn't allowed to contradict, the page templates, and the site memory.
 
 The duplicate-detection logic went through a real iteration. An early version compared keywords and search intent only, and let a page through that restated an existing feature under a different angle. It now also compares what the page would actually let a user do. That catches functional overlap a keyword-level check misses.
 
@@ -113,31 +115,30 @@ The decisions are checked in a fixed order. Is the keyword already covered? Woul
 
 An edit only touches supporting pages, never the pillar and hub pages that structure the site. The first call picks the page and the reader's question it should answer. A second call then reads that page as it is actually published, and proposes at most four targeted changes, or none if the page already answers the question well.
 
-The workflow checks every proposed change before a person sees it. Each passage to replace has to exist exactly once in the page. The title, the call to action, the FAQ and the read-next block stay untouched, and an edit can't add more than 250 words. Review and publication then follow the same path as a new page.
+The workflow checks every proposed change before a person sees it. Each passage to replace has to exist exactly once in the page. The title, the call to action, the FAQ and the read-next block stay untouched, and an edit can't add more than 250 words. The SEO specialist then reviews a before/after version, and the change ships through the same pull request and human merge as a new page.
 
 Several reliability guardrails were added after real failures, not designed in from day one:
 - a response that gets cut off is never published: the keyword is marked Failed for manual review instead of being retried
 - Claude's output is checked before review: valid filename, no existing page at that address, no leftover template placeholder, no link to a page that doesn't exist
 - a failing keyword doesn't stop the batch: it's marked Failed, the cost of the call is logged, any GitHub branch already created is deleted, the maintainer gets a Slack alert, and the next keyword starts
-- token consumption is logged for every API call, so cost drift is visible before it becomes a problem
 
 ## Human oversight and governance
 
 Nothing reaches the live site without a human decision at two points.
 
-Claude only proposes. A new page or an edit goes to a Slack review before anything is written to GitHub. If it's rejected, the reviewer's notes feed into the next generation pass, so the next draft starts from the feedback.
+Claude can only propose `skip`, `duplicate`, `edit` or `create`. It never publishes directly. A new page or an edit goes to a Slack review before anything is written to GitHub. If it's rejected, the reviewer's notes feed automatically into the next generation pass, instead of starting over from a blank prompt.
 
 Once approved, everything ships together in a single pull request: the new or edited page, plus the matching updates to the internal memory, the sitemap and the logs. The automation opens the PR. A person merges it, then confirms in Slack that the page is live. If the page can't be published as is, the reviewer says why, and the keyword goes back for a new generation with that comment.
 
-The merge step is a real review. On the first edit that went live, one redundant sentence in Claude's proposal was rewritten by hand before merging. The automated checks catch what would break a page. Judging whether a sentence earns its place is still a human call.
+The merge step is a real review, not a formality. On the first edit that went live, one redundant sentence in Claude's proposal was rewritten by hand before merging. The automated checks catch what would break a page. Judging whether a sentence earns its place is still a human call.
 
 ![Slack review, decision reasoning and token cost on a merged PR](assets/github-pr-detail.png)
 
-The repo's `main` branch is protected. No direct pushes are possible, a PR is required every time, and that rule can't be bypassed even by an admin token. The human review step is built into the repo, so it can't slip under deadline pressure.
+The repo's `main` branch is protected. No direct pushes are possible, a PR is required every time, and that rule can't be bypassed even by an admin token. The human review step is a structural guarantee, not a convention that could slip under deadline pressure.
 
-Keywords the system declines to act on are logged too, with the reasoning: skipped, flagged as a duplicate, or an edit dropped because the page already answered the question. Over time, that log shows which kinds of keywords lead nowhere.
+A separate log records every keyword the system processes, published or not: the decision, the reasoning, and the full generated text where relevant. Over time, that log shows which kinds of keywords get skipped, flagged as duplicates or turned into edits, and how often a first draft needs rework, not just the pages that made it to publication.
 
-`content-memory.md`, at the repo root, is the memory the workflow reads to avoid duplicate content and keep internal linking consistent. The prompts and page templates live in a separate repo.
+`content-memory.md`, at the repo root, is the reference memory used to avoid duplicate content and keep internal linking consistent from page to page. The prompts, page templates and product facts the workflows read live in a separate private repository, and the test and iteration log in a Claude project.
 
 ## Monthly performance report
 
@@ -145,10 +146,8 @@ A second workflow closes the loop. Search Console says what a page earned. Only 
 
 One Claude call then writes a short performance note: three points for leadership, a status for each page (Protect, Refresh or Too early) with the numbers behind it, and a few actions for the month, each with what to check the following month. The note also knows what the content workflow did on each page, for instance an edit made, or declined because the page already covered the question.
 
-Same split as the generation flow: code computes, the model writes. Code decides which statuses each page is allowed to get, and the workflow rejects a note that breaks them before anything is saved. Actions work the same way: code lists the search queries the note may suggest adding, and checks every suggested link. A suggestion that breaks a rule is dropped and flagged in the note.
+Same split as the generation flow: code computes, the model writes. Code decides which statuses each page is allowed to get, and the workflow rejects a note that breaks them before anything is saved. The note is a draft: the SEO specialist reviews it before it's shared with anyone.
 
 One rule came from looking at the data rather than from the design. A click from France can simply be the team checking its own pages, so a page now needs at least one click from outside France to earn Protect. The cost is that real French visitors don't count toward that status either, which is acceptable for a site written in English.
-
-The note is a draft, reviewed by the SEO specialist before it's shared. In one run, it explained a month's rankings with page edits made after that month ended. The review caught it, and the workflow now tells the model which decisions fall outside the period.
 
 Search Console access is read-only, and Claude only receives aggregated metrics per page, never data about individual visitors.
