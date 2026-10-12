@@ -113,7 +113,7 @@ The decisions are checked in a fixed order. Is the keyword already covered? Woul
 
 An edit only touches supporting pages, never the pillar and hub pages that structure the site. The first call picks the page and the reader's question it should answer. A second call then reads that page as it is actually published, and proposes at most four targeted changes, or none if the page already answers the question well.
 
-The workflow checks every proposed change before a person sees it. Each passage to replace has to exist exactly once in the page. The title, the call to action, the FAQ and the read-next block stay untouched, and an edit can't add more than 250 words. The SEO specialist then reviews a before/after version, and the change ships through the same pull request and human merge as a new page.
+The workflow checks every proposed change before a person sees it. Each passage to replace has to exist exactly once in the page. The title, the call to action, the FAQ and the read-next block stay untouched, and an edit can't add more than 250 words. Review and publication then follow the same path as a new page.
 
 Several reliability guardrails were added after real failures, not designed in from day one:
 - a response that gets cut off is never published: the keyword is marked Failed for manual review instead of being retried
@@ -125,19 +125,19 @@ Several reliability guardrails were added after real failures, not designed in f
 
 Nothing reaches the live site without a human decision at two points.
 
-Claude can only propose `skip`, `duplicate`, `edit` or `create`. It never publishes directly. A new page or an edit goes to a Slack review before anything is written to GitHub. If it's rejected, the reviewer's notes feed automatically into the next generation pass, instead of starting over from a blank prompt.
+Claude only proposes. A new page or an edit goes to a Slack review before anything is written to GitHub. If it's rejected, the reviewer's notes feed into the next generation pass, so the next draft starts from the feedback.
 
 Once approved, everything ships together in a single pull request: the new or edited page, plus the matching updates to the internal memory, the sitemap and the logs. The automation opens the PR. A person merges it, then confirms in Slack that the page is live. If the page can't be published as is, the reviewer says why, and the keyword goes back for a new generation with that comment.
 
-The merge step is a real review, not a formality. On the first edit that went live, one redundant sentence in Claude's proposal was rewritten by hand before merging. The automated checks catch what would break a page. Judging whether a sentence earns its place is still a human call.
+The merge step is a real review. On the first edit that went live, one redundant sentence in Claude's proposal was rewritten by hand before merging. The automated checks catch what would break a page. Judging whether a sentence earns its place is still a human call.
 
 ![Slack review, decision reasoning and token cost on a merged PR](assets/github-pr-detail.png)
 
-The repo's `main` branch is protected. No direct pushes are possible, a PR is required every time, and that rule can't be bypassed even by an admin token. The human review step is a structural guarantee, not a convention that could slip under deadline pressure.
+The repo's `main` branch is protected. No direct pushes are possible, a PR is required every time, and that rule can't be bypassed even by an admin token. The human review step is built into the repo, so it can't slip under deadline pressure.
 
-A separate log records every keyword the system processes, published or not: the decision, the reasoning, and the full generated text where relevant. Over time, that log shows which kinds of keywords get skipped, flagged as duplicates or turned into edits, and how often a first draft needs rework, not just the pages that made it to publication.
+Keywords the system declines to act on are logged too, with the reasoning: skipped, flagged as a duplicate, or an edit dropped because the page already answered the question. Over time, that log shows which kinds of keywords lead nowhere.
 
-`content-memory.md`, at the repo root, is the reference memory used to avoid duplicate content and keep internal linking consistent from page to page. The full process, the page templates, and the test and iteration log used to get there live in a separate Claude project, not in this repo.
+`content-memory.md`, at the repo root, is the memory the workflow reads to avoid duplicate content and keep internal linking consistent. The prompts and page templates live in a separate repo.
 
 ## Monthly performance report
 
@@ -145,8 +145,10 @@ A second workflow closes the loop. Search Console says what a page earned. Only 
 
 One Claude call then writes a short performance note: three points for leadership, a status for each page (Protect, Refresh or Too early) with the numbers behind it, and a few actions for the month, each with what to check the following month. The note also knows what the content workflow did on each page, for instance an edit made, or declined because the page already covered the question.
 
-Same split as the generation flow: code computes, the model writes. Code decides which statuses each page is allowed to get, and the workflow rejects a note that breaks them before anything is saved. The note is a draft: the SEO specialist reviews it before it's shared with anyone.
+Same split as the generation flow: code computes, the model writes. Code decides which statuses each page is allowed to get, and the workflow rejects a note that breaks them before anything is saved. Actions work the same way: code lists the search queries the note may suggest adding, and checks every suggested link. A suggestion that breaks a rule is dropped and flagged in the note.
 
 One rule came from looking at the data rather than from the design. A click from France can simply be the team checking its own pages, so a page now needs at least one click from outside France to earn Protect. The cost is that real French visitors don't count toward that status either, which is acceptable for a site written in English.
+
+The note is a draft, reviewed by the SEO specialist before it's shared. In one run, it explained a month's rankings with page edits made after that month ended. The review caught it, and the workflow now tells the model which decisions fall outside the period.
 
 Search Console access is read-only, and Claude only receives aggregated metrics per page, never data about individual visitors.
