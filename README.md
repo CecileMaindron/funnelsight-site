@@ -50,6 +50,8 @@ The actual n8n canvas, for scale:
 
 ![n8n workflow canvas](assets/n8n-canvas.png)
 
+*Click the image to open it at full size.*
+
 The canvas is split into seven colored zones:
 
 | Zone | What happens there |
@@ -61,6 +63,10 @@ The canvas is split into seven colored zones:
 | 5 · Publication (orange) | Five files written to a branch one after another, pull request, human merge. |
 | 6 · Error path (red) | Cost logged, branch cleaned up, alert, row marked Failed, batch continues. |
 | 7 · Page edits (grey) | Second Claude call on the target page, change checks, before/after review, pull request. |
+
+Zone 7 up close: the edit branch, from the second Claude call to the pull request.
+
+![Edit branch of the n8n workflow](assets/n8n-canvas-edit-zone.png)
 
 ## Site structure
 
