@@ -14,6 +14,8 @@ Each entry covers one choice: what I decided, what I considered instead, and wha
 
 **What would change my mind:** If I reused the same fetch or commit logic in a second workflow, or if changing how one file gets pulled from GitHub meant editing it in five or six places by hand, that's the point where extracting a sub-workflow would start paying for itself.
 
+**Update:** This was a call on the workflow as it stood, not a rule, and the option to improve existing pages changed the picture (see "Why existing pages get improved, not just new ones created"). It added two self-contained sequences to a canvas that was already wide. One reads the target page and proposes changes, the other publishes the edited page. Each takes a few clear inputs and returns a single result, which is what sub-workflows are made for, so both now run as small sub-workflows called from the main one. Nothing else calls them yet, but another workflow could later trigger an edit without duplicating that logic, a refresh action from the monthly report for instance. The two human reviews stayed in the main workflow on purpose. A sub-workflow paused while waiting for a Slack answer risks leaving the main workflow without a result, so the sub-workflows never wait for anyone. The rest of the workflow stays in one piece, for the reasons above.
+
 ## Why one API call handles both the decision and the writing
 
 **Decision:** A single Claude call takes the keyword in and returns either a skip/duplicate verdict with reasoning, or a full page.
@@ -25,6 +27,8 @@ Each entry covers one choice: what I decided, what I considered instead, and wha
 **Trade-off:** A two-step version would very likely be cheaper on keywords that get rejected early, since it wouldn't spend tokens writing a page that never ships.
 
 **What would change my mind:** If skip and duplicate outcomes started dominating the keyword list and token cost became the binding constraint, a cheap triage call before a full generation call would be the natural fix.
+
+**Update:** This still holds for new pages. An edit is the one case that takes two calls, for reasons explained in "Why existing pages get improved, not just new ones created".
 
 ## Why a static site, no framework
 
@@ -142,14 +146,14 @@ Each entry covers one choice: what I decided, what I considered instead, and wha
 
 **What would change my mind:** If I needed reliable traffic volumes that include visitors who decline, I'd add a cookieless analytics tool rather than go back to loading Google's script before consent.
 
-## Why code decides which statuses a page can get
+## Why existing pages get improved, not just new ones created
 
-**Decision:** In the monthly report, Claude writes the note but doesn't choose freely between statuses. Code works out which ones each page can get (Protect, Refresh or Too early), and the workflow checks the note against them before saving it.
+**Decision:** Before writing a new page, the workflow checks whether an existing page could answer the keyword better. If one can, it improves that page instead. The decisions are checked in a fixed order: skip, duplicate, edit, and only then create.
 
-**Context:** The first version put the metrics and the rules in the prompt and let Claude apply them. On the first test run, it marked two glossary pages Refresh at an average position around 80, and explained its choices with internal field names. Moving the rules into code fixed that. The second run then showed a gap in the rules themselves, with a page qualifying for Protect on only 2 impressions. Protect now requires at least 5.
+**Context:** As the site grew, new pages started to look more and more alike, even when none of them was an exact duplicate. Some glossary pages also sat far down the search results, most likely facing real competition rather than a fixable flaw. Adding more pages on the same themes risked a site that competes with itself and gives readers little they haven't already seen.
 
-**Why:** A threshold is arithmetic, and code applies it the same way every time. The model is more useful where judgment is needed. It decides whether an overlap between two pages on the same search query is intended, picks the actions, and explains each status in plain words. Code now gives each page its refresh signals and a protect flag. Any note that gives Refresh without a signal, or Protect without the flag, is rejected.
+**Why:** Better pages, not more pages. An edit only targets supporting pages, never the pillar and hub pages that structure the site, since a change there would ripple through the internal linking. It takes two calls instead of one. The first call works from the site memory, which describes every page without containing it. That's enough to decide that a page should be improved and to name the reader's question it misses, but not to rewrite it. Proposing exact changes means reading the page as it's actually published, and sending every page of the site with each call just in case would be wasteful. So a second call receives only the target page and that question, and proposes at most four targeted changes, or none if the page already covers it. Code then checks every change before anyone sees it: the passage to replace must appear exactly once, the title, call to action, FAQ and read-next block stay untouched, and an edit adds no more than 250 words. The SEO specialist reviews a before/after version, and the edit ships through the same pull request and human merge as a new page.
 
-**Trade-off:** The rules are rigid. A page just under a threshold can't be promoted, even when a person would make that call. The thresholds were also set on a few weeks of data and may need tuning.
+**Trade-off:** An edit asks more of the reviewer than a new page. The change has to be judged inside a page that already exists, and possibly already earns traffic. The checks protect the parts of a page that matter most, but they can't tell whether a sentence earns its place: on the first edit that went live, one redundant sentence was rewritten by hand before merging. Pillar and hub pages also stay outside this flow, so they don't benefit from it.
 
-**What would change my mind:** I wouldn't hand this decision back to the model. Once a few months of history exist, I'd check the thresholds against what actually happened to the pages.
+**What would change my mind:** If, after a few monthly reports, edited pages did no better than pages left alone, or if most edit proposals needed heavy rewriting before merge, I'd narrow edits to the cases where they clearly help, or drop the option.
