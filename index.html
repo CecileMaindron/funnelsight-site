@@ -60,46 +60,19 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Funnelsight: growth analytics for marketing and revenue teams</title>
-<meta name="description" content="Funnelsight connects acquisition, activation, retention, expansion and churn risk in one place for B2B PLG and PLS teams, no data team required to start.">
+<title>Marketing attribution software for B2B SaaS: Funnelsight</title>
+<meta name="description" content="Marketing attribution software for B2B SaaS: follow each customer from first visit to renewal, and see what every source is worth and how fast it pays back.">
 <meta name="google-site-verification" content="pwkpGD-lUkAX3U0JXVnwZ89rr338QaC_RcUiQQgpm48" />
 <link rel="canonical" href="https://funnelsight.dev/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Funnelsight: growth analytics for marketing and revenue teams">
-<meta property="og:description" content="Funnelsight connects acquisition, activation, retention, expansion and churn risk in one place for B2B PLG and PLS teams, no data team required to start.">
+<meta property="og:title" content="Marketing attribution software for B2B SaaS: Funnelsight">
+<meta property="og:description" content="Marketing attribution software for B2B SaaS: follow each customer from first visit to renewal, and see what every source is worth and how fast it pays back.">
 <meta property="og:url" content="https://funnelsight.dev/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Funnelsight: growth analytics for marketing and revenue teams">
-<meta name="twitter:description" content="Funnelsight connects acquisition, activation, retention, expansion and churn risk in one place for B2B PLG and PLS teams, no data team required to start.">
+<meta name="twitter:title" content="Marketing attribution software for B2B SaaS: Funnelsight">
+<meta name="twitter:description" content="Marketing attribution software for B2B SaaS: follow each customer from first visit to renewal, and see what every source is worth and how fast it pays back.">
 <link rel="stylesheet" href="/styles.css">
-<style>
-  /* Added for the new problem statement above the product section.
-     Move into styles.css whenever convenient — kept here so this file stays self-contained. */
-  .section-lede {
-    max-width: 62ch;
-    margin-bottom: 24px;
-    font-size: 18px;
-    color: #454A5B;
-  }
-
-  /* Added for the FAQ section. Move into styles.css whenever convenient. */
-  .faq-section { padding: 64px 0; border-top: 1px solid var(--line); }
-  .faq-section h2 { font-size: 30px; max-width: 20ch; margin-bottom: 24px; }
-  .faq-list { max-width: 720px; }
-  .faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
-  .faq-item summary {
-    cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    list-style: none;
-  }
-  .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary::after { content: '+'; float: right; color: var(--indigo); }
-  .faq-item[open] summary::after { content: '\2212'; }
-  .faq-item p { margin-top: 12px; font-size: 15px; color: #454A5B; }
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,15 +83,23 @@
       "name": "What does Funnelsight actually do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One dashboard for the full customer journey, from acquisition source to expansion, so marketing and revenue work from the same numbers instead of separate exports."
+        "text": "Funnelsight is marketing attribution software for B2B SaaS teams. It follows each customer from the first anonymous visit to paying customer and renewal, and compares sources on the revenue they bring and how fast they pay back. It works on top of the tools you already use, like GA4, Google Ads and your CRM."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need a data team to set it up?",
+      "name": "Which channel gets the credit for a sale?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not to get started. Connect your product analytics tool and your CRM yourself, and get a working dashboard the same day. A data team still helps with complex architecture or native integrations. That role isn't replaced. You're just not blocked without one."
+        "text": "Usually more than one. A customer might read an article, click an ad and talk to sales before buying, and no tool can say for certain which touch made the difference. That's why Funnelsight talks about influence rather than cause. Your team picks the attribution template that fits how you sell, and Funnelsight shares the credit for each sale across the touches on its path. And a source isn't judged on a single measure, such as the number of net new leads, the total volume of contacts or the last touch before the opportunity is created, but on how its contacts convert at each step: what share of them activate, then buy, then renew."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why don't our attribution numbers match what sales reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the two teams answer different questions. Sales mainly tracks who created each opportunity, a BDR, an account executive or a partner, and where each lead came from, since compensation and pipeline planning depend on it. Each deal counts whole, for one origin. Marketing compares channels that work in different ways, so attribution gives each source a share of every deal it touched, and a partner can hold 30% of one deal and 10% of another. Shares also shift over time: a new trial first gets full credit for its sign-ups, then a smaller share as the same accounts collect more touches, even when it performs just as well. Funnelsight shows both readings side by side, with your CRM as the reference."
       }
     },
     {
@@ -131,10 +112,26 @@
     },
     {
       "@type": "Question",
-      "name": "How is this different from just exporting to a spreadsheet?",
+      "name": "Do I need a data team to set it up?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A spreadsheet you rebuild every week answers the question once and needs redoing next week. Once a live source is connected, Funnelsight keeps the same view current automatically."
+        "text": "No. A marketing or growth team can connect its sources and get a working dashboard the same day. A data team only becomes useful for complex architecture or integrations Funnelsight doesn't support natively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "We already have a data analyst. Does Funnelsight replace them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Funnelsight doesn't take over data architecture, pipelines or integrations beyond what it supports natively, and your analyst stays in charge of those. What changes is that marketing and sales no longer wait for a new report for every question. Framework rules are set once, often with your analyst, and each team builds its own views on the same numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from exporting to a spreadsheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A spreadsheet answers the question once and has to be rebuilt the following week. Once a live source is connected, Funnelsight keeps the same view up to date, with the same rules applied every time."
       }
     },
     {
@@ -150,23 +147,15 @@
       "name": "Can other people on my team use it too?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Invite teammates from marketing and revenue, share a view for review, or export it for your quarterly business review, no rebuilding required."
+        "text": "Yes. Invite teammates from marketing, sales and customer success. Admins set up sources and shared rules, editors build and share dashboards, and viewers follow them and add notes."
       }
     },
     {
       "@type": "Question",
-      "name": "Is my data secure?",
+      "name": "Is my data secure, and where is it stored?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Your data stays in your workspace, nothing is shared beyond your account, and you can disconnect a source anytime."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where is my data stored?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In the EU. Funnelsight is based in Nantes, France, and data is hosted accordingly."
+        "text": "Your data stays in your workspace and is hosted in the EU: Funnelsight is based in Nantes, France. Nothing is shared beyond your account, and you can disconnect a source at any time."
       }
     },
     {
@@ -279,93 +268,131 @@
 
 <header class="hero wrap">
   <div>
-    <h1>See the growth loop your team is actually running.</h1>
-    <p class="lede">Funnelsight turns acquisition, activation, retention and expansion data into one shared view. Built for marketing and revenue teams running product-led growth, self-serve or sales-assisted, not for a dedicated analyst.</p>
+    <p class="eyebrow">For B2B SaaS teams: product-led, sales-led or hybrid</p>
+    <h1>Know what really brings in revenue, and when.</h1>
+    <p class="lede">One view of your whole funnel: from anonymous visitor to paying customer to renewal.</p>
     <div class="hero-actions">
       <a href="/trial" class="btn-primary accent">Start free trial</a>
       <a href="/#product" class="btn-ghost">See how it works</a>
     </div>
   </div>
-  <div>
-    <svg class="loop-motif" viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing web analytics, product analytics, CRM reports and a spreadsheet converging into one Funnelsight view">
-      <defs>
-        <marker id="fsArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-          <path d="M0,0 L10,5 L0,10 z" fill="#14161F"/>
-        </marker>
-      </defs>
 
-      <rect x="15" y="20" width="80" height="40" rx="4" fill="none" stroke="#DDE0E8" stroke-width="1.5"/>
-      <text x="55" y="44" text-anchor="middle" font-family="Inter" font-size="9" fill="#14161F">Web analytics</text>
-
-      <rect x="105" y="20" width="80" height="40" rx="4" fill="none" stroke="#DDE0E8" stroke-width="1.5"/>
-      <text x="145" y="44" text-anchor="middle" font-family="Inter" font-size="9" fill="#14161F">Product analytics</text>
-
-      <rect x="195" y="20" width="80" height="40" rx="4" fill="none" stroke="#DDE0E8" stroke-width="1.5"/>
-      <text x="235" y="44" text-anchor="middle" font-family="Inter" font-size="9" fill="#14161F">CRM reports</text>
-
-      <rect x="285" y="20" width="80" height="40" rx="4" fill="none" stroke="#DDE0E8" stroke-width="1.5"/>
-      <text x="325" y="44" text-anchor="middle" font-family="Inter" font-size="9" fill="#14161F">Spreadsheet</text>
-
-      <path d="M55,60 C55,88 200,88 200,108" stroke="#DDE0E8" stroke-width="1.5" fill="none"/>
-      <path d="M145,60 C145,88 200,88 200,108" stroke="#DDE0E8" stroke-width="1.5" fill="none"/>
-      <path d="M235,60 C235,88 200,88 200,108" stroke="#DDE0E8" stroke-width="1.5" fill="none"/>
-      <path d="M325,60 C325,88 200,88 200,108" stroke="#DDE0E8" stroke-width="1.5" fill="none"/>
-      <circle cx="200" cy="110" r="4" fill="#14161F"/>
-      <path d="M200,114 L200,132" stroke="#14161F" stroke-width="1.5" fill="none" marker-end="url(#fsArrow)"/>
-
-      <rect x="20" y="142" width="360" height="104" rx="6" fill="#FAFBFC" stroke="#14161F" stroke-width="1.5"/>
-      <text x="200" y="172" text-anchor="middle" font-family="Space Grotesk" font-size="20" font-weight="600" fill="#14161F">Funnelsight</text>
-
-      <rect x="35" y="196" width="100" height="28" rx="14" fill="#372F72"/>
-      <text x="85" y="215" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#FFFFFF">Activate</text>
-
-      <rect x="150" y="196" width="100" height="28" rx="14" fill="#D9A441"/>
-      <text x="200" y="215" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#14161F">Retain</text>
-
-      <rect x="265" y="196" width="100" height="28" rx="14" fill="#14161F"/>
-      <text x="315" y="215" text-anchor="middle" font-family="Inter" font-size="12" font-weight="600" fill="#FFFFFF">Expand</text>
-    </svg>
-  </div>
+  <figure class="source-card">
+    <div class="source-card-bar">
+      <ul class="view-tabs" aria-label="Dashboard views (illustration)">
+        <li>Team daily</li>
+        <li class="is-current" aria-current="true">Marketing QBR</li>
+        <li>Leadership</li>
+      </ul>
+      <span class="tag-illustrative">Illustrative data</span>
+    </div>
+    <div class="source-card-head">
+      <span class="source-card-title">Leads vs new revenue, by source</span>
+      <span class="source-card-period">Last 12 months</span>
+    </div>
+    <div class="source-table-wrap">
+      <table class="source-table">
+        <caption class="visually-hidden">Share of leads and share of new revenue for six acquisition sources over the last 12 months (illustrative data)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col"><span class="key key-leads" aria-hidden="true"></span>Share of leads</th>
+            <th scope="col"><span class="key key-revenue" aria-hidden="true"></span>Share of new revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Paid search</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 85%"></span></span><span class="bar-value">34%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 38%"></span></span><span class="bar-value bar-value-strong">15%</span></span></td>
+        </tr>
+        <tr>
+          <th scope="row">Organic search</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 60%"></span></span><span class="bar-value">24%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 82%"></span></span><span class="bar-value bar-value-strong">33%</span></span></td>
+        </tr>
+        <tr>
+          <th scope="row">Direct<span class="source-flag">Includes untagged visits</span></th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 55%"></span></span><span class="bar-value">22%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 75%"></span></span><span class="bar-value bar-value-strong">30%</span></span></td>
+        </tr>
+        <tr>
+          <th scope="row">LinkedIn ads</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 20%"></span></span><span class="bar-value">8%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 10%"></span></span><span class="bar-value bar-value-strong">4%</span></span></td>
+        </tr>
+        <tr>
+          <th scope="row">Partner referrals</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 10%"></span></span><span class="bar-value">4%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 25%"></span></span><span class="bar-value bar-value-strong">10%</span></span></td>
+        </tr>
+        <tr>
+          <th scope="row">Other</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 20%"></span></span><span class="bar-value">8%</span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 20%"></span></span><span class="bar-value bar-value-strong">8%</span></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption><strong>Paid search brings a third of leads but 15% of new revenue.</strong> Direct brings 30%, and is flagged: part of it is likely campaign traffic that lost its tags.</figcaption>
+  </figure>
 </header>
 
-<div class="wrap">
-  <p class="section-lede">Right now, that view lives in four places: Google Analytics for where traffic comes from, a product analytics tool nobody outside the team opens, a CRM report built for pipeline, and a spreadsheet someone rebuilds every Monday. None of them talk to each other, so a blended conversion rate looks fine while the best-performing channel is quietly carrying it and the weakest one is dragging it down. By the time marketing and sales agree on what actually counts as a qualified lead, the quarter is half over.</p>
-</div>
+<section class="problem wrap" aria-labelledby="problem-title">
+  <h2 id="problem-title">Why your teams rarely agree on what worked.</h2>
+  <p class="section-lede">Web analytics, product analytics and the CRM each record one part of the customer journey. When every team reports from its own tool, a simple question like “which channel worked last quarter?” gets several answers.</p>
+</section>
 
-<section class="values wrap" id="product">
-  <div class="value">
-    <div class="mark"></div>
-    <h2>One shared view</h2>
-    <p>Marketing, growth and sales look at the same numbers, from acquisition source to expansion, instead of separate exports for each stage.</p>
+<section class="proofs" id="product" aria-label="How Funnelsight helps">
+  <div class="wrap">
+    <div class="proof-row">
+      <h2>Start small, then grow.</h2>
+      <p>Begin with the tools you have, even a spreadsheet. Add sources when you need them.</p>
+    </div>
+    <div class="proof-row">
+      <h2>See what each source is worth, and how fast.</h2>
+      <p>A monthly plan and a multi-year contract don't pay back at the same pace. Funnelsight compares sources on recurring revenue and payback time. You see where to invest next, and which sources simply need more time.</p>
+    </div>
+    <div class="proof-row">
+      <h2>Find the paths single reports miss.</h2>
+      <p>Some channels look weak on their own but bring customers who convert elsewhere. Funnelsight shows the whole path before you cut anything.</p>
+    </div>
   </div>
-  <div class="value">
-    <div class="mark"></div>
-    <h2>No data team required to get started</h2>
-    <p>Connect your product and CRM events yourself and get a working dashboard the same day, not a quarter-long implementation. A data team still earns its place for complex architecture or integrations beyond what's built in. Funnelsight doesn't replace that. It just doesn't require one to start.</p>
-  </div>
-  <div class="value">
-    <div class="mark"></div>
-    <h2>Covers the whole journey, not just the middle of it</h2>
-    <p>Funnelsight doesn't start at the sign-up, and it doesn't stop once a lead reaches sales or a trial converts to paid. It keeps watching after that first payment too: expansion opportunities, churn risk before an account quietly leaves, and a paused or lapsed account showing signs of coming back.</p>
+</section>
+
+<section class="trust wrap" aria-labelledby="trust-title">
+  <h2 id="trust-title">Numbers your whole team can work from.</h2>
+  <div class="trust-grid">
+    <div class="trust-item">
+      <h3>Your own views, the same numbers</h3>
+      <p>Each team builds its dashboards on shared definitions. Rule changes are logged, so two reports never quietly disagree.</p>
+    </div>
+    <div class="trust-item">
+      <h3>A data check before the first chart</h3>
+      <p>See what Funnelsight can and can't see, and what needs fixing, like campaigns tagged inconsistently.</p>
+    </div>
+    <div class="trust-item">
+      <h3>Templates to start from</h3>
+      <p>Ready-made answers to the first questions teams ask, adjustable without a data team.</p>
+    </div>
   </div>
 </section>
 
 <section class="audience" id="audience">
   <div class="wrap">
     <h2>For teams who move growth, not chase vanity metrics.</h2>
-    <p>Funnelsight is built for the teams that make growth work day to day, self-serve or sales-assisted.</p>
     <div class="audience-grid">
       <div class="audience-card">
-        <h4>Marketing &amp; growth</h4>
-        <p>Look past vanity metrics like raw sign-up volume, and see which channels, campaigns and segments actually convert and retain: the same numbers sales is measured on, not a separate scoreboard.</p>
+        <h3>Marketing &amp; growth</h3>
+        <p>Judge channels, CTAs and product events by the customers who stay, not by sign-up volume.</p>
       </div>
       <div class="audience-card">
-        <h4>Revenue &amp; sales</h4>
-        <p>See product usage signals scored next to account data, PQL for self-serve accounts, SQL if you run product-led sales, so outreach happens when accounts are ready, not on a fixed schedule.</p>
+        <h3>Revenue &amp; sales</h3>
+        <p>Reach out when product usage shows an account is ready, with usage and account data in the same view.</p>
       </div>
       <div class="audience-card">
-        <h4>Customer success</h4>
-        <p>See which self-serve accounts are ready to expand before they ask, and spot a churn-risk pattern early enough to act on it, using the same usage signals marketing and sales already track.</p>
+        <h3>Customer success</h3>
+        <p>Spot accounts ready to expand before they ask, and churn-risk patterns early enough to act.</p>
       </div>
     </div>
   </div>
@@ -373,7 +400,7 @@
 
 <section class="cta-band wrap">
   <h2>Try it on your own funnel.</h2>
-  <p>Start a free trial and connect your first data source in a few minutes. No credit card required.</p>
+  <p>14 days free. No credit card required.</p>
   <div class="hero-actions">
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
@@ -384,19 +411,31 @@
   <div class="faq-list">
     <details class="faq-item">
       <summary>What does Funnelsight actually do?</summary>
-      <p>One dashboard for the full customer journey, from acquisition source to expansion, so marketing and revenue work from the same numbers instead of separate exports.</p>
+      <p>Funnelsight is marketing attribution software for B2B SaaS teams. It follows each customer from the first anonymous visit to paying customer and renewal, and compares sources on the revenue they bring and how fast they pay back. It works on top of the tools you already use, like GA4, Google Ads and your CRM.</p>
     </details>
     <details class="faq-item">
-      <summary>Do I need a data team to set it up?</summary>
-      <p>Not to get started. Connect your product analytics tool and your CRM yourself, and get a working dashboard the same day. A data team still helps with complex architecture or native integrations. That role isn't replaced. You're just not blocked without one.</p>
+      <summary>Which channel gets the credit for a sale?</summary>
+      <p>Usually more than one. A customer might read an article, click an ad and talk to sales before buying, and no tool can say for certain which touch made the difference. That's why Funnelsight talks about influence rather than cause. Your team picks the attribution template that fits how you sell, and Funnelsight shares the credit for each sale across the touches on its path. And a source isn't judged on a single measure, such as the number of net new leads, the total volume of contacts or the last touch before the opportunity is created, but on how its contacts convert at each step: what share of them activate, then buy, then renew.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Why don't our attribution numbers match what sales reports?</summary>
+      <p>Because the two teams answer different questions. Sales mainly tracks who created each opportunity, a BDR, an account executive or a partner, and where each lead came from, since compensation and pipeline planning depend on it. Each deal counts whole, for one origin. Marketing compares channels that work in different ways, so attribution gives each source a share of every deal it touched, and a partner can hold 30% of one deal and 10% of another. Shares also shift over time: a new trial first gets full credit for its sign-ups, then a smaller share as the same accounts collect more touches, even when it performs just as well. Funnelsight shows both readings side by side, with your CRM as the reference.</p>
     </details>
     <details class="faq-item">
       <summary>What data sources can I connect?</summary>
       <p>Product analytics, your CRM, and acquisition sources like Google Analytics (GA4) and Google Ads. No analytics tool in place yet? Import a spreadsheet to try Funnelsight, then connect a live source later.</p>
     </details>
     <details class="faq-item">
-      <summary>How is this different from just exporting to a spreadsheet?</summary>
-      <p>A spreadsheet you rebuild every week answers the question once and needs redoing next week. Once a live source is connected, Funnelsight keeps the same view current automatically.</p>
+      <summary>Do I need a data team to set it up?</summary>
+      <p>No. A marketing or growth team can connect its sources and get a working dashboard the same day. A data team only becomes useful for complex architecture or integrations Funnelsight doesn't support natively.</p>
+    </details>
+    <details class="faq-item">
+      <summary>We already have a data analyst. Does Funnelsight replace them?</summary>
+      <p>No. Funnelsight doesn't take over data architecture, pipelines or integrations beyond what it supports natively, and your analyst stays in charge of those. What changes is that marketing and sales no longer wait for a new report for every question. Framework rules are set once, often with your analyst, and each team builds its own views on the same numbers.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is this different from exporting to a spreadsheet?</summary>
+      <p>A spreadsheet answers the question once and has to be rebuilt the following week. Once a live source is connected, Funnelsight keeps the same view up to date, with the same rules applied every time.</p>
     </details>
     <details class="faq-item">
       <summary>Does Funnelsight score or predict which accounts will churn or convert?</summary>
@@ -404,15 +443,11 @@
     </details>
     <details class="faq-item">
       <summary>Can other people on my team use it too?</summary>
-      <p>Yes. Invite teammates from marketing and revenue, share a view for review, or export it for your quarterly business review, no rebuilding required.</p>
+      <p>Yes. Invite teammates from marketing, sales and customer success. Admins set up sources and shared rules, editors build and share dashboards, and viewers follow them and add notes.</p>
     </details>
     <details class="faq-item">
-      <summary>Is my data secure?</summary>
-      <p>Yes. Your data stays in your workspace, nothing is shared beyond your account, and you can disconnect a source anytime.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Where is my data stored?</summary>
-      <p>In the EU. Funnelsight is based in Nantes, France, and data is hosted accordingly.</p>
+      <summary>Is my data secure, and where is it stored?</summary>
+      <p>Your data stays in your workspace and is hosted in the EU: Funnelsight is based in Nantes, France. Nothing is shared beyond your account, and you can disconnect a source at any time.</p>
     </details>
     <details class="faq-item">
       <summary>Do I need a credit card to start the trial?</summary>
