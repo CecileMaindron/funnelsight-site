@@ -125,7 +125,7 @@ h1, h2, h3 {
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { text-decoration: none; font-size: 15px; font-weight: 500; }
 .nav-cta {
-  background: var(--ink);
+  background: var(--indigo);
   color: var(--white);
   padding: 10px 20px;
   border-radius: 6px;
@@ -251,7 +251,7 @@ footer a {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 56px;
-  align-items: center;
+  align-items: start;
 }
 .hero .eyebrow {
   font-size: 14px;
@@ -371,7 +371,7 @@ footer a {
 
 /* Proofs: full-width rows, title left, text right */
 .proofs { padding: 72px 0; background: var(--white); }
-.proofs .wrap { padding-left: 0; padding-right: 0; }
+.proofs .wrap, .audience .wrap { padding-left: 0; padding-right: 0; }
 .proof-row {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -394,8 +394,8 @@ footer a {
 /* Audience */
 .audience {
   padding: 72px 0;
-  background: var(--ink);
-  color: var(--white);
+  background: var(--bg);
+  border-top: 1px solid var(--line);
 }
 .audience h2 { font-size: 30px; max-width: 24ch; }
 .audience-grid {
@@ -405,12 +405,13 @@ footer a {
   gap: 24px;
 }
 .audience-card {
-  border: 1px solid #2A2D3B;
-  border-radius: 8px;
-  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
 }
 .audience-card h3 { font-size: 17px; margin-bottom: 8px; }
-.audience-card p { font-size: 14px; color: #B9BDCC; }
+.audience-card p { font-size: 15px; color: #454A5B; }
 
 /* CTA band */
 .cta-band {
@@ -817,9 +818,11 @@ footer a {
   .resources-hero h1 { font-size: 28px; }
   .article h1 { font-size: 28px; }
 
-  .nav .wrap { flex-wrap: wrap; justify-content: flex-start; gap: 16px; }
-  .nav-toggle-label { display: block; order: 2; margin-left: auto; padding: 10px 4px; min-height: 24px; }
-  .nav-cta { order: 3; }
+  .nav { padding: 12px 0; }
+  .nav .wrap { flex-wrap: wrap; justify-content: flex-start; gap: 12px; }
+  .nav-cta { padding: 8px 12px; font-size: 13px; }
+  .nav-cta { order: 2; margin-left: auto; }
+  .nav-toggle-label { display: block; order: 3; padding: 10px 4px; min-height: 24px; }
   .nav-links {
     display: none;
     order: 4;
@@ -845,6 +848,8 @@ footer a {
   .bar-track { min-width: 16px; }
   .bar-value { width: 28px; }
   .key { display: block; margin: 0 0 4px; }
+  .view-tabs { flex-wrap: nowrap; }
+  .view-tabs li { font-size: 12px; padding: 5px 8px; white-space: nowrap; }
 }
 
 @media (prefers-reduced-motion: reduce) {
