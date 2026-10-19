@@ -247,7 +247,7 @@ footer a {
 
 /* Hero */
 .hero {
-  padding: 88px 0 80px;
+  padding: 88px 32px 80px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 56px;
@@ -361,7 +361,10 @@ footer a {
 }
 
 /* Problem statement */
-.problem { padding: 72px 0 64px; border-top: 1px solid var(--line); }
+/* Section rhythm: bands alternate white and light grey, as in the validated mockup
+   (hero grey, problem white, proofs grey, reassurance white, audience grey,
+   CTA and FAQ white). */
+.problem { padding: 72px 0; background: var(--white); }
 .problem h2 { font-size: 30px; max-width: 24ch; margin-bottom: 16px; }
 .section-lede {
   max-width: 62ch;
@@ -370,8 +373,7 @@ footer a {
 }
 
 /* Proofs: full-width rows, title left, text right */
-.proofs { padding: 72px 0; background: var(--white); }
-.proofs .wrap, .audience .wrap { padding-left: 0; padding-right: 0; }
+.proofs { padding: 72px 0; background: var(--bg); }
 .proof-row {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
@@ -384,7 +386,7 @@ footer a {
 .proof-row p { font-size: 17px; color: #454A5B; }
 
 /* Reassurance: three columns with a top rule, no boxes */
-.trust { padding: 72px 0; }
+.trust { padding: 72px 0; background: var(--white); }
 .trust h2 { font-size: 30px; max-width: 24ch; margin-bottom: 32px; }
 .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .trust-item { padding-top: 16px; border-top: 3px solid var(--indigo); }
@@ -395,7 +397,6 @@ footer a {
 .audience {
   padding: 72px 0;
   background: var(--bg);
-  border-top: 1px solid var(--line);
 }
 .audience h2 { font-size: 30px; max-width: 24ch; }
 .audience-grid {
@@ -414,16 +415,34 @@ footer a {
 .audience-card p { font-size: 15px; color: #454A5B; }
 
 /* CTA band */
-.cta-band {
-  padding: 80px 0;
-  text-align: left;
+.cta-band { padding: 72px 0 0; background: var(--white); }
+.cta-panel {
+  background: var(--indigo);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
 }
-.cta-band h2 { font-size: 32px; max-width: 16ch; }
-.cta-band p { margin-top: 14px; color: #454A5B; max-width: 44ch; }
-.cta-band .hero-actions { margin-top: 28px; }
+.cta-panel h2 { font-size: 32px; }
+.cta-panel p { color: #E3E1F0; font-size: 16px; }
+.btn-on-dark {
+  margin-top: 8px;
+  background: var(--white);
+  color: var(--indigo);
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+.btn-on-dark:hover { background: #E3E1F0; }
 
 /* FAQ (moved from the inline style of index.html) */
-.faq-section { padding: 64px 0; border-top: 1px solid var(--line); }
+.faq-section { padding: 72px 0; background: var(--white); }
 .faq-section h2 { font-size: 30px; max-width: 20ch; margin-bottom: 24px; }
 .faq-list { max-width: 720px; }
 .faq-item { border-bottom: 1px solid var(--line); padding: 18px 0; }
@@ -808,12 +827,13 @@ footer a {
 @media (max-width: 860px) {
   .hero, .trial-layout, .audience-grid, .trust-grid, .proof-row { grid-template-columns: 1fr; }
   .hero h1, .trial-hero h1 { font-size: 26px; max-width: none; }
-  .hero.wrap, .trial-hero.wrap, .problem.wrap, .trust.wrap, .faq-section.wrap, .cta-band.wrap, .resources-hero.wrap, .article.wrap, .breadcrumb.wrap { padding-left: 40px; padding-right: 40px; }
-  .audience .wrap, .proofs .wrap { padding-left: 40px; padding-right: 40px; }
+  .hero.wrap, .trial-hero.wrap, .resources-hero.wrap, .article.wrap, .breadcrumb.wrap { padding-left: 40px; padding-right: 40px; }
+  .problem .wrap, .proofs .wrap, .trust .wrap, .audience .wrap, .cta-band .wrap, .faq-section .wrap { padding-left: 40px; padding-right: 40px; }
+  .cta-panel { padding: 40px 24px; }
+  .cta-panel h2 { font-size: 26px; }
   .problem h2, .trust h2 { font-size: 24px; max-width: none; }
   .proof-row h2 { font-size: 20px; }
   .faq-section h2 { font-size: 26px; }
-  .cta-band h2 { font-size: 26px; max-width: none; }
   .audience h2 { font-size: 24px; max-width: none; }
   .resources-hero h1 { font-size: 28px; }
   .article h1 { font-size: 28px; }
