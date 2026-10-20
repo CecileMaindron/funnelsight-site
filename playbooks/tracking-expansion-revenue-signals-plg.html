@@ -165,26 +165,41 @@
 
 <article class="article wrap">
   <h1>Tracking expansion revenue signals</h1>
-  <p class="lede-intro">Expansion revenue rarely announces itself. A team hits a seat limit, a workspace pushes past a usage cap, someone on the account starts using a feature that's gated behind a paid tier. None of that shows up as a deal in your CRM until someone notices and reaches out. The real work is deciding which signals are worth watching and building a habit of checking them.</p>
+  <p class="lede-intro">Expansion revenue rarely announces itself. A team hits a seat limit, a workspace pushes past a usage cap, someone starts using a feature reserved for a paid tier. None of it shows up as a deal in your CRM until someone notices. The work is choosing which signals deserve attention, and checking them before the account makes up its mind on its own.</p>
 
-  <h2>Where expansion signals actually get missed</h2>
-  <p>Most PLG teams already track new trial signups and activation. Expansion tends to get less attention, partly because it's split across two systems: usage data lives in the product, and the account record lives in the CRM. A customer success manager might notice a seat count creeping up, but that observation usually stays in their head or in a spreadsheet note, not in a place where the sales or growth team can act on it consistently.</p>
-  <p>That gap gets worse as the customer base grows. Watching every account by hand doesn't scale past a few dozen. By the time growth is fifty or a hundred accounts, someone needs a system that surfaces the accounts worth a look, rather than a person scanning a dashboard hoping to catch a pattern.</p>
+  <h2>Where expansion signals get missed</h2>
+  <p>New signups and activation usually get close attention. Expansion gets less because it is split across two systems: usage lives in the product, and the account record lives in the CRM. A customer success manager may notice a seat count creeping up, but that observation tends to stay in their head or in a spreadsheet note, out of reach for sales and growth.</p>
+  <p>The gap widens as the customer base grows. Watching accounts by hand works for a few dozen. Past fifty or a hundred, you need a way to surface the accounts worth a look instead of hoping someone spots the pattern.</p>
 
-  <h2>What counts as an expansion signal</h2>
-  <p>The exact list depends on the product, but a few categories show up often in B2B SaaS: usage approaching a plan limit (seats, storage, API calls), adoption of a feature reserved for a higher tier, a second team or department starting to use the product independently, and a sustained increase in an account's core usage metric over several weeks rather than a single spike.</p>
-  <p>A single spike is easy to over-read. Someone ran a big import last Tuesday and usage looks doubled, that's not expansion, that's noise. The signals worth tracking are ones that hold over time, not a one-off event.</p>
+  <h2>Look for a change, not a level</h2>
+  <p>By the time an upgrade shows up in billing, the decision is already made. To influence it, or simply to plan for it, look at what the account did in the weeks before.</p>
+  <p>Engagement alone says little. A team can use your product every day for a year without ever needing more. What tends to come before an upgrade is a change: usage crossing a threshold it had never crossed, a new kind of user showing up, a feature joining the account's routine.</p>
 
-  <h2>How Funnelsight fits into this</h2>
-  <p>Funnelsight brings product usage data and CRM account data into a single funnel view, across activation, retention, and expansion. That matters here because expansion signals are only useful once they're visible next to the account record, the plan tier, and whoever owns the relationship. A usage trend without that context is just a number in an export.</p>
-  <p>You define what an expansion signal means for your product once, the same way you'd define an activation event, and it stays consistent across every report from there. See <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> for the same principle applied earlier in the funnel.</p>
+  <h2>Signals worth watching</h2>
+  <p>The exact list depends on your product. A few signals come up often in B2B SaaS, and each one has a typical false alarm:</p>
+  <table class="data-table">
+    <caption>Common expansion signals and what can make them misleading</caption>
+    <thead>
+      <tr><th scope="col">Signal</th><th scope="col">What it looks like</th><th scope="col">What can mislead you</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Usage near a plan limit</th><td>Seats, projects, storage or API calls approaching the cap</td><td>A one-off import that doubles usage for a day</td></tr>
+      <tr><th scope="row">A higher-tier feature in use</th><td>Repeated use of a feature gated behind a paid plan</td><td>A single curious click on a locked feature</td></tr>
+      <tr><th scope="row">A second team joins</th><td>New users from the same company, working on their own projects</td><td>A colleague invited once for a review who never comes back</td></tr>
+      <tr><th scope="row">Sustained growth in core usage</th><td>The account's main metric rising week after week</td><td>A seasonal peak that falls back the following month</td></tr>
+    </tbody>
+  </table>
 
-  <h2>Start with one signal, not five</h2>
-  <p>Trying to track every possible expansion signal from day one usually means tracking none of them well. Pick the one signal that maps most directly to how your product actually gets sold on more seats or a higher tier, plan usage against a limit is a common starting point, and get that working before adding others.</p>
-  <p>The same applies to data freshness. A signal reviewed once a week from a spreadsheet export beats a real-time dashboard nobody built yet. Funnelsight's refresh cadence is configurable, daily or weekly checks are enough to catch an account trending toward its plan ceiling; nothing here requires a continuous data stream to be useful.</p>
+  <h2>Two examples</h2>
+  <p>Take a team plan provisioned for 10 seats. Three new logins appear over two weeks, all from the same company domain. Three logins aren't a deal. Seen against the seat limit and the plan tier, they give the account owner a reason to talk to the team before it hits a hard wall and leaves out of frustration instead of upgrading.</p>
+  <p>Now a free tier capped at three projects. One account goes from one project to three in a week, then invites a fourth teammate. Another has sat at one project for two months. Only the first one is changing. Flagging that change gives marketing or sales a window to reach out with context, before the account meets a generic billing prompt.</p>
 
-  <h2>A concrete example</h2>
-  <p>Say a marketing team's workspace is provisioned for 10 seats. Three new logins appear over two weeks, all from the same company domain but different email addresses. On their own, three logins aren't a deal. Tracked against the seat limit and viewed alongside the account's plan tier, that pattern becomes a reason for the account owner to have a conversation before the team hits a hard wall and churns out of frustration instead of upgrading.</p>
+  <h2>How Funnelsight fits</h2>
+  <p>Funnelsight brings product usage and CRM account data into one view, across activation, retention and expansion. An expansion signal is only useful next to the account record, the plan tier and the person who owns the relationship. Without that context, a usage trend is just a number in an export.</p>
+  <p>You define the thresholds that matter for your product once, such as a seat count, a feature or a usage floor, the same way you define an activation event (see <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a>). They apply to every account, and the rules stay visible and editable. When an account crosses one, the alert can reach the team by email or inside the CRM it already works from.</p>
+
+  <h2>Start with one signal</h2>
+  <p>Pick the signal most closely tied to how your product sells more seats or a higher tier, usually usage against a plan limit, and get it working before adding others. A weekly check from a spreadsheet export is a fine start. Funnelsight's refresh cadence is configurable, and a daily or weekly refresh is enough to catch an account trending toward its ceiling.</p>
 
   <div class="article-cta">
     <p>Bring usage and account data into one view, and start noticing expansion before it turns into a support ticket.</p>
@@ -194,11 +209,15 @@
   <div class="article-faq">
     <details>
       <summary>Do I need real-time data to catch expansion signals?</summary>
-      <p>No. A signal checked daily or weekly from a spreadsheet or a scheduled data refresh is enough to catch an account trending toward a plan limit. What matters is checking consistently, not catching the moment it happens.</p>
+      <p>No. A signal checked daily or weekly, from a spreadsheet or a scheduled refresh, is enough to catch an account trending toward a plan limit. Checking consistently matters more than catching the exact moment.</p>
     </details>
     <details>
       <summary>What's the difference between an expansion signal and a PQL?</summary>
-      <p>A product qualified lead usually points to a new deal, someone using the product enough to justify a sales conversation. An expansion signal points to an existing customer outgrowing their current plan. The underlying tracking logic is similar, but the audience and the follow-up action are different.</p>
+      <p>A product qualified lead usually points to a new deal: someone using the product enough to justify a sales conversation. An expansion signal points to an existing customer outgrowing their plan. The tracking logic is similar, but the audience and the follow-up are not.</p>
+    </details>
+    <details>
+      <summary>Is watching behavior before an upgrade the same as PQL scoring?</summary>
+      <p>Not quite. PQL scoring combines usage, feature adoption and account activity into one weighted score. Watching behavior before an upgrade follows the sequence of changes on one account over time. It can feed a score without being the score.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -211,7 +230,7 @@
         "name": "Do I need real-time data to catch expansion signals?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. A signal checked daily or weekly from a spreadsheet or a scheduled data refresh is enough to catch an account trending toward a plan limit. What matters is checking consistently, not catching the moment it happens."
+          "text": "No. A signal checked daily or weekly, from a spreadsheet or a scheduled refresh, is enough to catch an account trending toward a plan limit. Checking consistently matters more than catching the exact moment."
         }
       },
       {
@@ -219,7 +238,15 @@
         "name": "What's the difference between an expansion signal and a PQL?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A product qualified lead usually points to a new deal, someone using the product enough to justify a sales conversation. An expansion signal points to an existing customer outgrowing their current plan. The underlying tracking logic is similar, but the audience and the follow-up action are different."
+          "text": "A product qualified lead usually points to a new deal: someone using the product enough to justify a sales conversation. An expansion signal points to an existing customer outgrowing their plan. The tracking logic is similar, but the audience and the follow-up are not."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is watching behavior before an upgrade the same as PQL scoring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not quite. PQL scoring combines usage, feature adoption and account activity into one weighted score. Watching behavior before an upgrade follows the sequence of changes on one account over time. It can feed a score without being the score."
         }
       }
     ]

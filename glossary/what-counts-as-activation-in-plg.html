@@ -165,26 +165,51 @@
 
 <article class="article wrap">
   <h1>What counts as activation in product-led growth</h1>
-  <p class="lede-intro">Activation is the moment a new user experiences the value your product promised, not the moment they create an account. Most teams default to counting signup or first login as activation. Neither tells you whether the product actually worked for that person.</p>
+  <p class="lede-intro">Activation is the moment a new user experiences the value your product promised, not the moment they create an account. Signup and first login are the usual defaults, because they are easy to count. Neither tells you whether the product actually worked for that person.</p>
 
   <h2>Why "activation" resists a single definition</h2>
-  <p>A project management tool and an analytics tool don't activate the same way. For one, activation might mean inviting a teammate and assigning a task. For the other, it might mean connecting a data source and viewing a first real report. There's no universal event that counts as activation across every product, which is exactly why so many teams end up tracking the wrong one by default.</p>
-  <p>Login counts are easy to pull from any system, so they become the fallback metric. They're also close to meaningless on their own. A user can log in five times without ever touching the feature that makes your product worth paying for.</p>
-
-  <blockquote>
-    <strong>Common mistake:</strong> confusing activation with onboarding completion. Finishing a checklist tells you a user followed your steps. It doesn't tell you they got value from doing so. Design activation as a behavior to detect, not a flow to complete.
-  </blockquote>
+  <p>A project management tool and an analytics tool don't activate the same way. For one, activation might mean inviting a teammate and assigning a task. For the other, connecting a data source and viewing a first real report. No event counts as activation across every product, which is why so many teams end up tracking the wrong one by default.</p>
+  <p>Login counts are easy to pull from any system, so they become the fallback metric. On their own, they say almost nothing: a user can log in five times without ever touching the feature that makes your product worth paying for.</p>
 
   <h2>How to define activation for your product</h2>
-  <p>Start from retention, not from your onboarding flow. Look at the users who stuck around and became customers, then work backward to find the action (or short sequence of actions) that shows up consistently among them and rarely among the ones who churned. That action is your activation event, whatever it happens to be.</p>
-  <p>It's usually not the first thing a user does after signing up. It's the first thing they do that resembles how they'll actually use the product day to day. A single completed setup step is rarely enough; a repeated, meaningful action is a better signal.</p>
+  <p>Start from retention, not from your onboarding flow, and work backward:</p>
+  <ol class="step-list">
+    <li>
+      <span class="step-title">Start from the users who stayed</span>
+      <p>Take the accounts that kept using the product and became customers, not the ones who finished onboarding.</p>
+    </li>
+    <li>
+      <span class="step-title">Find the action they share</span>
+      <p>Look for the action, or short sequence of actions, that shows up consistently among them in their first days.</p>
+    </li>
+    <li>
+      <span class="step-title">Check it against the users who left</span>
+      <p>A good activation event is rare among accounts that churned. If everyone does it, it doesn't separate anything.</p>
+    </li>
+    <li>
+      <span class="step-title">Prefer a repeated action to a single step</span>
+      <p>A completed setup step is rarely enough. The first action that resembles everyday use of the product is usually a better signal.</p>
+    </li>
+  </ol>
 
   <h2>What this looks like for real products</h2>
-  <p>Slack ties its own growth measurement to a related idea: accounts approaching their message limit signal that a team has actually started relying on the product day to day, not just tried it once. It's a good illustration of the underlying principle: a strong activation (or usage) event is something your best-retained accounts do repeatedly, not something everyone technically does once during signup. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework behind it.</p>
-  <p>The stakes are real: companies with activation rates above 50% are disproportionately more likely to use multimedia (video, interactive walkthroughs) somewhere in onboarding, according to industry benchmark research cited in <a href="https://medium.com/@theaileenallen/plg-in-practice-a-guide-to-metrics-w-benchmarks-41f94fa2ef5d" target="_blank" rel="noopener">Aileen Allen's PLG metrics guide</a>. Getting the definition right isn't academic. It changes what you build.</p>
+  <p>Slack ties its own growth measurement to a related idea: accounts approaching their message limit show that a team has started relying on the product day to day, not just tried it once. The principle carries over: a strong activation event is something your best-retained accounts do repeatedly, not something everyone technically does once during signup. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
 
-  <h2>From definition to something you can track</h2>
-  <p>Defining activation is the easy part. Measuring it consistently, across the tools your product runs on, is where most teams get stuck, especially without a dedicated data team to stitch event logs together by hand. We cover the practical side of that in our guide to <a href="/playbooks/tracking-activation-metrics-plg-teams">tracking activation metrics for PLG teams</a>, including how to keep the definition stable as your product changes.</p>
+  <h2>Why teams end up with three activation numbers</h2>
+  <p>A product manager tracks feature adoption in the analytics tool. A growth marketer builds cohort views in a spreadsheet from raw exports. Sales watches login frequency as a rough proxy for interest. None of these numbers agree, and nobody wants to be the one who points it out in the weekly meeting. So activation gets defined once, in a slide, and never revisited while the product keeps changing underneath it.</p>
+  <p>Once a team agrees on one event, the calculation is simple:</p>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Activation rate (%) = (number of users who completed the activation event ÷ total new signups) × 100</p>
+  </div>
+  <p>The formula isn't the hard part. Getting three tools to agree on the numerator is.</p>
+
+  <h2>Keep the definition stable as the product changes</h2>
+  <p>An activation event that made sense a year ago can drift: a feature moves, onboarding changes, a new plan adds a different first step. Revisit the definition when the product changes, not every time the rate dips. When you do change it, write down the date and the reason, and compare the old and new rates over the same weeks before reading a trend across the break.</p>
+
+  <h2>How Funnelsight fits</h2>
+  <p>In Funnelsight, you define the activation event once from product usage data, and every report uses that same definition, including the <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a>. You can follow it through to trial conversion and revenue without exporting anything to a spreadsheet. When the definition changes, the change is logged, and past periods are either recalculated or the break is clearly marked.</p>
+  <p>Say a team decides activation means a new account has connected at least one data source and invited a second teammate within five days. In Funnelsight, that is one funnel step, not a formula split across two tools and reconciled by hand. The team can see each week what share of trials reach it, and whether that share is moving. See <a href="/case-studies/plg-team-unifies-activation-retention-data">how one PLG team put this into practice</a>. The same event is often the first signal behind a <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a>.</p>
 
   <div class="article-cta">
     <p>See how Funnelsight tracks the activation event you define, not a default metric that happens to be easy to pull.</p>
@@ -198,7 +223,11 @@
     </details>
     <details>
       <summary>How soon after signup should activation happen?</summary>
-      <p>It depends entirely on the product. There's no fixed window that applies everywhere. What matters more than timing is whether the activation event you've chosen actually correlates with users who stay.</p>
+      <p>It depends on the product, and no fixed window applies everywhere. What matters more than timing is whether the event you chose actually separates the users who stay from the ones who leave.</p>
+    </details>
+    <details>
+      <summary>Do I need engineering help to track activation?</summary>
+      <p>Not to define the event or follow it through the funnel in Funnelsight, if your product analytics tool already records the action. If it doesn't, recording it is a short, one-time setup, standard for any analytics tool.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -219,7 +248,15 @@
         "name": "How soon after signup should activation happen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It depends entirely on the product. There's no fixed window that applies everywhere. What matters more than timing is whether the activation event you've chosen actually correlates with users who stay."
+          "text": "It depends on the product, and no fixed window applies everywhere. What matters more than timing is whether the event you chose actually separates the users who stay from the ones who leave."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need engineering help to track activation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not to define the event or follow it through the funnel in Funnelsight, if your product analytics tool already records the action. If it doesn't, recording it is a short, one-time setup, standard for any analytics tool."
         }
       }
     ]
