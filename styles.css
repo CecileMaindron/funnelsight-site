@@ -677,6 +677,12 @@ footer a {
   white-space: nowrap;
   color: var(--ink);
 }
+/* Tables with four columns or more: tighter cells on small screens */
+@media (max-width: 600px) {
+  .data-table-dense { font-size: 14px; }
+  .data-table-dense th,
+  .data-table-dense td { padding: 10px 8px; }
+}
 
 .article-cta {
   margin: 48px 0; padding: 32px;
