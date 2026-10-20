@@ -60,17 +60,17 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing and sales funnel numbers don't match: Funnelsight</title>
-<meta name="description" content="Marketing and sales pull different funnel numbers from different tools. See how Funnelsight gives both teams one shared view of the pipeline.">
+<title>Why marketing and sales pipeline numbers don't match: Funnelsight</title>
+<meta name="description" content="Same CRM, same definitions, two different pipeline numbers. How attribution splits deals, why sales leaders can't find those figures in the CRM, and what helps.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/marketing-sales-funnel-numbers-dont-match">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Marketing and sales funnel numbers don&#x27;t match: Funnelsight">
-<meta property="og:description" content="Marketing and sales pull different funnel numbers from different tools. See how Funnelsight gives both teams one shared view of the pipeline.">
+<meta property="og:title" content="Why marketing and sales pipeline numbers don&#x27;t match: Funnelsight">
+<meta property="og:description" content="Same CRM, same definitions, two different pipeline numbers. How attribution splits deals, why sales leaders can't find those figures in the CRM, and what helps.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/marketing-sales-funnel-numbers-dont-match">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Marketing and sales funnel numbers don&#x27;t match: Funnelsight">
-<meta name="twitter:description" content="Marketing and sales pull different funnel numbers from different tools. See how Funnelsight gives both teams one shared view of the pipeline.">
+<meta name="twitter:title" content="Why marketing and sales pipeline numbers don&#x27;t match: Funnelsight">
+<meta name="twitter:description" content="Same CRM, same definitions, two different pipeline numbers. How attribution splits deals, why sales leaders can't find those figures in the CRM, and what helps.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -160,44 +160,85 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Marketing and sales are looking at different funnel numbers</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Why marketing and sales pipeline numbers don't match</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Marketing and sales are looking at different funnel numbers</h1>
-  <p class="lede-intro">Marketing counts a lead as qualified the moment it hits a score threshold. Sales counts it once they've actually talked to someone. Multiply that gap across every stage of the funnel, and by the time the two teams sit down for a pipeline review, they're arguing about whose spreadsheet is right instead of what to do next.</p>
+  <h1>Why marketing and sales pipeline numbers don't match</h1>
+  <p class="lede-intro">Same CRM, same definitions of a lead and an opportunity, and still two answers to "how much pipeline did marketing bring?". Usually nobody made a mistake. Sales reads the pipeline deal by deal, each deal counted whole. Marketing reads it through an attribution model, which splits each deal across the touches that came before it. The two readings answer different questions, and only one of them is built to give totals.</p>
 
-  <h2>Why the numbers never match</h2>
-  <p>Every tool has its own definition of a stage. The CRM says "opportunity created." The marketing platform says "lead converted." Someone built a dashboard three months ago, and nobody's touched the formulas since. None of this is anyone's fault, really. It's just what happens when funnel data lives in separate systems, refreshed on separate schedules, owned by separate teams.</p>
-  <p>The result is a familiar ritual: two decks, two sets of numbers, and the first fifteen minutes of every joint meeting spent reconciling them instead of discussing what to do about what they show.</p>
+  <h2>How an attribution model splits a deal</h2>
+  <p>A touch is any recorded activity by a person linked to the opportunity: a webinar attended, an email clicked, a trial started, a demo requested. Depending on the company, the people counted are the contacts on the opportunity or everyone at the account. Three touches can come from one person or from three.</p>
+  <p>A position-based model, common in B2B, gives 40% of the deal to the first touch and 40% to the last touch before the opportunity is created. The remaining 20% is split across the touches in between. A deal with a single touch gives it 100%.</p>
+  <p>Take two deals from the same quarter (illustrative figures):</p>
+  <table class="data-table data-table-dense">
+    <caption>Two deals split by a position-based model</caption>
+    <thead>
+      <tr><th scope="col">Deal</th><th scope="col">Touch, in order</th><th scope="col">Share</th><th scope="col">Credit</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">A<br>$30,000</th><td>Trial sign-up</td><td>100%</td><td>$30,000</td></tr>
+      <tr><th scope="row" rowspan="4">B<br>$50,000</th><td>Paid search ad, then a guide download</td><td>40%</td><td>$20,000</td></tr>
+      <tr><td>Blog article found through search</td><td>10%</td><td>$5,000</td></tr>
+      <tr><td>Newsletter</td><td>10%</td><td>$5,000</td></tr>
+      <tr><td>Webinar</td><td>40%</td><td>$20,000</td></tr>
+    </tbody>
+  </table>
+  <p>By channel, that gives:</p>
+  <table class="data-table">
+    <caption>Attributed pipeline by channel</caption>
+    <thead>
+      <tr><th scope="col">Channel</th><th scope="col">Attributed pipeline</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Trial</th><td>$30,000</td></tr>
+      <tr><th scope="row">Paid search</th><td>$20,000</td></tr>
+      <tr><th scope="row">Webinar</th><td>$20,000</td></tr>
+      <tr><th scope="row">Organic search</th><td>$5,000</td></tr>
+      <tr><th scope="row">Email</th><td>$5,000</td></tr>
+      <tr><th scope="row">Total</th><td>$80,000, the same as the CRM</td></tr>
+    </tbody>
+  </table>
+  <p>The ad brought a new person in and gets $20,000, as does the webinar, the last touch before the opportunity. The newsletter reached someone already in the database and gets $5,000. The total matches the CRM. No channel's figure matches any deal.</p>
 
-  <blockquote>
-    <strong>Common mistake:</strong> adding a lead score without marketing, product and sales agreeing on what triggers it. A number that only one team trusts isn't a shared definition, it's just another dashboard to argue about.
-  </blockquote>
+  <h2>Why a sales leader doesn't find those numbers in the CRM</h2>
+  <p><strong>The credit is split, the deals are not.</strong> A sales leader looking for the deals behind "paid search: $20,000" finds one deal worth $50,000, which also involved an article, a newsletter and a webinar. The figure is correct, but it matches nothing they can open in the CRM. Over a quarter with dozens of deals, each channel's figure adds up fractions of many deals.</p>
+  <p><strong>Touches with no link to the deal.</strong> An account executive has been working an account for weeks, with calls and a workshop for the team. Meanwhile, someone else at the same company, not involved in the project, attends a webinar. When the opportunity is created, a model that counts touches from everyone at the account gives that webinar 40% of a deal the sales team built. The data is right: the webinar happened, at that account, before the opportunity. The link to the deal is missing.</p>
+  <p><strong>Two teams, one deal.</strong> Marketing, sales and partners each report their contribution with their own rule. Put next to each other, their shares can add up to more than the whole pipeline, and each team can point to deals that prove its case.</p>
 
-  <h2>What actually closes the gap: product behavior, not scores</h2>
-  <p>A growing number of B2B teams replace the marketing-qualified lead with a <a href="/glossary/what-is-a-product-qualified-lead-pql">product-qualified lead (PQL)</a>: an account whose in-product behavior, not a form fill or a content download, signals it's ready for a sales conversation. Behavior is harder to argue with than a score someone configured six months ago. When both teams agree a PQL means "connected a data source and invited a teammate," there's nothing left to reconcile in the meeting.</p>
+  <h2>What helps</h2>
+  <ul>
+    <li><strong>Take totals from the CRM.</strong> Pipeline, deals and revenue come from the CRM. Attribution compares channels: read it row by row, or as orders of magnitude.</li>
+    <li><strong>Name the rule, not just the label.</strong> "Sourced", "touched" and "influenced" mean different things from one company to another. Write the rule under each figure: which touches count, over what window, and how the credit is split. That is what a <a href="/glossary/what-is-a-single-source-of-truth-saas">single source of truth</a> should hold: shared definitions, not a single number.</li>
+    <li><strong>Decide whose touches count.</strong> Counting everyone at the account catches buying committees, but also activity with no link to the deal. Counting only the contacts on the opportunity is stricter, and depends on sales adding them.</li>
+    <li><strong>Record sales activity as touches.</strong> Calls and meetings logged in the CRM can count as touches too, so the model sees the work done on the account.</li>
+    <li><strong>Show the deals behind a channel's figure.</strong> A list of the deals that make up a channel's credit, with each deal's share, answers "where is that $20,000?" faster than any explanation.</li>
+  </ul>
 
-  <h2>One funnel, one definition</h2>
-  <p>Funnelsight pulls funnel data into a single view that both teams look at, not two versions of the truth exported into separate slides. Stage definitions, including what counts as a PQL, are set once and <a href="/features/activation-retention-dashboard-plg-teams">applied consistently across the whole pipeline</a>, so everyone in the room is working from the same numbers before the conversation even starts.</p>
-  <p>When someone says "we're down 12% on stage two this month," there's only one 12% to argue about, and it's the actual problem, not the measurement.</p>
-
-  <h2>What this looks like in practice</h2>
-  <p>A growth marketer opens Funnelsight before a Monday pipeline review. The sales ops lead opens it an hour later, from a different laptop. Same funnel. Same stage counts. Same trend line. Neither one has exported anything to a spreadsheet first. If a number does shift between the two conversations, that's a signal something changed upstream, not something to debate in the meeting.</p>
+  <h2>How Funnelsight fits</h2>
+  <p>Funnelsight shows the CRM total next to the figures from the attribution template your team picks, with the rule written under each one. When the two differ, it says why: deals with no recorded touch, touches outside the window, or dates that differ (attribution follows touch dates, sales reports follow creation or close dates). Interactions recorded in the CRM, such as a sales meeting or a conversation at a trade show, count as touches like any other. Next to a channel's share, Funnelsight shows how many deals it touched, so a sales leader can see what the figure is made of. It doesn't calculate compensation, and the CRM stays the reference for pipeline and revenue.</p>
 
   <div class="article-cta">
-    <p>Give both teams the same funnel to look at.</p>
+    <p>See your CRM totals and your attribution side by side.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
-      <summary>Does this replace our CRM?</summary>
-      <p>No. Funnelsight reads from the tools you already use and gives both teams a shared view on top of them.</p>
+      <summary>What do "sourced", "touched" and "influenced" mean?</summary>
+      <p>It depends on the company. "Sourced" can mean the first recorded touch, the lead source in the CRM, or the team that opened the opportunity. "Touched" and "influenced" vary just as much, mostly in which touches count and over what window. Before comparing figures, check the rule behind each one.</p>
     </details>
     <details>
-      <summary>Do marketing and sales need separate accounts?</summary>
-      <p>No. Everyone signs into the same workspace and sees the same funnel, with permissions set per person if needed.</p>
+      <summary>Does attribution prove a channel caused a deal?</summary>
+      <p>No. An attribution model shows which touches came before a deal. It can't tell whether the deal would have happened without one of them. It's a way to compare channels, not proof of cause. Tests with holdout groups get closer to cause, but few B2B teams have the volume to run them often.</p>
+    </details>
+    <details>
+      <summary>Which attribution model should a B2B team start with?</summary>
+      <p>A position-based model is a common starting point when deals take weeks or months and involve several people. It credits the touch that brought someone in and the last one before the opportunity, without ignoring the rest. Its weights, such as 40-20-40, are a convention the team chooses, not a measurement. Keep the same model long enough to compare periods: changing it breaks the comparison with past results.</p>
+    </details>
+    <details>
+      <summary>Does this replace our CRM?</summary>
+      <p>No. Funnelsight reads from your CRM and the other tools you already use. The CRM stays the reference for pipeline and revenue.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -207,18 +248,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Does this replace our CRM?",
+        "name": "What do \"sourced\", \"touched\" and \"influenced\" mean?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Funnelsight reads from the tools you already use and gives both teams a shared view on top of them."
+          "text": "It depends on the company. \"Sourced\" can mean the first recorded touch, the lead source in the CRM, or the team that opened the opportunity. \"Touched\" and \"influenced\" vary just as much, mostly in which touches count and over what window. Before comparing figures, check the rule behind each one."
         }
       },
       {
         "@type": "Question",
-        "name": "Do marketing and sales need separate accounts?",
+        "name": "Does attribution prove a channel caused a deal?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Everyone signs into the same workspace and sees the same funnel, with permissions set per person if needed."
+          "text": "No. An attribution model shows which touches came before a deal. It can't tell whether the deal would have happened without one of them. It's a way to compare channels, not proof of cause. Tests with holdout groups get closer to cause, but few B2B teams have the volume to run them often."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which attribution model should a B2B team start with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A position-based model is a common starting point when deals take weeks or months and involve several people. It credits the touch that brought someone in and the last one before the opportunity, without ignoring the rest. Its weights, such as 40-20-40, are a convention the team chooses, not a measurement. Keep the same model long enough to compare periods: changing it breaks the comparison with past results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this replace our CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Funnelsight reads from your CRM and the other tools you already use. The CRM stays the reference for pipeline and revenue."
         }
       }
     ]
