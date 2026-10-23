@@ -683,6 +683,17 @@ footer a {
   .data-table-dense th,
   .data-table-dense td { padding: 10px 8px; }
 }
+/* Tables whose cells hold sentences (e.g. "When... / With Funnelsight"):
+   row headers wrap, and rows stack on small screens */
+.data-table-text tbody th { white-space: normal; width: 40%; }
+@media (max-width: 600px) {
+  .data-table-text thead { display: none; }
+  .data-table-text tbody tr,
+  .data-table-text tbody th,
+  .data-table-text tbody td { display: block; width: auto; }
+  .data-table-text tbody th { padding-bottom: 4px; }
+  .data-table-text tbody td { border-top: none; padding-top: 0; }
+}
 
 .article-cta {
   margin: 48px 0; padding: 32px;
