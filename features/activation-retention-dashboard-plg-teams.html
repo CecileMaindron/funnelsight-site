@@ -61,16 +61,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Activation and retention dashboard for PLG: Funnelsight</title>
-<meta name="description" content="See activation and retention side by side in one dashboard, built on the activation event your team defines, without exporting data between tools.">
+<meta name="description" content="Activation, trial conversion and retention signals in one dashboard, by acquisition source and weekly cohort, built on the activation event your team defines.">
 <link rel="canonical" href="https://funnelsight.dev/features/activation-retention-dashboard-plg-teams">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Activation and retention dashboard for PLG: Funnelsight">
-<meta property="og:description" content="See activation and retention side by side in one dashboard, built on the activation event your team defines, without exporting data between tools.">
+<meta property="og:description" content="Activation, trial conversion and retention signals in one dashboard, by acquisition source and weekly cohort, built on the activation event your team defines.">
 <meta property="og:url" content="https://funnelsight.dev/features/activation-retention-dashboard-plg-teams">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activation and retention dashboard for PLG: Funnelsight">
-<meta name="twitter:description" content="See activation and retention side by side in one dashboard, built on the activation event your team defines, without exporting data between tools.">
+<meta name="twitter:description" content="Activation, trial conversion and retention signals in one dashboard, by acquisition source and weekly cohort, built on the activation event your team defines.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -165,17 +165,87 @@
 
 <article class="article wrap">
   <h1>Activation and retention dashboard for PLG teams</h1>
-  <p class="lede-intro">Funnelsight puts activation and retention on the same screen, built around the activation event your team defines, not a generic default.</p>
+  <p class="lede-intro">Funnelsight puts activation and retention on the same screen, built around the activation event your team defines, not a generic default. You see which sources bring users who get value from the trial, how each week's sign-ups are doing, and which customers need attention.</p>
 
-  <h2>What it does</h2>
-  <p>The dashboard brings product usage data and CRM data into one funnel view, covering activation, retention, and expansion. You're not switching tabs to compare what happened in the product with what happened in the deal.</p>
+  <h2>Questions it answers</h2>
+  <h3>Which sources bring users who activate, not just sign up?</h3>
+  <p>Sign-up volume says which channels are loud. The dashboard follows each source through the trial, to the users who reached the activation event and the ones who became paying customers.</p>
+  <table class="data-table data-table-dense">
+    <caption>Activation and conversion by source, last 30 days. Activation: first data source connected. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Source</th><th scope="col">Sign-ups</th><th scope="col">Activated during trial</th><th scope="col">Converted to paid</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Paid search</th><td>420</td><td>40%</td><td>12%</td></tr>
+      <tr><th scope="row">Organic search</th><td>310</td><td>55%</td><td>20%</td></tr>
+      <tr><th scope="row">Direct</th><td>260</td><td>58%</td><td>22%</td></tr>
+      <tr><th scope="row">LinkedIn ads</th><td>110</td><td>35%</td><td>9%</td></tr>
+      <tr><th scope="row">Partner referrals</th><td>60</td><td>68%</td><td>30%</td></tr>
+      <tr><th scope="row">Other</th><td>90</td><td>50%</td><td>17%</td></tr>
+    </tbody>
+  </table>
+  <p>Paid search brings the most sign-ups. Partner referrals bring the fewest, and the trials most likely to become paying customers.</p>
+
+  <h3>Is this week's cohort activating more slowly than the last?</h3>
+  <p>Each week's sign-ups form a cohort. The share that activates should stay fairly stable from one week to the next, so a drop stands out, and Funnelsight flags it. A dated note on that week keeps the explanation next to the number.</p>
+  <table class="data-table data-table-dense">
+    <caption>Weekly sign-up cohorts. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Cohort</th><th scope="col">Sign-ups</th><th scope="col">Activated within 7 days</th><th scope="col">Median days to activate</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">4 weeks ago</th><td>280</td><td>44%</td><td>2.1</td></tr>
+      <tr><th scope="row">3 weeks ago</th><td>300</td><td>45%</td><td>2.0</td></tr>
+      <tr><th scope="row">2 weeks ago</th><td>290</td><td>36% (⚑ flagged)</td><td>3.4</td></tr>
+      <tr><th scope="row">Last week</th><td>310</td><td>43%</td><td>2.2</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Note on the cohort from 2 weeks ago:</strong> setup step added to onboarding, removed a week later. Without the note, the dip would be debated at the next review.</p>
+
+  <h3>Do larger companies behave differently in the trial?</h3>
+  <p>The same cohorts can be filtered by segment, for example by company size when a team starts targeting larger accounts. It shows both how many sign-ups come from those accounts and whether they use the trial differently.</p>
+  <table class="data-table">
+    <caption>Last 4 weeks, by company size. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Company size</th><th scope="col">Share of sign-ups</th><th scope="col">Activated within 7 days</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">SMB</th><td>58%</td><td>43%</td></tr>
+      <tr><th scope="row">Mid-market</th><td>20%</td><td>45%</td></tr>
+      <tr><th scope="row">Enterprise</th><td>9%</td><td>42%</td></tr>
+      <tr><th scope="row">Not matched yet</th><td>13%</td><td>38%</td></tr>
+    </tbody>
+  </table>
+  <p>Enterprise accounts are 9% of sign-ups and activate at about the same rate as smaller ones. Company size comes from the CRM account a sign-up is matched to, so the most recent sign-ups may not have one yet.</p>
+
+  <h3>Which customers are slipping, and which are ready to expand?</h3>
+  <p>After the trial, the same view follows paying accounts. Rules your team sets flag a drop in usage or an account approaching its plan limit, and the alert reaches the team by email or in the CRM it already works from. See <a href="/playbooks/tracking-expansion-revenue-signals-plg">which expansion signals are worth watching</a>.</p>
 
   <h2>How it works</h2>
-  <p>You set the activation event that matters for your product, a specific action, not a generic template. That definition then applies consistently across every report in Funnelsight, so activation means the same thing whether someone on your team is looking at a cohort view or a single account. If you're still <a href="/glossary/what-counts-as-activation-in-plg">piecing activation metrics together from spreadsheets and product logs</a>, this replaces that manual step.</p>
-  <p>Data updates on a schedule you control, hourly or on a cadence that fits your team, rather than a raw continuous stream. Setup doesn't require a data team. You can start by importing a spreadsheet to test the dashboard before connecting a live source, and have something functional the same day.</p>
+  <p>You set the activation event that matters for your product, a specific action, not a generic template. That definition then applies to every report in Funnelsight, so activation means the same thing whether someone is looking at a cohort view or a single account. If you're still <a href="/glossary/what-counts-as-activation-in-plg">piecing activation metrics together from spreadsheets and product logs</a>, this replaces that manual step.</p>
+  <p>"Activated" means the event your team chose, not a login. For a reporting tool, it might be opening a dashboard several times in a week. For a data pipeline, it might be the first sync that runs on its own, after which people only log in to fix or change something. The same choice applies later, when your churn-risk rules decide what counts as an active account.</p>
+  <p>When the definition changes, the change is logged, and past periods are either recalculated or the break is clearly marked. Each team builds the views it needs on the same numbers: weekly detail for the people running onboarding, a monthly summary for leadership.</p>
+  <p>Data updates on a schedule you control, hourly or on a cadence that fits your team. Setup doesn't require a data team. You can start by importing a spreadsheet to test the dashboard before connecting a live source, and have something working the same day. That's also useful groundwork if you're comparing a <a href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">spreadsheet-based approach against a dedicated tool</a>. The same dashboard is what surfaces a product qualified lead in the first place: see <a href="/case-studies/plg-team-turns-pql-into-sales-conversation">how one team turned that signal into a sales conversation</a>.</p>
 
-  <h2>Why it matters for growth teams</h2>
-  <p>When activation and retention sit in separate tools, or in separate tabs of the same spreadsheet, teams end up debating the numbers instead of acting on them. Having both in one dashboard, built on a shared definition of what counts as activation, means marketing and product are looking at the same thing when they talk about it. That's also useful groundwork if you're comparing a <a href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">spreadsheet-based approach against a dedicated tool</a>. The same dashboard is what surfaces a PQL in the first place: see <a href="/case-studies/plg-team-turns-pql-into-sales-conversation">how one team turned that signal into a sales conversation</a>.</p>
+  <h2>What it does, and what it doesn't</h2>
+  <table class="data-table data-table-text">
+    <caption>Scope of the activation and retention dashboard</caption>
+    <thead>
+      <tr><th scope="col">Included</th><th scope="col">Capability</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">✓ Yes</th><td>One activation event, defined once and applied to every report</td></tr>
+      <tr><th scope="row">✓ Yes</th><td>Activation and trial conversion by acquisition source</td></tr>
+      <tr><th scope="row">✓ Yes</th><td>Weekly cohorts, with dated notes on the periods that need explaining</td></tr>
+      <tr><th scope="row">✓ Yes</th><td>Churn-risk and expansion flags, on rules your team sets and can see</td></tr>
+      <tr><th scope="row">✓ Yes</th><td>Alerts by email or in your CRM</td></tr>
+      <tr><th scope="row">✓ Yes</th><td>Start from a spreadsheet, connect live sources later</td></tr>
+      <tr><th scope="row">✗ No</th><td>A continuous real-time stream: data refreshes on a schedule you choose</td></tr>
+      <tr><th scope="row">✗ No</th><td>Predictions from a model nobody can read: every flag comes from a visible rule</td></tr>
+      <tr><th scope="row">✗ No</th><td>Replace your product analytics tool: Funnelsight reads from it</td></tr>
+      <tr><th scope="row">✗ No</th><td>Custom data modeling or warehouse sync: that still needs technical help</td></tr>
+    </tbody>
+  </table>
 
   <div class="article-cta">
     <p>See your own activation and retention numbers in one place.</p>
@@ -185,11 +255,15 @@
   <div class="article-faq">
     <details>
       <summary>Is the dashboard updated in real time?</summary>
-      <p>Data refreshes on a schedule you set, for example hourly, rather than as a continuous live stream. Most teams find a set refresh cadence easier to work with than a constantly shifting number.</p>
+      <p>No. Data refreshes on a schedule you set, for example every hour, rather than as a continuous stream. A set cadence also keeps the numbers stable while a team discusses them.</p>
     </details>
     <details>
       <summary>Do I need to define activation separately for each report?</summary>
       <p>No. You define your activation event once, and it applies across all reports and views in Funnelsight.</p>
+    </details>
+    <details>
+      <summary>Can I see activation and conversion by acquisition source?</summary>
+      <p>Yes. Each source shows its sign-ups, the share that activated during the trial and the share that became paying customers, so a channel isn't judged on sign-ups alone.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -202,7 +276,7 @@
         "name": "Is the dashboard updated in real time?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Data refreshes on a schedule you set, for example hourly, rather than as a continuous live stream. Most teams find a set refresh cadence easier to work with than a constantly shifting number."
+          "text": "No. Data refreshes on a schedule you set, for example every hour, rather than as a continuous stream. A set cadence also keeps the numbers stable while a team discusses them."
         }
       },
       {
@@ -211,6 +285,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "No. You define your activation event once, and it applies across all reports and views in Funnelsight."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see activation and conversion by acquisition source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Each source shows its sign-ups, the share that activated during the trial and the share that became paying customers, so a channel isn't judged on sign-ups alone."
         }
       }
     ]

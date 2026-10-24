@@ -548,6 +548,7 @@ footer a {
 .article h1 { font-size: 40px; margin-bottom: 20px; }
 .article .lede-intro { font-size: 18px; color: #454A5B; margin-bottom: 40px; }
 .article h2 { font-size: 26px; margin: 40px 0 16px; }
+.article h3 { font-size: 19px; margin: 28px 0 10px; }
 .article p { font-size: 16px; color: #2A2D3B; margin-bottom: 16px; }
 .article a:not(.btn-primary) { color: var(--indigo); text-decoration: underline; }
 
@@ -682,6 +683,7 @@ footer a {
   .data-table-dense { font-size: 14px; }
   .data-table-dense th,
   .data-table-dense td { padding: 10px 8px; }
+  .data-table-dense tbody th { white-space: normal; }
 }
 /* Tables whose cells hold sentences (e.g. "When... / With Funnelsight"):
    row headers wrap, and rows stack on small screens */
