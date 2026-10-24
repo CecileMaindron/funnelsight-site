@@ -585,6 +585,8 @@ footer a {
   color: var(--ink);
 }
 .formula-box p + p { margin-top: 10px; }
+.formula-box ul { margin: 0 0 14px; padding-left: 20px; }
+.formula-box li { margin-bottom: 6px; font-size: 16px; color: #2A2D3B; }
 
 /* Numbered steps: for an ordered progression the reader should follow in
    sequence (e.g. signals from broadest to most revealing). Same indigo
@@ -695,6 +697,18 @@ footer a {
   .data-table-text tbody td { display: block; width: auto; }
   .data-table-text tbody th { padding-bottom: 4px; }
   .data-table-text tbody td { border-top: none; padding-top: 0; }
+}
+/* Comparison tables (two options side by side): narrower label column;
+   on small screens each value is prefixed with its column name */
+.data-table-compare tbody th { width: 26%; }
+@media (max-width: 600px) {
+  .data-table-compare tbody td::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .data-table-compare tbody td + td { padding-top: 6px; }
+  .data-table-compare tbody th { width: auto; }
 }
 
 .article-cta {
