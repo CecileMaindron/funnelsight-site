@@ -167,16 +167,51 @@
   <h1>Spreadsheets vs a dedicated analytics tool for PLG tracking</h1>
   <p class="lede-intro">A spreadsheet is usually the first place PLG funnel tracking lives. It's the right call for a while, and then it isn't. Here's where that switch usually happens, and what changes on the other side of it.</p>
 
+  <h2>Side by side</h2>
+  <table class="data-table data-table-text data-table-compare">
+    <caption>Spreadsheet or dedicated analytics tool for PLG funnel tracking</caption>
+    <thead>
+      <tr><th scope="col"></th><th scope="col">Spreadsheet</th><th scope="col">Dedicated tool</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Setup</th><td data-label="Spreadsheet">Minutes, with a tool everyone already knows</td><td data-label="Dedicated tool">A first connection, then rules you set once</td></tr>
+      <tr><th scope="row">Cost</th><td data-label="Spreadsheet">Free, or already paid for</td><td data-label="Dedicated tool">A subscription</td></tr>
+      <tr><th scope="row">What counts as "activated"</th><td data-label="Spreadsheet">Lives in each person's formulas</td><td data-label="Dedicated tool">Defined once, applied to every report</td></tr>
+      <tr><th scope="row">Several sources (product, CRM, ads)</th><td data-label="Spreadsheet">Joined by hand at every update</td><td data-label="Dedicated tool">Joined automatically, on a schedule</td></tr>
+      <tr><th scope="row">Cleaning the data</th><td data-label="Spreadsheet">Formats and labels fixed by hand at each refresh, unless formulas or an automated flow do it</td><td data-label="Dedicated tool">The same rules applied at every refresh, and inconsistent values flagged, such as "LinkedIn", "linkedin" and "li"</td></tr>
+      <tr><th scope="row">Mistakes</th><td data-label="Spreadsheet">A deleted or edited row can go unnoticed, and undoing one change without losing the others is hard</td><td data-label="Dedicated tool">Source data isn't edited by hand, and gaps in it are flagged</td></tr>
+      <tr><th scope="row">When a rule changes</th><td data-label="Spreadsheet">Past numbers change without a trace</td><td data-label="Dedicated tool">The change can be tracked over time</td></tr>
+      <tr><th scope="row">Updates</th><td data-label="Spreadsheet">When someone has time</td><td data-label="Dedicated tool">On a schedule you choose</td></tr>
+      <tr><th scope="row">Who keeps it running</th><td data-label="Spreadsheet">Usually the person who built it</td><td data-label="Dedicated tool">Anyone with access, within shared rules</td></tr>
+      <tr><th scope="row">Best for</th><td data-label="Spreadsheet">A one-off question, a quick test, or a mock-up of what to track before anyone builds it</td><td data-label="Dedicated tool">A funnel several teams report on every week</td></tr>
+    </tbody>
+  </table>
+
   <h2>Where spreadsheets start to break</h2>
-  <p>A spreadsheet is often the first tool a growth team reaches for. It's free, everyone already knows how to use it, and for a handful of signups it works fine. Then the account list grows. The event log gets exported from three separate places, and every dashboard update means someone rebuilds a pivot table by hand.</p>
+  <p>A spreadsheet is often the first tool a growth team reaches for. It's free, everyone already knows how to use it, and for a handful of sign-ups it works fine. Then the account list grows. The event log gets exported from three separate places, and every dashboard update means someone rebuilds a pivot table by hand.</p>
   <p>Formulas break when a column moves. Definitions drift, too: one person's "activated user" is not quite the next person's. By the time a report reaches the leadership team, the numbers behind it have usually gone stale.</p>
+  <div class="formula-box">
+    <span class="formula-label">Signs the spreadsheet has done its job</span>
+    <ul>
+      <li>Someone spends a morning every week rebuilding the same view.</li>
+      <li>Every refresh starts with fixing formats and labels by hand.</li>
+      <li>Two people get two different activation numbers from the same file.</li>
+      <li>The file joins exports from three tools or more.</li>
+      <li>A column moved, and nobody noticed the broken formulas until a meeting.</li>
+      <li>Leadership asks for a trend, and the history only goes back to the last rebuild.</li>
+    </ul>
+    <p>If two of these sound familiar, the spreadsheet is costing more time than a tool would.</p>
+  </div>
+
+  <h2>What doesn't change when you switch</h2>
+  <p>A tool doesn't fix the data it receives. Campaigns still need consistent tags, conversions still need to be tracked, and the team still has to agree on what counts as activation before any report can be trusted. What changes is that these rules are written down once and applied everywhere, instead of living in a file only one person fully understands.</p>
 
   <h2>What changes with a dedicated tool</h2>
-  <p>Funnelsight pulls product usage and CRM data into one funnel view, so the definition of activation is set once and applied the same way across every report. If you're still deciding what that definition should even include, <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> walks through how to set it. If you're not ready for a dedicated tool yet, you can get a first version of this working with just <a href="/playbooks/tracking-plg-funnel-without-data-team">a spreadsheet import and one activation event</a>.</p>
-  <p>Tracking activation events directly, instead of reconstructing them from exports, removes the manual rebuild step entirely. Teams that switch off spreadsheets don't need a data analyst to keep the setup running. Dashboards update as new usage data comes in, not when someone finds a free morning to refresh a pivot table, the same activation and retention numbers surfacing automatically in Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">dashboard</a>.</p>
+  <p>Funnelsight pulls product usage and CRM data into one funnel view, so the definition of activation is set once and applied the same way across every report. If you're still deciding what that definition should include, <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> walks through how to set it. If you're not ready for a dedicated tool yet, you can get a first version working with just <a href="/playbooks/tracking-plg-funnel-without-data-team">a spreadsheet import and one activation event</a>.</p>
+  <p>Tracking activation events directly, instead of reconstructing them from exports, removes the manual rebuild step. Keeping the setup running doesn't take a data analyst. Dashboards refresh on the schedule you set, not when someone finds a free morning to update a pivot table, and the same activation and retention numbers appear in Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">dashboard</a>. When the data has gaps, such as campaigns without tags, the data check shows where, so you know how far the numbers can be trusted.</p>
 
   <h2>A concrete example</h2>
-  <p>Say a marketing team tracks trial signups in one spreadsheet and product usage exports in another, joining the two by hand every Monday. With Funnelsight connected to the product and the CRM, that same team sees signups, activation, and pipeline stage in a single funnel, updated automatically. Instead of losing a morning to reconciling two files, they spend it looking at what the drop-off actually shows.</p>
+  <p>Say a marketing team tracks trial sign-ups in one spreadsheet and product usage exports in another, joining the two by hand every Monday. With Funnelsight connected to the product and the CRM, that same team sees sign-ups, activation and pipeline stage in a single funnel, refreshed on its own schedule. Instead of losing a morning to reconciling two files, they spend it looking at what the drop-off actually shows.</p>
 
   <div class="article-cta">
     <p>Stop rebuilding the same spreadsheet every week.</p>
@@ -185,12 +220,16 @@
 
   <div class="article-faq">
     <details>
+      <summary>When is a spreadsheet enough?</summary>
+      <p>When one person answers a question once, on a few hundred sign-ups, from one or two exports, or runs a quick test. It's also a good place to sketch what you want to track, the funnel steps and their definitions, before anyone builds it. Once several teams report on the same funnel every week, the weekly rebuild and the drift in definitions cost more than a tool.</p>
+    </details>
+    <details>
       <summary>Do I need a data team to move off spreadsheets?</summary>
       <p>No. Funnelsight is built to run without a dedicated data team. A team can connect its product and CRM data and have a working funnel the same day, within a 14-day trial and with no credit card required.</p>
     </details>
     <details>
       <summary>Can I keep using spreadsheets alongside Funnelsight?</summary>
-      <p>Yes, plenty of teams keep spreadsheets around for one-off analysis. What changes is that the funnel numbers everyone reports on come from one consistent source instead of separate manual exports.</p>
+      <p>Yes. Spreadsheets stay useful for one-off analysis. What changes is that the funnel numbers everyone reports on come from one consistent source instead of separate manual exports.</p>
     </details>
     <details>
       <summary>Where is the data hosted?</summary>
@@ -204,6 +243,14 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "When is a spreadsheet enough?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When one person answers a question once, on a few hundred sign-ups, from one or two exports, or runs a quick test. It's also a good place to sketch what you want to track, the funnel steps and their definitions, before anyone builds it. Once several teams report on the same funnel every week, the weekly rebuild and the drift in definitions cost more than a tool."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "Do I need a data team to move off spreadsheets?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -215,7 +262,7 @@
         "name": "Can I keep using spreadsheets alongside Funnelsight?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, plenty of teams keep spreadsheets around for one-off analysis. What changes is that the funnel numbers everyone reports on come from one consistent source instead of separate manual exports."
+          "text": "Yes. Spreadsheets stay useful for one-off analysis. What changes is that the funnel numbers everyone reports on come from one consistent source instead of separate manual exports."
         }
       },
       {
@@ -234,7 +281,7 @@
     <a class="read-next-card" href="/glossary/what-is-a-single-source-of-truth-saas">
       <span class="read-next-label">Read next</span>
       <span class="read-next-title">What is a single source of truth in SaaS</span>
-      <span class="read-next-desc">One shared view of usage and revenue data that marketing, sales, and leadership all read the same way, and how to start building one.</span>
+      <span class="read-next-desc">Where shared definitions live, what can vary from one team to another, and how to start without overengineering it.</span>
     </a>
   </section>
 </article>
