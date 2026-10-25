@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://funnelsight.dev/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/resources</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/marketing-sales-funnel-numbers-dont-match</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/glossary/what-counts-as-activation-in-plg</loc>
@@ -23,6 +23,10 @@
   <url>
     <loc>https://funnelsight.dev/playbooks/spreadsheet-vs-analytics-tool-plg-tracking</loc>
     <lastmod>2026-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://funnelsight.dev/features/revenue-attribution-payback-by-source</loc>
+    <lastmod>2026-10-25</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/features/activation-retention-dashboard-plg-teams</loc>
