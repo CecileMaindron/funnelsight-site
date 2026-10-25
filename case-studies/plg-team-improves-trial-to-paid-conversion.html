@@ -167,18 +167,29 @@
   <h1>PLG team improves trial-to-paid conversion</h1>
   <p class="lede-intro">Illustrative example. This case study describes a fictional company, built to show how a PLG team could use Funnelsight to find out why some trials convert and others don't, then act on it.</p>
 
+  <div class="formula-box">
+    <span class="formula-label">At a glance</span>
+    <ul>
+      <li><strong>Company:</strong> Ledgerline, an invoicing tool for small businesses (fictional)</li>
+      <li><strong>Team involved:</strong> growth</li>
+      <li><strong>Problem:</strong> healthy sign-ups, weak paid conversion, and no clear idea why</li>
+      <li><strong>What changed:</strong> paying accounts traced back through their trial to find what they had in common</li>
+      <li><strong>Result (illustrative):</strong> trials that connected a bank account early converted at roughly twice the rate, and follow-up now prioritizes them</li>
+    </ul>
+  </div>
+
   <h2>Context</h2>
-  <p>The team in this example, a mid-size project management SaaS company we'll call Ridgeline, ran a 14-day self-serve trial. Signups were healthy. Paid conversions weren't. Nobody on the growth team could say with confidence what separated a trial that converted from one that didn't, beyond guesswork ("they probably didn't invite teammates").</p>
+  <p>The team in this example, at an invoicing tool for small businesses we'll call Ledgerline, ran a 14-day self-serve trial. Signups were healthy. Paid conversions weren't. Nobody on the growth team could say with confidence what separated a trial that converted from one that didn't, beyond guesswork ("they probably didn't send enough invoices").</p>
   <p>Trial activity lived in the product database. Who actually paid lived in the CRM. Comparing the two meant a manual export every time someone wanted to check a theory, which meant nobody checked it often.</p>
 
   <h2>Approach</h2>
-  <p>Ridgeline connected its product usage data and CRM data in <a href="/features/activation-retention-dashboard-plg-teams">Funnelsight's shared funnel view</a>, so trial behavior and paid status sat in the same report instead of two separate systems.</p>
-  <p>The first step was straightforward: track trial-specific events (first project created, first teammate invited, first integration connected) for every account starting day one of the trial.</p>
-  <p>The second step is the one that actually produced an answer. Rather than only watching new trials go forward, the team went backward: they pulled the list of accounts that had converted to paid over the previous quarter, then traced each one back through its trial-period activity. The question wasn't "what should predict conversion" but "what did our paying accounts actually do, in fact, during their trial". This reverse-engineering step surfaced a pattern the team hadn't hypothesized on their own: accounts that invited a second teammate within the first 4 days of the trial converted at a meaningfully higher rate than accounts that invited nobody, or invited someone later.</p>
-  <p>Once that pattern was visible, Ridgeline used Funnelsight's rule-based scoring to flag trial accounts hitting that same early-invite behavior, so the team could prioritize outreach toward the trials most likely to convert instead of spreading effort evenly across all of them.</p>
+  <p>Ledgerline connected its product usage data and CRM data in <a href="/features/activation-retention-dashboard-plg-teams">Funnelsight's shared funnel view</a>, so trial behavior and paid status sat in the same report instead of two separate systems.</p>
+  <p>The first step was straightforward: track trial-specific events (first invoice sent, first teammate invited, bank account connected) for every account starting day one of the trial.</p>
+  <p>The second step is the one that actually produced an answer. Rather than only watching new trials go forward, the team went backward: they pulled the list of accounts that had converted to paid over the previous quarter, then traced each one back through its trial-period activity. The question wasn't "what should predict conversion" but "what did our paying accounts actually do, in fact, during their trial". This reverse-engineering step surfaced a pattern the team hadn't hypothesized on their own: accounts that connected a bank account within the first 4 days of the trial converted at a meaningfully higher rate than accounts that never connected one, or connected it later.</p>
+  <p>Once that pattern was visible, Ledgerline used Funnelsight's rule-based scoring to flag trial accounts that connected a bank account early, so the team could prioritize outreach toward the trials most likely to convert instead of spreading effort evenly across all of them.</p>
 
   <h2>Result</h2>
-  <p>In this illustrative scenario, trials that invited a second teammate within the first 4 days converted to paid at roughly twice the rate of trials that didn't, based on the reverse-engineered cohort Ridgeline built. The team started weighting early-invite behavior as a factor in their trial follow-up sequence, without redesigning the trial itself.</p>
+  <p>In this illustrative scenario, trials that connected a bank account within the first 4 days converted to paid at roughly twice the rate of trials that didn't, based on the reverse-engineered cohort Ledgerline built. The team started weighting that behavior as a factor in their trial follow-up sequence, without redesigning the trial itself.</p>
   <p>Tracking the events themselves needed a short, one-time setup from an engineer, standard for any product analytics tool. From there, one person on the growth team could pull the backward-looking report and act on it directly in Funnelsight, with no data analyst needed for the analysis itself.</p>
 
   <div class="article-cta">

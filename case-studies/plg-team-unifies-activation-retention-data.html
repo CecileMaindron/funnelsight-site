@@ -61,16 +61,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PLG team unifies activation and retention data: Funnelsight</title>
-<meta name="description" content="See how a fictional PLG team unified activation and retention data in Funnelsight, replacing spreadsheet guesswork with one shared funnel view.">
+<meta name="description" content="Illustrative example: a fictional PLG team separates trial activation from account activation, so growth, customer success and product read the right number.">
 <link rel="canonical" href="https://funnelsight.dev/case-studies/plg-team-unifies-activation-retention-data">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="PLG team unifies activation and retention data: Funnelsight">
-<meta property="og:description" content="See how a fictional PLG team unified activation and retention data in Funnelsight, replacing spreadsheet guesswork with one shared funnel view.">
+<meta property="og:description" content="Illustrative example: a fictional PLG team separates trial activation from account activation, so growth, customer success and product read the right number.">
 <meta property="og:url" content="https://funnelsight.dev/case-studies/plg-team-unifies-activation-retention-data">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PLG team unifies activation and retention data: Funnelsight">
-<meta name="twitter:description" content="See how a fictional PLG team unified activation and retention data in Funnelsight, replacing spreadsheet guesswork with one shared funnel view.">
+<meta name="twitter:description" content="Illustrative example: a fictional PLG team separates trial activation from account activation, so growth, customer success and product read the right number.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -167,16 +167,27 @@
   <h1>PLG team unifies activation and retention data</h1>
   <p class="lede-intro">Illustrative example. The account below describes Taskframe, a fictional project management SaaS company created to show how Funnelsight works in practice. It is not a real customer, and the figures are illustrative, not measured results.</p>
 
+  <div class="formula-box">
+    <span class="formula-label">At a glance</span>
+    <ul>
+      <li><strong>Company:</strong> Taskframe, a project management tool (fictional)</li>
+      <li><strong>Teams involved:</strong> growth, customer success and product</li>
+      <li><strong>Problem:</strong> one word, "activation", used for three different things</li>
+      <li><strong>What changed:</strong> two named definitions, one for trial users and one for paying accounts</li>
+      <li><strong>Result (illustrative):</strong> planning meetings start from the numbers, and customer success focuses on accounts that are actually stuck</li>
+    </ul>
+  </div>
+
   <h2>The situation</h2>
-  <p>Taskframe's growth team tracked activation in a spreadsheet, updated by hand after pulling numbers from their product analytics tool. The product team tracked retention separately, inside that same analytics tool, using its own definition of an active user. Neither team looked at the other's numbers unless a report was due.</p>
-  <p>The gap showed up at planning time. When the growth team said activation was up, the product team's retention view told a flatter story. Nobody could say with confidence whether new activated users were actually the ones sticking around, because activation and retention lived in two places that never talked to each other.</p>
+  <p>Taskframe sells a 14-day self-serve trial and annual plans signed with sales. Three teams used the word "activation" for three different things. Growth counted a trial user as activated once they created a first project, and speed mattered: a trial that activates on day twelve rarely converts. Customer success counted a paid account as activated once the team started working in it, which could come weeks after signature, because the customer was preparing its rollout, hiring someone to own the tool or waiting for an integrator. On an annual contract, three days or three weeks made little difference. Product counted active users, so an account where one manager used the tool every day looked healthy while the rest of the team never logged in.</p>
+  <p>The gap showed up at planning time. Each team brought its own number, and the meeting started by reconciling them instead of deciding anything.</p>
 
   <h2>What changed</h2>
-  <p>Taskframe connected their product usage data and CRM data in <a href="/features/activation-retention-dashboard-plg-teams">a single funnel view</a>, then defined the activation event that mattered for their product once. From there, the growth team and the product team were finally working from the same number.</p>
-  <p>Setup didn't require a data team. The dashboard was live the same day the trial started, using a spreadsheet export while they connected a live data source.</p>
+  <p>Taskframe connected its product usage data and CRM data in <a href="/features/activation-retention-dashboard-plg-teams">a single funnel view</a>, which put the three definitions side by side. Rather than force one of them on everyone, it kept two and named them. Trial activation is measured per user, within the trial, and timed. Account activation is measured per account, with at least three people completing a project, and tracked against the start date the customer planned. Retention is read on account activation. When an account waits for an integrator, a dated note says so, and customer success stops flagging it as at risk.</p>
+  <p>Setup didn't require a data team. The dashboard was live the same day, using a spreadsheet export while a live data source was being connected.</p>
 
   <h2>The result</h2>
-  <p>In this illustrative scenario, Taskframe's growth and product teams stopped reconciling three different activation counts before every planning meeting, a task that had eaten roughly half an hour at the start of every session. They looked at one shared view instead, with retention broken down by the same activation definition everyone had already agreed on. The conversation moved from "whose number is right" to "what do we do about it." As with the rest of this account, that figure is illustrative, not a measured result.</p>
+  <p>In this illustrative scenario, planning meetings start from the numbers, and customer success spends its time on the accounts that are actually stuck rather than on the ones waiting to roll out. The conversation moved from "whose number is right" to "what do we do about it."</p>
 
   <div class="article-cta">
     <p>See what a shared activation and retention view looks like for your own team.</p>
