@@ -10,7 +10,7 @@ It isn't a real product. It's the practical half of a certification project (RS7
 
 **Live site:** [funnelsight.dev](https://funnelsight.dev)
 
-![Funnelsight homepage: "Know what really brings in revenue, and when", with a leads vs new revenue by source dashboard](funnelsight-homepage.png)
+![Funnelsight homepage: "Know what really brings in revenue, and when", with a leads vs new revenue by source dashboard](assets/funnelsight-homepage.png)
 
 ## The problem
 
