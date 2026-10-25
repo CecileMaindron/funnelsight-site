@@ -12,6 +12,15 @@ It isn't a real product. It's the practical half of a certification project (RS7
 
 ![Funnelsight homepage: "Know what really brings in revenue, and when", with a leads vs new revenue by source dashboard](assets/funnelsight-homepage.png)
 
+## At a glance
+
+- **What it is:** a demo SaaS site whose SEO pages are produced by an AI workflow, with a person approving every page before it goes live.
+- **What changed in the work:** the SEO specialist no longer writes pages. They choose the keywords and review what comes out.
+- **What I designed:** the process, the editorial and brand rules, the quality checks, and what stays manual. The engineering parts were built with Claude as a collaborator.
+- **How it's measured:** a monthly report puts what each page cost next to what it earned in search.
+
+The rest of this page goes into how it works, for those who want the details.
+
 ## The problem
 
 SEO content production breaks down the same way in most small marketing teams. No dedicated writer. Output split across whoever has an hour free. No shared template, no consistent quality bar.
