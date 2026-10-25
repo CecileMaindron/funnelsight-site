@@ -3,3 +3,6 @@
 
 /robots.txt
   Cache-Control: no-cache, must-revalidate
+
+/styles.css
+  Cache-Control: no-cache, must-revalidate
