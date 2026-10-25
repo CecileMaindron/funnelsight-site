@@ -10,6 +10,8 @@ It isn't a real product. It's the practical half of a certification project (RS7
 
 **Live site:** [funnelsight.dev](https://funnelsight.dev)
 
+![Funnelsight homepage: "Know what really brings in revenue, and when", with a leads vs new revenue by source dashboard](funnelsight-homepage.png)
+
 ## The problem
 
 SEO content production breaks down the same way in most small marketing teams. No dedicated writer. Output split across whoever has an hour free. No shared template, no consistent quality bar.
