@@ -61,16 +61,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Expanding self-serve PLG to a new country: Funnelsight</title>
-<meta name="description" content="Why translating the site is rarely the right first move when a self-serve product expands to a new country, and what to check before it, from demand to payment.">
+<meta name="description" content="Once a self-serve product has picked a new country: how to shape the channel mix, what to localize first, the rules that don't translate, and a first quarter plan.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/expanding-self-serve-plg-to-new-country">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Expanding self-serve PLG to a new country: Funnelsight">
-<meta property="og:description" content="Why translating the site is rarely the right first move when a self-serve product expands to a new country, and what to check before it, from demand to payment.">
+<meta property="og:description" content="Once a self-serve product has picked a new country: how to shape the channel mix, what to localize first, the rules that don't translate, and a first quarter plan.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/expanding-self-serve-plg-to-new-country">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Expanding self-serve PLG to a new country: Funnelsight">
-<meta name="twitter:description" content="Why translating the site is rarely the right first move when a self-serve product expands to a new country, and what to check before it, from demand to payment.">
+<meta name="twitter:description" content="Once a self-serve product has picked a new country: how to shape the channel mix, what to localize first, the rules that don't translate, and a first quarter plan.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -164,24 +164,63 @@
 
 <article class="article wrap">
   <h1>Expanding self-serve PLG to a new country</h1>
-  <p class="lede-intro">Say a self-serve SaaS company with a freemium tier decides Europe is next. The instinct is almost always the same: translate the site, maybe the product too, then start running ads in the new language. Nine times out of ten, that's the wrong first move. Not because translation doesn't matter, but because it answers a question nobody asked yet: does this market actually want what's being sold.</p>
+  <p class="lede-intro">The decision to open a new market is made. What follows decides whether it works: which channels to start with, what to localize first, how self-serve and sales share the work, and how the central team and the local team read the same numbers.</p>
 
-  <h2>Start with a question translation can't answer</h2>
-  <p>Deciding to expand a sales-led motion into a new market usually starts from zero: market sizing, competitive research, outbound lists built from nothing, because there's no user yet to look at. A self-serve product doesn't have that problem in the same way. If it's been live and findable for a while, there's often already a trickle of signups or downloads from that country. People found it and started using it before anyone targeted that market on purpose. That's a demand signal a sales-led motion doesn't get for free.</p>
-  <p>The sign that a market is worth translating for isn't excitement in a strategy meeting. It's existing demand: traffic already coming from that country, a sign-up rate that holds up without any local push, support tickets or competitor searches that show someone already looked. Translate ahead of that signal and a company ends up with five language versions of a page nobody reads in any of them.</p>
-  <p>It's the same blind spot as judging a whole funnel by one number instead of its segments, covered in <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">marketing and sales funnel misalignment</a>. Country is just another segment. Funnelsight filters an existing funnel view by country the same way it already filters by channel or persona, using the activation event already defined for the rest of the product. No new setup for a new market, just a different filter. A few hundred signups, even pulled from a spreadsheet export, is enough to see whether activation and conversion hold up against the existing baseline.</p>
+  <h2>Start from the demand you already have</h2>
+  <p>A self-serve product that has been findable for a while usually has users in a market before anyone targets it. Those sign-ups are the starting point: how many come in each month, how they found the product, and whether they activate and convert at the same rate as everywhere else. A few hundred of them, even from a spreadsheet export, are enough for a first read. In Funnelsight, the country is <a href="/features/activation-retention-dashboard-plg-teams">one more filter on the funnel</a> you already track, with the same activation event as the rest of the product, so a new market starts with a comparison rather than a blank page.</p>
 
-  <h2>What actually blocks the product, not the page</h2>
-  <p>Assume the demand is real. The next question isn't about copy, it's about data and law. GDPR applies the moment a company touches EU user data, regardless of where that company is incorporated. Germany goes further: a strong expectation, and in regulated sectors a legal requirement, that data stays within its borders. A product without multi-region infrastructure can't promise that and sort it out later.</p>
-  <p>The UK breaks the "Europe is one market" assumption too. Post-Brexit, UK VAT runs on its own registration threshold, separate from the EU's. Solving VAT for the EU doesn't solve it for the UK. None of this is about language. It's about whether the product can legally and technically operate there at all, and that has to be settled before a single page gets translated.</p>
-  <p>A self-serve product can often reach a market like that at close to no marginal cost: nothing new to build, nothing new to translate. It just needs two things already in place: data protection rules close enough to the ones the product already meets, and an audience where English converts, even when it isn't the first language. The moment a market doesn't share those conditions, self-serve runs into the same questions a sales-led motion already has answers for, built market by market with a team on the ground from the start.</p>
+  <h2>What shapes the channel mix</h2>
+  <p>The channel mix that works at home rarely transfers as it is. Four things decide what it should look like in a new market.</p>
+  <table class="data-table data-table-text">
+    <caption>What shapes the channel mix in a new market</caption>
+    <thead>
+      <tr><th scope="col">What to look at</th><th scope="col">What it changes</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">How mature the market is</th><td>When buyers don't know the category yet, few of them search for it. The first channels are then the ones that explain it, such as content, events or partners.</td></tr>
+      <tr><th scope="row">How people buy</th><td>Some markets buy through integrators or resellers, others pay online, and in some the first conversation happens in a messaging app such as WhatsApp. The channels have to follow those habits.</td></tr>
+      <tr><th scope="row">Who is already there</th><td>A well-established local competitor has already shaped what buyers expect, from the price to whether they can try the product before talking to anyone.</td></tr>
+      <tr><th scope="row">How trust is built</th><td>In some markets a self-serve trial is enough to buy. In others, a call or a meeting still decides, and the channel mix has to make room for it.</td></tr>
+    </tbody>
+  </table>
+  <p>Once the first channels are chosen, each one has to be judged on its own clock. Paid search shows within days whether people respond, while a local guide or a series of articles takes months to build. A partner adds the length of their own sales cycle, and an event only pays off once the deals it started have closed. A single monthly report that puts them side by side favors the fastest channel by default. Set a decision date for each channel before the test starts, and judge it on what counts in that market: the accounts it brings that activate, convert, and pay back what the channel cost. Funnelsight shows that by source and by country, with each source's payback time next to its sign-up volume.</p>
 
-  <h2>Payment decides conversion before language does</h2>
-  <p>A self-serve product lives or dies on how easy it is to pay for. Translate the page while checkout still runs on one currency and a short list of payment methods, and the part fixed is the one a buyer reads last, not the one that decides whether they finish. Buyers often drop out of a checkout that doesn't offer the way they usually pay. For a self-serve motion specifically, that matters more than it would with a sales team: there's no one in the loop to paper over a clunky checkout.</p>
-  <p>Currency is the deeper choice. Bill in local currency where conversion is price-sensitive, hold a single currency where it barely moves the decision. Either way, it should be a deliberate call, not whatever happened to be configured when the first customer in that currency signed up.</p>
+  <h2>What to localize first, and what can wait</h2>
+  <p>Plenty of self-serve products enter a new market without translating the site, changing the currency or adapting their prices, and do fine as long as the audience buys in English. What can't wait is what makes the trial legal and usable there, starting with the consent and data rules that let the team capture and follow up the leads it brings in.</p>
+  <table class="data-table data-table-text data-table-compare">
+    <caption>What to localize first in a new market</caption>
+    <thead>
+      <tr><th scope="col">Can't wait</th><th scope="col">Can wait until demand is proven</th></tr>
+    </thead>
+    <tbody>
+      <tr><td data-label="Can't wait"><ul><li>Consent and data rules for capturing and following up trial leads</li><li>Tax registration where it's required</li><li>A consistent journey: an ad in the local language leads to a page in that language, and the rest of the path follows</li></ul></td><td data-label="Can wait"><ul><li>A translated site, product and content</li><li>Local currency and local pricing</li><li>Support in local hours, as long as you say clearly when support is available</li></ul></td></tr>
+    </tbody>
+  </table>
+  <p>Two choices need more care when a sales team or partners are involved. Prices that differ from one country to the next invite customers to buy where it's cheaper, or to contest the price, so local pricing needs a clear rule before anyone quotes it. And the split between buying online and going through sales or a partner can differ by country. Where buyers expect a local contract, accounts tend to stall at the checkout: activation holds up, then conversion drops at the last step. That shows in the funnel for that country. The same usage signals that flag a product qualified lead can then send those accounts to sales or a partner as warm leads, with their usage attached, instead of leaving them at a checkout page.</p>
 
-  <h2>Buying habits don't translate either</h2>
-  <p>Even with infrastructure and payments sorted, how a market buys can still break a motion built for English-speaking, credit-card-first customers. German public-sector and enterprise buyers, in particular, often require contracting through a locally registered entity before anything gets signed, no matter how good the self-serve trial was. A local reseller relationship can still be the fastest way into a market like that, even for a product the company would rather sell directly.</p>
+  <h2>Rules that don't translate</h2>
+  <p>GDPR applies the moment a company touches EU user data, wherever that company is incorporated. It doesn't require data to stay in a given country, but some sectors add their own rules. In Germany, for example, health and social data processed in the cloud must stay in Germany, the EU, the EEA, Switzerland or a country with an EU adequacy decision. A product without the right hosting options can't promise that and sort it out later.</p>
+  <p>The UK breaks the "Europe is one market" assumption too. Since Brexit, UK VAT is a separate system: registering for EU VAT, including the EU's one-stop shop, doesn't cover UK sales. A business based outside the UK that sells digital services to UK consumers has to register from the first sale, with no threshold. Sales to UK businesses generally fall under the reverse charge, where the customer accounts for the VAT.</p>
+  <p>Public buyers in Germany can award contracts to companies based anywhere, but tenders are mostly published and run in German, through dedicated procurement platforms, and federal bodies require electronic invoices in a set format. A local reseller or partner is often the practical way in, even for a product the company would rather sell directly.</p>
+
+  <h2>One set of definitions, local views</h2>
+  <p>Expansion usually means working with people who don't report to the central team: a country manager, a partner, a local agency. Many disagreements start with the numbers. The local team counts a lead one way, headquarters another, and the first meetings go into reconciling them. Sharing the definitions moves the discussion to decisions. The activation event, the attribution rule and the funnel stages are set once for every market. Each team builds the view it needs on those numbers, and local context, such as a public holiday, a local campaign or a payment outage, goes into a dated note on that period. A dip in one country is then explained before it's debated.</p>
+
+  <h2>A first quarter in a new market</h2>
+  <ol class="step-list">
+    <li>
+      <span class="step-title">Set the starting point (weeks 1 to 3)</span>
+      <p>Pull the existing sign-ups, activation and conversion for that country. Run a data check to see what's missing, such as campaign tags or deals with no source, and agree on the definitions with the local team.</p>
+    </li>
+    <li>
+      <span class="step-title">Test a few channels (weeks 3 to 8)</span>
+      <p>Pick two or three channels based on what the market looks like, each with a budget and a decision date. In self-serve, make sure the journey is consistent and the checkout works before paying for traffic.</p>
+    </li>
+    <li>
+      <span class="step-title">Decide what comes next (weeks 8 to 12)</span>
+      <p>Compare each channel and the country's funnel with the starting point. Then decide what to scale, what to localize next, and where accounts should go to sales or a partner rather than a checkout page.</p>
+    </li>
+  </ol>
 
   <div class="article-cta">
     <p>See your funnel broken down by country, channel and segment, without waiting on a data team.</p>
@@ -191,7 +230,7 @@
   <div class="article-faq">
     <details>
       <summary>Does this mean translation never matters?</summary>
-      <p>No. It means translation earns its place after demand, infrastructure and payment are already sorted, not before. Once those hold up, translating the product is often the fast, almost boring part, especially for a site and product that weren't built with language hardcoded into them anywhere. Skipping straight to translation is the mistake, not translation itself.</p>
+      <p>No. Translation earns its place once demand is confirmed and the journey can be localized from start to finish: the ad, the page it leads to, the product and the follow-up. A journey that switches language halfway can do worse than a consistent one in English.</p>
     </details>
     <details>
       <summary>Should I expect the same conversion rate in every market?</summary>
@@ -208,7 +247,7 @@
         "name": "Does this mean translation never matters?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. It means translation earns its place after demand, infrastructure and payment are already sorted, not before. Once those hold up, translating the product is often the fast, almost boring part, especially for a site and product that weren't built with language hardcoded into them anywhere. Skipping straight to translation is the mistake, not translation itself."
+          "text": "No. Translation earns its place once demand is confirmed and the journey can be localized from start to finish: the ad, the page it leads to, the product and the follow-up. A journey that switches language halfway can do worse than a consistent one in English."
         }
       },
       {
