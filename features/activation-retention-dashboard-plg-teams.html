@@ -228,24 +228,28 @@
   <p>Data updates on a schedule you control, hourly or on a cadence that fits your team. Setup doesn't require a data team. You can start by importing a spreadsheet to test the dashboard before connecting a live source, and have something working the same day. That's also useful groundwork if you're comparing a <a href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">spreadsheet-based approach against a dedicated tool</a>. The same dashboard is what surfaces a product qualified lead in the first place: see <a href="/case-studies/plg-team-turns-pql-into-sales-conversation">how one team turned that signal into a sales conversation</a>.</p>
 
   <h2>What it does, and what it doesn't</h2>
-  <table class="data-table data-table-text">
-    <caption>Scope of the activation and retention dashboard</caption>
-    <thead>
-      <tr><th scope="col">Included</th><th scope="col">Capability</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">✓ Yes</th><td>One activation event, defined once and applied to every report</td></tr>
-      <tr><th scope="row">✓ Yes</th><td>Activation and trial conversion by acquisition source</td></tr>
-      <tr><th scope="row">✓ Yes</th><td>Weekly cohorts, with dated notes on the periods that need explaining</td></tr>
-      <tr><th scope="row">✓ Yes</th><td>Churn-risk and expansion flags, on rules your team sets and can see</td></tr>
-      <tr><th scope="row">✓ Yes</th><td>Alerts by email or in your CRM</td></tr>
-      <tr><th scope="row">✓ Yes</th><td>Start from a spreadsheet, connect live sources later</td></tr>
-      <tr><th scope="row">✗ No</th><td>A continuous real-time stream: data refreshes on a schedule you choose</td></tr>
-      <tr><th scope="row">✗ No</th><td>Predictions from a model nobody can read: every flag comes from a visible rule</td></tr>
-      <tr><th scope="row">✗ No</th><td>Replace your product analytics tool: Funnelsight reads from it</td></tr>
-      <tr><th scope="row">✗ No</th><td>Custom data modeling or warehouse sync: that still needs technical help</td></tr>
-    </tbody>
-  </table>
+  <div class="scope-lists">
+    <div class="scope-list scope-yes">
+      <h3>It does</h3>
+      <ul>
+        <li>One activation event, defined once and applied to every report</li>
+        <li>Activation and trial conversion by acquisition source</li>
+        <li>Weekly cohorts, with dated notes on the periods that need explaining</li>
+        <li>Churn-risk and expansion flags, on rules your team sets and can see</li>
+        <li>Alerts by email or in your CRM</li>
+        <li>Start from a spreadsheet, connect live sources later</li>
+      </ul>
+    </div>
+    <div class="scope-list scope-no">
+      <h3>It doesn't</h3>
+      <ul>
+        <li>Stream data in real time: it refreshes on a schedule you choose</li>
+        <li>Predict from a model nobody can read: every flag comes from a visible rule</li>
+        <li>Replace your product analytics tool: Funnelsight reads from it</li>
+        <li>Model custom data or sync a data warehouse: that still needs technical help</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="article-cta">
     <p>See your own activation and retention numbers in one place.</p>
