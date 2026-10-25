@@ -829,6 +829,8 @@ footer a {
 }
 .resource-group[open] summary::after { content: '\2212'; }
 
+/* One line under each section title, saying how the cards are ordered */
+.resource-group-intro { font-size: 15px; color: var(--muted); margin: 0 0 20px; max-width: 60ch; }
 .resource-cards { display: grid; gap: 24px; padding-bottom: 32px; }
 .resource-card {
   border: 1px solid var(--line); border-radius: 8px; padding: 24px;

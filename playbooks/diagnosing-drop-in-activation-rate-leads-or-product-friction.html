@@ -177,13 +177,26 @@
     <span class="formula-label">Formula</span>
     <p>Segment activation rate (%) = (users in that segment who completed the activation event ÷ total new signups in that segment) × 100</p>
   </div>
+  <table class="data-table data-table-text data-table-compare">
+    <caption>Reading the segment split</caption>
+    <thead>
+      <tr><th scope="col">What the split shows</th><th scope="col">What it points to</th><th scope="col">Where to look next</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">The drop sits in one or two sources, while the others hold steady</th><td data-label="What it points to">Who is arriving: a campaign, an audience or a partner changed</td><td data-label="Where to look next">The owner of that channel, with the segment numbers in hand</td></tr>
+      <tr><th scope="row">The drop shows up in every source and every cohort</th><td data-label="What it points to">The product: something in the activation flow got harder</td><td data-label="Where to look next">The step where completion fell, and what changed there recently</td></tr>
+      <tr><th scope="row">Users start the flow but stall at the same step</th><td data-label="What it points to">One specific point of friction</td><td data-label="Where to look next">That step, and any release or setting change around the date the drop began</td></tr>
+      <tr><th scope="row">The drop is small and within past variation</th><td data-label="What it points to">Probably noise</td><td data-label="Where to look next">A few more weeks of data before acting</td></tr>
+    </tbody>
+  </table>
   <p>If the drop is concentrated in one or two acquisition sources while the others hold steady, that points upstream: something changed in who's arriving from that channel. If the drop shows up evenly across every source and every cohort, including the ones that have historically converted well, that points downstream: something changed in the product experience itself, not in who's using it. This is the diagnostic value of keeping acquisition source, signup data and activation events in the same view rather than three separate exports that have to be stitched together by hand, which is the core idea behind our <a href="/glossary/what-counts-as-activation-in-plg">guide to defining and tracking activation</a>.</p>
-  <p>A second check worth running alongside the segment split: look at time-to-first-action within the activation flow itself. If users are starting the flow but stalling at the same step they used to complete quickly, that's a stronger product-friction signal than a broad activation number alone.</p>
+  <p>A second check worth running alongside the segment split: look at how long users take to reach activation (see <a href="/playbooks/time-to-value-tracking">tracking time to value</a>). If users are starting the flow but stalling at the same step they used to complete quickly, that's a stronger product-friction signal than a broad activation number alone.</p>
   <p>None of this requires a fully built-out segmentation model on day one. Start with the two or three acquisition sources that bring in the most volume and the most recent signup cohort, confirm the pattern there, then widen the check once you know which direction to look.</p>
 
   <h2>What to do once you know the direction</h2>
   <p>If the drop is upstream, the next step is a conversation with whoever owns that channel or campaign, using the segment data as the starting point rather than an assumption. If it's downstream, the next step is tracing the specific step in the activation flow where completion dropped, which usually means looking at feature-level adoption data rather than the activation event alone.</p>
   <p>Either way, this diagnosis depends on activation already being defined as a single, consistent event across the team. A team still debating what counts as activation will struggle to tell a real drop from a definition drift.</p>
+  <p>Once the cause is clear, a dated note on that period keeps the explanation next to the number, so the same dip isn't debated again at the next review.</p>
 
   <div class="article-cta">
     <p>See segmented activation data without exporting three reports by hand.</p>

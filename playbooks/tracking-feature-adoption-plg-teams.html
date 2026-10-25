@@ -61,16 +61,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tracking feature adoption for PLG teams: Funnelsight</title>
-<meta name="description" content="How to track which features drive retention in a PLG product, without building a custom event pipeline first.">
+<meta name="description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Tracking feature adoption: Funnelsight">
-<meta property="og:description" content="How to track which features drive retention in a PLG product, without building a custom event pipeline first.">
+<meta property="og:description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tracking feature adoption: Funnelsight">
-<meta name="twitter:description" content="How to track which features drive retention in a PLG product, without building a custom event pipeline first.">
+<meta name="twitter:description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -168,20 +168,34 @@
   <p class="lede-intro">Knowing that users are active is not the same as knowing what they're actually using. Feature adoption tracking tells you which parts of your product are earning their place, and which ones nobody touches after the first week.</p>
 
   <h2>Why "active user" isn't enough</h2>
-  <p>Most PLG teams start with a broad activity metric: logins, sessions, maybe a single activation event. That's a reasonable starting point, but it hides a lot. A user can log in every day and still ignore the feature you just shipped. A team can renew a contract and still be using only a fraction of what they're paying for.</p>
+  <p>A broad activity metric is the usual starting point: logins, sessions, maybe a single activation event. That's reasonable, but it hides a lot. A user can log in every day and still ignore the feature you just shipped. A team can renew a contract and still use only a fraction of what it pays for.</p>
   <p>Feature adoption tracking answers a narrower, more useful question: out of the people who could use this feature, how many actually do, and does using it change how long they stick around? That connection between a specific feature and retention is usually the missing piece.</p>
 
   <h2>What to track first</h2>
   <p>Don't try to instrument every feature at once. Pick two or three that you already suspect matter, usually the ones your best customers use and your churned customers didn't. For each one, track:</p>
   <p>Who used it at least once, who used it repeatedly, and how those two groups compare on retention a month or two later. That's it. You can add breadth later once the first pass tells you something worth acting on.</p>
   <p>This is where a lot of teams get stuck waiting for a complete tracking plan before starting. You don't need one. A spreadsheet export of usage events for a single feature, checked against your renewal or retention numbers, is enough to get a first read. Cover one feature and one segment properly before trying to cover everything at once.</p>
+  <p>Adoption has levels: a user who opens a feature once has found it, one who comes back to it on their own got something from it, and an account that uses it every week has made it part of how it works. The first click overstates adoption, so the last two levels are the ones worth comparing with retention.</p>
+
+  <h2>Why a feature isn't adopted</h2>
+  <p>Low adoption has more than one cause, and each one leaves a different trace in the data.</p>
+  <table class="data-table data-table-text data-table-compare">
+    <caption>Why a feature isn't adopted</caption>
+    <thead>
+      <tr><th scope="col">Why it isn't adopted</th><th scope="col">What it looks like in the data</th><th scope="col">What usually helps</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">People don't see it</th><td data-label="What it looks like in the data">Few accounts ever try it</td><td data-label="What usually helps">Surface it where the related work happens</td></tr>
+      <tr><th scope="row">They don't understand it</th><td data-label="What it looks like in the data">People try it once and rarely come back</td><td data-label="What usually helps">Explain it at the moment of use, with an example</td></tr>
+      <tr><th scope="row">They can't use it</th><td data-label="What it looks like in the data">Only some roles use it, or never the accounts on a given setup</td><td data-label="What usually helps">Check access rights, required skills and setup, such as needing an admin or a developer</td></tr>
+      <tr><th scope="row">It appears at the wrong time</th><td data-label="What it looks like in the data">Newer accounts ignore it while older ones use it, or the reverse</td><td data-label="What usually helps">Introduce it when the need appears, not on day one</td></tr>
+      <tr><th scope="row">Starting costs too much</th><td data-label="What it looks like in the data">People look at it, or click on it while it's locked, but don't use it</td><td data-label="What usually helps">Lower the barrier: a trial of the feature, a template, or help with setup or a security review</td></tr>
+    </tbody>
+  </table>
 
   <h2>Connecting adoption to the rest of your funnel</h2>
   <p>Feature adoption only becomes actionable when it sits next to the rest of your data: activation, retention, and what's happening on the revenue side. Funnelsight keeps product usage and CRM data in one shared funnel view, so a feature adoption trend and an account's renewal status show up in the same place instead of two exports you have to reconcile by hand. If you haven't yet defined which behaviors count as activation for your product, that's worth doing first, see our guide on <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> before layering feature-level tracking on top.</p>
   <p>Data doesn't need to be continuous to be useful here. A dashboard refreshed on a set schedule, daily or a few times a day, is enough to spot a feature adoption trend early. Waiting for a real-time pipeline before you start is usually just a way to delay starting.</p>
-
-  <h2>A common mistake: tracking clicks instead of outcomes</h2>
-  <p>It's tempting to count a feature as "adopted" the first time someone clicks into it. That overstates adoption and tells you nothing about value. A better bar is repeated, unprompted use: did the user come back to this feature on their own, more than once, without a tooltip or email nudging them there. That's a much stronger adoption signal, and a much better predictor of retention.</p>
 
   <div class="article-cta">
     <p>See feature-level usage next to retention and CRM data, in one dashboard.</p>

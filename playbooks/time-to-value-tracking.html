@@ -61,16 +61,16 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Time to value tracking for PLG teams: Funnelsight</title>
-<meta name="description" content="How to track time to value in a PLG motion: what to measure, how to set a starting point, and how to start with a rough version.">
+<meta name="description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Tracking time to value: Funnelsight">
-<meta property="og:description" content="How to track time to value in a PLG motion: what to measure, how to set a starting point, and how to start with a rough version.">
+<meta property="og:description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tracking time to value: Funnelsight">
-<meta name="twitter:description" content="How to track time to value in a PLG motion: what to measure, how to set a starting point, and how to start with a rough version.">
+<meta name="twitter:description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -168,12 +168,32 @@
   <p class="lede-intro">Time to value is the time between signup and the moment a user first gets real value from your product. If that number is creeping up, trials go quiet before anyone notices why.</p>
 
   <h2>Why this number gets missed</h2>
-  <p>Most teams track whether a user activated. Fewer track how long it took. That gap matters: a user who reaches activation on day one behaves very differently from one who reaches it on day twelve of a fourteen-day trial. Both count as "activated" in a simple yes/no view, but only one of them is a healthy signal.</p>
+  <p>Activation is usually tracked as a yes or no. How long it took gets less attention, and that gap matters: a user who reaches activation on day one behaves very differently from one who reaches it on day twelve of a fourteen-day trial. Both count as "activated" in a simple yes/no view, but only one of them is a healthy signal.</p>
   <p>Without a time dimension, a slow drift goes unnoticed for months. Onboarding gets a little more complex, a new step gets added to setup, and time to value quietly stretches from two days to six. Nobody decided that on purpose. Nobody sees it either, until trial conversion drops and the cause isn't obvious.</p>
 
   <h2>What to measure</h2>
   <p>You need two timestamps: the moment a user signs up, and the moment they hit the activation event you've already defined for your product (see <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> if that definition isn't settled yet). The difference between the two is time to value for that user. Averaged or put into a median across a cohort, it becomes a trend you can watch.</p>
+  <p>The moment that matters is when someone understands why the product is worth using, the aha moment, but that can't be timestamped. The activation event is the measurable action that shows they got there, so it's the one to time. Setup steps, such as creating an account or logging in, come before it and don't count.</p>
   <p>In Funnelsight, the activation event you define applies consistently across every report, so the same event used to flag activation is the one used to calculate this delay. No separate configuration needed for a second metric.</p>
+
+  <h2>Where the delay sits</h2>
+  <p>The median tells you whether the delay is drifting. The spread tells you where the risk is.</p>
+  <table class="data-table data-table-dense">
+    <caption>Days from sign-up to activation, activated users in a 14-day trial. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Days to activate</th><th scope="col">Share of activated users</th><th scope="col">Converted to paid</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Day 0 to 1</th><td>38%</td><td>41%</td></tr>
+      <tr><th scope="row">Days 2 to 3</th><td>29%</td><td>36%</td></tr>
+      <tr><th scope="row">Days 4 to 7</th><td>21%</td><td>27%</td></tr>
+      <tr><th scope="row">Days 8 to 14</th><td>12%</td><td>15%</td></tr>
+    </tbody>
+  </table>
+  <p>Most activations happen in the first three days. The ones that come in the second week convert far less often, which is why a median that drifts from two days to five is worth catching early.</p>
+
+  <h2>What the delay tells you to do</h2>
+  <p>When people activate matters as much as how many do. A clearer setup and a more obvious first action help more people activate in their first session, but they can't bring back the ones who left before getting there: those people only see the product again if something brings them back. That's where onboarding emails take over, ideally pointing to the exact step where each person stopped, with in-app guidance waiting when they return. For accounts worth a conversation, an offer of help from a person can do what an email can't. Split by source, the same view shows which channels bring people who activate in their first session, and which ones bring people who need the follow-up.</p>
 
   <h2>Start with a rough version</h2>
   <p>You don't need every plan tier or every persona covered on day one. Pick your main self-serve segment, measure time to value for that group alone, and expand later. A spreadsheet export of signup dates and activation dates is enough to get a first median. Batch data, checked once a week, tells you if the number is moving before you invest in anything more automated.</p>
@@ -181,7 +201,7 @@
 
   <h2>What to do once you're tracking it</h2>
   <p>A rising time to value is usually a symptom, not the disease. Common causes: a new onboarding step, a change in default settings, a feature that used to be visible and got buried in a redesign. Once you have the trend, cross it against product changes on a rough timeline and the likely cause tends to jump out.</p>
-  <p>Teams already watching activation metrics closely often add this as a second layer, not a replacement. See <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> for how to define the event it builds on.</p>
+  <p>Time to value works best as a second layer on top of activation, not a replacement for it. See <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> for how to define the event it builds on.</p>
 
   <div class="article-cta">
     <p>See time to value alongside activation and retention in one view, no data team required.</p>
