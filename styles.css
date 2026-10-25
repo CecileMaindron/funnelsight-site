@@ -701,6 +701,9 @@ footer a {
 /* Comparison tables (two options side by side): narrower label column;
    on small screens each value is prefixed with its column name */
 .data-table-compare tbody th { width: 26%; }
+.data-table td ul { margin: 0; padding-left: 18px; }
+.data-table td li { margin-bottom: 8px; }
+.data-table td li:last-child { margin-bottom: 0; }
 @media (max-width: 600px) {
   .data-table-compare tbody td::before {
     content: attr(data-label) ": ";
@@ -709,6 +712,8 @@ footer a {
   }
   .data-table-compare tbody td + td { padding-top: 6px; }
   .data-table-compare tbody th { width: auto; }
+  .data-table-compare tbody tr > td:first-child { border-top: 1px solid var(--line); padding-top: 12px; }
+  .data-table-compare tbody tr:first-child > td:first-child { border-top: none; }
 }
 
 .article-cta {
