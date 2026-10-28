@@ -171,19 +171,41 @@
   <h2>Why referral rate is hard to track in a self-serve motion</h2>
   <p>In a sales-led business, a referral usually comes with a name attached: a rep hears about it directly. In a self-serve motion, someone signs up on their own, and the fact that a colleague or contact recommended your product often lives nowhere except that person's memory. Unless someone asks, there's nothing structured to query later.</p>
   <p>A "How did you hear about us?" field adds context that tracking can't see, such as a recommendation over coffee. Its answers are best read next to tracked data rather than instead of it, because people skip the field, misremember, or pick the closest option. The more durable signals are the ones you can observe.</p>
-  <table class="data-table data-table-text data-table-compare">
-    <caption>Referral signals and how far to trust them</caption>
-    <thead>
-      <tr><th scope="col">Signal</th><th scope="col">How far you can trust it</th><th scope="col">What to watch out for</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">An invite or referral feature in the product</th><td data-label="How far you can trust it">High: the link between the two accounts is recorded</td><td data-label="What to watch out for">It only covers referrals that go through the feature</td></tr>
-      <tr><th scope="row">A new sign-up on the same company domain, soon after an existing user was active</th><td data-label="How far you can trust it">Fairly high, once checked</td><td data-label="What to watch out for">A colleague may have found you on their own</td></tr>
-      <tr><th scope="row">A "How did you hear about us?" answer</th><td data-label="How far you can trust it">Useful as context, not as a measurement</td><td data-label="What to watch out for">People skip it or pick the closest option</td></tr>
-      <tr><th scope="row">A partner or a consultant who recommends you</th><td data-label="How far you can trust it">Reliable when the partner registers the lead</td><td data-label="What to watch out for">Only if the registration is agreed and used</td></tr>
-      <tr><th scope="row">A mention in a sales or support conversation</th><td data-label="How far you can trust it">Reliable for that account</td><td data-label="What to watch out for">Rare, and only if someone writes it down</td></tr>
-    </tbody>
-  </table>
+  <figure class="trust-ladder">
+    <figcaption class="tl-title">Referral signals, from most to least reliable</figcaption>
+    <ol class="tl-list">
+      <li class="tl-item">
+        <span class="tl-level" aria-hidden="true"><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span></span>
+        <span class="tl-label">Recorded</span>
+        <p class="tl-name">An invite or referral feature</p>
+        <p class="tl-text">The link between the two accounts is recorded, for referrals that use the feature.</p>
+      </li>
+      <li class="tl-item">
+        <span class="tl-level" aria-hidden="true"><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span></span>
+        <span class="tl-label">Recorded</span>
+        <p class="tl-name">A partner who registers the lead</p>
+        <p class="tl-text">Just as reliable, as long as partners actually register their leads.</p>
+      </li>
+      <li class="tl-item">
+        <span class="tl-level" aria-hidden="true"><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot"></span></span>
+        <span class="tl-label">Reported</span>
+        <p class="tl-name">A mention to sales or support</p>
+        <p class="tl-text">Reliable, but rare, and only if someone writes it down.</p>
+      </li>
+      <li class="tl-item">
+        <span class="tl-level" aria-hidden="true"><span class="tl-dot is-on"></span><span class="tl-dot is-on"></span><span class="tl-dot"></span><span class="tl-dot"></span></span>
+        <span class="tl-label">Inferred</span>
+        <p class="tl-name">A sign-up from a customer's company domain</p>
+        <p class="tl-text">Usually right once checked, though a colleague may have found you alone.</p>
+      </li>
+      <li class="tl-item">
+        <span class="tl-level" aria-hidden="true"><span class="tl-dot is-on"></span><span class="tl-dot"></span><span class="tl-dot"></span><span class="tl-dot"></span></span>
+        <span class="tl-label">Declared</span>
+        <p class="tl-name">"How did you hear about us?"</p>
+        <p class="tl-text">Context, not a measurement: people skip it or pick the closest option.</p>
+      </li>
+    </ol>
+  </figure>
 
   <h2>How Funnelsight approaches this</h2>
   <p>Funnelsight tracks acquisition source alongside downstream product and revenue outcomes in a single view, so a referral signal doesn't have to live in isolation from what happens after sign-up. This is tracking and reporting, not a referral program in itself: Funnelsight doesn't create invite links, manage incentives, or run the mechanics of a referral program, the way a dedicated referral or loyalty platform would. It surfaces what's already happening so a team can decide what to build on top of it. If your product has an invite or referral mechanism, the sign-ups it produces can be tracked through to activation, conversion, and retention, the same way any other acquisition source is, on the <a href="/glossary/what-counts-as-activation-in-plg">activation</a> side of the funnel. That matters because a referral channel with a small number of sign-ups but strong downstream conversion is worth more attention than the raw count suggests, and that only becomes visible once acquisition and product data sit in the same place.</p>
