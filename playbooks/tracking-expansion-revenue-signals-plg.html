@@ -177,18 +177,28 @@
 
   <h2>Signals worth watching</h2>
   <p>The exact list depends on your product. A few signals come up often in B2B SaaS, and each one has a typical false alarm:</p>
-  <table class="data-table">
-    <caption>Common expansion signals and what can make them misleading</caption>
-    <thead>
-      <tr><th scope="col">Signal</th><th scope="col">What it looks like</th><th scope="col">What can mislead you</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">Usage near a plan limit</th><td>Seats, projects, storage or API calls approaching the cap</td><td>A one-off import that doubles usage for a day</td></tr>
-      <tr><th scope="row">A higher-tier feature in use</th><td>Repeated use of a feature gated behind a paid plan</td><td>A single curious click on a locked feature</td></tr>
-      <tr><th scope="row">A second team joins</th><td>New users from the same company, working on their own projects</td><td>A colleague invited once for a review who never comes back</td></tr>
-      <tr><th scope="row">Sustained growth in core usage</th><td>The account's main metric rising week after week</td><td>A seasonal peak that falls back the following month</td></tr>
-    </tbody>
-  </table>
+  <ul class="signal-pairs" aria-label="Common expansion signals and their false alarms">
+      <li class="sp-item">
+        <p class="sp-signal">Usage near a plan limit</p>
+        <p class="sp-real">Seats, projects, storage or API calls approaching the cap.</p>
+        <p class="sp-false"><span class="sp-tag">False alarm</span> A one-off import that doubles usage for a day.</p>
+      </li>
+      <li class="sp-item">
+        <p class="sp-signal">A higher-tier feature in use</p>
+        <p class="sp-real">Repeated use of a feature gated behind a paid plan.</p>
+        <p class="sp-false"><span class="sp-tag">False alarm</span> A single curious click on a locked feature.</p>
+      </li>
+      <li class="sp-item">
+        <p class="sp-signal">A second team joins</p>
+        <p class="sp-real">New users from the same company, working on their own projects.</p>
+        <p class="sp-false"><span class="sp-tag">False alarm</span> A colleague invited once for a review who never comes back.</p>
+      </li>
+      <li class="sp-item">
+        <p class="sp-signal">Sustained growth in core usage</p>
+        <p class="sp-real">The account's main metric rising week after week.</p>
+        <p class="sp-false"><span class="sp-tag">False alarm</span> A seasonal peak that falls back the following month.</p>
+      </li>
+  </ul>
 
   <h2>Two examples</h2>
   <p>Take a team plan provisioned for 10 seats. Three new logins appear over two weeks, all from the same company domain. Three logins aren't a deal. Seen against the seat limit and the plan tier, they give the account owner a reason to talk to the team before it hits a hard wall and leaves out of frustration instead of upgrading.</p>
