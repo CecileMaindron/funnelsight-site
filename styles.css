@@ -588,7 +588,7 @@ footer a {
   color: var(--ink);
 }
 .formula-box p + p { margin-top: 10px; }
-.formula-box ul { margin: 0 0 14px; padding-left: 20px; }
+.formula-box ul, .formula-box ol { margin: 0 0 14px; padding-left: 20px; }
 .formula-box li { margin-bottom: 6px; font-size: 16px; color: #2A2D3B; }
 
 /* Numbered steps: for an ordered progression the reader should follow in
@@ -978,6 +978,31 @@ footer a {
   .scope-lists { gap: 12px; }
   .scope-list { padding: 14px 16px; }
   .scope-list li { margin-bottom: 6px; }
+}
+
+/* Plan against actual (case study): grouped rows, the reading written as
+   a word next to each value, never carried by colour alone */
+.nowrap-values td { white-space: nowrap; }
+.lifetime-table td { vertical-align: middle; }
+.lifetime-table .pair-bars { min-width: 140px; }
+.lifetime-key { display: block; margin-top: 4px; font-weight: 500; font-size: 12px; color: var(--muted); white-space: nowrap; }
+.lifetime-table td.num { white-space: nowrap; }
+.lifetime-table th[scope="row"] { vertical-align: middle; }
+@media (max-width: 600px) {
+  .lifetime-table { font-size: 13px; }
+  .lifetime-table th, .lifetime-table td { padding: 8px 6px; }
+  .lifetime-table .pair-bars { min-width: 56px; }
+  .lifetime-table th[scope="row"] { white-space: normal; width: 28%; }
+  .lifetime-table td.num { width: 1%; }
+  .lifetime-table td.num { white-space: normal; }
+  .lifetime-key { white-space: normal; }
+}
+
+.plan-table td .check-status { display: inline-block; margin-left: 6px; vertical-align: 1px; white-space: nowrap; }
+.plan-table tr.plan-group th { background: var(--bg); font-size: 13px; font-weight: 700; color: var(--indigo); text-transform: none; padding-top: 10px; padding-bottom: 10px; }
+.plan-table tbody + tbody { border-top: 2px solid var(--line); }
+@media (max-width: 600px) {
+  .plan-table td .check-status { display: block; width: fit-content; margin: 4px 0 0; }
 }
 
 /* ==========================================================================
