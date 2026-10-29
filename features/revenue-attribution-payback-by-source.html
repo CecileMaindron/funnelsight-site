@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Revenue attribution and payback by source: Funnelsight">
 <meta name="twitter:description" content="Revenue attribution by source: the recurring revenue each source brings, how many months it takes to cover its cost, and how the total reconciles with your CRM.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-28">
+<link rel="stylesheet" href="/styles.css?v=2026-10-29">
 </head>
 <body>
 
@@ -139,7 +139,7 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/#product">Product</a></li>
+      <li><a href="/product">Product</a></li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -188,11 +188,11 @@
     </div>
     <div class="source-card-head">
       <span class="source-card-title">Cost vs new revenue, by source</span>
-      <span class="source-card-period">Last 12 months · Position-based (40-20-40)</span>
+      <span class="source-card-period">Last 12 months · U-shaped (40-20-40)</span>
     </div>
     <div class="source-table-wrap">
       <table class="source-table">
-        <caption class="visually-hidden">Cost and new annual recurring revenue for five acquisition sources over the last 12 months, with payback in months (illustrative data)</caption>
+        <caption class="visually-hidden">Cost and new annual recurring revenue for seven acquisition sources over the last 12 months, with payback in months (illustrative data)</caption>
         <thead>
           <tr>
             <th scope="col">Source</th>
@@ -203,39 +203,49 @@
         <tbody>
         <tr>
           <th scope="row">Organic search</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 17%"></span></span><span class="bar-value">$66k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 100%"></span></span><span class="bar-value bar-value-strong">$396k</span></span></span></td>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 20%"></span></span><span class="bar-value">$66k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 100%"></span></span><span class="bar-value bar-value-strong">$324k</span></span></span></td>
           <td class="num payback-months">2</td>
         </tr>
         <tr>
-          <th scope="row">Partner referrals</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 8%"></span></span><span class="bar-value">$30k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 30%"></span></span><span class="bar-value bar-value-strong">$120k</span></span></span></td>
-          <td class="num payback-months">3</td>
-        </tr>
-        <tr>
           <th scope="row">Paid search</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 19%"></span></span><span class="bar-value">$75k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 45%"></span></span><span class="bar-value bar-value-strong">$180k</span></span></span></td>
-          <td class="num payback-months">5</td>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 37%"></span></span><span class="bar-value">$120k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 49%"></span></span><span class="bar-value bar-value-strong">$160k</span></span></span></td>
+          <td class="num payback-months">9</td>
         </tr>
         <tr>
           <th scope="row">LinkedIn ads</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 8%"></span></span><span class="bar-value">$32k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 12%"></span></span><span class="bar-value bar-value-strong">$48k</span></span></span></td>
-          <td class="num payback-months">8</td>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 5%"></span></span><span class="bar-value">$15k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 18%"></span></span><span class="bar-value bar-value-strong">$58k</span></span></span></td>
+          <td class="num payback-months">3</td>
+        </tr>
+        <tr>
+          <th scope="row">Partner referrals</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 9%"></span></span><span class="bar-value">$30k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 33%"></span></span><span class="bar-value bar-value-strong">$106k</span></span></span></td>
+          <td class="num payback-months">3</td>
+        </tr>
+        <tr>
+          <th scope="row">Events and webinars</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 19%"></span></span><span class="bar-value">$60k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 42%"></span></span><span class="bar-value bar-value-strong">$136k</span></span></span></td>
+          <td class="num payback-months">5</td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 3%"></span></span><span class="bar-value">$9k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 40%"></span></span><span class="bar-value bar-value-strong">$128k</span></span></span></td>
+          <td class="num payback-months">Under 1</td>
         </tr>
         <tr>
           <th scope="row">Direct<span class="source-flag">No cost recorded</span></th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"></span><span class="bar-value">$0</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 91%"></span></span><span class="bar-value bar-value-strong">$360k</span></span></span></td>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"></span><span class="bar-value">$0</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 89%"></span></span><span class="bar-value bar-value-strong">$288k</span></span></span></td>
           <td class="num"><span class="bar-value-note">Not calculated</span></td>
         </tr>
         </tbody>
       </table>
     </div>
-    <figcaption><strong>Organic search brings six times its cost in new ARR, LinkedIn ads one and a half times.</strong> Direct brings $360k but has no cost recorded, so its payback isn't calculated rather than shown as instant.</figcaption>
+    <figcaption><strong>Organic search brings about five times its cost in new ARR, paid search a third more than its cost.</strong> Direct brings $288k but has no cost recorded, so its payback isn't calculated rather than shown as instant.</figcaption>
   </figure>
   <p>Payback translates directly into the return leadership asks for: a source that pays back in 4 months returns about three times its cost over the first year. What it doesn't show is how each cost behaves. Content costs what you decide to produce. Paid search prices move with competition and the season, so the same budget buys more or fewer clicks from one quarter to the next. A commission-based partner program costs nothing until a deal closes. Two sources with the same payback can carry very different risks.</p>
 
   <h3>Is a slow source a bad one?</h3>
-  <p>Not necessarily. A multi-year contract signed with sales can take longer to cover its cost than a monthly plan, then keep paying for years. Whether 8 months is acceptable depends on how long those customers stay, which the same view shows by source.</p>
-  <p>The attribution model can also make a source look slower than it is. A LinkedIn ad can reach buyers before they search, and the deal then comes in through search or Direct. Under last touch, the ad gets little or no credit for that deal. Comparing last touch with first touch or position-based shows whether a channel opens paths that others close.</p>
+  <p>Not necessarily. A multi-year contract signed with sales can take longer to cover its cost than a monthly plan, then keep paying for years. Whether 9 months is acceptable depends on how long those customers stay, which the same view shows by source.</p>
+  <p>The attribution model can also make a source look slower than it is. A LinkedIn ad can reach buyers before they search, and the deal then comes in through search or Direct. Under last touch, the ad gets little or no credit for that deal. Comparing last touch with first touch or U-shaped shows whether a channel opens paths that others close.</p>
   <p>Timing matters too. Organic search looks inexpensive over 12 months partly because it also earns from content published in earlier years, while paid search brings customers the day its budget is switched on and stops when it's switched off. One is cheaper per customer, the other can be scaled at will. Funnelsight reads each source on its own timeline, so a channel isn't cut for being slower to show results.</p>
 
   <h3>Why doesn't the attributed total match the CRM?</h3>
@@ -252,7 +262,7 @@
   <p>A mistagged campaign is a different problem: it doesn't shrink the total, it credits the wrong source, often Direct. The same happens when someone discovers you in an AI assistant's answer: nothing links the answer to the visit that follows, which is credited to branded search or Direct. Funnelsight shows both totals side by side and explains what sits in the gap, with the CRM as the reference for revenue. <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">Why marketing and sales pipeline numbers don't match</a> goes further into the two readings.</p>
 
   <h2>How it works</h2>
-  <p>Your team picks an attribution model, first touch, last touch, linear or position-based, and can adjust its weights, for example from 40-20-40 to 20-60-20. Putting two models side by side shows how much a ranking depends on the model rather than on the sources. Your team also sets what counts as a first touch and how far back touches are counted, often the length of your sales cycle.</p>
+  <p>Your team picks an attribution model, first touch, last touch, linear or U-shaped (also called position-based), and can adjust its weights, for example from 40-20-40 to 20-60-20. Putting two models side by side shows how much a ranking depends on the model rather than on the sources. Your team also sets what counts as a first touch and how far back touches are counted, often the length of your sales cycle.</p>
   <p>Terms such as "sourced" or "influenced" vary from one company to another, so Funnelsight doesn't impose a definition: each reading your team names shows its rule. When a rule changes, the change is logged and past periods are recalculated or the break is marked, the principle behind <a href="/glossary/what-is-a-single-source-of-truth-saas">a single source of truth</a>.</p>
 
   <h2>What it does, and what it doesn't</h2>
@@ -294,7 +304,7 @@
     </details>
     <details>
       <summary>Which attribution model should we start with?</summary>
-      <p>The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as position-based. Keep the same model when you compare periods.</p>
+      <p>The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as U-shaped. Keep the same model when you compare periods.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -323,7 +333,7 @@
         "name": "Which attribution model should we start with?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as position-based. Keep the same model when you compare periods."
+          "text": "The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as U-shaped. Keep the same model when you compare periods."
         }
       }
     ]

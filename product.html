@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+</script>
+
+<script>
+  gtag('config', 'G-NG2EK7DNXQ');
+</script>
+<style>
+  /* Consent banner. Move into styles.css whenever convenient. */
+  .consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #14161F;
+    color: #FFFFFF;
+    padding: 16px;
+  }
+  .consent-banner .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .consent-banner p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  .consent-banner a { color: #FFFFFF; text-decoration: underline; }
+  .consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .consent-actions button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  #consent-accept { background: #FFFFFF; color: #14161F; }
+  #consent-decline { background: transparent; color: #FFFFFF; }
+</style>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing attribution platform for B2B SaaS: how Funnelsight works</title>
+<meta name="description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
+<link rel="canonical" href="https://funnelsight.dev/product">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Funnelsight">
+<meta property="og:title" content="Marketing attribution platform for B2B SaaS: how Funnelsight works">
+<meta property="og:description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
+<meta property="og:url" content="https://funnelsight.dev/product">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marketing attribution platform for B2B SaaS: how Funnelsight works">
+<meta name="twitter:description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-29">
+</head>
+<body>
+
+
+<div class="consent-banner" id="consent-banner">
+  <div class="wrap">
+    <p>We use Google Analytics to see which pages are useful. No ads, no data shared beyond this account. This is a demo site for a fictional company: no real visitor data is collected beyond this test.</p>
+    <div class="consent-actions">
+      <button id="consent-accept">Accept</button>
+      <button id="consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var CONSENT_KEY = 'fs_consent';
+  var stored = localStorage.getItem(CONSENT_KEY);
+  var banner = document.getElementById('consent-banner');
+
+  function setConsent(granted) {
+    gtag('consent', 'update', {
+      'analytics_storage': granted ? 'granted' : 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    localStorage.setItem(CONSENT_KEY, granted ? 'granted' : 'denied');
+    if (granted && !document.getElementById('ga-loader')) {
+      var s = document.createElement('script');
+      s.id = 'ga-loader';
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG2EK7DNXQ';
+      document.head.appendChild(s);
+    }
+    if (!granted) {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') === 0) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.funnelsight.dev';
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    }
+    if (banner) banner.style.display = 'none';
+  }
+
+  if (stored === 'granted' || stored === 'denied') {
+    setConsent(stored === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('consent-accept');
+  var declineBtn = document.getElementById('consent-decline');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent(true); });
+  if (declineBtn) declineBtn.addEventListener('click', function () { setConsent(false); });
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'consent-reopen' && banner) banner.style.display = 'flex';
+  });
+})();
+</script>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo">funnel<span>sight</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
+    <ul class="nav-links">
+      <li><a href="/product" aria-current="page">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Solutions</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/solutions/marketing">For Marketing</a></li>
+          <li><a href="/solutions/sales">For Sales</a></li>
+          <li><a href="/solutions/customer-success">For Customer Success</a></li>
+        </ul>
+      </li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/trial">Start trial</a></li>
+    </ul>
+    <a href="/trial" class="nav-cta">Start free trial</a>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
+</div>
+
+<main id="main">
+<header class="hero wrap product-hero">
+  <div>
+    <p class="eyebrow">Marketing attribution platform for B2B SaaS</p>
+    <h1>Every source, from first visit to revenue, in one view you can check.</h1>
+    <p class="lede">Funnelsight connects your web analytics, ad spend, product data and CRM. It shows what each source brings in, how fast it pays back, and the rule behind every figure.</p>
+    <div class="hero-actions">
+      <a href="/trial" class="btn-primary accent">Start free trial</a>
+      <a href="#first-day" class="btn-ghost">See how it works</a>
+    </div>
+  </div>
+
+  <figure class="source-card payback-card demo-card" id="demo" aria-labelledby="demo-title">
+    <p class="demo-hint" id="demo-hint" hidden>Try it: change how credit is counted and watch the ranking move.</p>
+    <div class="source-card-bar">
+      <div class="model-switch" role="group" aria-label="How credit is counted" id="model-switch" hidden>
+        <button type="button" data-model="first" aria-pressed="false">First touch</button>
+        <button type="button" data-model="last" aria-pressed="false">Last touch</button>
+        <button type="button" data-model="ushaped" aria-pressed="true">U-shaped</button>
+      </div>
+      <span class="tag-illustrative">Illustrative data</span>
+    </div>
+    <div class="source-card-head">
+      <span class="source-card-title" id="demo-title">Cost vs new ARR, by source</span>
+      <span class="source-card-period">Last 12 months · <span id="demo-model-label">U-shaped</span></span>
+    </div>
+    <p class="demo-def" id="demo-def">40% of each deal to the touch that created the lead, 40% to the last touch before the opportunity, 20% shared by the touches in between.</p>
+    <div class="source-table-wrap">
+      <table class="source-table">
+        <caption class="visually-hidden">Cost and new annual recurring revenue for seven acquisition sources over the last 12 months, under the selected way of counting credit (illustrative data)</caption>
+        <thead>
+          <tr>
+            <th scope="col">Source</th>
+            <th scope="col"><span class="key key-leads" aria-hidden="true"></span>Cost <span class="key key-revenue key-inline" aria-hidden="true"></span>New ARR</th>
+          </tr>
+        </thead>
+        <tbody id="demo-rows">
+        <tr data-source="organic">
+          <th scope="row">Organic search</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 16%"></span></span><span class="bar-value">$66k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 81%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$324k</span></span></span></td>
+        </tr>
+        <tr data-source="paid">
+          <th scope="row">Paid search</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 30%"></span></span><span class="bar-value">$120k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 40%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$160k</span></span></span></td>
+        </tr>
+        <tr data-source="linkedin">
+          <th scope="row">LinkedIn ads</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 4%"></span></span><span class="bar-value">$15k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 14%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$58k</span></span></span></td>
+        </tr>
+        <tr data-source="partner">
+          <th scope="row">Partner referrals</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 8%"></span></span><span class="bar-value">$30k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 26%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$106k</span></span></span></td>
+        </tr>
+        <tr data-source="events">
+          <th scope="row">Events and webinars</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 15%"></span></span><span class="bar-value">$60k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 34%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$136k</span></span></span></td>
+        </tr>
+        <tr data-source="email">
+          <th scope="row">Email</th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 2%"></span></span><span class="bar-value">$9k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 32%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$128k</span></span></span></td>
+        </tr>
+        <tr data-source="direct">
+          <th scope="row">Direct<span class="source-flag">No cost recorded</span></th>
+          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"></span><span class="bar-value">$0</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 72%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$288k</span></span></span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>
+      <span id="demo-caption" aria-live="polite"><strong>Both ends count, and the middle gets a share:</strong> webinars and email, which keep leads warm until the opportunity, start to show.</span>
+      <span class="demo-total">The seven sources add up to $1.20M in every model: changing the model moves credit between sources, it doesn't create revenue. Costs cover media, commissions and content production, not tool licences.</span>
+    </figcaption>
+  </figure>
+</header>
+
+<section class="steps-section" id="first-day">
+  <div class="wrap">
+    <h2>Your first day with Funnelsight.</h2>
+    <ul class="day-one">
+      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v5l-4 2v-7z"/></svg></span><h3>Your whole funnel in one view</h3><p>From anonymous visit to paying and renewing customer.</p></li>
+      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg></span><h3>A first read of your data</h3><p>What Funnelsight sees, what's missing, and what to fix first.</p></li>
+      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span><h3>Ready-made views</h3><p>The questions teams ask first, answered from templates you adjust.</p></li>
+    </ul>
+    <p class="day-foot">Revenue and payback by source follow once your costs are in: Google Ads connects directly, and other costs come from a spreadsheet or are entered by hand.</p>
+  </div>
+</section>
+
+<section class="feature-rows">
+  <div class="wrap">
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="feature-pain">"Can we trust this number?"</p>
+        <h2>A data check before the first chart.</h2>
+        <p>Like a site health report, the data check lists each blind spot with its weight, so you know what to fix first and what to keep in mind while you read. It never blocks anything.</p>
+      </div>
+      <figure class="ui-card">
+        <div class="ui-card-head"><span class="source-card-title">Data check</span><span class="tag-illustrative">Illustrative data</span></div>
+        <p class="check-summary"><strong>4 to check</strong> · 1 OK</p>
+        <ul class="check-list">
+          <li><span class="check-status check-warn">Check</span><span class="check-name">Sessions without campaign tags</span><span class="check-weight">14% of sessions</span></li>
+          <li><span class="check-status check-warn">Check</span><span class="check-name">Closed deals with no source</span><span class="check-weight">9% of new ARR</span></li>
+          <li><span class="check-status check-warn">Check</span><span class="check-name">LinkedIn tagged three ways: "linkedin", "LinkedIn", "li"</span><span class="check-weight">6% of sessions</span></li>
+          <li><span class="check-status check-warn">Check</span><span class="check-name">Payment provider listed as a referral</span><span class="check-weight">2% of sign-ups</span></li>
+          <li><span class="check-status check-ok">OK</span><span class="check-name">Visitors followed from the website to the sign-up page and into the product</span><span class="check-weight">3 of 3 addresses</span></li>
+        </ul>
+      </figure>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="feature-pain">"Why don't our two reports match?"</p>
+        <h2>Shared rules, and every change logged.</h2>
+        <p>The attribution model, the window and the definitions are set once and apply to every campaign. When a rule changes, the change is logged with its date and author, and past periods are recalculated or the break is clearly marked. Funnelsight also shows how credit moves between sources after a change, so no team quietly gains or loses credit.</p>
+      </div>
+      <figure class="ui-card">
+        <div class="ui-card-head"><span class="source-card-title">Framework rules</span><span class="tag-illustrative">Illustrative data</span></div>
+        <dl class="rule-list">
+          <div><dt>Attribution model</dt><dd>U-shaped: 40% first touch, 40% last, 20% between</dd></div>
+          <div><dt>Attribution window</dt><dd>120 days</dd></div>
+          <div><dt>Activation</dt><dd>First dashboard shared with a teammate</dd></div>
+        </dl>
+        <div class="rule-log">
+          <p class="rule-log-title">Change log</p>
+          <p><span class="rule-log-date">6 Oct</span>Window changed from 90 to 120 days by an admin, to match the sales cycle. Past periods recalculated.</p>
+        </div>
+      </figure>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="feature-pain">"Why did sign-ups drop that week?"</p>
+        <h2>One set of numbers, a view for each use, and context that stays.</h2>
+        <p>The team works from a daily view, the planning view compares results with your targets, and leadership gets a summary, all on the same data. Anyone can add a dated note to a chart: a campaign launch, a site migration, a tracking bug and its fix. The note stays with that period, so the explanation is still there months later.</p>
+      </div>
+      <figure class="ui-card">
+        <div class="source-card-bar">
+          <ul class="view-tabs" aria-label="Dashboard views (illustration)">
+            <li class="is-current" aria-current="true">Team daily</li>
+            <li>Planning</li>
+            <li>Leadership</li>
+          </ul>
+          <span class="tag-illustrative">Illustrative data</span>
+        </div>
+        <div class="ui-card-head"><span class="source-card-title">Trial sign-ups, weekly</span></div>
+        <table class="source-table week-table">
+          <caption class="visually-hidden">Trial sign-ups per week over four weeks, with a dated note on the week of 12 October (illustrative data)</caption>
+          <thead><tr><th scope="col">Week of</th><th scope="col">Sign-ups</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">5 Oct</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 92%"></span></span><span class="bar-value bar-value-strong">296</span></span></td></tr>
+            <tr><th scope="row">12 Oct<span class="source-flag">Note</span></th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 64%"></span></span><span class="bar-value bar-value-strong">205</span></span></td></tr>
+            <tr><th scope="row">19 Oct</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 95%"></span></span><span class="bar-value bar-value-strong">305</span></span></td></tr>
+            <tr><th scope="row">26 Oct</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 98%"></span></span><span class="bar-value bar-value-strong">314</span></span></td></tr>
+          </tbody>
+        </table>
+        <p class="ui-note"><strong>Note, 12 Oct, tracking change:</strong> the sign-up form moved to the app domain and two days weren't tracked. Fixed on 14 Oct.</p>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<section class="scope-section">
+  <div class="wrap">
+    <h2>What's in Funnelsight, and what isn't.</h2>
+    <p class="section-lede">Help reading the numbers, not a black box: Funnelsight points out what deserves a look and shows the rule behind every figure. The decisions stay with your team.</p>
+    <div class="feature-grid">
+      <div class="feature-group">
+        <h3>See the whole funnel</h3>
+        <ul>
+          <li>One view from anonymous visit to paying and renewing customer</li>
+          <li>Each source's effect at every stage: sign-up, <a href="/features/activation-retention-dashboard-plg-teams">activation and retention</a>, deal, renewal</li>
+          <li>Filters by segment, such as company size, plan or country</li>
+          <li>The real path to conversion: entry page, call to action clicked, content downloaded</li>
+        </ul>
+      </div>
+      <div class="feature-group">
+        <h3>Judge sources on revenue</h3>
+        <ul>
+          <li>New recurring revenue and <a href="/features/revenue-attribution-payback-by-source">payback by source</a></li>
+          <li>First touch, last touch, linear or U-shaped, with weights you can adjust and two models side by side</li>
+          <li>Formulas finance can read and check</li>
+          <li>A planning view that compares results with your targets</li>
+        </ul>
+      </div>
+      <div class="feature-group">
+        <h3>Spot what deserves a look</h3>
+        <ul>
+          <li>A sudden drop that may be a tracking issue rather than a real change</li>
+          <li>A metric that rises while nothing that matters follows</li>
+          <li>One large deal carrying a whole source</li>
+          <li>A share that falls because credit is spread over more touches, not because the source got worse</li>
+        </ul>
+      </div>
+      <div class="feature-group">
+        <h3>Work as one team</h3>
+        <ul>
+          <li>Shared rules with a change log, views for each use and dated notes</li>
+          <li>Admin, editor and viewer levels</li>
+          <li>Alerts by email or in your CRM</li>
+          <li>Product-qualified lead scoring for <a href="/solutions/sales">sales</a>, churn-risk and expansion signals for <a href="/solutions/customer-success">customer success</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="scope-list scope-no not-list">
+      <h3>What it doesn't do</h3>
+      <ul>
+        <li>Forecast results or set your budget: it shows what happened, and your team decides</li>
+        <li>Use a black-box "data-driven" model: every weight is visible and adjustable</li>
+        <li>Prove that a touch caused a sale: it shows which touches came before it, and results of lift tests run elsewhere can sit next to it</li>
+        <li>Replace your CRM, your analytics tools or a data team's pipelines</li>
+      </ul>
+    </div>
+    <p class="scope-foot">Hosted in the EU. Funnelsight is based in Nantes, France.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-panel">
+      <h2>Try it on your own funnel.</h2>
+      <p>14 days free. No credit card required.</p>
+      <a href="/trial" class="btn-on-dark">Start free trial</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+      <summary>What do I need to get started?</summary>
+      <p>The tools you already use, or even a spreadsheet. GA4, Google Ads, your CRM and your product analytics tool connect natively, and costs no connected tool holds can be imported or entered by hand. The data check then shows what is missing, such as campaigns without tags.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can we change the attribution model later?</summary>
+      <p>Yes. An admin changes it, the change is logged, and past periods are recalculated or the break is clearly marked. You can also compare two models side by side before you switch.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does Funnelsight replace our analytics tools or our CRM?</summary>
+      <p>No. It works on top of them. Your analytics tools keep collecting, the CRM stays the reference for pipeline and revenue, and Funnelsight connects what they record into one view of the funnel.</p>
+    </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+(function () {
+  var MAX = 400;
+  var data = {
+  "ushaped": {
+    "label": "U-shaped",
+    "def": "40% of each deal to the touch that created the lead, 40% to the last touch before the opportunity, 20% shared by the touches in between.",
+    "caption": "<strong>Both ends count, and the middle gets a share:</strong> webinars and email, which keep leads warm until the opportunity, start to show.",
+    "rows": {
+      "organic": [
+        324
+      ],
+      "paid": [
+        160
+      ],
+      "linkedin": [
+        58
+      ],
+      "partner": [
+        106
+      ],
+      "events": [
+        136
+      ],
+      "email": [
+        128
+      ],
+      "direct": [
+        288
+      ]
+    }
+  },
+  "first": {
+    "label": "First touch",
+    "def": "All the credit for each deal goes to the touch that created the lead.",
+    "caption": "<strong>First touch rewards the sources that create leads:</strong> paid search and LinkedIn ads stand out, email creates none.",
+    "rows": {
+      "organic": [
+        400
+      ],
+      "paid": [
+        230
+      ],
+      "linkedin": [
+        90
+      ],
+      "partner": [
+        130
+      ],
+      "events": [
+        110
+      ],
+      "email": [
+        0
+      ],
+      "direct": [
+        240
+      ]
+    }
+  },
+  "last": {
+    "label": "Last touch",
+    "def": "All the credit for each deal goes to the last touch before the opportunity was created.",
+    "caption": "<strong>Last touch rewards the sources just before the opportunity:</strong> Direct and email lead, LinkedIn ads almost disappear.",
+    "rows": {
+      "organic": [
+        260
+      ],
+      "paid": [
+        130
+      ],
+      "linkedin": [
+        30
+      ],
+      "partner": [
+        110
+      ],
+      "events": [
+        120
+      ],
+      "email": [
+        170
+      ],
+      "direct": [
+        380
+      ]
+    }
+  }
+};
+  var sw = document.getElementById('model-switch');
+  var hint = document.getElementById('demo-hint');
+  if (!sw) return;
+  sw.hidden = false;
+  if (hint) hint.hidden = false;
+  var buttons = sw.querySelectorAll('button');
+  function show(model) {
+    var d = data[model];
+    Object.keys(d.rows).forEach(function (key) {
+      var row = document.querySelector('#demo-rows tr[data-source="' + key + '"]');
+      var v = d.rows[key];
+      row.querySelector('[data-bar="arr"]').style.width = Math.round(v[0] / MAX * 100) + '%';
+      row.querySelector('[data-value="arr"]').textContent = '$' + v[0] + 'k';
+      var p = row.querySelector('[data-value="payback"]');
+      if (p) {
+        if (v[1] === null) { p.innerHTML = '<span class="bar-value-note">Not calculated</span>'; }
+        else { p.textContent = v[1]; }
+      }
+    });
+    document.getElementById('demo-model-label').textContent = d.label;
+    document.getElementById('demo-def').textContent = d.def;
+    document.getElementById('demo-caption').innerHTML = d.caption;
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-model') === model ? 'true' : 'false'); });
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-model')); }); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do I need to get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tools you already use, or even a spreadsheet. GA4, Google Ads, your CRM and your product analytics tool connect natively, and costs no connected tool holds can be imported or entered by hand. The data check then shows what is missing, such as campaigns without tags."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we change the attribution model later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. An admin changes it, the change is logged, and past periods are recalculated or the break is clearly marked. You can also compare two models side by side before you switch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Funnelsight replace our analytics tools or our CRM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It works on top of them. Your analytics tools keep collecting, the CRM stays the reference for pipeline and revenue, and Funnelsight connects what they record into one view of the funnel."
+      }
+    }
+  ]
+}
+</script>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <span>Funnelsight, Nantes, France</span>
+      <span>© 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/CecileMaindron/funnelsight-site/blob/main/README.md" target="_blank" rel="noopener">Learn more about this project</a>
+      <span class="footer-credit">Built by Cécile Maindron:
+        <a href="https://www.linkedin.com/in/cmaindron/" target="_blank" rel="me noopener" aria-label="Cécile Maindron on LinkedIn">LinkedIn</a> ·
+        <a href="https://github.com/CecileMaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on GitHub">GitHub</a> ·
+        <a href="https://medium.com/@cmaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on Medium">Medium</a>
+      </span>
+      <button type="button" class="footer-consent" id="consent-reopen">Cookie settings</button>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
