@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+</script>
+
+<script>
+  gtag('config', 'G-NG2EK7DNXQ');
+</script>
+<style>
+  /* Consent banner. Move into styles.css whenever convenient. */
+  .consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #14161F;
+    color: #FFFFFF;
+    padding: 16px;
+  }
+  .consent-banner .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .consent-banner p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  .consent-banner a { color: #FFFFFF; text-decoration: underline; }
+  .consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .consent-actions button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  #consent-accept { background: #FFFFFF; color: #14161F; }
+  #consent-decline { background: transparent; color: #FFFFFF; }
+</style>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why the enterprise pipeline falls short after moving upmarket: Funnelsight</title>
+<meta name="description" content="Illustrative example: after moving upmarket, pipeline coverage falls to 2.8x against a 4x target. Stage by stage, the cause is part targeting, part routing.">
+<link rel="canonical" href="https://funnelsight.dev/case-studies/moving-upmarket-enterprise-pipeline">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Funnelsight">
+<meta property="og:title" content="Why the enterprise pipeline falls short after moving upmarket: Funnelsight">
+<meta property="og:description" content="Illustrative example: after moving upmarket, pipeline coverage falls to 2.8x against a 4x target. Stage by stage, the cause is part targeting, part routing.">
+<meta property="og:url" content="https://funnelsight.dev/case-studies/moving-upmarket-enterprise-pipeline">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why the enterprise pipeline falls short after moving upmarket: Funnelsight">
+<meta name="twitter:description" content="Illustrative example: after moving upmarket, pipeline coverage falls to 2.8x against a 4x target. Stage by stage, the cause is part targeting, part routing.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+</head>
+<body>
+
+
+<div class="consent-banner" id="consent-banner">
+  <div class="wrap">
+    <p>We use Google Analytics to see which pages are useful. No ads, no data shared beyond this account. This is a demo site for a fictional company: no real visitor data is collected beyond this test.</p>
+    <div class="consent-actions">
+      <button id="consent-accept">Accept</button>
+      <button id="consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var CONSENT_KEY = 'fs_consent';
+  var stored = localStorage.getItem(CONSENT_KEY);
+  var banner = document.getElementById('consent-banner');
+
+  function setConsent(granted) {
+    gtag('consent', 'update', {
+      'analytics_storage': granted ? 'granted' : 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    localStorage.setItem(CONSENT_KEY, granted ? 'granted' : 'denied');
+    if (granted && !document.getElementById('ga-loader')) {
+      var s = document.createElement('script');
+      s.id = 'ga-loader';
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG2EK7DNXQ';
+      document.head.appendChild(s);
+    }
+    if (!granted) {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') === 0) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.funnelsight.dev';
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    }
+    if (banner) banner.style.display = 'none';
+  }
+
+  if (stored === 'granted' || stored === 'denied') {
+    setConsent(stored === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('consent-accept');
+  var declineBtn = document.getElementById('consent-decline');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent(true); });
+  if (declineBtn) declineBtn.addEventListener('click', function () { setConsent(false); });
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'consent-reopen' && banner) banner.style.display = 'flex';
+  });
+})();
+</script>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo">funnel<span>sight</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
+    <ul class="nav-links">
+      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Solutions</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/solutions/marketing">For Marketing</a></li>
+          <li><a href="/solutions/sales">For Sales</a></li>
+          <li><a href="/solutions/customer-success">For Customer Success</a></li>
+        </ul>
+      </li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/trial">Start trial</a></li>
+    </ul>
+    <a href="/trial" class="nav-cta">Start free trial</a>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
+</div>
+
+<nav class="breadcrumb wrap" aria-label="Breadcrumb">
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Moving upmarket: why the enterprise pipeline falls short</span>
+</nav>
+
+<article class="article wrap">
+  <h1>Moving upmarket: why the enterprise pipeline falls short</h1>
+  <p class="lede-intro">Illustrative example. Contractly is a fictional company, and the figures are illustrative, not measured results.</p>
+
+  <div class="formula-box">
+    <span class="formula-label">At a glance</span>
+    <ul>
+      <li><strong>Company:</strong> Contractly, a contract management tool that grew by selling self-serve to small businesses (fictional)</li>
+      <li><strong>Decision:</strong> sell bigger deals to large companies, where legal and procurement teams buy</li>
+      <li><strong>Symptom after two quarters:</strong> pipeline coverage at 2.8 times the target instead of 4</li>
+      <li><strong>Finding:</strong> part targeting, part routing. Large accounts were interested, but too few of the right people, and the right ones never reached sales</li>
+    </ul>
+  </div>
+
+  <p>Two quarters after Contractly started selling to large companies, pipeline coverage for the next two quarters stood at 2.8 times the target. The team needs 4, because roughly one opportunity in four closes. Sign-ups were down 18% and demo requests from large companies reached half the plan. The first reaction in the room was the usual one: it's marketing. Three fixes came up: doubling the paid budget, rewriting the whole website for enterprise buyers, or lowering the MQL bar to give sales more leads.</p>
+  <p>Before picking one, the team filtered its funnel in Funnelsight on the target accounts, from the campaign to the first sales contact. It then read the new audience stage by stage. Each stage was compared with what this audience should look like, not with the small businesses the team knew.</p>
+
+  <h2>The new audience, stage by stage</h2>
+  <table class="data-table data-table-dense plan-table">
+    <caption>Leads from large companies, last quarter, read stage by stage. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Question</th><th scope="col">What the data shows</th><th scope="col">Reading</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Do large companies come?</th><td>22% of new leads, up from 8%</td><td><span class="check-status check-ok">Working</span></td></tr>
+      <tr><th scope="row">Are they the right people?</th><td>46% in the target audience, meaning a legal, procurement or finance role in a country with a sales team</td><td><span class="check-status check-warn">Marketing fix</span></td></tr>
+      <tr><th scope="row">Are they as active as other leads?</th><td>2.1 actions on average in their first two weeks, against 4.8 for small businesses</td><td><span class="check-status check-ok">Expected</span></td></tr>
+      <tr><th scope="row">Does sales reach them?</th><td>30% of target accounts contacted within two weeks</td><td><span class="check-status check-warn">Routing leak</span></td></tr>
+      <tr><th scope="row">Do they close?</th><td>Too early to read: the sales cycle is about six months</td><td><span class="check-status check-ok">Read later</span></td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Marketing had part of it wrong.</strong> The paid campaigns targeted large companies by size alone. They did reach them, but more than half of the leads were IT staff curious about the tool, or people in countries where Contractly had no one to sell. Doubling that budget would have bought more of the same leads.</p>
+  <p><strong>Lower activity on average wasn't the problem.</strong> A large account sends two kinds of people. Practitioners such as contract managers and in-house lawyers try the product, often several per company. The people who decide read a comparison, join a webinar and rarely log in. Averaged together, they look less active than a small business, where one person does both. Lowering the MQL bar to match small-business activity would have filled the sales queue with small trials.</p>
+  <p><strong>The biggest leak was in the handoff.</strong> The practitioners were the signal. Most of them didn't ask for a demo. They started a self-serve trial instead, sometimes three or four colleagues from the same company. Read person by person, they looked like small trials, and no one in sales saw them. Grouped by account, 35 target companies had three or more people trying the product.</p>
+
+  <h2>What changed</h2>
+  <ul>
+    <li><strong>Paid campaigns targeted by role and country.</strong> On LinkedIn, the campaigns now reach legal, procurement and finance roles in countries with a sales team.</li>
+    <li><strong>A path for large companies on the website.</strong> A "Talk to sales" button now sits next to the self-serve trial. A new page in the product section answers what a large legal team asks first, such as security reviews and rollout across departments.</li>
+    <li><strong>A guided tour, with no form.</strong> Decision-makers who won't set up a trial can see the product in a few minutes.</li>
+    <li><strong>Routing by account.</strong> When three people from a target account start a trial, the account goes to an enterprise rep. The alert arrives in the CRM with what the team has tried so far.</li>
+  </ul>
+  <p>The budget stayed where it was, and so did most of the website. In this illustrative scenario, leads from the target audience rose to 65% the following quarter. Pipeline coverage came back to 3.6 times the target.</p>
+
+  <h2>What to copy</h2>
+  <ul>
+    <li>Before choosing a fix, ask one question per stage, from "do they come?" to "do they close?"</li>
+    <li>Compare a new audience with its own expected values, not with the customers you already have.</li>
+    <li>Group people by company: a large account rarely arrives as one lead.</li>
+  </ul>
+
+  <div class="article-cta">
+    <p>See where your own funnel leaks, stage by stage and account by account.</p>
+    <a href="/trial" class="btn-primary accent">Start free trial</a>
+  </div>
+
+  <section class="read-next" aria-label="Read next">
+    <a class="read-next-card" href="/playbooks/marketing-sales-funnel-numbers-dont-match">
+      <span class="read-next-label">Read next</span>
+      <span class="read-next-title">Why marketing and sales pipeline numbers don't match</span>
+      <span class="read-next-desc">How an attribution model splits each deal, why a sales leader can't find those figures in the CRM, and what helps.</span>
+    </a>
+  </section>
+</article>
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <span>Funnelsight, Nantes, France</span>
+      <span>© 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/CecileMaindron/funnelsight-site/blob/main/README.md" target="_blank" rel="noopener">Learn more about this project</a>
+      <span class="footer-credit">Built by Cécile Maindron:
+        <a href="https://www.linkedin.com/in/cmaindron/" target="_blank" rel="me noopener" aria-label="Cécile Maindron on LinkedIn">LinkedIn</a> ·
+        <a href="https://github.com/CecileMaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on GitHub">GitHub</a> ·
+        <a href="https://medium.com/@cmaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on Medium">Medium</a>
+      </span>
+      <button type="button" class="footer-consent" id="consent-reopen">Cookie settings</button>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

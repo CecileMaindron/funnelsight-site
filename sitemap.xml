@@ -10,19 +10,19 @@
   </url>
   <url>
     <loc>https://funnelsight.dev/resources</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/trial</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/marketing-sales-funnel-numbers-dont-match</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/glossary/what-counts-as-activation-in-plg</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/spreadsheet-vs-analytics-tool-plg-tracking</loc>
@@ -30,15 +30,11 @@
   </url>
   <url>
     <loc>https://funnelsight.dev/features/revenue-attribution-payback-by-source</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/features/activation-retention-dashboard-plg-teams</loc>
-    <lastmod>2026-10-28</lastmod>
-  </url>
-  <url>
-    <loc>https://funnelsight.dev/case-studies/plg-team-unifies-activation-retention-data</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/glossary/how-to-calculate-churn-rate-b2b-saas</loc>
@@ -62,7 +58,7 @@
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/tracking-expansion-revenue-signals-plg</loc>
@@ -93,10 +89,6 @@
     <lastmod>2026-10-28</lastmod>
   </url>
   <url>
-    <loc>https://funnelsight.dev/case-studies/plg-team-improves-trial-to-paid-conversion</loc>
-    <lastmod>2026-10-25</lastmod>
-  </url>
-  <url>
     <loc>https://funnelsight.dev/glossary/user-level-vs-account-level-analytics</loc>
     <lastmod>2026-10-09</lastmod>
   </url>
@@ -114,7 +106,7 @@
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/signup-volume-vs-pql-quality</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://funnelsight.dev/playbooks/expanding-self-serve-plg-to-new-country</loc>
@@ -123,5 +115,17 @@
   <url>
     <loc>https://funnelsight.dev/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction</loc>
     <lastmod>2026-10-28</lastmod>
+  </url>
+  <url>
+    <loc>https://funnelsight.dev/case-studies/moving-upmarket-enterprise-pipeline</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://funnelsight.dev/case-studies/most-used-feature-vs-retention</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://funnelsight.dev/case-studies/cutting-marketing-budget-without-emptying-pipeline</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
