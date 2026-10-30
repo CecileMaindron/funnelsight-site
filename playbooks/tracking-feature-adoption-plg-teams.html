@@ -60,18 +60,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tracking feature adoption for PLG teams: Funnelsight</title>
-<meta name="description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
+<title>What feature adoption doesn't tell you: Funnelsight</title>
+<meta name="description" content="Feature adoption works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Tracking feature adoption: Funnelsight">
-<meta property="og:description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
+<meta property="og:title" content="What feature adoption doesn't tell you: Funnelsight">
+<meta property="og:description" content="Feature adoption works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tracking feature adoption: Funnelsight">
-<meta name="twitter:description" content="How to track feature adoption in a PLG product: the levels of adoption, why a feature isn't adopted, and how to link usage to retention.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+<meta name="twitter:title" content="What feature adoption doesn't tell you: Funnelsight">
+<meta name="twitter:description" content="Feature adoption works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-31">
 </head>
 <body>
 
@@ -160,94 +160,46 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Tracking feature adoption</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">What feature adoption doesn't tell you</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Tracking feature adoption</h1>
-  <p class="lede-intro">Knowing that users are active is not the same as knowing what they're actually using. Feature adoption tracking tells you which parts of your product are earning their place, and which ones nobody touches after the first week.</p>
+  <h1>What feature adoption doesn't tell you</h1>
+  <p class="lede-intro">Tracking feature adoption works like measuring channels. It shows where to invest, what to develop and what to stop, and as with channels, volume and frequency of use don't say enough on their own.</p>
 
-  <h2>Why "active user" isn't enough</h2>
-  <p>A broad activity metric is the usual starting point: logins, sessions, maybe a single activation event. That's reasonable, but it hides a lot. A user can log in every day and still ignore the feature you just shipped. A team can renew a contract and still use only a fraction of what it pays for.</p>
-  <p>Feature adoption tracking answers a narrower, more useful question: out of the people who could use this feature, how many actually do, and does using it change how long they stick around? That connection between a specific feature and retention is usually the missing piece.</p>
-
-  <h2>What to track first</h2>
-  <p>Don't try to instrument every feature at once. Pick two or three that you already suspect matter, usually the ones your best customers use and your churned customers didn't. For each one, track:</p>
-  <p>Who used it at least once, who used it repeatedly, and how those two groups compare on retention a month or two later. That's it. You can add breadth later once the first pass tells you something worth acting on.</p>
-  <p>This is where a lot of teams get stuck waiting for a complete tracking plan before starting. You don't need one. A spreadsheet export of usage events for a single feature, checked against your renewal or retention numbers, is enough to get a first read. Cover one feature and one segment properly before trying to cover everything at once.</p>
-  <p>Adoption has levels: a user who opens a feature once has found it, one who comes back to it on their own got something from it, and an account that uses it every week has made it part of how it works. The first click overstates adoption, so the last two levels are the ones worth comparing with retention.</p>
-
-  <h2>Why a feature isn't adopted</h2>
-  <p>Low adoption has more than one cause, and each one leaves a different trace in the data.</p>
+  <h2>Three questions usage can't answer alone</h2>
   <table class="data-table data-table-text data-table-compare">
-    <caption>Why a feature isn't adopted</caption>
+    <caption>What feature adoption answers once it's read with acquisition, sales and billing data</caption>
     <thead>
-      <tr><th scope="col">Why it isn't adopted</th><th scope="col">What it looks like in the data</th><th scope="col">What usually helps</th></tr>
+      <tr><th scope="col">Question</th><th scope="col">Read usage with</th><th scope="col">What it helps decide</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">People don't see it</th><td data-label="In the data">Few accounts ever try it</td><td data-label="What helps">Surface it where the related work happens</td></tr>
-      <tr><th scope="row">They don't understand it</th><td data-label="In the data">People try it once and rarely come back</td><td data-label="What helps">Explain it at the moment of use, with an example</td></tr>
-      <tr><th scope="row">They can't use it</th><td data-label="In the data">Only some roles use it, or no account on a given setup</td><td data-label="What helps">Check access rights, skills and setup, such as needing an admin</td></tr>
-      <tr><th scope="row">It appears at the wrong time</th><td data-label="In the data">Newer accounts ignore it while older ones use it</td><td data-label="What helps">Introduce it when the need appears, not on day one</td></tr>
-      <tr><th scope="row">Starting costs too much</th><td data-label="In the data">People open it, or click it while locked, then stop</td><td data-label="What helps">Lower the barrier: a trial, a template, or help with setup or security</td></tr>
+      <tr><th scope="row">What brought people to the trial?</th><td data-label="Read usage with">Their acquisition source and what they did first</td><td data-label="What it helps decide">Which features to put forward in campaigns and on the site</td></tr>
+      <tr><th scope="row">What convinced them to pay?</th><td data-label="Read usage with">Trial outcomes in the CRM</td><td data-label="What it helps decide">Where onboarding should lead, and what belongs in the trial</td></tr>
+      <tr><th scope="row">What keeps them, and grows what they pay?</th><td data-label="Read usage with">Renewals, churn and billing</td><td data-label="What it helps decide">What to protect and develop, and what can stop</td></tr>
     </tbody>
   </table>
+  <p>A feature's role isn't always the one it was built for. Some are must-haves, because they carry the value proposition or keep the product level with competitors. Others turn out to keep customers when they were expected to convert them, or the reverse. The answers also differ by persona, job to be done or company segment, so it's worth reading each question segment by segment before deciding.</p>
 
-  <h2>Connecting adoption to the rest of your funnel</h2>
-  <p>Feature adoption only becomes actionable when it sits next to the rest of your data: activation, retention, and what's happening on the revenue side. Funnelsight keeps product usage and CRM data in one shared funnel view, so a feature adoption trend and an account's renewal status show up in the same place instead of two exports you have to reconcile by hand. If you haven't yet defined which behaviors count as activation for your product, that's worth doing first, see our guide on <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> before layering feature-level tracking on top.</p>
-  <p>Data doesn't need to be continuous to be useful here. A dashboard refreshed on a set schedule, daily or a few times a day, is enough to spot a feature adoption trend early. Waiting for a real-time pipeline before you start is usually just a way to delay starting.</p>
+  <h2>Account by account</h2>
+  <p>The same data also works for a single account, where it tells customer success and sales what to do next. Each line below follows one feature in one account over the past year. The first two curves look alike, with use that stops, and only the account's history and contract say whether that's normal.</p>
+  <table class="data-table spark-table">
+    <caption>One feature per account, monthly use over the last 12 months. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Feature, one account each</th><th scope="col">Monthly use</th><th scope="col">What it signals</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Import from the previous tool</th><td><span class="spark" aria-hidden="true"><i style="height: 100%"></i><i style="height: 30%"></i><i style="height: 8%"></i><i style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i></span><span class="visually-hidden">A peak in the first month, then almost nothing</span></td><td><strong>Nothing to worry about.</strong> A migration happens once, so the drop is expected.</td></tr>
+      <tr><th scope="row">Monthly client report, annual contract</th><td><span class="spark" aria-hidden="true"><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i></span><span class="visually-hidden">Used every month for ten months, then not at all for the last two</span></td><td><strong>Churn risk.</strong> The report stopped in the two months before renewal.</td></tr>
+      <tr><th scope="row">Automated alerts</th><td><span class="spark" aria-hidden="true"><i style="height: 12%"></i><i style="height: 18%"></i><i style="height: 24%"></i><i style="height: 30%"></i><i style="height: 38%"></i><i style="height: 48%"></i><i style="height: 56%"></i><i style="height: 66%"></i><i style="height: 76%"></i><i style="height: 86%"></i><i style="height: 96%"></i><i style="height: 100%"></i></span><span class="visually-hidden">Steady growth every month, up to the plan's limit</span></td><td><strong>Upsell.</strong> Use has grown every month and reached the plan's limit.</td></tr>
+    </tbody>
+  </table>
+  <p>A product analytics tool draws these curves. What it can't show is the context that makes them readable: the first account came from a competitor with history to import, the second is about to renew, and the third pays for a plan with a limit. That context lives in the CRM and in billing. Funnelsight brings it next to usage and turns these patterns into <a href="/features/activation-retention-dashboard-plg-teams">churn-risk and expansion flags</a> for customer success and sales.</p>
 
   <div class="article-cta">
-    <p>See feature-level usage next to retention and CRM data, in one dashboard.</p>
+    <p>See how each feature is used, next to what each account buys and when it renews.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
-
-  <div class="article-faq">
-    <details>
-      <summary>What counts as feature adoption in a PLG product?</summary>
-      <p>A common working definition is repeated, unprompted use of a feature by a user or account, rather than a single click. One-time use tells you a feature was discovered; repeated use tells you it's providing value.</p>
-    </details>
-    <details>
-      <summary>Do I need to track every feature to get useful data?</summary>
-      <p>No. Start with two or three features you already suspect matter, ideally ones your retained customers use and your churned customers didn't. Expand coverage once that first comparison gives you something worth acting on.</p>
-    </details>
-    <details>
-      <summary>Can I track feature adoption without a data team?</summary>
-      <p>Yes. A spreadsheet export of usage events for a single feature, checked against retention or renewal data, is enough for a first pass. A dedicated dashboard becomes useful once you want that comparison updated automatically and shared across the team.</p>
-    </details>
-  </div>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What counts as feature adoption in a PLG product?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A common working definition is repeated, unprompted use of a feature by a user or account, rather than a single click. One-time use tells you a feature was discovered; repeated use tells you it's providing value."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to track every feature to get useful data?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Start with two or three features you already suspect matter, ideally ones your retained customers use and your churned customers didn't. Expand coverage once that first comparison gives you something worth acting on."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I track feature adoption without a data team?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A spreadsheet export of usage events for a single feature, checked against retention or renewal data, is enough for a first pass. A dedicated dashboard becomes useful once you want that comparison updated automatically and shared across the team."
-        }
-      }
-    ]
-  }
-  </script>
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/case-studies/most-used-feature-vs-retention">

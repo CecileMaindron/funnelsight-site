@@ -61,17 +61,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The hidden cost of chasing signup volume: Funnelsight</title>
-<meta name="description" content="Shrinking the signup form and lowering the PQL bar can look like easy wins. Here's what they actually cost, and when they're worth doing anyway.">
+<meta name="description" content="A shorter form or a new channel raises sign-ups. Here's why that doesn't always bring more customers, and what to check after each change.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/signup-volume-vs-pql-quality">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="The hidden cost of chasing signup volume: Funnelsight">
-<meta property="og:description" content="Shrinking the signup form and lowering the PQL bar can look like easy wins. Here's what they actually cost, and when they're worth doing anyway.">
+<meta property="og:description" content="A shorter form or a new channel raises sign-ups. Here's why that doesn't always bring more customers, and what to check after each change.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/signup-volume-vs-pql-quality">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The hidden cost of chasing signup volume: Funnelsight">
-<meta name="twitter:description" content="Shrinking the signup form and lowering the PQL bar can look like easy wins. Here's what they actually cost, and when they're worth doing anyway.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+<meta name="twitter:description" content="A shorter form or a new channel raises sign-ups. Here's why that doesn't always bring more customers, and what to check after each change.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-31">
 </head>
 <body>
 
@@ -165,18 +165,33 @@
 
 <article class="article wrap">
   <h1>The hidden cost of chasing signup volume</h1>
-  <p class="lede-intro">Two moments come up again and again in growth teams. Someone suggests shrinking the signup form to get more leads. Someone on sales asks why a lead needs to clear a PQL bar at all when pipeline is tight. Neither move is automatically wrong, and neither one is free.</p>
+  <p class="lede-intro">Shortening the sign-up form or opening a new channel raises the sign-up count, often at a lower cost. What it brings in customers shows up further down the funnel, where few reports look.</p>
 
-  <h2>Why a shorter form looks like the fix</h2>
-  <p>A longer signup form is an easy target when the number everyone is watching is total signups. Fewer fields, less friction, more people through the door. Testing that idea isn't the problem: trying a shorter form, or swapping one field for another, can genuinely move the needle, and the usual discipline applies here like anywhere else. Change one field at a time, and give it enough time to read the result, instead of cycling the form every few weeks and never knowing which change actually did anything.</p>
-  <p>The part that gets skipped is checking what a removed field was doing further down the funnel, not just at the signup step. Country and phone number are the two that come up most. Drop country and compliance rules a team relies on elsewhere can quietly stop applying correctly. Drop phone number and email becomes the only way to reach that person later, which matters the day they go quiet: a dormant or churned trial user has no reason to hand over a phone number after the fact, so if email isn't working, there's no second channel left. A shorter form that moves the signup number up while usage, activation, or PQL volume moves down hasn't fixed anything. It's moved the same problem one step further down the funnel.</p>
+  <h2>A shorter form, one quarter later</h2>
+  <p>A SaaS team with a free trial cuts its sign-up form from six fields to three, removing phone number, company and job title. The acquisition budget, paid and content together, stays at $75k a quarter. Sign-ups go up, and the quarterly report calls it a win. To check whether the win holds, the team follows those sign-ups in Funnelsight, all the way to the customers sales signed.</p>
+  <table class="data-table data-table-dense nowrap-values">
+    <caption>The quarter before and the quarter after the change. Customers who buy online without sales aren't included. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col"></th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Change</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Sign-ups</th><td>3,000</td><td>3,300</td><td><strong>+10%</strong></td></tr>
+      <tr><th scope="row">Product qualified leads</th><td>600</td><td>645</td><td>+8%</td></tr>
+      <tr><th scope="row">Accepted by sales</th><td>330</td><td>323</td><td>&minus;2%</td></tr>
+      <tr><th scope="row">New customers through sales</th><td>66</td><td>65</td><td><strong>&minus;2%</strong></td></tr>
+      <tr><th scope="row">Cost per sign&#8209;up</th><td>$25</td><td>$23</td><td>&minus;9%</td></tr>
+    </tbody>
+  </table>
+  <p>A shorter form lowers the bar to entry, so the extra sign-ups include more people who just want to look. And without a phone number, reps reached fewer PQLs.</p>
 
-  <h2>Why calling a signup five minutes in solves nothing</h2>
-  <p>A rep reaching out to a trial user minutes after signup is usually trying to compensate for something else: a trial that isn't quite self-serve enough, or a worry that the prospect won't get set up correctly alone. Both are legitimate reasons to get involved, if the product genuinely needs it. What's harder to justify is reaching out as a default, on every signup, regardless of whether the person has done anything yet.</p>
-  <p>If a signup needs a salesperson that early, the question isn't really about timing. It's about the trial itself. What does a self-serve trial offer over asking the prospect to book a demo? And from the rep's side, someone who signed up five minutes ago and hasn't logged in yet usually doesn't have much to talk about. There's also a simpler signal worth taking seriously: someone who picked "start a trial" over "contact us" or "request a demo" chose that path for a reason. At that stage, they weren't looking for a conversation with sales. Our page on <a href="/solutions/sales">redefining the hot lead in a self-serve motion</a> goes further into when sales should actually step in.</p>
+  <h2>What chasing sign-ups does to the rest of the funnel</h2>
+  <p>A target set on sign-ups alone tends to start a chain of reactions, each easy to justify on its own.</p>
+  <p><strong>More sign-ups look like the answer.</strong> A shorter form, a new channel or a new profile, such as another company size, vertical or job title, can all raise volume, often at a lower cost per sign-up. Testing them is how a team finds room to grow, but it's unknown territory, and 10% more sign-ups at the top rarely means 10% more customers at the bottom.</p>
+  <p><strong>Then the PQL bar gets the blame.</strong> When PQLs don't keep pace with sign-ups, it's tempting to conclude the bar is too strict and lower it until they do. A PQL, like an MQL, shouldn't be redefined to follow pipeline swings. A conversion rate that stays far too high or too low is a reason to revisit the bar, while one weak quarter isn't.</p>
+  <p><strong>Then lead quality gets the blame.</strong> When sales accepts fewer PQLs, the usual explanation is that the leads got worse. That only holds if the audience changed, since a new channel or profile can bring people who use the product the same way without being buyers. With the same audience and the same bar, a PQL is worth what it was before. The cause is more often what's missing around it, such as the profile reps rely on to route and follow up each lead.</p>
 
-  <h2>The same fight marketing already had over the MQL bar</h2>
-  <p>Raise the PQL bar and sales complains there isn't enough volume to work with. Lower it and sales complains the leads aren't worth calling. That's not a new argument: marketing has been having some version of this fight over the MQL bar for years. The criteria behind a PQL can genuinely be too strict, or too loose, and worth revisiting on that basis. What doesn't hold up is adjusting them every time sales asks, without looking at what actually happens to conversion further down the funnel once the bar moves.</p>
+  <h2>Leads don't carry the pipeline alone</h2>
+  <p>Behind these reactions is the idea that pipeline is lead generation's job. Even the best leads get lost if the product doesn't show its value during the trial, or if the follow-up from sales is slow or generic. <a href="/solutions/sales">Redefining the hot lead in a self-serve motion</a> looks at when sales should step in, and <a href="/glossary/what-is-a-product-qualified-lead-pql">what counts as a PQL</a> at how to set the bar.</p>
 
   <h2>What to watch after each change</h2>
   <p>Each of these moves can be the right call. What matters is checking the step after the one it was meant to improve.</p>
@@ -186,32 +201,23 @@
       <tr><th scope="col">What you change</th><th scope="col">What it can improve</th><th scope="col">What to watch next</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">A shorter sign-up form</th><td data-label="What it can improve">More sign-ups</td><td data-label="What to watch next">Activation and PQLs per sign-up, and whether you can still reach the people who go quiet</td></tr>
+      <tr><th scope="row">A shorter sign-up form</th><td data-label="What it can improve">More sign-ups</td><td data-label="What to watch next">PQLs and leads accepted by sales per sign-up, and whether you can still reach users who stop being active</td></tr>
+      <tr><th scope="row">A new channel or audience</th><td data-label="What it can improve">More sign-ups, often cheaper</td><td data-label="What to watch next">The cost per lead accepted by sales, and how that audience converts compared with your usual one</td></tr>
       <tr><th scope="row">A lower PQL bar</th><td data-label="What it can improve">More PQLs for sales</td><td data-label="What to watch next">How the PQLs that only clear the new bar convert, and the time reps spend on each one</td></tr>
-      <tr><th scope="row">Calling new sign-ups sooner</th><td data-label="What it can improve">Faster contact</td><td data-label="What to watch next">Whether those trials activate and convert better, or simply get a call they didn't ask for</td></tr>
       <tr><th scope="row">A higher PQL bar</th><td data-label="What it can improve">Better PQLs</td><td data-label="What to watch next">Whether sales still has enough to work on, and how many good accounts now buy without help</td></tr>
     </tbody>
   </table>
-
-  <h2>Seeing the trade-off instead of guessing at it</h2>
-  <p>Funnelsight connects acquisition source, product usage, and CRM activity in one view, so a change made at one point in the funnel doesn't disappear into a blended number somewhere else. PQL scoring weighting stays visible and editable by your team rather than hidden inside a black box, so a lowered threshold shows up as a lowered threshold, not as an unexplained shift in close rate three weeks later. You can see, by segment, whether a shorter form, a changed PQL bar, or an earlier sales touch actually produced more paying customers, or just moved the same problem to a different stage. Our <a href="/glossary/what-is-a-product-qualified-lead-pql">guide to what counts as a PQL</a> covers how that scoring works in more detail.</p>
-
-  <h2>What this looks like in practice</h2>
-  <p>A growth team lowers its PQL threshold for a quarter to keep sales fed, the kind of change that's easy to justify in the moment. Looking at the segmented view instead of a single pipeline total, they see the accounts that only cleared the new, lower threshold convert at a visibly lower rate than the ones that would have cleared the original bar, while the time reps spend per PQL goes up, not down. The threshold goes back up the next quarter, this time with the team watching segment-level conversion instead of just the raw PQL count. Our <a href="/features/product-qualified-lead-scoring">PQL scoring feature</a> is built around exactly that kind of visible, adjustable rule.</p>
+  <p>In Funnelsight, the <a href="/features/product-qualified-lead-scoring">PQL scoring rule</a> stays visible and dated, so a lowered threshold shows up as a lowered threshold, not as an unexplained dip in close rate a few weeks later.</p>
 
   <div class="article-cta">
-    <p>See whether a change to your signup form or your PQL bar actually improves conversion, not just volume.</p>
+    <p>See what a change to your form or your PQL bar does, down to the leads sales accepts.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
       <summary>Does this mean the signup form should never change?</summary>
-      <p>No. Testing and adjusting fields can genuinely help. The point is to change one field at a time and check the effect across the whole funnel, not just the signup count.</p>
-    </details>
-    <details>
-      <summary>Should sales ever contact a trial user directly?</summary>
-      <p>Yes, when the trial genuinely isn't self-serve enough for the prospect to get there alone. It shouldn't be the default reflex every time pipeline feels tight.</p>
+      <p>No. Testing fields can help. Change one field at a time, leave it long enough to read the result, and check its effect down to the leads sales accepts, not just the sign-up count.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -224,15 +230,7 @@
         "name": "Does this mean the signup form should never change?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Testing and adjusting fields can genuinely help. The point is to change one field at a time and check the effect across the whole funnel, not just the signup count."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should sales ever contact a trial user directly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, when the trial genuinely isn't self-serve enough for the prospect to get there alone. It shouldn't be the default reflex every time pipeline feels tight."
+          "text": "No. Testing fields can help. Change one field at a time, leave it long enough to read the result, and check its effect down to the leads sales accepts, not just the sign-up count."
         }
       }
     ]

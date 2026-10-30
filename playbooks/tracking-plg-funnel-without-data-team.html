@@ -60,18 +60,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Track your PLG funnel without a data team: Funnelsight</title>
-<meta name="description" content="What a first PLG funnel view should answer, the data it needs, what to use without a product analytics tool, and how to start the same day without a data team.">
+<title>Start tracking your PLG funnel: Funnelsight</title>
+<meta name="description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Track your PLG funnel without a data team: Funnelsight">
-<meta property="og:description" content="What a first PLG funnel view should answer, the data it needs, what to use without a product analytics tool, and how to start the same day without a data team.">
+<meta property="og:title" content="Start tracking your PLG funnel: Funnelsight">
+<meta property="og:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Track your PLG funnel without a data team: Funnelsight">
-<meta name="twitter:description" content="What a first PLG funnel view should answer, the data it needs, what to use without a product analytics tool, and how to start the same day without a data team.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+<meta name="twitter:title" content="Start tracking your PLG funnel: Funnelsight">
+<meta name="twitter:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-31">
 </head>
 <body>
 
@@ -159,96 +159,92 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Track your PLG funnel without a data team</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Start tracking your PLG funnel</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Track your PLG funnel without a data team</h1>
-  <p class="lede-intro">Funnel tracking often waits until an analyst or an engineer is free. It doesn't have to: a first useful view needs a few exports and one agreed definition, and it can be in place the same day.</p>
+  <h1>Start tracking your PLG funnel</h1>
+  <p class="lede-intro">A first funnel view takes two exports and one definition your team agrees on. With access to the right data, it can be ready the same day.</p>
 
-  <h2>Why funnel tracking usually waits on a data team</h2>
-  <p>Activation and retention data tends to live in two places: the product itself, and the CRM. Pulling both into one view by hand, in a spreadsheet, works for a while. Then the team grows, the number of signals grows with it, and the spreadsheet stops being something anyone trusts. At that point, the instinct is to wait for a data hire or an engineering sprint before doing anything more structured. That wait can stretch for months, and in the meantime nobody has a clear read on where users actually drop off.</p>
-
-  <h2>What a first view should answer</h2>
-  <p>A first view doesn't need twenty metrics. It needs to answer three questions well:</p>
-  <ul>
-    <li>Of the people who signed up last month, how many reached the activation event, and how long did it take them?</li>
-    <li>Which sources bring the sign-ups that activate, not just the most sign-ups?</li>
-    <li>Do the users who activated still use the product a few weeks later?</li>
-  </ul>
-  <p>A view that answers those three is already more useful than a dashboard full of numbers nobody acts on.</p>
-
-  <h2>What you need to build it</h2>
-  <table class="data-table data-table-text data-table-compare">
-    <caption>The data a first funnel view needs</caption>
+  <h2>A first view, built in an afternoon</h2>
+  <p>A growth marketer exports last month's sign-ups from the CRM, with the source of each one, and a usage export from the product. The team has agreed that a user is activated once they share a first project with a teammate within 14 days. Both files go into Funnelsight as a spreadsheet and are matched on each user's email. When the usage export has no email, which is common for privacy reasons, the match runs on the user ID the product assigns, as long as the CRM stores it too. Sign-ups with no recorded source stay in the view, labelled as such, rather than disappearing. The view below is ready before the end of the afternoon.</p>
+  <table class="data-table bar-table lifetime-table">
+    <caption>Last month's sign-ups by source, and how many activated within 14 days. Illustrative data</caption>
     <thead>
-      <tr><th scope="col">What you need</th><th scope="col">Where it usually comes from</th><th scope="col">Why it matters</th></tr>
+      <tr><th scope="col">Source</th><th scope="col">Users<span class="lifetime-key"><span class="key key-leads" aria-hidden="true"></span>Signed up <span class="key key-revenue key-inline" aria-hidden="true"></span>Activated</span></th><th scope="col">Activation rate</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">The list of sign-ups or accounts</th><td data-label="Where it comes from">Your CRM or your sign-up database</td><td data-label="Why it matters">It tells you who signed up, and when</td></tr>
-      <tr><th scope="row">Product usage</th><td data-label="Where it comes from">An export from your product analytics tool, or from the product's own database</td><td data-label="Why it matters">It shows whether the activation event happened</td></tr>
-      <tr><th scope="row">The acquisition source</th><td data-label="Where it comes from">Your CRM or GA4, from campaign tags</td><td data-label="Why it matters">It lets you compare sources on activation rather than on volume</td></tr>
-      <tr><th scope="row">The activation event</th><td data-label="Where it comes from">A decision your team makes</td><td data-label="Why it matters">Without it, "activated" means something different to each person</td></tr>
+      <tr><th scope="row">Organic search</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 100%"></span></span><span class="bar-value">480</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 38%"></span></span><span class="bar-value bar-value-strong">182</span></span></span></td><td class="num">38%</td></tr>
+      <tr><th scope="row">Paid search</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 62%"></span></span><span class="bar-value">300</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 12%"></span></span><span class="bar-value bar-value-strong">60</span></span></span></td><td class="num">20%</td></tr>
+      <tr><th scope="row">Social</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 50%"></span></span><span class="bar-value">240</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 8%"></span></span><span class="bar-value bar-value-strong">36</span></span></span></td><td class="num">15%</td></tr>
+      <tr><th scope="row">Referrals</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 38%"></span></span><span class="bar-value">180</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 19%"></span></span><span class="bar-value bar-value-strong">90</span></span></span></td><td class="num">50%</td></tr>
     </tbody>
   </table>
-  <p>The last line is the only one you can't export. It's also the one most likely to cause arguments later, so it's worth settling first: <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> walks through how to choose it.</p>
+  <p>Paid search brings more sign-ups than referrals, yet fewer of its users activate: 60 against 90. Ad platforms learn to find the people most likely to sign up, who aren't always the ones who go on to use the product. A report that stops at sign-ups would send more of next month's budget to paid search. Referrals, where half the users activate, would get none of the attention.</p>
+
+  <h2>Three questions a first view should answer</h2>
+  <ul>
+    <li>Of last month's sign-ups, how many activated, and how long did it take them?</li>
+    <li>Which sources bring the users who activate, not just the most sign-ups?</li>
+    <li>Do the users who activated still use the product a few weeks later?</li>
+  </ul>
+  <p>The example above answers the first two. The third needs the same usage export, taken again a few weeks later.</p>
+
+  <h2>Where each step's data lives</h2>
+  <div class="layer-map">
+    <p class="lm-title">Each step of the funnel, and where its data comes from</p>
+    <ol class="lm-steps">
+      <li class="lm-step"><span class="lm-stage">Visit</span><span class="lm-source">Campaign tags on each link, saved with the sign-up</span></li>
+      <li class="lm-step"><span class="lm-stage">Sign-up</span><span class="lm-source">The CRM or the sign-up database, with each user's source</span></li>
+      <li class="lm-step"><span class="lm-stage">Activation</span><span class="lm-source lm-source-decision"><span class="lm-tag">Your decision</span>A usage export, read against the event your team chose</span></li>
+      <li class="lm-step"><span class="lm-stage">Still active</span><span class="lm-source">The same usage export, a few weeks later</span></li>
+      <li class="lm-step"><span class="lm-stage">Paying</span><span class="lm-source">Billing, or the CRM</span></li>
+    </ol>
+  </div>
+  <p>Activation is the one step you can't export. It's a decision, and the one most likely to cause arguments later, so it's worth settling first. <a href="/glossary/what-counts-as-activation-in-plg">What counts as activation in PLG</a> walks through how to choose it.</p>
+
+  <h2>What you can do alone, and where you'll need help</h2>
+  <p>Starting alone is realistic. Covering the whole funnel alone rarely is, because the data belongs to several teams and comes with rules.</p>
+  <div class="scope-lists">
+    <div class="scope-list scope-yes">
+      <h3>You can do yourself</h3>
+      <ul>
+        <li>Lay out the funnel steps and propose an activation event</li>
+        <li>Import the exports and check how they match</li>
+        <li>Read the view and compare sources</li>
+        <li>List what the view can't see yet</li>
+      </ul>
+    </div>
+    <div class="scope-list scope-help">
+      <h3>You'll need someone else for</h3>
+      <ul>
+        <li>Access to the CRM and product exports, often granted by an admin</li>
+        <li>Knowing which fields to export, such as the user ID the product assigns, and what each one means</li>
+        <li>Agreement on the activation event from the teams that use it</li>
+        <li>Recording an event the product doesn't capture yet</li>
+        <li>The data rules: an export holds personal data, so keep only the columns you need, store it where access is limited, and delete it once imported</li>
+      </ul>
+    </div>
+  </div>
 
   <h2>No product analytics tool yet?</h2>
-  <p>Not every team has one, and it's tempting to wait until it does. A product analytics tool isn't a prerequisite, though, and it comes with its own work: someone has to instrument the product so it sends clean events, and in Europe users usually have to consent to being tracked. In the meantime, other signals can stand in for usage:</p>
+  <p>A product analytics tool isn't a prerequisite, and it comes with its own work. Someone has to instrument the product so it sends clean events, and in Europe users usually have to consent to being tracked. Until then, other signals can stand in for usage.</p>
   <ul>
     <li><strong>The product's own database,</strong> which already records what accounts create, connect or configure.</li>
     <li><strong>Light tracking on the web app,</strong> when the product runs online.</li>
-    <li><strong>Requests that can only come from inside the product,</strong> such as a contact form or a feature that only shows up after a few days of use. When one arrives, it confirms the user got that far.</li>
-    <li><strong>A thank-you page after a download.</strong> A visit confirms the download started, and a short form on that page can tell you who it was.</li>
+    <li><strong>Requests that can only come from inside the product,</strong> such as a form that only appears after a few days of use. When one arrives, it confirms the user got that far.</li>
+    <li><strong>A thank-you page after a download,</strong> where a visit confirms the download started and a short form can tell you who it was.</li>
   </ul>
-  <p>Starting this way has another benefit. Laying out the funnel step by step, with the data you actually have, quickly shows where the gaps are and which events a product analytics tool would need to capture. Choosing that tool, and briefing whoever implements it, is easier once you know what the first view couldn't answer. In Funnelsight, the data check lists what it can and can't see, so those gaps are written down from the first import.</p>
 
-  <h2>How to start without one</h2>
-  <p>Funnelsight is built so a marketing or growth person can set up a working view alone. You import a spreadsheet to get started and test the setup before connecting a live product data source, so there's nothing to provision on day one. Once you've settled on the action, or short sequence of actions, that shows up consistently among the users who stick around, you define that event once. It is the same mechanism behind Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a>. A working view can be in place the same day, without a <a href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">dedicated analytics tool</a> or a data engineer involved.</p>
-  <p>Starting simple doesn't mean using unreliable data. It means limiting scope at first, not cutting corners on rigor. In practice, cover one persona or segment before all of them, and set your data refresh on a schedule, hourly or daily, rather than aiming for a continuous stream you don't need yet. Both are configurable later, once you know what you're actually looking for.</p>
-
-  <h2>What a first pass looks like</h2>
-  <p>A growth marketer exports the current user list from the CRM, with each user's acquisition source, and a usage export from the product. They import both into Funnelsight as a spreadsheet and define "created first project" as the activation event. Within the same session, they can see how many signed-up users reached that event, which sources those users came from, and how that group's retention compares over the following weeks. There's no dashboard to build from scratch and no query to write. Once the setup earns its keep, the next step is connecting a live source, so the view updates on its own schedule instead of through a manual re-import.</p>
+  <h2>What the first view can't see yet</h2>
+  <p>Laying out the funnel with the data you have shows the gaps quickly, such as sign-ups with no source or an activation step the product doesn't record. That list becomes the brief for a product analytics tool, or for whoever instruments the product. In Funnelsight, the data check writes those gaps down from the first import.</p>
+  <p>A small scope at first doesn't mean looser rigor. One segment covered properly, with data refreshed daily rather than continuously, is enough to act on. Once the view has earned its place, a live connection replaces the manual re-import, and the <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> updates on its own schedule.</p>
 
   <div class="article-cta">
-    <p>Get a working funnel view today, no data team required.</p>
+    <p>See which sources bring users who activate, from your first import.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
-  <div class="article-faq">
-    <details>
-      <summary>Do I need engineering help to set this up?</summary>
-      <p>No. Importing a spreadsheet is enough to get started, and a working dashboard can be in place the same day.</p>
-    </details>
-    <details>
-      <summary>Can I start with one metric before covering everything?</summary>
-      <p>Yes. Covering a single activation event or one segment first, then expanding, is a reasonable way to start: it keeps the data rigorous while limiting what you take on at once.</p>
-    </details>
-  </div>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Do I need engineering help to set this up?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Importing a spreadsheet is enough to get started, and a working dashboard can be in place the same day."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I start with one metric before covering everything?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Covering a single activation event or one segment first, then expanding, is a reasonable way to start: it keeps the data rigorous while limiting what you take on at once."
-        }
-      }
-    ]
-  }
-  </script>
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">
