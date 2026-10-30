@@ -831,6 +831,10 @@ footer a {
 .resource-group[open] summary::after { content: '\2212'; }
 
 /* One line under each section title, saying how the cards are ordered */
+.resource-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+.resource-jump a { font-size: 14px; font-weight: 600; color: var(--indigo); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--white); }
+.resource-jump a:hover { background: var(--bg); }
+.resource-group summary { scroll-margin-top: 100px; }
 .resource-group-intro { font-size: 15px; color: var(--muted); margin: 0 0 20px; max-width: 60ch; }
 .resource-cards { display: grid; gap: 24px; padding-bottom: 32px; }
 .resource-card {
@@ -887,6 +891,8 @@ footer a {
 .scope-list li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
 .scope-yes li::before { content: "\2713" / ""; color: var(--indigo); }
 .scope-no li::before { content: "\2717" / ""; color: var(--muted); }
+.scope-help { border-top: 4px solid var(--accent); }
+.scope-help li::before { content: "\2192" / ""; color: #7A4F00; }
 @media (max-width: 600px) {
   .scope-lists { grid-template-columns: 1fr; }
   .share-figure { padding: 14px; }
@@ -978,6 +984,64 @@ footer a {
   .scope-lists { gap: 12px; }
   .scope-list { padding: 14px 16px; }
   .scope-list li { margin-bottom: 6px; }
+}
+
+/* Layer map: each funnel step on top, where its data comes from below.
+   On mobile, each step becomes a row, stage on the left */
+.layer-map { margin: 24px 0; background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.article .lm-title { font-weight: 600; font-size: 15px; color: var(--ink); margin: 0 0 14px; }
+.lm-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.article .lm-steps li { margin: 0; }
+.lm-step { display: flex; flex-direction: column; gap: 8px; position: relative; }
+.lm-stage { display: block; background: var(--indigo); color: var(--white); font-weight: 600; font-size: 14px; border-radius: 6px; padding: 8px 10px; text-align: center; }
+.lm-step:not(:last-child) .lm-stage::after { content: "\203A"; position: absolute; top: 5px; right: -10px; font-size: 18px; line-height: 1; color: var(--muted); }
+.lm-source { display: block; flex: 1; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 13.5px; line-height: 1.4; color: #2A2D3B; }
+.lm-source-decision { background: var(--white); border: 1.5px dashed var(--accent); }
+.lm-tag { display: block; width: fit-content; font-size: 11px; font-weight: 700; color: #7A4F00; background: #FBEAD0; border-radius: 4px; padding: 1px 6px; margin-bottom: 4px; }
+@media (max-width: 600px) {
+  .layer-map { padding: 14px; }
+  .lm-steps { grid-template-columns: 1fr; gap: 8px; }
+  .lm-step { flex-direction: row; align-items: stretch; gap: 8px; }
+  .lm-stage { width: 92px; flex-shrink: 0; display: flex; align-items: center; background: var(--white); color: var(--indigo); border: none; border-left: 3px solid var(--indigo); border-radius: 0; text-align: left; font-size: 14px; padding: 4px 0 4px 10px; }
+  .lm-step:not(:last-child) .lm-stage::after { content: none; }
+}
+
+/* Account view: what the CRM holds about one account, next to what
+   Funnelsight adds from product usage and billing */
+.account-view { margin: 24px 0; background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.av-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 18px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.av-title { font-weight: 600; font-size: 15px; color: var(--ink); }
+.article .av-account { margin: 0; padding: 10px 18px; font-size: 14px; color: var(--ink); border-bottom: 1px solid var(--line); }
+.av-row { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 16px; padding: 12px 18px; border-top: 1px solid #EEF0F4; }
+.av-row-head { border-top: none; padding-bottom: 0; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.article .av-who, .article .av-crm, .article .av-fs { margin: 0; font-size: 14.5px; }
+.article .av-who { font-weight: 600; color: var(--ink); }
+.article .av-crm { color: #2A2D3B; }
+.article .av-fs { color: var(--ink); }
+.av-cell-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.av-status { display: block; width: fit-content; font-size: 12px; font-weight: 600; color: var(--indigo); background: #ECEAF6; border-radius: 4px; padding: 1px 6px; margin-bottom: 3px; }
+.av-status-hot { color: #7A4F00; background: #FBEAD0; }
+.av-status-cold { color: var(--muted); background: var(--bg); }
+@media (max-width: 600px) {
+  .av-head, .article .av-account { padding: 10px 14px; }
+  .av-row-head { display: none; }
+  .av-row { grid-template-columns: 1fr; gap: 6px; padding: 12px 14px; }
+  .av-cell-label { position: static; width: auto; height: auto; overflow: visible; clip: auto; white-space: normal; display: block; font-size: 12px; color: var(--muted); }
+}
+
+/* Spark table: one small bar per month, the reading written next to it */
+.spark-table td { vertical-align: middle; }
+.spark { display: inline-flex; align-items: flex-end; gap: 2px; height: 28px; }
+.spark i { display: block; width: 6px; background: var(--indigo); border-radius: 1px; }
+.spark i.is-zero { background: var(--line); }
+@media (max-width: 600px) {
+  .spark-table { font-size: 14px; }
+  .spark-table thead { display: none; }
+  .spark-table tbody tr { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-items: center; padding: 12px 10px; border-top: 1px solid var(--line); }
+  .spark-table tbody th { grid-column: 1 / -1; white-space: normal; padding: 0; border: none; }
+  .spark-table tbody td { padding: 0; border: none; }
+  .spark { gap: 1px; height: 24px; }
+  .spark i { width: 5px; }
 }
 
 /* Plan against actual (case study): grouped rows, the reading written as

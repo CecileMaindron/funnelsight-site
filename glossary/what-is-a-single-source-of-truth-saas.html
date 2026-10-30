@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is a single source of truth in SaaS: Funnelsight">
 <meta name="twitter:description" content="A single source of truth in SaaS is where definitions live, not a single number. What to keep shared, what can vary, and how to start without overengineering.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+<link rel="stylesheet" href="/styles.css?v=2026-10-31">
 </head>
 <body>
 
@@ -165,94 +165,52 @@
 
 <article class="article wrap">
   <h1>What is a single source of truth in SaaS</h1>
-  <p class="lede-intro">A single source of truth is the place where a company's key definitions live, starting with the ones teams tend to read differently: what counts as an active user, when a lead becomes an MQL, whether a larger renewal is an upsell. It also names the reference system for each figure. It doesn't mean every team sees one number. It means that when two numbers differ, anyone can see why.</p>
+  <p class="lede-intro">Asked how many customers the company has, finance says 1,240, sales says 860 and the product team says 2,100. A single source of truth doesn't pick one of these figures. It's where the definitions behind each one are written down, so anyone can see why they differ.</p>
 
-  <h2>Why the phrase comes up so often</h2>
-  <p>Most SaaS companies end up with product usage in one tool, CRM activity in another and billing somewhere else. Each tool tells part of the story. Marketing looks at sign-ups and feature usage, sales at deal stages and account value. When the figures don't line up, the conversation shifts from "what should we do?" to "whose number is right?". A shared dashboard helps, but it doesn't settle the question on its own if the definitions behind it are still unclear.</p>
-  <p>Asking an AI assistant doesn't remove the question. Ask it how many active users you had last month and it will answer, picking a definition for you without saying which. Written-down definitions are what make its answer comparable with everyone else's.</p>
+  <h2>One set of definitions, several right numbers</h2>
+  <p>The finance, sales and product figures are all correct. Finance counts each entity it invoices, so the subsidiaries of one group count separately. Sales counts the accounts it owns in the CRM, grouped under the parent company. The product team counts paid instances, and one customer can run several, for different teams or regions. The real problem is one word, customer, for three different counts. Deciding which one the company reports, and giving the others their own names, ends the debate. Pipeline works the same way, with sales reading it deal by deal and marketing through an attribution model that splits each deal across the touches before it (see <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>).</p>
+  <div class="scope-lists">
+    <div class="scope-list scope-yes">
+      <h3>Keep it single</h3>
+      <ul>
+        <li>The definitions teams read differently, such as customer, active user, MQL or upsell</li>
+        <li>The reference system for each figure, such as the CRM for opportunities and revenue</li>
+        <li>Rule changes, dated and explained</li>
+      </ul>
+    </div>
+    <div class="scope-list scope-help">
+      <h3>Let it vary</h3>
+      <ul>
+        <li>Views, from daily detail for campaign owners to a summary for leadership</li>
+        <li>Readings, deal by deal, by channel or by account</li>
+        <li>Periods and level of detail</li>
+      </ul>
+    </div>
+  </div>
 
-  <h2>One source of definitions, not one number</h2>
-  <p>Two teams can work from the same definitions and still report different figures, both correct. Sales reads the pipeline deal by deal, while marketing reads it through an attribution model that splits each deal across the touches that came before it. They answer different questions (see <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>).</p>
-  <p>Counting can do the same. Say a team counts trial sign-ups once per account and per month, because ten people from the same company starting a trial still lead to one purchase, not ten. The definition is sound. But an account that signs up in two different weeks counts once in each weekly total and once in the monthly one, so the four weeks add up to more than the month. The CRM, which records each person, shows a third figure. All three are right.</p>
-  <table class="data-table">
-    <caption>What a single source of truth keeps shared, and what can vary</caption>
-    <thead>
-      <tr><th scope="col">Keep it single</th><th scope="col">Let it vary</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Definitions that teams read differently: active user, MQL, upsell or renewal</td><td>Views: daily detail for the people running campaigns, a summary for leadership</td></tr>
-      <tr><td>The reference system for each figure, such as the CRM for opportunities and revenue</td><td>Readings: deal by deal, by channel, by account</td></tr>
-      <tr><td>Rule changes, dated and explained</td><td>Periods and level of detail</td></tr>
-    </tbody>
-  </table>
+  <h2>Why a shared dashboard isn't enough</h2>
+  <p>Product usage, CRM activity and billing usually live in different tools, and each team reads the one it knows best. When the figures don't line up, the meeting turns from "what should we do?" to "whose number is right?". A shared dashboard doesn't settle that while the definitions behind it stay unclear.</p>
+  <p>An AI assistant doesn't settle it either. Ask it how many customers you have and it will answer with the finance, sales or product count, without saying which. Written-down definitions are what make its answer comparable with everyone else's.</p>
 
   <h2>Signs the definitions aren't shared</h2>
   <ul>
     <li>Meetings start by reconciling numbers instead of discussing them.</li>
-    <li>One team's "active user" is another team's "logged in once last month".</li>
-    <li>Sales signed off on the criteria that make a lead an MQL, yet still questions the quality of the leads it receives, or asks for more of them.</li>
     <li>A customer renews with more seats, and one team books it as an upsell while another books it as a renewal.</li>
-    <li>A metric's name says one thing and its formula another. A "monthly recurring revenue" figure that also counts one-off setup fees looks plausible, so nobody goes back to read the formula.</li>
-    <li>A definition changed, and nobody knows when, so this quarter is compared with last quarter across the break.</li>
+    <li>A metric's name says one thing and its formula another, like a "monthly recurring revenue" that includes one-off setup fees.</li>
+    <li>A definition changed, nobody knows when, and this quarter is compared with the last one across the break.</li>
   </ul>
 
   <h2>How to start without overengineering it</h2>
-  <p>Write down the definitions of the few metrics that drive decisions, and name the reference system for each one. Start with the two or three sources that cause the most disagreement, usually product usage and CRM data. A spreadsheet is enough to check which fields actually matter. Log every change to a definition with its date and reason. What matters at this stage is agreement, not speed: the people who own activation, retention and revenue reporting need to sign off on what each metric means before it gets automated. For a first view built from exports, see <a href="/playbooks/tracking-plg-funnel-without-data-team">tracking your PLG funnel without a data team</a>.</p>
+  <p>Write down the definitions of the few metrics that drive decisions, name the reference system for each one, and log every change with its date and reason. Start with the sources that cause the most disagreement, usually product usage and CRM data. Agreement matters more than speed at this stage: the people who own activation, retention and revenue reporting sign off on each definition before it gets automated. For a first view built from exports, see <a href="/playbooks/tracking-plg-funnel-without-data-team">starting to track your PLG funnel</a>.</p>
 
   <h2>How Funnelsight fits</h2>
-  <p>Funnelsight is built on the same idea. Definitions and framework rules, such as the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a>, what makes a <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a>, or the attribution model and its window, are set once and apply everywhere. Each team builds the views it needs on the same numbers. When a rule changes, the change is logged, and past periods are either recalculated or the break is clearly marked. The CRM stays the reference for pipeline and revenue: Funnelsight is one view among others, not the single truth, and it shows where its figures differ from the CRM, and why.</p>
+  <p>Funnelsight keeps these definitions in one place. Rules such as the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a>, what makes a <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> or the attribution model are set once and apply to every view a team builds. When a rule changes, the change is logged, and past periods are either recalculated or the break is clearly marked. The CRM stays the reference for pipeline and revenue, and Funnelsight shows where its own figures differ from it, and why.</p>
 
   <div class="article-cta">
     <p>Set your definitions once, and let every team build its own views on them.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
-  <div class="article-faq">
-    <details>
-      <summary>Is a single source of truth the same as a data warehouse?</summary>
-      <p>Not necessarily. A data warehouse is infrastructure for storing data. A single source of truth is an outcome: everyone reading figures built on the same definitions. You can reach it with a warehouse, or with a simpler shared tool, depending on team size and complexity.</p>
-    </details>
-    <details>
-      <summary>Should every team see the same number?</summary>
-      <p>No. Every team should read figures built from the same definitions, but the figures can differ because they answer different questions: a deal-by-deal pipeline for sales, a split by channel for marketing, a summary for leadership. What matters is that each figure says which rule it follows, and that totals come from the reference system.</p>
-    </details>
-    <details>
-      <summary>Do we need to unify every data source at once?</summary>
-      <p>No. Start with the two or three sources that cause the most disagreement, usually product usage and CRM data, and expand from there once the definitions are settled.</p>
-    </details>
-  </div>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is a single source of truth the same as a data warehouse?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not necessarily. A data warehouse is infrastructure for storing data. A single source of truth is an outcome: everyone reading figures built on the same definitions. You can reach it with a warehouse, or with a simpler shared tool, depending on team size and complexity."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should every team see the same number?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Every team should read figures built from the same definitions, but the figures can differ because they answer different questions: a deal-by-deal pipeline for sales, a split by channel for marketing, a summary for leadership. What matters is that each figure says which rule it follows, and that totals come from the reference system."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do we need to unify every data source at once?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Start with the two or three sources that cause the most disagreement, usually product usage and CRM data, and expand from there once the definitions are settled."
-        }
-      }
-    ]
-  }
-  </script>
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/playbooks/marketing-sales-funnel-numbers-dont-match">

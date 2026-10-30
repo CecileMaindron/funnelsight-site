@@ -60,18 +60,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why self-serve revenue gets lost in your CRM: Funnelsight</title>
-<meta name="description" content="Why self-serve accounts get marked deal lost, undercounted in your CRM, and treated as prospects instead of paying customers, and how to fix it.">
+<title>The self-serve customers your sales team can't see: Funnelsight</title>
+<meta name="description" content="Trial sign-ups reach the CRM as leads, but not whether they used the product, are still testing or already pay. What sales can do once it sees each status, and how to get there.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/self-serve-revenue-vs-sales-assisted-crm">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Why self-serve revenue gets lost in your CRM: Funnelsight">
-<meta property="og:description" content="Why self-serve accounts get marked deal lost, undercounted in your CRM, and treated as prospects instead of paying customers, and how to fix it.">
+<meta property="og:title" content="The self-serve customers your sales team can't see: Funnelsight">
+<meta property="og:description" content="Trial sign-ups reach the CRM as leads, but not whether they used the product, are still testing or already pay. What sales can do once it sees each status, and how to get there.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/self-serve-revenue-vs-sales-assisted-crm">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Why self-serve revenue gets lost in your CRM: Funnelsight">
-<meta name="twitter:description" content="Why self-serve accounts get marked deal lost, undercounted in your CRM, and treated as prospects instead of paying customers, and how to fix it.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-30">
+<meta name="twitter:title" content="The self-serve customers your sales team can't see: Funnelsight">
+<meta name="twitter:description" content="Trial sign-ups reach the CRM as leads, but not whether they used the product, are still testing or already pay. What sales can do once it sees each status, and how to get there.">
+<link rel="stylesheet" href="/styles.css?v=2026-10-31">
 </head>
 <body>
 
@@ -159,45 +159,58 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Why self-serve revenue gets lost in your CRM</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">The self-serve customers your sales team can't see</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Why self-serve revenue gets lost in your CRM</h1>
-  <p class="lede-intro">Self-serve and sales often end up pulling in different directions. Usually the real issue isn't team alignment, it's a CRM that was never built to represent a customer who never entered a sales-qualified pipeline.</p>
+  <h1>The self-serve customers your sales team can't see</h1>
+  <p class="lede-intro">A rep opens a target account and finds a prospect with no open opportunity. Five people from that company joined a trial at different times, in three separate trials, and the CRM can't say what happened next.</p>
 
-  <h2>The problem</h2>
-  <p>A self-serve account can sit tagged as a prospect for months while it's already paying. Worse, when a prospect talks to sales and later converts through the self-serve flow anyway, that path sometimes gets logged as a lost deal, when the business actually won a customer. It's a close relative of <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>: two systems describe the same customer in different ways.</p>
-  <table class="data-table data-table-text">
-    <caption>The same self-serve account, seen by three systems</caption>
-    <thead>
-      <tr><th scope="col">System</th><th scope="col">What it says about the same account</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">Product</th><td>In use: the account's core workflow runs every week, whether people do the work in the app or an integration does it for them</td></tr>
-      <tr><th scope="row">Billing</th><td>Paying: a monthly plan, renewed for the last five months</td></tr>
-      <tr><th scope="row">CRM</th><td>A prospect, or a lost deal if a rep spoke to them before they bought online</td></tr>
-    </tbody>
-  </table>
-  <p>This gap matters because self-serve can carry a large share of revenue. In a product genuinely run as product-led growth, an undercount there distorts every report built on top of it. Momentive (formerly SurveyMonkey) is a useful reference point: years into building a sales-assisted motion, its self-serve channel still brought in about 61% of revenue in the third quarter of 2022, according to <a href="https://www.businesswire.com/news/home/20221102006046/en/Momentive-Announces-Third-Quarter-2022-Financial-Results" target="_blank" rel="noopener">its quarterly results</a>.</p>
-  <p>The reverse mistake shows up once a team tries to fix this. Self-serve accounts get pushed into an enterprise or expansion category a little too easily, because that's the label the org rewards. A useful check before counting a migration as growth is whether the new contract represents a real, multiple-of-the-original jump in value, not a marginal bump. If the number barely moved, the account was probably relabeled, not expanded.</p>
+  <h2>One account, two views</h2>
+  <p>The five people did reach the CRM, each with a status, but none of those statuses says whether the person used the product, is still testing it or already pays. Funnelsight <a href="/glossary/user-level-vs-account-level-analytics">groups product usage and billing by account</a> and puts each trial's status next to what the CRM holds.</p>
+  <figure class="account-view">
+    <div class="av-head">
+      <span class="av-title">A logistics group with 2,000 employees</span>
+      <span class="tag-illustrative">Illustrative data</span>
+    </div>
+    <p class="av-account">Account type: Prospect &middot; Open opportunities: none</p>
+    <div class="av-grid">
+      <div class="av-row av-row-head" aria-hidden="true"><span></span><span>In the CRM</span><span>Added by Funnelsight</span></div>
+      <div class="av-row">
+        <p class="av-who">Finance analyst, over a year ago</p>
+        <p class="av-crm"><span class="av-cell-label">In the CRM</span>A lead with no activity for a year</p>
+        <p class="av-fs"><span class="av-cell-label">Added by Funnelsight</span><span class="av-status av-status-hot">Paying online</span>$3,600 a year, 7 active users, usage up every month for a quarter, daily use of a higher-plan feature during a 7&#8209;day preview</p>
+      </div>
+      <div class="av-row">
+        <p class="av-who">Marketing manager and 2 invited colleagues, 10 days ago</p>
+        <p class="av-crm"><span class="av-cell-label">In the CRM</span>Three new leads, not yet MQLs</p>
+        <p class="av-fs"><span class="av-cell-label">Added by Funnelsight</span><span class="av-status">Trial in progress</span>All three active this week</p>
+      </div>
+      <div class="av-row">
+        <p class="av-who">IT engineer, 2 months ago</p>
+        <p class="av-crm"><span class="av-cell-label">In the CRM</span>Marked &ldquo;Not now&rdquo; after a call from a BDR</p>
+        <p class="av-fs"><span class="av-cell-label">Added by Funnelsight</span><span class="av-status av-status-cold">Trial ended</span>Logged in twice, never went past setup</p>
+      </div>
+    </div>
+  </figure>
 
-  <h2>How Funnelsight closes the gap</h2>
-  <p>The underlying issue isn't which team owns self-serve, it's that product usage data and CRM data live in two separate systems. Funnelsight unifies both in a single shared funnel view across activation, retention, and expansion, so a self-serve account already generating usage and revenue shows up as a customer, not a prospect stuck in an old pipeline stage. That's the same mechanism behind Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a>: define the activation event once, and it carries through everywhere, including when you're tracking <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention</a> across accounts that started self-serve.</p>
+  <h2>What the rep can do with it</h2>
+  <p>Taken one at a time, none of these prospects justified a sales follow-up. Grouped by account and read with product usage, they show a company where one team has paid for months and is outgrowing its plan, while another is testing right now.</p>
+  <p>That's worth a conversation. If finance bought for its own division, the rep can bring the product to the others, starting with marketing while its trial is running. If the purchase covers the whole company, the conversation is an upgrade, prompted by the higher-plan feature finance used every day of its preview. Either way, the rep opens with what these teams already do in the product, rather than a generic introduction.</p>
 
-  <h2>Try it against your own data</h2>
-  <p>You can check where your own CRM and usage data diverge without a full integration first. Funnelsight lets you import a spreadsheet of your self-serve accounts to see, in one view, which of them are already active and paying despite still being tagged as prospects. No data team or engineering sprint required to get that first look.</p>
+  <h2>A few signals, not everything</h2>
+  <p>Syncing every product event into the CRM would bury reps in data nobody keeps up to date. What helps is a handful of signals tied to decisions sales and customer success already make: a trial worth helping, a team ready to pay or upgrade, another division to approach, an account whose usage is falling. Funnelsight reads product, billing and CRM data together and sends those signals to the account in the CRM, where reps already work.</p>
 
   <div class="article-cta">
-    <p>See where self-serve revenue is hiding in your own funnel.</p>
+    <p>See who uses and pays for your product in the accounts your reps own.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <section class="read-next" aria-label="Read next">
-    <a class="read-next-card" href="/glossary/what-is-ltv-cac-ratio">
+    <a class="read-next-card" href="/solutions/sales">
       <span class="read-next-label">Read next</span>
-      <span class="read-next-title">What is the LTV:CAC ratio</span>
-      <span class="read-next-desc">Definition, formula, and how to read the result alongside the revenue dynamics covered here.</span>
+      <span class="read-next-title">Redefining the hot lead in a self-serve motion</span>
+      <span class="read-next-desc">Which usage signals earn a sales conversation, and when sales should step in.</span>
     </a>
   </section>
 </article>
