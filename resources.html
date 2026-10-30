@@ -171,6 +171,15 @@
     <a href="#features">Features</a>
     <a href="#glossary">Glossary</a>
   </nav>
+  <script>
+  // A jump link opens its section first, so a closed section (Glossary) is shown, not skipped
+  document.querySelectorAll('.resource-jump a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var section = document.getElementById(link.getAttribute('href').slice(1));
+      if (section && section.tagName === 'DETAILS') section.open = true;
+    });
+  });
+  </script>
 
   <details class="resource-group" id="case-studies" open>
     <summary><h2>Case studies</h2></summary>
