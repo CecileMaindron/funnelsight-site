@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Product qualified lead scoring: Funnelsight">
 <meta name="twitter:description" content="See how PQL scoring works in Funnelsight: usage frequency, feature adoption, and account activity combined into one editable score.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown is-current">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring" aria-current="page">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -159,8 +167,13 @@
   <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
 </div>
 
-<nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Product qualified lead scoring</span>
+<nav class="product-subnav" aria-label="Product">
+  <div class="wrap">
+    <a href="/product">Overview</a>
+    <a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a>
+    <a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a>
+    <a href="/features/product-qualified-lead-scoring" aria-current="page">PQL scoring</a>
+  </div>
 </nav>
 
 <article class="article wrap">
@@ -232,10 +245,10 @@
   </script>
 
   <section class="read-next" aria-label="Read next">
-    <a class="read-next-card" href="/case-studies/plg-team-turns-pql-into-sales-conversation">
+    <a class="read-next-card" href="/case-studies/moving-upmarket-enterprise-pipeline">
       <span class="read-next-label">Read next</span>
-      <span class="read-next-title">PLG team turns a PQL into a sales conversation</span>
-      <span class="read-next-desc">How a team closed the visibility gap between product usage and CRM so a qualified lead didn't sit unnoticed.</span>
+      <span class="read-next-title">Moving upmarket: why the enterprise pipeline falls short</span>
+      <span class="read-next-desc">Illustrative example: reading a new audience stage by stage, and routing trials from target accounts to sales.</span>
     </a>
   </section>
 </article>

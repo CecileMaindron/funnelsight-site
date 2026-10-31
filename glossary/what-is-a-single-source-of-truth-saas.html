@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is a single source of truth in SaaS: Funnelsight">
 <meta name="twitter:description" content="A single source of truth in SaaS is where definitions live, not a single number. What to keep shared, what can vary, and how to start without overengineering.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -165,7 +173,7 @@
 
 <article class="article wrap">
   <h1>What is a single source of truth in SaaS</h1>
-  <p class="lede-intro">Asked how many customers the company has, finance says 1,240, sales says 860 and the product team says 2,100. A single source of truth doesn't pick one of these figures. It's where the definitions behind each one are written down, so anyone can see why they differ.</p>
+  <p class="lede-intro">Asked how many customers the company has, finance says 1,240, sales says 860 and the product team says 2,100. A single source of truth is where the definitions behind each figure are written down, so anyone can see why they differ.</p>
 
   <h2>One set of definitions, several right numbers</h2>
   <p>The finance, sales and product figures are all correct. Finance counts each entity it invoices, so the subsidiaries of one group count separately. Sales counts the accounts it owns in the CRM, grouped under the parent company. The product team counts paid instances, and one customer can run several, for different teams or regions. The real problem is one word, customer, for three different counts. Deciding which one the company reports, and giving the others their own names, ends the debate. Pipeline works the same way, with sales reading it deal by deal and marketing through an attribution model that splits each deal across the touches before it (see <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>).</p>

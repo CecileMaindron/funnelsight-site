@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is a product qualified lead (PQL): Funnelsight">
 <meta name="twitter:description" content="A product qualified lead (PQL) is a user whose in-product behavior signals they're ready to buy. How to define one, measure the PQL rate, and align your teams.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -231,7 +239,7 @@
   <p>Give each team one volume number and one quality number, so nobody improves their own metric at another team's expense. Marketing might watch signups and signup-to-PQL rate, and sales the PQLs contacted and the PQL-to-customer rate. Then review the definition on a schedule. Every quarter is a reasonable rhythm, since the product keeps changing underneath it.</p>
 
   <h2>How this connects to tracking in practice</h2>
-  <p>Once a PQL definition exists, the harder part is usually keeping it visible where sales and marketing both look, instead of living in a document nobody updates. Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> is built on the same mechanism: you set the qualifying event once, the same way you'd set up <a href="/playbooks/tracking-activation-metrics-plg-teams">activation tracking</a>, and it carries through every report from there. See <a href="/case-studies/plg-team-turns-pql-into-sales-conversation">how a PQL signal reached sales with the usage context attached</a> for what that handoff can look like.</p>
+  <p>Once a PQL definition exists, the harder part is usually keeping it visible where sales and marketing both look, instead of living in a document nobody updates. Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> is built on the same mechanism: you set the qualifying event once, the same way you'd set up <a href="/glossary/what-counts-as-activation-in-plg">activation tracking</a>, and it carries through every report from there. See <a href="/case-studies/moving-upmarket-enterprise-pipeline">how a team routed trials from its target accounts to sales</a> for what that handoff can look like.</p>
 
   <div class="article-cta">
     <p>See how a PQL definition shows up consistently across your funnel, from first usage to CRM handoff.</p>

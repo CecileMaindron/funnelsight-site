@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What feature adoption doesn't tell you: Funnelsight">
 <meta name="twitter:description" content="Feature adoption works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -181,20 +189,7 @@
   </table>
   <p>A feature's role isn't always the one it was built for. Some are must-haves, because they carry the value proposition or keep the product level with competitors. Others turn out to keep customers when they were expected to convert them, or the reverse. The answers also differ by persona, job to be done or company segment, so it's worth reading each question segment by segment before deciding.</p>
 
-  <h2>Account by account</h2>
-  <p>The same data also works for a single account, where it tells customer success and sales what to do next. Each line below follows one feature in one account over the past year. The first two curves look alike, with use that stops, and only the account's history and contract say whether that's normal.</p>
-  <table class="data-table spark-table">
-    <caption>One feature per account, monthly use over the last 12 months. Illustrative data</caption>
-    <thead>
-      <tr><th scope="col">Feature, one account each</th><th scope="col">Monthly use</th><th scope="col">What it signals</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">Import from the previous tool</th><td><span class="spark" aria-hidden="true"><i style="height: 100%"></i><i style="height: 30%"></i><i style="height: 8%"></i><i style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i></span><span class="visually-hidden">A peak in the first month, then almost nothing</span></td><td><strong>Nothing to worry about.</strong> A migration happens once, so the drop is expected.</td></tr>
-      <tr><th scope="row">Monthly client report, annual contract</th><td><span class="spark" aria-hidden="true"><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i style="height: 100%"></i><i class="is-zero" style="height: 6%"></i><i class="is-zero" style="height: 6%"></i></span><span class="visually-hidden">Used every month for ten months, then not at all for the last two</span></td><td><strong>Churn risk.</strong> The report stopped in the two months before renewal.</td></tr>
-      <tr><th scope="row">Automated alerts</th><td><span class="spark" aria-hidden="true"><i style="height: 12%"></i><i style="height: 18%"></i><i style="height: 24%"></i><i style="height: 30%"></i><i style="height: 38%"></i><i style="height: 48%"></i><i style="height: 56%"></i><i style="height: 66%"></i><i style="height: 76%"></i><i style="height: 86%"></i><i style="height: 96%"></i><i style="height: 100%"></i></span><span class="visually-hidden">Steady growth every month, up to the plan's limit</span></td><td><strong>Upsell.</strong> Use has grown every month and reached the plan's limit.</td></tr>
-    </tbody>
-  </table>
-  <p>A product analytics tool draws these curves. What it can't show is the context that makes them readable: the first account came from a competitor with history to import, the second is about to renew, and the third pays for a plan with a limit. That context lives in the CRM and in billing. Funnelsight brings it next to usage and turns these patterns into <a href="/features/activation-retention-dashboard-plg-teams">churn-risk and expansion flags</a> for customer success and sales.</p>
+  <p>Read account by account, the same usage data also shows which customers are growing and which ones are drifting away (see <a href="/playbooks/tracking-expansion-revenue-signals-plg">expansion or churn: reading the signals in an account</a>).</p>
 
   <div class="article-cta">
     <p>See how each feature is used, next to what each account buys and when it renews.</p>

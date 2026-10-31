@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to calculate net revenue retention (NRR): Funnelsight">
 <meta name="twitter:description" content="Learn how to calculate net revenue retention (NRR) for B2B SaaS: the formula, what counts as expansion and contraction, and how to start tracking it simply.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -188,7 +196,7 @@
   <p>For a sense of where your own number lands: the <a href="https://www.thesaascfo.com/?p=308354" target="_blank" rel="noopener">2026 Benchmarkit B2B SaaS metrics report</a> put median GRR at 84%, with the top quartile closer to 90%. Treat that as a loose reference point, not a verdict. The report blends company stages and revenue bands into one median, the same way an unsegmented churn number blends self-serve and sales-assisted: a healthy GRR for an early-stage self-serve product and a healthy GRR for an enterprise sales-assisted one aren't the same number.</p>
 
   <h2>What counts as expansion and contraction</h2>
-  <p>Expansion revenue covers anything that grows an existing account: seat upgrades, plan tier changes, add-on purchases. Contraction revenue covers the opposite, a downgrade or a reduction in seats that doesn't fully cancel the account. Churned revenue is the full loss from an account that cancels outright. Keeping these three buckets separate, rather than lumping everything into one "net change" number, is what makes NRR useful for diagnosing where the movement is actually coming from. This gets harder when self-serve accounts are involved: a customer already expanding through the product can still be sitting in your CRM under the wrong stage, which throws off the count before you've even started calculating. See <a href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">why self-serve revenue gets lost in your CRM</a> for how that mismatch happens.</p>
+  <p>Expansion revenue covers anything that grows an existing account: seat upgrades, plan tier changes, add-on purchases. Contraction revenue covers the opposite, a downgrade or a reduction in seats that doesn't fully cancel the account. Churned revenue is the full loss from an account that cancels outright. Keeping these three buckets separate, rather than lumping everything into one "net change" number, is what makes NRR useful for diagnosing where the movement is actually coming from. This gets harder when self-serve accounts are involved: a customer already expanding through the product can still be sitting in your CRM under the wrong stage, which throws off the count before you've even started calculating. See <a href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">the self-serve customers your sales team can't see</a> for how that mismatch happens.</p>
   <p>Three details are easy to get wrong here. One-time fees, setup, implementation, professional services, don't belong in expansion or contraction: they're not recurring, so including them distorts the number depending on timing. A churned account should count the moment its revenue actually stops, not the moment it gives notice, the same precision question churn rate itself runs into when deciding what "lost" means. And if monthly and annual contracts are both in the mix, normalize them to the same period before comparing them: raw monthly figures next to raw annual ones understate or overstate the real movement, depending on which way the mix shifts.</p>
 
   <h2>Start simple, before building a full revenue model</h2>
@@ -207,7 +215,7 @@
     </details>
     <details>
       <summary>What's a good NRR for a B2B SaaS company?</summary>
-      <p>There's no single universal target, it depends on pricing model, customer segment, and company stage. Most teams get more value from watching their own NRR trend month over month than from comparing against an external benchmark.</p>
+      <p>There's no single universal target, it depends on pricing model, customer segment, and company stage. Your own NRR trend, month over month, usually says more than a comparison with an external benchmark.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -228,7 +236,7 @@
         "name": "What's a good NRR for a B2B SaaS company?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "There's no single universal target, it depends on pricing model, customer segment, and company stage. Most teams get more value from watching their own NRR trend month over month than from comparing against an external benchmark."
+          "text": "There's no single universal target, it depends on pricing model, customer segment, and company stage. Your own NRR trend, month over month, usually says more than a comparison with an external benchmark."
         }
       }
     ]

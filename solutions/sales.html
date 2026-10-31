@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redefining the hot lead for self-serve sales: Funnelsight">
 <meta name="twitter:description" content="A filled-out form still signals intent. In self-serve, Funnelsight adds product usage as a second signal, scored on rules your team sets, never a black box.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,12 +139,20 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
       <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown is-current">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/solutions/marketing">For Marketing</a></li>
-          <li><a href="/solutions/sales">For Sales</a></li>
+          <li><a href="/solutions/sales" aria-current="page">For Sales</a></li>
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>

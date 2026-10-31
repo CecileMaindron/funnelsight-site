@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The self-serve customers your sales team can't see: Funnelsight">
 <meta name="twitter:description" content="Trial sign-ups reach the CRM as leads, but not whether they used the product, are still testing or already pay. What sales can do once it sees each status, and how to get there.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -138,7 +138,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -147,7 +155,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -195,11 +203,12 @@
   </figure>
 
   <h2>What the rep can do with it</h2>
-  <p>Taken one at a time, none of these prospects justified a sales follow-up. Grouped by account and read with product usage, they show a company where one team has paid for months and is outgrowing its plan, while another is testing right now.</p>
+  <p>Taken one at a time, none of these prospects justified a sales follow-up. Grouped by account and read with product usage, they show a company where one team has paid for months and is outgrowing its plan, while another is testing right now. Some teams call this a product qualified account: several active users in one company, rather than one promising user.</p>
   <p>That's worth a conversation. If finance bought for its own division, the rep can bring the product to the others, starting with marketing while its trial is running. If the purchase covers the whole company, the conversation is an upgrade, prompted by the higher-plan feature finance used every day of its preview. Either way, the rep opens with what these teams already do in the product, rather than a generic introduction.</p>
+  <p>The account can also fall between two segmentations. Sales sees a group with 2,000 employees, while customer success sees a few thousand dollars a year and no reason to assign anyone, so nobody follows it until both read the same view.</p>
 
-  <h2>A few signals, not everything</h2>
-  <p>Syncing every product event into the CRM would bury reps in data nobody keeps up to date. What helps is a handful of signals tied to decisions sales and customer success already make: a trial worth helping, a team ready to pay or upgrade, another division to approach, an account whose usage is falling. Funnelsight reads product, billing and CRM data together and sends those signals to the account in the CRM, where reps already work.</p>
+  <h2>The signals worth sending to the CRM</h2>
+  <p>Syncing every product event into the CRM would bury reps in data nobody keeps up to date. The signals worth sending are the few tied to decisions sales and customer success already make: a trial worth helping, a team ready to pay or upgrade, another division to approach, an account whose usage is falling. Funnelsight reads product, billing and CRM data together and sends those signals to the account in the CRM, where reps already work.</p>
 
   <div class="article-cta">
     <p>See who uses and pays for your product in the accounts your reps own.</p>
