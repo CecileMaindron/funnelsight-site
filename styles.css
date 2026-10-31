@@ -177,6 +177,18 @@ h1, h2, h3 {
 .demo-banner strong { color: var(--white); }
 
 /* Breadcrumb */
+/* Current section in the main navigation */
+.nav-links > li.is-current > a,
+.nav-links > li.is-current > .nav-dropdown-label { color: var(--indigo); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.nav-dropdown-menu a[aria-current="page"] { color: var(--indigo); font-weight: 600; }
+
+/* Product sub-navigation: product page and feature pages */
+.product-subnav { background: var(--white); border-bottom: 1px solid var(--line); }
+.product-subnav .wrap { display: flex; flex-wrap: wrap; gap: 6px 8px; padding-top: 10px; padding-bottom: 10px; }
+.product-subnav a { flex-shrink: 0; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; }
+.product-subnav a:hover { color: var(--ink); background: var(--bg); }
+.product-subnav a[aria-current="page"] { color: var(--white); background: var(--indigo); }
+
 .breadcrumb { max-width: 720px; padding: 24px 0 0; font-size: 13px; color: var(--muted); }
 .breadcrumb a { color: var(--muted); text-decoration: none; }
 .breadcrumb a:hover { text-decoration: underline; }
@@ -270,6 +282,15 @@ footer a {
   color: #454A5B;
 }
 .hero-actions { margin-top: 32px; display: flex; gap: 14px; align-items: center; }
+
+/* Product page hero: text centred above a full-width demo, so it can't be
+   mistaken for the homepage (text left, card right) */
+.hero.product-hero { grid-template-columns: 1fr; gap: 40px; padding-top: 56px; }
+.product-hero > div:first-child { text-align: center; }
+.product-hero h1 { max-width: 22ch; margin: 0 auto; }
+.product-hero p.lede { margin-left: auto; margin-right: auto; max-width: 60ch; }
+.product-hero .hero-actions { justify-content: center; }
+.product-hero .demo-card { max-width: 860px; width: 100%; margin: 0 auto; }
 
 /* Hero visual: illustrative product card (leads vs new revenue by source) */
 .source-card {

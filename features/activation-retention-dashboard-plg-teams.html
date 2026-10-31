@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activation and retention dashboard for PLG: Funnelsight">
 <meta name="twitter:description" content="Activation, trial conversion and retention signals in one dashboard, by acquisition source and weekly cohort, built on the activation event your team defines.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown is-current">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams" aria-current="page">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -159,8 +167,13 @@
   <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
 </div>
 
-<nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Activation and retention dashboard for PLG teams</span>
+<nav class="product-subnav" aria-label="Product">
+  <div class="wrap">
+    <a href="/product">Overview</a>
+    <a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a>
+    <a href="/features/activation-retention-dashboard-plg-teams" aria-current="page">Activation and retention</a>
+    <a href="/features/product-qualified-lead-scoring">PQL scoring</a>
+  </div>
 </nav>
 
 <article class="article wrap">
@@ -184,7 +197,7 @@
       <tr><th scope="row">Other</th><td>90</td><td>50%</td><td>17%</td></tr>
     </tbody>
   </table>
-  <p>Paid search brings the most sign-ups. Partner referrals bring the fewest, and the trials most likely to become paying customers. Recommendations, from partners or from existing customers, are worth tracking on their own: see <a href="/playbooks/referral-rate-tracking-plg-teams">how to track referral rate</a>. Linking usage to revenue can also change a roadmap: see <a href="/case-studies/most-used-feature-vs-retention">why the most-used feature isn't the one that keeps customers</a>.</p>
+  <p>Paid search brings the most sign-ups. Partner referrals bring the fewest, and the trials most likely to become paying customers. Linking usage to revenue can also change a roadmap: see <a href="/case-studies/most-used-feature-vs-retention">why the most-used feature isn't the one that keeps customers</a>.</p>
 
   <h3>Is this week's cohort activating more slowly than the last?</h3>
   <p>Each week's sign-ups form a cohort. The share that activates should stay fairly stable from one week to the next, so a drop stands out, and Funnelsight flags it. A dated note on that week keeps the explanation next to the number.</p>
@@ -200,7 +213,7 @@
       <tr><th scope="row">Last week</th><td>310</td><td>43%</td><td>2.2</td></tr>
     </tbody>
   </table>
-  <p><strong>Note on the cohort from 2 weeks ago:</strong> setup step added to onboarding, removed a week later. Without the note, the dip would be debated at the next review. When a cohort drops, <a href="/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction">splitting it by source</a> tells you whether the cause is who signed up or what happened next.</p>
+  <p><strong>Note on the cohort from 2 weeks ago:</strong> setup step added to onboarding, removed a week later. Without the note, the dip would be debated at the next review. When a cohort drops, <a href="/playbooks/time-to-value-tracking">splitting it by source and checking time to value</a> tells you whether the cause is who signed up or what happened next.</p>
 
   <h3>Do larger companies behave differently in the trial?</h3>
   <p>The same cohorts can be filtered by segment, for example by company size when a team starts targeting larger accounts, or by country when it <a href="/playbooks/expanding-self-serve-plg-to-new-country">opens a new market</a>. It shows both how many sign-ups come from those accounts and whether they use the trial differently.</p>
@@ -225,7 +238,7 @@
   <p>You set the activation event that matters for your product, a specific action, not a generic template. That definition then applies to every report in Funnelsight, so activation means the same thing whether someone is looking at a cohort view or a single account. If you're still <a href="/glossary/what-counts-as-activation-in-plg">piecing activation metrics together from spreadsheets and product logs</a>, this replaces that manual step.</p>
   <p>"Activated" means the event your team chose, not a login. For a reporting tool, it might be opening a dashboard several times in a week. For a data pipeline, it might be the first sync that runs on its own, after which people only log in to fix or change something. The same choice applies later, when your churn-risk rules decide what counts as an active account.</p>
   <p>When the definition changes, the change is logged, and past periods are either recalculated or the break is clearly marked. Each team builds the views it needs on the same numbers: weekly detail for the people running onboarding, a monthly summary for leadership.</p>
-  <p>Data updates on a schedule you control, hourly or on a cadence that fits your team. Setup doesn't require a data team. You can start by importing a spreadsheet to test the dashboard before connecting a live source, and have something working the same day. That's also useful groundwork if you're comparing a <a href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">spreadsheet-based approach against a dedicated tool</a>. Grouped by account, the same view shows when several people from one company are trying the product: see <a href="/case-studies/moving-upmarket-enterprise-pipeline">how a team moving upmarket found its enterprise leads</a>.</p>
+  <p>Data updates on a schedule you control, hourly or on a cadence that fits your team. Setup doesn't require a data team. You can start by importing a spreadsheet to test the dashboard before connecting a live source, and have something working the same day. <a href="/playbooks/tracking-plg-funnel-without-data-team">Starting to track your PLG funnel</a> shows what that first view looks like, and when a spreadsheet stops being enough. Grouped by account, the same view shows when several people from one company are trying the product: see <a href="/case-studies/moving-upmarket-enterprise-pipeline">how a team moving upmarket found its enterprise leads</a>.</p>
 
   <h2>What it does, and what it doesn't</h2>
   <div class="scope-lists">

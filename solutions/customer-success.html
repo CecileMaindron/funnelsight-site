@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What self-serve growth means for customer success: Funnelsight">
 <meta name="twitter:description" content="In self-serve, onboarding starts inside the trial. See how Funnelsight surfaces the usage signals customer success needs, and how the job shifts.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,13 +139,21 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
       <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown is-current">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/solutions/marketing">For Marketing</a></li>
           <li><a href="/solutions/sales">For Sales</a></li>
-          <li><a href="/solutions/customer-success">For Customer Success</a></li>
+          <li><a href="/solutions/customer-success" aria-current="page">For Customer Success</a></li>
         </ul>
       </li>
       <li><a href="/resources">Resources</a></li>
@@ -178,7 +186,7 @@
     <tbody>
       <tr><th scope="row">An account's usage drops and nobody notices before renewal</th><td>A rule your team sets flags the drop, by email or in the CRM, while there's still time to act.</td></tr>
       <tr><th scope="row">Thousands of self-serve accounts, and no CSM assigned to most of them</th><td>The same rules watch every account, so people step in only where an account is flagged.</td></tr>
-      <tr><th scope="row">An account hits its plan limit</th><td>Thresholds you define flag it before the account has to ask (see <a href="/playbooks/tracking-expansion-revenue-signals-plg">tracking expansion revenue signals</a>).</td></tr>
+      <tr><th scope="row">An account hits its plan limit</th><td>Thresholds you define flag it before the account has to ask (see <a href="/playbooks/tracking-expansion-revenue-signals-plg">reading the signals in an account</a>).</td></tr>
       <tr><th scope="row">A customer who left starts using the product again</th><td>Renewed activity on a dormant or churned account is flagged too, so someone can reach out.</td></tr>
     </tbody>
   </table>

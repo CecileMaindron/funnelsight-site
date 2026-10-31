@@ -60,18 +60,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Time to value tracking for PLG teams: Funnelsight</title>
-<meta name="description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
+<title>When activation drops: what time to value tells you: Funnelsight</title>
+<meta name="description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Tracking time to value: Funnelsight">
-<meta property="og:description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
+<meta property="og:title" content="When activation drops: what time to value tells you: Funnelsight">
+<meta property="og:description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tracking time to value: Funnelsight">
-<meta name="twitter:description" content="How to track time to value in a PLG motion: what to time, where the delay sits, and what to do for users who don't activate in their first session.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<meta name="twitter:title" content="When activation drops: what time to value tells you: Funnelsight">
+<meta name="twitter:description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -160,62 +168,70 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Tracking time to value</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">When activation drops: what time to value tells you</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Tracking time to value</h1>
-  <p class="lede-intro">Time to value is the time between signup and the moment a user first gets real value from your product. If that number is creeping up, trials go quiet before anyone notices why.</p>
+  <h1>When activation drops: what time to value tells you</h1>
+  <p class="lede-intro">The activation rate fell from 34% to 29% this month. Before anyone changes the onboarding or the campaign mix, a second number shows where to look: how long the users who did activate took to get there.</p>
 
-  <h2>Why this number gets missed</h2>
-  <p>Activation is usually tracked as a yes or no. How long it took gets less attention, and that gap matters: a user who reaches activation on day one behaves very differently from one who reaches it on day twelve of a fourteen-day trial. Both count as "activated" in a simple yes/no view, but only one of them is a healthy signal.</p>
-  <p>Without a time dimension, a slow drift goes unnoticed for months. Onboarding gets a little more complex, a new step gets added to setup, and time to value quietly stretches from two days to six. Nobody decided that on purpose. Nobody sees it either, until trial conversion drops and the cause isn't obvious.</p>
-
-  <h2>What to measure</h2>
-  <p>You need two timestamps: the moment a user signs up, and the moment they hit the activation event you've already defined for your product (see <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> if that definition isn't settled yet). The difference between the two is time to value for that user. Averaged or put into a median across a cohort, it becomes a trend you can watch.</p>
-  <p>The moment that matters is when someone understands why the product is worth using, the aha moment, but that can't be timestamped. The activation event is the measurable action that shows they got there, so it's the one to time. Setup steps, such as creating an account or logging in, come before it and don't count.</p>
-  <p>In Funnelsight, the activation event you define applies consistently across every report, so the same event used to flag activation is the one used to calculate this delay. No separate configuration needed for a second metric.</p>
-
-  <h2>Where the delay sits</h2>
-  <p>The median tells you whether the delay is drifting. The spread tells you where the risk is.</p>
-  <table class="data-table bar-table">
-    <caption>Days from sign-up to activation, activated users in a 14-day trial. Illustrative data</caption>
+  <h2>The same drop, two causes</h2>
+  <table class="data-table data-table-dense">
+    <caption>Two months with the same drop in activation. Activation within a 14-day trial, median per monthly cohort. Illustrative data</caption>
     <thead>
-      <tr><th scope="col">Days to activate</th><th scope="col">Share of activated users</th><th scope="col">Converted to paid</th></tr>
+      <tr><th scope="col"></th><th scope="col">Usual month</th><th scope="col">Drop A</th><th scope="col">Drop B</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Day 0 to 1</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 100%"></span></span><span class="bar-value bar-value-strong">38%</span></span></td><td class="num">41%</td></tr>
-      <tr><th scope="row">Days 2 to 3</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 76%"></span></span><span class="bar-value bar-value-strong">29%</span></span></td><td class="num">36%</td></tr>
-      <tr><th scope="row">Days 4 to 7</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 55%"></span></span><span class="bar-value bar-value-strong">21%</span></span></td><td class="num">27%</td></tr>
-      <tr><th scope="row">Days 8 to 14</th><td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 32%"></span></span><span class="bar-value bar-value-strong">12%</span></span></td><td class="num">15%</td></tr>
+      <tr><th scope="row">Activation rate</th><td>34%</td><td>29%</td><td>29%</td></tr>
+      <tr><th scope="row">Days to activate</th><td>2</td><td>2</td><td><strong>4</strong></td></tr>
+      <tr><th scope="row">Cause</th><td>&nbsp;</td><td>New campaign</td><td>New setup step</td></tr>
     </tbody>
   </table>
-  <p>Most activations happen in the first three days. The ones that come in the second week convert far less often, which is why a median that drifts from two days to five is worth catching early.</p>
+  <p>In the first case, the users who activate do it as fast as before, so the product works as it did and the change is in who signs up. In the second, the users who activate take twice as long, which points to something in the product that got harder.</p>
 
-  <h2>What the delay tells you to do</h2>
-  <p>When people activate matters as much as how many do. Some people get stuck during their first session. For them, a clearer setup or a more obvious first action helps, and the wording is often the cheapest thing to test before rebuilding a flow. Others leave before reaching the activation event, and no change to the product reaches them until something brings them back. That's where onboarding emails take over, ideally pointing to the exact step where each person stopped, with in-app guidance waiting when they return. For accounts worth a conversation, an offer of help from a person can do what an email can't. Split by source, the same view shows which channels bring people who activate in their first session, and which ones bring people who need the follow-up.</p>
+  <h2>Two measures, one stage</h2>
+  <p>The activation rate is the share of sign-ups that reach the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a> within the trial. Time to value is the number of days between sign-up and that same event, so two dates per user are enough to calculate it. The moment someone understands why the product is worth using can't be timestamped, and the activation event is the measurable action that shows they got there.</p>
+  <p>Read both per weekly or monthly cohort, over several periods. A shift that shows in one cohort is often noise, while a shift that holds over several cohorts is a trend.</p>
 
-  <h2>Start with a rough version</h2>
-  <p>You don't need every plan tier or every persona covered on day one. Pick your main self-serve segment, measure time to value for that group alone, and expand later. A spreadsheet export of signup dates and activation dates is enough to get a first median. Batch data, checked once a week, tells you if the number is moving before you invest in anything more automated.</p>
-  <p>What matters is that the two dates you're comparing are accurate, not that you cover every account type at once. Start narrow, stay rigorous on the data itself, then widen the scope.</p>
+  <h2>Where the problem starts</h2>
+  <figure class="decision-tree">
+    <figcaption class="dt-title">Reading a drop in activation</figcaption>
+    <ol class="dt-steps">
+      <li class="dt-step">
+        <p class="dt-q">Is the drop bigger than the usual swings between cohorts?</p>
+        <p class="dt-out"><span class="dt-ans">No</span> Probably noise. Wait for a few more cohorts.</p>
+        <p class="dt-next"><span class="dt-ans">Yes</span> Next question.</p>
+      </li>
+      <li class="dt-step">
+        <p class="dt-q">Is it concentrated in one or two acquisition sources?</p>
+        <p class="dt-out"><span class="dt-ans">Yes</span> The audience changed. Talk to that channel's owner, numbers in hand.</p>
+        <p class="dt-next"><span class="dt-ans">No</span> Next question.</p>
+      </li>
+      <li class="dt-step">
+        <p class="dt-q">Do the users who activate take longer than before?</p>
+        <p class="dt-out"><span class="dt-ans">Yes</span> The product got harder. Find the step where users stall, starting with recent releases.</p>
+        <p class="dt-out"><span class="dt-ans">No</span> The audience shifted across sources. Check what changed in positioning, pricing or targeting.</p>
+      </li>
+    </ol>
+  </figure>
 
-  <h2>What to do once you're tracking it</h2>
-  <p>A rising time to value is usually a symptom, not the disease. Common causes: a new onboarding step, a change in default settings, a feature that used to be visible and got buried in a redesign. Once you have the trend, cross it against product changes on a rough timeline and the likely cause tends to jump out.</p>
-  <p>Time to value works best as a second layer on top of activation, not a replacement for it. See <a href="/glossary/what-counts-as-activation-in-plg">what counts as activation in PLG</a> for how to define the event it builds on.</p>
+  <h2>What each cause calls for</h2>
+  <p>An audience change starts with the channel or campaign owner, using the segment data rather than an assumption. The cause can sit in the promise itself, since a campaign that promises something the product doesn't do brings sign-ups no onboarding will win back. A product change starts with the step where users stall, and the wording on that step is often the cheapest thing to test before rebuilding a flow. Users who left before activating need something to bring them back, such as an email pointing to the exact step where they stopped. For accounts worth a conversation, an offer of help from a person can do what an email can't.</p>
+  <p>Once the cause is clear, a dated note on that period keeps the explanation next to the number, so the same dip isn't debated again at the next review. None of this works if the activation event itself changed in the meantime, since a new definition can look exactly like a drop.</p>
 
   <div class="article-cta">
-    <p>See time to value alongside activation and retention in one view, no data team required.</p>
+    <p>See activation and time to value by source and cohort, in one view.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
       <summary>What's a good time to value?</summary>
-      <p>It depends entirely on your product and your activation event. There's no universal benchmark worth quoting here: what matters is your own trend over time, not a number borrowed from a different product category.</p>
+      <p>There's no universal benchmark worth quoting, since it depends on the product and on the activation event chosen. A product set up in minutes and one that needs a data connection can't be compared. What matters is your own trend, cohort after cohort.</p>
     </details>
     <details>
-      <summary>Do I need real-time tracking to measure this?</summary>
-      <p>No. A weekly batch check of signup and activation dates is enough to catch a drift early. Real-time monitoring adds little value for a metric you're reviewing on a weekly or monthly cadence anyway.</p>
+      <summary>Should the trial last as long as time to value?</summary>
+      <p>It should at least leave room for it: if most users need eight days to activate, a seven-day trial ends too soon. A much longer trial has its own cost, though, since it delays payment and can lose people who were ready to buy. Letting active users extend their trial, or letting early buyers start their paid plan with billing deferred to the trial's end, covers both cases.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -228,15 +244,15 @@
         "name": "What's a good time to value?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It depends entirely on your product and your activation event. There's no universal benchmark worth quoting here: what matters is your own trend over time, not a number borrowed from a different product category."
+          "text": "There's no universal benchmark worth quoting, since it depends on the product and on the activation event chosen. A product set up in minutes and one that needs a data connection can't be compared. What matters is your own trend, cohort after cohort."
         }
       },
       {
         "@type": "Question",
-        "name": "Do I need real-time tracking to measure this?",
+        "name": "Should the trial last as long as time to value?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. A weekly batch check of signup and activation dates is enough to catch a drift early. Real-time monitoring adds little value for a metric you're reviewing on a weekly or monthly cadence anyway."
+          "text": "It should at least leave room for it: if most users need eight days to activate, a seven-day trial ends too soon. A much longer trial has its own cost, though, since it delays payment and can lose people who were ready to buy. Letting active users extend their trial, or letting early buyers start their paid plan with billing deferred to the trial's end, covers both cases."
         }
       }
     ]
@@ -244,10 +260,10 @@
   </script>
 
   <section class="read-next" aria-label="Read next">
-    <a class="read-next-card" href="/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction">
+    <a class="read-next-card" href="/playbooks/tracking-feature-adoption-plg-teams">
       <span class="read-next-label">Read next</span>
-      <span class="read-next-title">Diagnosing a drop in activation rate</span>
-      <span class="read-next-desc">Segment the data first, so you fix the right problem: who is signing up, or what happens next.</span>
+      <span class="read-next-title">What feature adoption doesn't tell you</span>
+      <span class="read-next-desc">What brought trial users in, what convinced them to pay and what keeps them.</span>
     </a>
   </section>
 </article>

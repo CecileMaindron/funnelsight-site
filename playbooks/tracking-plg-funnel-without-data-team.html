@@ -61,17 +61,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start tracking your PLG funnel: Funnelsight</title>
-<meta name="description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
+<meta name="description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Start tracking your PLG funnel: Funnelsight">
-<meta property="og:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
+<meta property="og:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start tracking your PLG funnel: Funnelsight">
-<meta name="twitter:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, and what you'll need help with.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<meta name="twitter:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -138,7 +138,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -147,7 +155,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -180,15 +188,7 @@
       <tr><th scope="row">Referrals</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 38%"></span></span><span class="bar-value">180</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 19%"></span></span><span class="bar-value bar-value-strong">90</span></span></span></td><td class="num">50%</td></tr>
     </tbody>
   </table>
-  <p>Paid search brings more sign-ups than referrals, yet fewer of its users activate: 60 against 90. Ad platforms learn to find the people most likely to sign up, who aren't always the ones who go on to use the product. A report that stops at sign-ups would send more of next month's budget to paid search. Referrals, where half the users activate, would get none of the attention.</p>
-
-  <h2>Three questions a first view should answer</h2>
-  <ul>
-    <li>Of last month's sign-ups, how many activated, and how long did it take them?</li>
-    <li>Which sources bring the users who activate, not just the most sign-ups?</li>
-    <li>Do the users who activated still use the product a few weeks later?</li>
-  </ul>
-  <p>The example above answers the first two. The third needs the same usage export, taken again a few weeks later.</p>
+  <p>Paid search brings more sign-ups than referrals, yet fewer of its users activate: 60 against 90. Ad platforms learn to find the people most likely to sign up, who aren't always the ones who go on to use the product. A report that stops at sign-ups would send more of next month's budget to paid search. Referrals, where half the users activate, would get none of the attention. The same usage export, taken again a few weeks later, shows whether those activated users stay.</p>
 
   <h2>Where each step's data lives</h2>
   <div class="layer-map">
@@ -203,8 +203,17 @@
   </div>
   <p>Activation is the one step you can't export. It's a decision, and the one most likely to cause arguments later, so it's worth settling first. <a href="/glossary/what-counts-as-activation-in-plg">What counts as activation in PLG</a> walks through how to choose it.</p>
 
+  <h2>No product analytics tool yet?</h2>
+  <p>A product analytics tool isn't a prerequisite, and it comes with its own work. Someone has to instrument the product so it sends clean events, and depending on the country, users may have to consent before they're tracked. Until then, other signals can stand in for usage.</p>
+  <ul>
+    <li><strong>The product's own database,</strong> which already records what accounts create, connect or configure.</li>
+    <li><strong>Light tracking on the web app,</strong> when the product runs online.</li>
+    <li><strong>Requests that can only come from inside the product,</strong> such as a form that only appears after a few days of use. When one arrives, it confirms the user got that far.</li>
+    <li><strong>A thank-you page after a download,</strong> where a visit confirms the download started and a short form can tell you who it was.</li>
+  </ul>
+
   <h2>What you can do alone, and where you'll need help</h2>
-  <p>Starting alone is realistic. Covering the whole funnel alone rarely is, because the data belongs to several teams and comes with rules.</p>
+  <p>You can start alone, but the data belongs to several teams and comes with rules, so part of the work needs someone else.</p>
   <div class="scope-lists">
     <div class="scope-list scope-yes">
       <h3>You can do yourself</h3>
@@ -227,18 +236,15 @@
     </div>
   </div>
 
-  <h2>No product analytics tool yet?</h2>
-  <p>A product analytics tool isn't a prerequisite, and it comes with its own work. Someone has to instrument the product so it sends clean events, and in Europe users usually have to consent to being tracked. Until then, other signals can stand in for usage.</p>
+  <h2>From a first view to a weekly one</h2>
+  <p>You could get a similar first view from a spreadsheet or a one-off import. It stops being enough once several teams report on the same funnel every week, and a few signs point to that moment:</p>
   <ul>
-    <li><strong>The product's own database,</strong> which already records what accounts create, connect or configure.</li>
-    <li><strong>Light tracking on the web app,</strong> when the product runs online.</li>
-    <li><strong>Requests that can only come from inside the product,</strong> such as a form that only appears after a few days of use. When one arrives, it confirms the user got that far.</li>
-    <li><strong>A thank-you page after a download,</strong> where a visit confirms the download started and a short form can tell you who it was.</li>
+    <li>Someone spends a morning every week rebuilding the same view.</li>
+    <li>Two people get two different activation numbers from the same file.</li>
+    <li>A column moved and broke the formulas, and nobody noticed until a meeting.</li>
+    <li>Leadership asks for a trend, and the history only goes back to the last rebuild.</li>
   </ul>
-
-  <h2>What the first view can't see yet</h2>
-  <p>Laying out the funnel with the data you have shows the gaps quickly, such as sign-ups with no source or an activation step the product doesn't record. That list becomes the brief for a product analytics tool, or for whoever instruments the product. In Funnelsight, the data check writes those gaps down from the first import.</p>
-  <p>A small scope at first doesn't mean looser rigor. One segment covered properly, with data refreshed daily rather than continuously, is enough to act on. Once the view has earned its place, a live connection replaces the manual re-import, and the <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> updates on its own schedule.</p>
+  <p>A dedicated tool doesn't fix the data it receives. Campaigns still need consistent tags, and the activation event still needs the teams' agreement. What changes is that those rules are written once and applied to every report, and that a live connection replaces the manual re-import. In Funnelsight, the <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> then updates on its own schedule.</p>
 
   <div class="article-cta">
     <p>See which sources bring users who activate, from your first import.</p>
@@ -247,10 +253,10 @@
 
 
   <section class="read-next" aria-label="Read next">
-    <a class="read-next-card" href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">
+    <a class="read-next-card" href="/playbooks/signup-volume-vs-pql-quality">
       <span class="read-next-label">Read next</span>
-      <span class="read-next-title">Spreadsheets vs a dedicated analytics tool</span>
-      <span class="read-next-desc">Where spreadsheets break down for PLG tracking, and what changes with a dedicated tool.</span>
+      <span class="read-next-title">The hidden cost of chasing signup volume</span>
+      <span class="read-next-desc">Why more sign-ups from a shorter form or a new channel don't always bring more customers.</span>
     </a>
   </section>
 </article>

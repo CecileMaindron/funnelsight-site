@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Marketing attribution platform for B2B SaaS: how Funnelsight works">
 <meta name="twitter:description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product" aria-current="page">Product</a></li>
+      <li class="nav-dropdown is-current">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product" aria-current="page">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -158,6 +166,15 @@
 <div class="demo-banner">
   <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
 </div>
+
+<nav class="product-subnav" aria-label="Product">
+  <div class="wrap">
+    <a href="/product" aria-current="page">Overview</a>
+    <a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a>
+    <a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a>
+    <a href="/features/product-qualified-lead-scoring">PQL scoring</a>
+  </div>
+</nav>
 
 <main id="main">
 <header class="hero wrap product-hero">

@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Acquisition-to-expansion guides for PLG and PLS: Funnelsight">
 <meta name="twitter:description" content="Guides on the full B2B growth funnel, from acquisition to expansion, for PLG and PLS teams, from the Funnelsight team.">
-<link rel="stylesheet" href="/styles.css?v=2026-10-31">
+<link rel="stylesheet" href="/styles.css?v=2026-11-01">
 </head>
 <body>
 
@@ -139,7 +139,15 @@
     <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
     <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
     <ul class="nav-links">
-      <li><a href="/product">Product</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+          <li><a href="/features/product-qualified-lead-scoring">PQL scoring</a></li>
+        </ul>
+      </li>
       <li class="nav-dropdown">
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
@@ -148,7 +156,7 @@
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
       </li>
-      <li><a href="/resources">Resources</a></li>
+      <li class="is-current"><a href="/resources" aria-current="page">Resources</a></li>
       <li><a href="/trial">Start trial</a></li>
     </ul>
     <a href="/trial" class="nav-cta">Start free trial</a>
@@ -211,12 +219,7 @@
       <a class="resource-card" href="/playbooks/tracking-plg-funnel-without-data-team">
         <span class="tag">Playbook</span>
         <h3>Start tracking your PLG funnel</h3>
-        <p>A first view from two exports: which sources bring users who activate, where each step's data lives, and where you'll need help.</p>
-      </a>
-      <a class="resource-card" href="/playbooks/spreadsheet-vs-analytics-tool-plg-tracking">
-        <span class="tag">Playbook</span>
-        <h3>Spreadsheets vs a dedicated analytics tool</h3>
-        <p>Where spreadsheets stop being reliable for funnel tracking, what a dedicated tool changes, and what it doesn't fix.</p>
+        <p>A first view from two exports: which sources bring users who activate, where each step's data lives, and when a spreadsheet stops being enough.</p>
       </a>
       <a class="resource-card" href="/playbooks/marketing-sales-funnel-numbers-dont-match">
         <span class="tag">Playbook</span>
@@ -228,20 +231,10 @@
         <h3>The hidden cost of chasing signup volume</h3>
         <p>Why more sign-ups from a shorter form or a new channel don't always bring more customers, and what to check after each change.</p>
       </a>
-      <a class="resource-card" href="/playbooks/referral-rate-tracking-plg-teams">
-        <span class="tag">Playbook</span>
-        <h3>Tracking referral rate</h3>
-        <p>Which customers, users and partners recommend you, how far each signal can be trusted, and what those referrals are worth.</p>
-      </a>
       <a class="resource-card" href="/playbooks/time-to-value-tracking">
         <span class="tag">Playbook</span>
-        <h3>Tracking time to value</h3>
-        <p>How long users take to reach value, where the delay sits, and what to do for those who don't activate in their first session.</p>
-      </a>
-      <a class="resource-card" href="/playbooks/diagnosing-drop-in-activation-rate-leads-or-product-friction">
-        <span class="tag">Playbook</span>
-        <h3>Diagnosing a drop in activation rate: leads or product friction</h3>
-        <p>How to tell whether a drop in activation comes from who signs up or from the product, by splitting the data before acting.</p>
+        <h3>When activation drops: what time to value tells you</h3>
+        <p>Whether a drop comes from who signs up or from the product, and how time to value tells the two apart.</p>
       </a>
       <a class="resource-card" href="/playbooks/tracking-feature-adoption-plg-teams">
         <span class="tag">Playbook</span>
@@ -255,8 +248,8 @@
       </a>
       <a class="resource-card" href="/playbooks/tracking-expansion-revenue-signals-plg">
         <span class="tag">Playbook</span>
-        <h3>Tracking expansion revenue signals</h3>
-        <p>The usage changes that come before an upgrade, and how to catch them before an account outgrows its plan.</p>
+        <h3>Expansion or churn: reading the signals in an account</h3>
+        <p>Why the same drop in seats or usage can mean growth, a pause or a departure, and how to tell them apart.</p>
       </a>
       <a class="resource-card" href="/playbooks/expanding-self-serve-plg-to-new-country">
         <span class="tag">Playbook</span>
@@ -267,19 +260,19 @@
     </div>
   </details>
 
-  <details class="resource-group" id="features" open>
+  <details class="resource-group" id="features">
     <summary><h2>Features</h2></summary>
     <p class="resource-group-intro">What Funnelsight shows, and how it works.</p>
     <div class="resource-cards">
-      <a class="resource-card" href="/features/activation-retention-dashboard-plg-teams">
-        <span class="tag">Feature</span>
-        <h3>Activation and retention dashboard for PLG teams</h3>
-        <p>Activation, trial conversion and retention signals by source and weekly cohort, built on the activation event your team defines.</p>
-      </a>
       <a class="resource-card" href="/features/revenue-attribution-payback-by-source">
         <span class="tag">Feature</span>
         <h3>Revenue attribution and payback by source</h3>
         <p>The recurring revenue each source brings, how many months it takes to cover its cost, and why the attributed total differs from the CRM.</p>
+      </a>
+      <a class="resource-card" href="/features/activation-retention-dashboard-plg-teams">
+        <span class="tag">Feature</span>
+        <h3>Activation and retention dashboard for PLG teams</h3>
+        <p>Activation, trial conversion and retention signals by source and weekly cohort, built on the activation event your team defines.</p>
       </a>
       <a class="resource-card" href="/features/product-qualified-lead-scoring">
         <span class="tag">Feature</span>
