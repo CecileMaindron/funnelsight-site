@@ -61,17 +61,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to calculate churn rate for B2B SaaS: Funnelsight</title>
-<meta name="description" content="Learn the standard formula for B2B SaaS churn rate, the difference between logo and revenue churn, and how to start tracking it without complex tooling.">
+<meta name="description" content="Why a monthly customer total isn't enough to calculate churn, the formula, how to compare self-serve and sales-led churn, what a good rate looks like, and how much churn a price increase can afford.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/how-to-calculate-churn-rate-b2b-saas">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="How to calculate churn rate for B2B SaaS: Funnelsight">
-<meta property="og:description" content="Learn the standard formula for B2B SaaS churn rate, the difference between logo and revenue churn, and how to start tracking it without complex tooling.">
+<meta property="og:description" content="Why a monthly customer total isn't enough to calculate churn, the formula, how to compare self-serve and sales-led churn, what a good rate looks like, and how much churn a price increase can afford.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/how-to-calculate-churn-rate-b2b-saas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to calculate churn rate for B2B SaaS: Funnelsight">
-<meta name="twitter:description" content="Learn the standard formula for B2B SaaS churn rate, the difference between logo and revenue churn, and how to start tracking it without complex tooling.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-01">
+<meta name="twitter:description" content="Why a monthly customer total isn't enough to calculate churn, the formula, how to compare self-serve and sales-led churn, what a good rate looks like, and how much churn a price increase can afford.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-02">
 </head>
 <body>
 
@@ -173,64 +173,87 @@
 
 <article class="article wrap">
   <h1>How to calculate churn rate for B2B SaaS</h1>
-  <p class="lede-intro">Customer churn rate is the number of customers lost during a period divided by the number of customers at the start of that period. Multiply the result by 100 to express it as a percentage. Revenue churn works the same way, but with MRR in place of customer counts.</p>
+  <p class="lede-intro">The monthly customer count in your dashboard can't give you a churn rate. Going from 1,005 to 1,100 customers could mean 30 left, or 130: it depends on how many new customers came in.</p>
 
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>Customer churn rate = (customers lost ÷ customers at the start of the period) × 100</p>
-    <p>Revenue churn rate = (MRR lost ÷ MRR at the start of the period) × 100</p>
-  </div>
+  <h2>Churn in customers</h2>
+  <p>Add the customers who joined or came back during the month, and the ones who left fall out of the difference.</p>
+  <figure class="churn-bridge" aria-label="Customer bridge for October (illustrative data)">
+    <div class="cb-step"><span class="cb-value">1,005</span><span class="cb-label">customers on 1 Oct</span></div>
+    <div class="cb-step"><span class="cb-value">+ 125</span><span class="cb-label">new or reactivated</span></div>
+    <div class="cb-step cb-step-key"><span class="cb-value">− 30</span><span class="cb-label">lost</span></div>
+    <div class="cb-step"><span class="cb-value">= 1,100</span><span class="cb-label">customers on 1 Nov</span></div>
+    <figcaption>Customer churn = lost ÷ customers at the start = 30 ÷ 1,005 = <strong>3%</strong>. Illustrative data</figcaption>
+  </figure>
 
-  <h2>Logo churn vs. revenue churn</h2>
-  <p>Logo churn counts customers. Revenue churn counts dollars. The two can move in different directions in the same month, and for B2B SaaS, that gap matters more than it looks.</p>
-  <p>If your smallest accounts churn at a higher rate than your largest ones, logo churn will look worse than revenue churn. That's common, and it isn't automatically a problem. Net revenue churn goes a step further: it subtracts expansion revenue (upgrades, seat growth) from what you lost, so a quarter with heavy downgrades but strong upsells can still show a healthy number.</p>
+  <h2>Churn in revenue</h2>
+  <p>Revenue needs two more lines, because customers who stay also upgrade or downgrade. Billing tools usually list these movements separately.</p>
+  <figure class="ui-card mrr-bridge">
+    <div class="ui-card-head"><span class="source-card-title">MRR movements, October</span><span class="tag-illustrative">Illustrative data</span></div>
+    <dl class="mb-list">
+      <div><dt>MRR on 1 Oct</dt><dd>$200k</dd></div>
+      <div><dt>New</dt><dd>+ $14k</dd></div>
+      <div><dt>Expansion (upgrades)</dt><dd>+ $6k</dd></div>
+      <div><dt>Contraction (downgrades)</dt><dd>− $3k</dd></div>
+      <div class="mb-key"><dt>Churned</dt><dd>− $9k</dd></div>
+      <div class="mb-total"><dt>MRR on 1 Nov</dt><dd>$208k</dd></div>
+    </dl>
+    <p class="ui-note">Revenue churn = $9k ÷ $200k = <strong>4.5%</strong>, against 3% of customers: two of the 30 were large accounts. Net of contraction and expansion: ($9k + $3k − $6k) ÷ $200k = 3%.</p>
+  </figure>
+  <p>Finance will look at the revenue figure first. Count only paying customers: a free user who never pays isn't churn, while a customer who drops back to a free plan is lost revenue.</p>
 
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>Net revenue churn = (lost MRR − expansion MRR) ÷ starting MRR × 100</p>
-  </div>
+  <h2>Expect self-serve churn to run higher</h2>
+  <p>Self-serve customers are smaller, pay month to month and can leave in a few clicks. Sales-led customers sign a contract, usually annual, and can only leave at renewal. Higher self-serve churn is the normal state of things, so judge each against its own history rather than against the other.</p>
+  <figure class="ui-card churn-clock" role="img" aria-label="Monthly churn over one year. Self-serve stays close to 3% every month. Sales-led is at zero most months, then 3% in March, 2% in June and 5% in December, when annual contracts come up for renewal. Illustrative data">
+    <div class="ui-card-head"><span class="source-card-title">Monthly churn over a year</span><span class="tag-illustrative">Illustrative data</span></div>
+    <div class="cc-row"><span class="cc-name">Self-serve</span><span class="cc-bars" aria-hidden="true"><span class="cc-bar" style="height:64%"></span><span class="cc-bar" style="height:56%"></span><span class="cc-bar" style="height:62%"></span><span class="cc-bar" style="height:58%"></span><span class="cc-bar" style="height:60%"></span><span class="cc-bar" style="height:66%"></span><span class="cc-bar" style="height:54%"></span><span class="cc-bar" style="height:60%"></span><span class="cc-bar" style="height:62%"></span><span class="cc-bar" style="height:56%"></span><span class="cc-bar" style="height:64%"></span><span class="cc-bar" style="height:58%"></span></span><span class="cc-total">about 31% a year</span></div>
+    <div class="cc-row"><span class="cc-name">Sales-led</span><span class="cc-bars" aria-hidden="true"><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar" style="height:60%"></span><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar" style="height:40%"></span><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar cc-zero"></span><span class="cc-bar" style="height:100%"></span></span><span class="cc-total">about 10% a year</span></div>
+    <div class="cc-row cc-axis" aria-hidden="true"><span class="cc-name"></span><span class="cc-bars"><span>J</span><span>F</span><span>M</span><span>A</span><span>M</span><span>J</span><span>J</span><span>A</span><span>S</span><span>O</span><span>N</span><span>D</span></span><span class="cc-total"></span></div>
+  </figure>
+  <p>For contracts, the renewal rate reads more clearly than a monthly rate: of the contracts that came up for renewal, how many renewed, and at what value.</p>
 
-  <p>That's essentially the flip side of <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention</a>, and most B2B SaaS teams end up tracking both side by side rather than picking one. A single churn figure hides which story is actually happening underneath it. An account also starts leaving well before it cancels: several of its users stop logging in, and that shows up in account-level usage first. See <a href="/glossary/user-level-vs-account-level-analytics">user-level vs account-level analytics</a>.</p>
+  <h2>A good churn rate is one your acquisition cost can live with</h2>
+  <p>Say a new customer costs $3,600 to win, through ads, events and sales time, and brings in $200 of margin a month. It takes 18 months to earn that $3,600 back. Churn decides whether customers stay that long. If 3% of customers leave each month, the average customer stays about 33 months (1 ÷ 3%). If 6% leave, about 17 months.</p>
+  <figure class="ui-card lifetime-bars" role="img" aria-label="At 3% monthly churn, customers stay about 33 months on average, beyond the 18 months needed to earn back their acquisition cost. At 6%, about 17 months, short of it. Illustrative data">
+    <div class="ui-card-head"><span class="source-card-title">How long the average customer stays</span><span class="tag-illustrative">Illustrative data</span></div>
+    <div class="lt-chart" aria-hidden="true">
+      <div class="lt-row"><span class="lt-name">3% leave each month</span><span class="lt-track"><span class="lt-bar" style="width:92%"></span><span class="lt-mark" style="left:50%"></span></span><span class="lt-val">33 months</span></div>
+      <div class="lt-row"><span class="lt-name">6% leave each month</span><span class="lt-track"><span class="lt-bar lt-short" style="width:47%"></span><span class="lt-mark" style="left:50%"></span></span><span class="lt-val">17 months</span></div>
+    </div>
+    <p class="ui-note">The line marks month 18, when a customer has paid back what it cost to win. At 6%, the average customer leaves just before.</p>
+  </figure>
+  <p>At 3%, customers keep paying long after they've covered their cost. At 6%, the average customer leaves before you've earned back what you spent to win them. That's why self-serve, where customers cost far less to win, can live with a higher churn rate. The <a href="/glossary/what-is-ltv-cac-ratio">LTV:CAC ratio</a> builds on the same idea.</p>
 
-  <h2>Decide what counts before you calculate</h2>
-  <p>Before any of this means something, you have to fix three things: who counts as a customer, whether self-serve and sales-assisted are tracked together or apart, and what period the number represents.</p>
-  <p>A free user leaving isn't churn by itself. Churn is normally measured against paying accounts, so a free user who never converts to paid shows up as a drop in your free-to-paid conversion rate, not as churn. The exception worth watching for is a freemium-forever model: if you're already counting free signups and free-to-paid conversions as funnel metrics, a paid account downgrading back to free is a real loss of revenue, and it's easy to miss if your churn definition only catches full cancellations.</p>
-  <p>Graduating to a richer product or tier isn't churn either, even though it can look like one in a dashboard that only tracks cancellations on the old plan. Exclude it or label it separately: a number that quietly mixes a real loss with a win tells you about neither.</p>
-  <p>Self-serve and sales-assisted rarely churn at the same rate. Blending them into one number hides whichever motion is actually struggling. Track them separately as the primary view, and keep a blended figure only for an executive rollup.</p>
-  <p>Failed payments deserve their own line too. When a card expires or a charge is declined, the customer hasn’t chosen to leave: that’s involuntary churn, as opposed to the voluntary churn of an actual cancellation. Counting the two together hides how much of your churn is billing friction, some of which you can still recover.</p>
-  <p>A monthly rate doesn't convert to an annual one by simple multiplication, and the two don't even call for the same formula. If you have a full year of data, calculate the annual rate directly, the same way as the monthly one, just over 12 months instead of one. If you only have a monthly number and need to estimate an annual rate before the year is out, the common shortcut assumes a constant rate on a fixed customer base:</p>
+  <h2>Before a price increase, agree on the churn you can afford</h2>
+  <p>Take 100 customers paying $100 a month: $10,000 in total. Raise the price by 10%, and if nobody leaves, you make $11,000. If 9 customers leave, the 91 who stay pay $10,010, about what you made before. So with a 10% increase, you can lose up to about 9% of the customers concerned and still come out even. With a 20% increase, about 17%.</p>
+  <p>Agree on that margin before the change, then compare the departures that follow with it. On annual contracts, wait for the renewals to see the effect. Changing how you charge, from a price per user to a price based on usage for example, raises some bills and lowers others. The customers whose bill goes up are the ones likely to leave, so look at them account by account before the switch.</p>
 
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>Annualized churn rate ≈ 1 − (1 − monthly churn rate)^12</p>
-  </div>
-
-  <p>Treat it as an approximation, not a substitute for real annual data. On a growing customer base, the actual annual rate usually lands closer to the average of your monthly rates than to this compounded estimate.</p>
-
-  <h2>Why your first-month number needs context</h2>
-  <p>How much weight to put on a month-one cancellation depends on what the product actually does. A scheduling tool for a medical practice isn't something you sign up for to cover one week of appointments, so a customer churning a month in is very likely a real problem. A tool built to move data from one system to another is different: someone might run it once for a migration and never need it again, and that's not a failure to serve them, it's the job getting done.</p>
-
-  <h2>Start simple, then refine</h2>
-  <p>You don't need every segment, every cohort, and every edge case covered before you calculate churn for the first time. Pick one period (monthly is the usual starting point for SaaS) and run the formula on whatever data you already have in a spreadsheet or your billing tool's export. If you run both self-serve and sales-assisted, start with self-serve alone: it's usually the simpler of the two to pull from a single billing export, and it keeps you from blending the two motions you just decided not to blend.</p>
-  <p>What you shouldn't compromise on is the accuracy of that data. A narrower scope is fine; a churn number built on stale exports or guessed customer counts isn't. Get the basic calculation right on a small, accurate slice first, then expand to cohorts, segments, and automated recalculation as the process proves useful.</p>
-
-  <h2>Where churn fits into your funnel view</h2>
-  <p>Churn is the mirror image of retention: the customers you didn't keep. A dashboard that already tracks <a href="/features/activation-retention-dashboard-plg-teams">activation and retention</a> gives you most of the inputs a churn calculation needs, without a separate spreadsheet pass every month. Funnelsight brings usage data and CRM data into the same funnel view, so retention and churn read from the same source instead of two disconnected exports.</p>
-  <p>A churn number tells you how much you lost, not why. The clearest way to find out is still to ask: a short survey built into the cancellation flow catches a reason most canceling customers won't volunteer on a call, especially in self-serve. It also surfaces what a dashboard can't, like a competitor they switched to or a feature they needed and never found.</p>
+  <h2>When churn rises, check the mix before the strategy</h2>
+  <p>Before concluding that something is wrong, check whether one of these explains the rise.</p>
+  <ul class="check-list churn-checks">
+    <li><span class="check-status check-ok">Mix</span><span class="check-name">You won more new customers than usual. New customers leave more often in their first months, so churn rises with them.</span></li>
+    <li><span class="check-status check-ok">Plan</span><span class="check-name">You stopped targeting a segment, like small accounts after a move upmarket. Their departures were expected.</span></li>
+    <li><span class="check-status check-ok">Price</span><span class="check-name">You raised prices, and the departures stay below the margin you agreed on.</span></li>
+    <li><span class="check-status check-warn">Act</span><span class="check-name">The same kind of customer, after the same time with you, leaves more often than a year ago.</span></li>
+  </ul>
+  <p>The acquisition source matters as well. A channel whose customers leave within a few months costs more than its acquisition cost suggests. Funnelsight reads churn by source and by cohort in the same view as <a href="/features/revenue-attribution-payback-by-source">revenue and payback</a>, so you can tell the channels that bring customers who stay from those that mostly bring sign-ups.</p>
 
   <div class="article-cta">
-    <p>See retention and churn read from the same numbers, not two spreadsheets.</p>
+    <p>See churn by source and by cohort, next to the revenue each channel brings.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
-      <summary>Is churn rate the same as retention rate?</summary>
-      <p>No, but they're two sides of the same measurement. Retention rate tells you what share of customers (or revenue) you kept; churn rate tells you what share you lost. In most cases, churn rate is roughly 100% minus retention rate over the same period.</p>
+      <summary>How do I turn a monthly churn rate into an annual one?</summary>
+      <p>Compound it rather than multiplying by twelve: annual churn ≈ 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, against 36% if you multiply, because customers who have already left can't leave a second time. Once you have twelve months of real data, calculate the annual rate directly.</p>
     </details>
     <details>
-      <summary>Should I calculate churn monthly or annually?</summary>
-      <p>Monthly is the standard starting point for most B2B SaaS businesses, since it surfaces problems faster than an annual view. If your contracts are mostly annual, it's worth tracking both: monthly churn for early warning signs, annual churn to match how revenue is actually structured.</p>
+      <summary>What's a typical churn rate in B2B SaaS?</summary>
+      <p>Recent surveys measure it in revenue. <a href="https://www.saas-capital.com/research/saas-retention-benchmarks-for-private-b2b-companies/" target="_blank" rel="noopener">SaaS Capital's 2025 survey</a> of more than 1,000 private B2B SaaS companies puts median gross revenue retention at 91%, so about 9% of revenue lost in a year, and 95% for companies whose contracts exceed $250k a year. Customer churn usually runs higher than revenue churn, since small customers leave more often. Compare yourself with companies selling at a similar contract size, and above all with your own trend.</p>
+    </details>
+    <details>
+      <summary>Is churn rate the same as retention rate?</summary>
+      <p>They are two sides of the same measure. Over the same period and on the same base, churn rate is 100% minus retention rate. Net revenue retention is different: it adds expansion, so it can go above 100%.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -240,18 +263,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is churn rate the same as retention rate?",
+        "name": "How do I turn a monthly churn rate into an annual one?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No, but they're two sides of the same measurement. Retention rate tells you what share of customers (or revenue) you kept; churn rate tells you what share you lost. In most cases, churn rate is roughly 100% minus retention rate over the same period."
+          "text": "Compound it rather than multiplying by twelve: annual churn ≈ 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, against 36% if you multiply, because customers who have already left can't leave a second time. Once you have twelve months of real data, calculate the annual rate directly."
         }
       },
       {
         "@type": "Question",
-        "name": "Should I calculate churn monthly or annually?",
+        "name": "What's a typical churn rate in B2B SaaS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Monthly is the standard starting point for most B2B SaaS businesses, since it surfaces problems faster than an annual view. If your contracts are mostly annual, it's worth tracking both: monthly churn for early warning signs, annual churn to match how revenue is actually structured."
+          "text": "Recent surveys measure it in revenue. SaaS Capital's 2025 survey of more than 1,000 private B2B SaaS companies puts median gross revenue retention at 91%, so about 9% of revenue lost in a year, and 95% for companies whose contracts exceed $250k a year. Customer churn usually runs higher than revenue churn, since small customers leave more often. Compare yourself with companies selling at a similar contract size, and above all with your own trend."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is churn rate the same as retention rate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They are two sides of the same measure. Over the same period and on the same base, churn rate is 100% minus retention rate. Net revenue retention is different: it adds expansion, so it can go above 100%."
         }
       }
     ]
