@@ -1079,6 +1079,18 @@ footer a {
 
 /* Account view: what the CRM holds about one account, next to what
    Funnelsight adds from product usage and billing */
+/* Zoom path: lead -> account -> person */
+.zoom-path { margin: 24px 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; position: relative; }
+.zp-step { position: relative; background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.zp-step + .zp-step::before { content: '\2192'; position: absolute; left: -22px; top: 50%; transform: translateY(-50%); color: var(--indigo); font-weight: 700; font-size: 18px; }
+.zp-step-key { border: 2px solid var(--indigo); background: #F4F3FA; }
+.zp-level { display: block; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--indigo); margin-bottom: 6px; }
+.article .zp-step p { margin: 0; font-size: 15px; }
+.zoom-path figcaption { grid-column: 1 / -1; font-size: 14px; color: #454A5B; }
+@media (max-width: 600px) {
+  .zoom-path { grid-template-columns: 1fr; gap: 22px; }
+  .zp-step + .zp-step::before { content: '\2193'; left: 50%; top: -20px; transform: translateX(-50%); }
+}
 .account-view { margin: 24px 0; background: var(--white); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
 .av-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 18px; background: var(--bg); border-bottom: 1px solid var(--line); }
 .av-title { font-weight: 600; font-size: 15px; color: var(--ink); }

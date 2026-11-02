@@ -61,17 +61,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>User-level vs account-level analytics: Funnelsight</title>
-<meta name="description" content="User-level analytics tracks individual behavior. Account-level rolls it up to the buying unit. B2B teams usually need both, read together.">
+<meta name="description" content="Account or user level? Start from what you want to know. How sales and marketing move between the two to pick accounts, find the right person to call and shape the message.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/user-level-vs-account-level-analytics">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="User-level vs account-level analytics: Funnelsight">
-<meta property="og:description" content="User-level analytics tracks individual behavior. Account-level rolls it up to the buying unit. B2B teams usually need both, read together.">
+<meta property="og:description" content="Account or user level? Start from what you want to know. How sales and marketing move between the two to pick accounts, find the right person to call and shape the message.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/user-level-vs-account-level-analytics">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="User-level vs account-level analytics: Funnelsight">
-<meta name="twitter:description" content="User-level analytics tracks individual behavior. Account-level rolls it up to the buying unit. B2B teams usually need both, read together.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-02">
+<meta name="twitter:description" content="Account or user level? Start from what you want to know. How sales and marketing move between the two to pick accounts, find the right person to call and shape the message.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-03">
 </head>
 <body>
 
@@ -173,38 +173,63 @@
 
 <article class="article wrap">
   <h1>User-level vs account-level analytics</h1>
-  <p class="lede-intro">User-level analytics tracks what one individual does in your product: logins, clicks, feature use. Account-level analytics rolls that activity up to the company or team that individual belongs to. In many B2B products, the buying decision is made at the account level, but the behavior that predicts it happens at the user level. You need both, connected, not one instead of the other.</p>
+  <p class="lede-intro">A sales rep asks for a report by account. What they want to know is whether the company is worth their time, and who to call. The two answers sit at two different levels.</p>
 
-  <h2>Why the distinction matters in B2B</h2>
-  <p>A single user churning out of your product might mean nothing. A whole account going quiet, three seats stopped logging in, the admin hasn't touched a key feature in weeks, is a different signal entirely. If your dashboard only shows user-level numbers, you'll miss that pattern until the renewal conversation is already going badly.</p>
-  <p>The reverse problem also happens. An account-only view can hide the fact that adoption is uneven inside the account: one power user carrying the whole usage number while four other seats never logged in. That account looks healthy in aggregate and isn't.</p>
-  <p>The picture changes when one admin or developer sets the tool up and the people who benefit from it never log in. User and account are then almost the same thing, so look at what that person puts in place and keeps running, such as a live integration.</p>
+  <figure class="zoom-path" aria-label="From one lead to the account, then to the person to call (illustrative example)">
+    <div class="zp-step">
+      <span class="zp-level">One lead</span>
+      <p>An analyst downloads a guide. On its own, a lead like many others.</p>
+    </div>
+    <div class="zp-step">
+      <span class="zp-level">The account</span>
+      <p>Four people from the same finance team this month: two guides downloaded, the pricing page read three times, a trial started. No opportunity in the CRM.</p>
+    </div>
+    <div class="zp-step zp-step-key">
+      <span class="zp-level">The person to call</span>
+      <p>The team's manager, who started the trial and came back to the pricing page.</p>
+    </div>
+    <figcaption>Up to the account to judge the company, back down to the person to know who to call. Illustrative example</figcaption>
+  </figure>
 
-  <h2>How the two levels work together</h2>
-  <p>Most B2B teams start by tracking individual actions: sign-ins, feature adoption, activation events. That's the user level. The useful step after that is grouping those same events by the account or company each user belongs to, so a marketing or growth team can see both views without switching tools or re-exporting data.</p>
-  <p>This is the same principle behind Funnelsight's shared funnel view: product usage data and CRM data live together, across activation, retention, and expansion, so an account's usage pattern and its sales status show up in the same place. You're not maintaining two separate spreadsheets and reconciling them by hand.</p>
-  <p>If you're setting this up for the first time, start simple. Pick one segment, maybe your highest-tier accounts, and get the user-to-account rollup working there before trying to cover every plan type. A batch refresh once a day is enough to start; you don't need a live stream to get useful signal.</p>
+  <h2>Start from what you want to know</h2>
+  <p>The question decides where a report starts and where it ends. Most commercial questions need both user-level and account-level data, in a different order.</p>
+  <table class="data-table data-table-dense">
+    <thead>
+      <tr><th scope="col">What you want to know</th><th scope="col">Start from</th><th scope="col">End with</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Which companies to work on</th><td>Accounts: how many people, how active, which stage</td><td>The teams involved inside each one</td></tr>
+      <tr><th scope="row">Who to call in an account</th><td>The account's contacts and users</td><td>The one whose role and activity fit the offer</td></tr>
+      <tr><th scope="row">Which campaigns work</th><td>The leads each campaign brought</td><td>The opportunities on their accounts</td></tr>
+      <tr><th scope="row">Whether a customer is at risk</th><td>The account's usage and renewal date</td><td>The users who stopped being active</td></tr>
+    </tbody>
+  </table>
+  <p>When several people from one team read the site, download content or sign up for a trial within a few days, there's often a project or a training behind it. Either way, it's a good moment to reach out, and twenty contacts attached to an account won't tell a rep which one to contact first.</p>
+  <p>Who the person is changes what the activity means. A university account often brings a stream of student sign-ups that is easy to dismiss as a whole, yet the same email domain can hide someone from the IT department evaluating the product for the campus. The reverse happens too: a CTO who downloads a white paper looks like the obvious contact, but next to an IT manager who has tested the product all week, the CTO is someone to bring in later, and the IT manager is the person to reach now.</p>
 
-  <h2>What to actually look at</h2>
-  <p>A practical starting point: for each account, how many distinct users were active in the last 7 or 14 days, and did that number go up or down. That single rollup catches the "one power user propping up a quiet account" problem without requiring a complex model. From there, teams doing <a href="/glossary/what-is-a-product-qualified-lead-pql">PQL scoring</a> typically feed account-level activity into the account's score, not just one user's, since a purchase often involves more than one person.</p>
+  <h2>The same choice shapes the message</h2>
+  <p>Marketing faces the same choice. Data at the account level lets a campaign speak to the company as a whole: why the project matters to the business, which teams are already involved, what each person weighing the decision needs to hear. That's what account-based marketing is for, and it only pays off when it serves a sales objective.</p>
+  <p>Data at the person level lets the message follow what someone has actually done: the guide they read, the feature they tried, the page they keep coming back to. A follow-up that picks up from there usually lands better than one written for a job title alone.</p>
+
+  <h2>Before you trust an account view</h2>
+  <p>People sign up with personal email addresses, subsidiaries use their own domains, and one group can appear as several accounts in the CRM. Each of these splits a company into fragments or leaves people outside it.</p>
+  <p>The account itself can mislead. When a product is used by one department, the CRM account still covers the whole group, so a few active users can look like a small footprint in a large company, or like broad adoption when they all sit in one team. Read the account together with the teams behind it.</p>
+  <p>A grouped signal still needs context. A partner may start a trial to test the product for a client, an existing customer may sign up its staff for trials to train them, and a department may not know its company already holds licences. Each looks like new interest, and each calls for a different conversation.</p>
+  <p>In Funnelsight, activity can be filtered by account or by person, and you switch from one view to the other in a click, without a second export.</p>
 
   <div class="article-cta">
-    <p>See user and account activity in the same dashboard, without stitching data together yourself.</p>
+    <p>Move from the account to the person, and back, in one view.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
-      <summary>Is account-level analytics only relevant for larger deals?</summary>
-      <p>No. Many small self-serve accounts have more than one user once they're past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200. If one person runs the tool for everyone else, user and account are nearly the same thing.</p>
+      <summary>What is account-level reporting?</summary>
+      <p>Account-level reporting groups leads, contacts and product users under the company they belong to, and reports on companies rather than people: how many accounts reached each stage, which ones are active, how many people each one involves. It answers which companies to work on. Who to contact inside them takes the person-level view underneath.</p>
     </details>
     <details>
-      <summary>Do I need a data team to set up account-level rollups?</summary>
-      <p>No. Defining which users belong to which account is a configuration step a marketing or growth team can do directly, without a data team or ongoing engineering support.</p>
-    </details>
-    <details>
-      <summary>What about trial users who haven't invited a team yet?</summary>
-      <p>You don't need a shared company email domain to group users into an account. If your trial works on an invite basis, one person signs up and invites teammates into the same workspace, that invite relationship groups their activity from day one, regardless of what email domain each person used. The real gap is a solo trial user who never invites anyone: there's no "account" to roll up yet, because there's only one person using it. That's not a tracking problem, it's just an accurate reflection of where that trial actually is.</p>
+      <summary>How do you match leads and users to the right account?</summary>
+      <p>Most teams start with the email domain, then fill the gaps: enrichment data for people who sign up with a personal address, the CRM's parent and child accounts for subsidiaries, and a manual review of the leads that remain unmatched. Agree on the rules once, so marketing and sales count the same accounts.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -214,26 +239,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is account-level analytics only relevant for larger deals?",
+        "name": "What is account-level reporting?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Many small self-serve accounts have more than one user once they're past the trial stage. Tracking at the account level just means grouping those users together, which matters whether the account has 2 seats or 200. If one person runs the tool for everyone else, user and account are nearly the same thing."
+          "text": "Account-level reporting groups leads, contacts and product users under the company they belong to, and reports on companies rather than people: how many accounts reached each stage, which ones are active, how many people each one involves. It answers which companies to work on. Who to contact inside them takes the person-level view underneath."
         }
       },
       {
         "@type": "Question",
-        "name": "Do I need a data team to set up account-level rollups?",
+        "name": "How do you match leads and users to the right account?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Defining which users belong to which account is a configuration step a marketing or growth team can do directly, without a data team or ongoing engineering support."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What about trial users who haven't invited a team yet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You don't need a shared company email domain to group users into an account. If your trial works on an invite basis, one person signs up and invites teammates into the same workspace, that invite relationship groups their activity from day one, regardless of what email domain each person used. The real gap is a solo trial user who never invites anyone: there's no \"account\" to roll up yet, because there's only one person using it. That's not a tracking problem, it's just an accurate reflection of where that trial actually is."
+          "text": "Most teams start with the email domain, then fill the gaps: enrichment data for people who sign up with a personal address, the CRM's parent and child accounts for subsidiaries, and a manual review of the leads that remain unmatched. Agree on the rules once, so marketing and sales count the same accounts."
         }
       }
     ]
@@ -241,10 +258,10 @@
   </script>
 
   <section class="read-next" aria-label="Read next">
-    <a class="read-next-card" href="/features/product-qualified-lead-scoring">
+    <a class="read-next-card" href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">
       <span class="read-next-label">Read next</span>
-      <span class="read-next-title">Product qualified lead scoring</span>
-      <span class="read-next-desc">How usage frequency, feature adoption, and account activity combine into one editable, rule-based score.</span>
+      <span class="read-next-title">The self-serve customers your sales team can't see</span>
+      <span class="read-next-desc">What sales can do once it sees the teams already paying online in its accounts, and how to get them to the right rep.</span>
     </a>
   </section>
 
