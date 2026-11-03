@@ -332,6 +332,29 @@ footer a {
 .kt-big { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--ink); line-height: 1.2; }
 .kt-lbl { font-size: 12px; color: var(--muted); }
 .kt-sub { font-size: 12px; color: #454A5B; margin-top: 4px; }
+.kt-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.kt-muted { border-left-color: #C9CDD8; background: var(--bg); }
+.kt-muted .kt-big { color: var(--muted); }
+.wl-list { list-style: none; margin: 0; padding: 0 0 6px; }
+.wl-list li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; border-top: 1px solid #EEF0F4; }
+.wl-acct { font-size: 14px; font-weight: 600; color: var(--ink); display: flex; flex-direction: column; gap: 2px; }
+.wl-acct span { font-size: 12px; font-weight: 400; color: var(--muted); }
+.wl-chip { flex-shrink: 0; max-width: 46%; font-size: 12px; font-weight: 600; border-radius: 4px; padding: 3px 8px; text-align: right; }
+.wl-down { color: #7A4F00; background: #FBEAD0; }
+.wl-up { color: var(--indigo); background: #E8E6F3; }
+.wl-none { color: var(--muted); background: var(--bg); }
+.tl-list { list-style: none; margin: 0; padding: 6px 16px 14px; }
+.tl-list li { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 8px 0 8px; border-left: 2px solid #D6D2EC; margin-left: 4px; padding-left: 12px; font-size: 14px; position: relative; }
+.tl-list li::before { content: ''; position: absolute; left: -6px; top: 13px; width: 10px; height: 10px; border-radius: 50%; background: var(--indigo); }
+.tl-date { font-size: 12px; font-weight: 600; color: var(--muted); padding-top: 1px; }
+.tl-warn::before { background: var(--accent) !important; }
+.tl-next::before { background: var(--white) !important; border: 2px solid var(--indigo); }
+.tl-next .tl-text { color: var(--indigo); font-weight: 600; }
+.tl-note .tl-text { background: #FDF6EA; border-radius: 6px; padding: 6px 8px; }
+@media (max-width: 600px) {
+  .wl-list li { flex-direction: column; align-items: flex-start; }
+  .wl-chip { max-width: none; text-align: left; }
+}
 .go-further { padding: 56px 0 8px; background: var(--white); }
 .go-further h2 { font-size: 24px; margin-bottom: 20px; }
 .go-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
