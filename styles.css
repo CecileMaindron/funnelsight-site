@@ -1404,6 +1404,18 @@ footer a {
   .view-tabs li { font-size: 12px; padding: 5px 8px; white-space: nowrap; }
 }
 
+/* Diverging bars around 100% (NRR by source) */
+.nd-list { list-style: none; margin: 0; padding: 4px 16px 12px; }
+.nd-row { display: grid; grid-template-columns: 110px 1fr 1fr 42px; align-items: center; padding: 5px 0; font-size: 13px; }
+.nd-neg, .nd-pos { display: flex; align-items: center; height: 18px; }
+.nd-neg { justify-content: flex-end; border-right: 2px solid var(--ink); }
+.nd-bar { display: block; height: 14px; border-radius: 3px; background: #8F89BF; min-width: 3px; }
+.nd-neg .nd-bar { background: var(--accent); }
+.nd-zero { width: 3px; background: var(--muted); }
+.nd-val { text-align: right; font-size: 12px; white-space: nowrap; }
+.nd-key .nd-label, .nd-key .nd-val { font-weight: 700; }
+@media (max-width: 480px) { .nd-row { grid-template-columns: 92px 1fr 1fr 38px; } }
+
 @media (prefers-reduced-motion: reduce) {
   .article a.read-next-card,
   .article a.read-next-card::after,
