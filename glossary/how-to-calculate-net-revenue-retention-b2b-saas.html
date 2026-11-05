@@ -61,17 +61,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to calculate net revenue retention (NRR): Funnelsight</title>
-<meta name="description" content="Learn how to calculate net revenue retention (NRR) for B2B SaaS: the formula, what counts as expansion and contraction, and how to start tracking it simply.">
+<meta name="description" content="How to calculate net revenue retention (NRR) and GRR, what counts as expansion, and how NRR by acquisition source shows which customers grow.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/how-to-calculate-net-revenue-retention-b2b-saas">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="How to calculate net revenue retention (NRR): Funnelsight">
-<meta property="og:description" content="Learn how to calculate net revenue retention (NRR) for B2B SaaS: the formula, what counts as expansion and contraction, and how to start tracking it simply.">
+<meta property="og:description" content="How to calculate net revenue retention (NRR) and GRR, what counts as expansion, and how NRR by acquisition source shows which customers grow.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/how-to-calculate-net-revenue-retention-b2b-saas">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to calculate net revenue retention (NRR): Funnelsight">
-<meta name="twitter:description" content="Learn how to calculate net revenue retention (NRR) for B2B SaaS: the formula, what counts as expansion and contraction, and how to start tracking it simply.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-06">
+<meta name="twitter:description" content="How to calculate net revenue retention (NRR) and GRR, what counts as expansion, and how NRR by acquisition source shows which customers grow.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-07">
 </head>
 <body>
 
@@ -172,49 +172,82 @@
 
 <article class="article wrap">
   <h1>How to calculate net revenue retention (NRR)</h1>
-  <p class="lede-intro">Net revenue retention (NRR) measures the revenue you keep and grow from your existing customer base over a period, leaving new customer revenue out entirely. An NRR above 100% means expansion is outpacing losses, even before a single new logo is signed. This is what SaaS teams call negative churn: upgrades and added seats bring in more revenue than downgrades and cancellations take away.</p>
+  <p class="lede-intro">Total ARR can keep rising while the customer base underneath it erodes. New customers, a price increase or a favorable exchange rate all lift the total. Net revenue retention (NRR) isolates the customers you already had: how much of their recurring revenue they still bring in a year later, upgrades and downgrades included, with new customers left out.</p>
 
   <div class="formula-box">
     <span class="formula-label">Formula</span>
-    <p>NRR = (starting revenue + expansion revenue − contraction revenue − churned revenue) ÷ starting revenue × 100</p>
+    <p>NRR (%) = (starting revenue + expansion − contraction − churned revenue) ÷ starting revenue × 100</p>
   </div>
 
-  <h2>Why NRR is different from churn rate</h2>
-  <p>Churn rate tells you how much revenue you lost. NRR tells you the full picture: losses offset by growth from the same customers. A company can have real churn and still post a healthy NRR, if upsells and expansions from the accounts that stayed cover the gap. That's why B2B SaaS teams track both side by side rather than picking one. If churn rate is the metric you're missing, see how to <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">calculate churn rate for B2B SaaS</a>.</p>
+  <figure class="ui-card mrr-bridge">
+    <div class="ui-card-head"><span class="source-card-title">One year of revenue from existing customers</span><span class="tag-illustrative">Illustrative data</span></div>
+    <dl class="mb-list">
+      <div><dt>ARR on 1 Nov 2025, customers active that day</dt><dd>$10.0M</dd></div>
+      <div><dt>Expansion</dt><dd>+ $1.6M</dd></div>
+      <div><dt>Contraction</dt><dd>− $0.4M</dd></div>
+      <div><dt>Churned</dt><dd>− $0.9M</dd></div>
+      <div class="mb-total"><dt>Same customers on 1 Nov 2026</dt><dd>$10.3M</dd></div>
+    </dl>
+    <p class="ui-note">NRR = $10.3M ÷ $10.0M = <strong>103%</strong>. Customers signed during the year are not part of the calculation.</p>
+  </figure>
+  <p>Above 100%, the customers you already have grow your revenue on their own. Below 100%, new customers first have to make up for what the existing base lost before the total grows at all. Healthy growth needs all three: revenue from new customers, expansion, and customers who stay.</p>
 
-  <h2>Why a healthy NRR can still hide a problem</h2>
-  <p>NRR blends two different stories into one number: how much revenue you kept, and how much you grew from what you kept. A business losing a long tail of small accounts can still post a comfortably healthy NRR if a handful of large accounts are expanding fast enough to cover the gap. The number looks fine. The customer base underneath it might not be. Reading the base account by account, including how many users are still active in each, is how you catch it early: see <a href="/glossary/user-level-vs-account-level-analytics">user-level vs account-level analytics</a>.</p>
-  <p>This is the same blind spot as reading churn without <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">separating self-serve from sales-assisted</a>: a single blended figure can't tell you which segment is actually struggling. The fix is similar too. Track gross revenue retention (GRR) alongside NRR: the same calculation, same period, same inputs, just with expansion left out entirely.</p>
-
+  <h2>NRR and GRR: the same customers, without the expansion</h2>
+  <p>Gross revenue retention (GRR) takes the same customers over the same period and leaves expansion out. It can't go above 100%.</p>
   <div class="formula-box">
     <span class="formula-label">Formula</span>
-    <p>GRR = (starting revenue − contraction revenue − churned revenue) ÷ starting revenue × 100</p>
+    <p>GRR (%) = (starting revenue − contraction − churned revenue) ÷ starting revenue × 100</p>
   </div>
+  <p>In the example, GRR = ($10.0M − $0.4M − $0.9M) ÷ $10.0M = 87%. The 16 points between 87% and 103% are expansion. Read the two together. If NRR holds while GRR falls, growth from some customers is covering rising losses from others, and the total won't show it until the expansion slows down.</p>
 
-  <p>GRR can't go above 100%, since it only ever subtracts. If NRR is strong but GRR is falling, growth is covering for churn, not fixing it.</p>
-  <p>For a sense of where your own number lands: the <a href="https://www.thesaascfo.com/?p=308354" target="_blank" rel="noopener">2026 Benchmarkit B2B SaaS metrics report</a> put median GRR at 84%, with the top quartile closer to 90%. Treat that as a loose reference point, not a verdict. The report blends company stages and revenue bands into one median, the same way an unsegmented churn number blends self-serve and sales-assisted: a healthy GRR for an early-stage self-serve product and a healthy GRR for an enterprise sales-assisted one aren't the same number.</p>
+  <h2>What goes in each line</h2>
+  <ul>
+    <li><strong>Expansion:</strong> more seats, a higher plan, add-ons. A price increase counts too, but note it separately. It lifts NRR the year it applies, then the effect stops: an NRR of 108% with 6 points from a price increase doesn't say the same thing as 108% from customers adding users. The same goes for a first-year discount that shrinks at renewal: revenue goes up without the customer using more. Watch GRR at that renewal, when customers decide whether the product is worth its full price.</li>
+    <li><strong>Contraction:</strong> fewer seats or a lower plan, on an account that stays.</li>
+    <li><strong>Churned revenue:</strong> accounts that cancel, counted when the revenue stops, not when the customer gives notice.</li>
+    <li><strong>Left out:</strong> one-time fees such as setup or services, customers signed during the period, and currency effects. Calculate at constant exchange rates, or a falling currency makes customers who changed nothing look like contraction.</li>
+  </ul>
+  <p>If monthly and annual contracts are both in the mix, bring them to the same period first: monthly revenue times twelve, next to annual contract values.</p>
 
-  <h2>What counts as expansion and contraction</h2>
-  <p>Expansion revenue covers anything that grows an existing account: seat upgrades, plan tier changes, add-on purchases. Contraction revenue covers the opposite, a downgrade or a reduction in seats that doesn't fully cancel the account. Churned revenue is the full loss from an account that cancels outright. Keeping these three buckets separate, rather than lumping everything into one "net change" number, is what makes NRR useful for diagnosing where the movement is actually coming from. This gets harder when self-serve accounts are involved: a customer already expanding through the product can still be sitting in your CRM under the wrong stage, which throws off the count before you've even started calculating. See <a href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">the self-serve customers your sales team can't see</a> for how that mismatch happens.</p>
-  <p>Three details are easy to get wrong here. One-time fees, setup, implementation, professional services, don't belong in expansion or contraction: they're not recurring, so including them distorts the number depending on timing. A churned account should count the moment its revenue actually stops, not the moment it gives notice, the same precision question churn rate itself runs into when deciding what "lost" means. And if monthly and annual contracts are both in the mix, normalize them to the same period before comparing them: raw monthly figures next to raw annual ones understate or overstate the real movement, depending on which way the mix shifts.</p>
+  <h2>Read it by segment, then by source</h2>
+  <p>A single NRR mixes customers who grow with customers who leave. A few large accounts expanding can cover a long tail of small ones leaving: the number looks fine while the base underneath it doesn't. Split it first by segment, such as self-serve and sales-led or contract size, and look at the largest accounts one by one, down to how many of their users are still active (see <a href="/glossary/user-level-vs-account-level-analytics">user-level vs account-level analytics</a>).</p>
+  <p>Then split it by the source that brought the customers. That's where NRR concerns marketing.</p>
 
-  <h2>Start simple, before building a full revenue model</h2>
-  <p>You don't need a finance-grade system to get a first NRR number. A spreadsheet tracking monthly recurring revenue per customer, updated on a set schedule rather than in real time, is enough to start. Pick one plan tier or customer segment first instead of trying to cover every pricing scenario at once. The goal is a smaller, reliable starting point, not a rougher or less accurate one: the data behind the number still has to be correct, only its scope stays narrow at first.</p>
-  <p>Once that manual process is solid and you're tired of rebuilding the spreadsheet every month, a shared view that pulls product usage and CRM data together, like Funnelsight's <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a>, takes over the recalculation for you.</p>
+  <figure class="ui-card" role="img" aria-label="NRR by acquisition source, one year: partners 112%, organic search 106%, other sources 103%, events 100%, LinkedIn ads 99%, paid search 95%. All sources together: 103%. Illustrative data">
+    <div class="ui-card-head"><span class="source-card-title">NRR by acquisition source, one year</span><span class="tag-illustrative">Illustrative data</span></div>
+    <p class="card-ctx">All sources: 103%</p>
+    <ul class="nd-list" aria-hidden="true">
+      <li class="nd-row"><span class="nd-label">Partners</span><span class="nd-neg"></span><span class="nd-pos"><span class="nd-bar" style="width:100%"></span></span><span class="nd-val">112%</span></li>
+      <li class="nd-row"><span class="nd-label">Organic search</span><span class="nd-neg"></span><span class="nd-pos"><span class="nd-bar" style="width:50%"></span></span><span class="nd-val">106%</span></li>
+      <li class="nd-row"><span class="nd-label">Other sources</span><span class="nd-neg"></span><span class="nd-pos"><span class="nd-bar" style="width:25%"></span></span><span class="nd-val">103%</span></li>
+      <li class="nd-row"><span class="nd-label">Events</span><span class="nd-neg"></span><span class="nd-pos"><span class="nd-bar nd-zero"></span></span><span class="nd-val">100%</span></li>
+      <li class="nd-row"><span class="nd-label">LinkedIn ads</span><span class="nd-neg"><span class="nd-bar" style="width:8%"></span></span><span class="nd-pos"></span><span class="nd-val">99%</span></li>
+      <li class="nd-row nd-key"><span class="nd-label">Paid search</span><span class="nd-neg"><span class="nd-bar" style="width:42%"></span></span><span class="nd-pos"></span><span class="nd-val">95%</span></li>
+    </ul>
+    <p class="ui-note">A year after signing, customers from paid search bring 5% less revenue than at the start, while customers from partners bring 12% more.</p>
+  </figure>
+
+  <p>A channel's value doesn't stop at the first year of revenue. Two channels can pay back their cost in the same number of months and be worth very different amounts two years later. Before moving budget between channels, read their NRR next to their <a href="/features/revenue-attribution-payback-by-source">payback by source</a>. Customers who leave in their first months weigh on the number too: <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">how to calculate churn rate</a> covers that part.</p>
+
+  <h2>What a good NRR looks like</h2>
+  <p>It depends mostly on contract size, because larger customers have more room to add seats and teams. SaaS Capital's 2025 retention benchmarks for private B2B SaaS companies put median NRR at 102% for contracts of $25k to $50k a year, with the bottom quarter at 97% and the top quarter at 111%. Compare yourself with companies selling at a similar contract size, and above all with your own trend over the last few years.</p>
+
+  <h2>How Funnelsight shows it</h2>
+  <p>Funnelsight shows NRR and GRR by acquisition source and by customer cohort, next to the revenue and payback of each channel. A price change can be logged as a dated note, so its effect on expansion stays visible instead of passing for customers growing.</p>
 
   <div class="article-cta">
-    <p>See your net revenue retention update automatically as usage and account data change.</p>
+    <p>See which channels bring customers who grow, next to what each channel cost.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
   <div class="article-faq">
     <details>
-      <summary>Is NRR the same as gross revenue retention (GRR)?</summary>
-      <p>No. GRR only counts losses (contraction and churn) and caps at 100%, since it excludes expansion. NRR includes expansion, so it can go above 100%. The two together show whether growth from existing customers is coming from upsells, or just from keeping churn low.</p>
+      <summary>Should NRR be calculated monthly or annually?</summary>
+      <p>Usually annually, on the customers active at the start of a twelve-month period. A monthly NRR is possible, but small monthly movements add up: a monthly NRR of 99% gives about 89% over a year. Annual contracts also renew on fixed dates, which makes monthly figures jump around.</p>
     </details>
     <details>
-      <summary>What's a good NRR for a B2B SaaS company?</summary>
-      <p>There's no single universal target, it depends on pricing model, customer segment, and company stage. Your own NRR trend, month over month, usually says more than a comparison with an external benchmark.</p>
+      <summary>What is net revenue churn?</summary>
+      <p>Net revenue churn is the mirror of NRR: (churned revenue + contraction − expansion) ÷ starting revenue, or 100% minus NRR. When expansion outweighs the losses, it turns negative, which is why an NRR above 100% is also called negative churn. In the example on this page, net revenue churn is −3%.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -224,18 +257,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is NRR the same as gross revenue retention (GRR)?",
+        "name": "Should NRR be calculated monthly or annually?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. GRR only counts losses (contraction and churn) and caps at 100%, since it excludes expansion. NRR includes expansion, so it can go above 100%. The two together show whether growth from existing customers is coming from upsells, or just from keeping churn low."
+          "text": "Usually annually, on the customers active at the start of a twelve-month period. A monthly NRR is possible, but small monthly movements add up: a monthly NRR of 99% gives about 89% over a year. Annual contracts also renew on fixed dates, which makes monthly figures jump around."
         }
       },
       {
         "@type": "Question",
-        "name": "What's a good NRR for a B2B SaaS company?",
+        "name": "What is net revenue churn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "There's no single universal target, it depends on pricing model, customer segment, and company stage. Your own NRR trend, month over month, usually says more than a comparison with an external benchmark."
+          "text": "Net revenue churn is the mirror of NRR: (churned revenue + contraction − expansion) ÷ starting revenue, or 100% minus NRR. When expansion outweighs the losses, it turns negative, which is why an NRR above 100% is also called negative churn. In the example on this page, net revenue churn is −3%."
         }
       }
     ]
