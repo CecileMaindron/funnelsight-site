@@ -60,17 +60,17 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is the LTV:CAC ratio: Funnelsight</title>
-<meta name="description" content="LTV:CAC compares what a customer is worth with what it costs to win them. Plain-English formula, worked example, and how to read the result.">
+<title>LTV:CAC ratio: how much to spend to acquire a customer: Funnelsight</title>
+<meta name="description" content="What the LTV:CAC ratio means, why lifetime value is the hard half, and how to work out how much you can spend to acquire a new customer.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/what-is-ltv-cac-ratio">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="What is the LTV:CAC ratio: Funnelsight">
-<meta property="og:description" content="LTV:CAC compares what a customer is worth with what it costs to win them. Plain-English formula, worked example, and how to read the result.">
+<meta property="og:title" content="LTV:CAC ratio: how much to spend to acquire a customer: Funnelsight">
+<meta property="og:description" content="What the LTV:CAC ratio means, why lifetime value is the hard half, and how to work out how much you can spend to acquire a new customer.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/what-is-ltv-cac-ratio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is the LTV:CAC ratio: Funnelsight">
-<meta name="twitter:description" content="LTV:CAC compares what a customer is worth with what it costs to win them. Plain-English formula, worked example, and how to read the result.">
+<meta name="twitter:title" content="LTV:CAC ratio: how much to spend to acquire a customer: Funnelsight">
+<meta name="twitter:description" content="What the LTV:CAC ratio means, why lifetime value is the hard half, and how to work out how much you can spend to acquire a new customer.">
 <link rel="stylesheet" href="/styles.css?v=2026-11-07">
 </head>
 <body>
@@ -171,172 +171,74 @@
 </nav>
 
 <article class="article wrap">
-  <h1>What is the LTV:CAC ratio</h1>
-  <p class="lede-intro">The LTV:CAC ratio compares what a customer is worth to your business over time, known as lifetime value or LTV, with what it cost to win that customer, known as customer acquisition cost or CAC. A commonly cited benchmark is 3:1: each customer should bring back roughly three times what it took to acquire them. The right target varies with your business model and sales cycle, and the ratio is only as reliable as the numbers that feed it.</p>
-
-  <h2>The formula</h2>
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>LTV:CAC = customer lifetime value ÷ customer acquisition cost</p>
-  </div>
-  <p>Both halves of that fraction are estimates, and each one hides a few decisions. Most of the mistakes people make with this ratio happen before the division, so the next sections take each half in plain language, one at a time.</p>
-
-  <h2>Customer lifetime value: what a customer is worth</h2>
-  <p>Lifetime value answers one question: over the whole time someone stays a customer, how much money do they leave you with? Three inputs get you there.</p>
-  <p>The first is what the customer pays, usually measured as average monthly revenue per customer. The second is gross margin, the share of that revenue left after the direct costs of delivering your product, such as hosting, customer support and payment processing fees. If a customer pays $100 a month and $20 of that goes into serving them, your gross margin is 80%. Marketing and sales salaries don't count here, and neither does product development. The third is how long customers stay, which comes from your <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">monthly churn rate</a>.</p>
+  <h1>What is the LTV:CAC ratio, and how much can you spend to acquire a new customer?</h1>
+  <p class="lede-intro">The LTV:CAC ratio compares what a customer is worth over the time they stay, their lifetime value (LTV), with what it cost to win them, the customer acquisition cost (CAC). A ratio of 3:1 is the figure most often cited. In practice, the ratio answers a simple question: how much can you spend to acquire a new customer, on this channel or in this segment? Most teams have a CAC figure, at least for ads. LTV is the hard half.</p>
 
   <div class="formula-box">
     <span class="formula-label">Formula</span>
-    <p>Average customer lifespan in months ≈ 1 ÷ monthly churn rate</p>
-    <p>Customer lifetime value = (average monthly revenue per customer × gross margin) ÷ monthly churn rate</p>
+    <p>LTV:CAC = lifetime value ÷ customer acquisition cost</p>
+    <p>LTV = monthly revenue per customer × gross margin × months a customer stays</p>
+    <p>CAC = sales and marketing spend ÷ new paying customers, over the same period</p>
   </div>
+  <p>Two of these inputs are often out of a marketer's reach. Gross margin is what's left of a customer's payment once the direct costs of serving them are paid: hosting, support, payment fees. Finance holds that figure. The full CAC includes salaries, tools and events, not only ads, and salaries are often confidential. Ask finance for both, or use rough estimates and label them as such: the reasoning below still works.</p>
 
-  <p>At 2% monthly churn, the average customer stays about 50 months. Gross margin belongs in the calculation because revenue isn't money you keep. Using revenue in its place is the easiest way to flatter this number: with an 80% margin, it overstates LTV by a quarter.</p>
-  <p>Two cautions apply. The shortcut above assumes churn stays constant, which it rarely does. And a 50-month lifespan is a prediction, not an observation. If your oldest customers joined 14 months ago, you are extrapolating far beyond your data, so many teams cap the lifespan they assume at a few years and revisit it as history builds up. More rigorous versions also discount future revenue, since a dollar paid in three years is worth less than one paid today. <a href="https://www.wallstreetprep.com/knowledge/ltv-cac-ratio/" target="_blank" rel="noopener">Wall Street Prep's guide</a> walks through that approach with a full worked example.</p>
+  <h2>Why lifetime value is the hard half</h2>
+  <p>CAC comes from spend you've already made. LTV depends on years you haven't seen yet, and on a new product or a new segment, nobody knows yet how long customers stay. Beyond that, what makes it hard depends on how you sell.</p>
+  <ul>
+    <li><strong>Self-serve and small accounts.</strong> Customers start on a small plan and move up at their own pace, faster when someone works the account and slower when nobody does. There's no typical curve to project. Some grow into a contract handled by sales, or into another of your products, and their revenue then shows up somewhere else.</li>
+    <li><strong>Contracts with an account team.</strong> Revenue moves mostly at renewal, when the account owner sells more usage or a higher tier. Month to month it's more predictable, and the uncertainty sits in the renewal rate, which you only learn as contracts come up for renewal.</li>
+  </ul>
 
-  <h2>Customer acquisition cost: what a new customer really costs</h2>
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>CAC = total sales and marketing spend in a period ÷ number of new paying customers in that period</p>
-  </div>
-  <p>This looks simple, yet the top number is often undercounted. Ad spend is easy to see, while everything else sits in other budgets and in payroll. A complete figure, often called fully loaded CAC, includes ad spend, the salaries and commissions of everyone in sales and marketing, the tools they use, content production, agency fees and events. <a href="https://blog.chargebee.com/blog/understanding-cac-relevance-saas-company/" target="_blank" rel="noopener">Chargebee's guide to CAC</a> goes into what a fully loaded version covers.</p>
+  <h2>One example, three answers</h2>
+  <p>Say a new customer costs $3,000 to win. They pay $250 a month, of which $200 is gross margin. Each month, 2% of customers leave. The usual formula divides the monthly margin by the share of customers who leave each month: $200 ÷ 2% = $10,000, a ratio of 3.3, comfortably above 3:1. That figure counts every month a customer might ever stay. Stop the count at a horizon you can actually observe, and the answer changes.</p>
 
-  <blockquote>
-    <strong>Common mistake:</strong> counting only paid advertising. A team that spends $10,000 on ads and $30,000 on salaries and tools to win 40 customers hasn't paid $250 per customer. It has paid $1,000, and every number built on top of the lower figure, this ratio included, looks four times better than it should.
-  </blockquote>
+  <figure class="ui-card" role="img" aria-label="Lifetime value of the same customers by horizon, against a CAC of $3,000: over 24 months, $3,840, a ratio of 1.3; over 36 months, $5,170, a ratio of 1.7; with no limit, $10,000, a ratio of 3.3. Illustrative data">
+    <div class="ui-card-head"><span class="source-card-title">Lifetime value of the same customers</span><span class="tag-illustrative">Illustrative data</span></div>
+    <p class="card-ctx">CAC $3,000 · $200 margin a month · 2% leave each month</p>
+    <ul class="hb-list" aria-hidden="true">
+      <li style="grid-template-columns:110px 1fr auto" class="hb-row"><span class="hb-label">Over 24 months</span><span class="hb-track"><span class="hb-bar" style="width:38%"></span></span><span class="hb-val">$3,840 · 1.3:1</span></li>
+      <li style="grid-template-columns:110px 1fr auto" class="hb-row hb-key"><span class="hb-label">Over 36 months</span><span class="hb-track"><span class="hb-bar" style="width:52%"></span></span><span class="hb-val">$5,170 · 1.7:1</span></li>
+      <li style="grid-template-columns:110px 1fr auto" class="hb-row"><span class="hb-label">No limit</span><span class="hb-track"><span class="hb-bar" style="width:100%"></span></span><span class="hb-val">$10,000 · 3.3:1</span></li>
+    </ul>
+    <p class="ui-note">Almost half of the $10,000 comes after the third year: from customers nobody has watched stay that long yet.</p>
+  </figure>
 
-  <p>The bottom of the fraction needs the same care. Count paying customers only. In a product-led model, thousands of free signups can flow in, but they aren't customers yet, and dividing by them makes acquisition look far cheaper than it is. If you run a free plan or a free trial, the cost of serving those free users is part of what it takes to win the paying ones. Many teams include it in CAC, which is a defensible choice as long as you apply it every time.</p>
-  <p>Timing matters as well. If your sales cycle runs three months, this quarter's new customers mostly came from last quarter's spend. Use the same period on both sides of the fraction, and shift one of them by your typical sales cycle when that cycle is long.</p>
+  <p>None of the three figures is wrong. They answer different questions, and the ratio that reaches 3:1 rests on the part you can't check yet.</p>
 
-  <h2>A worked example</h2>
-  <p>Take a small team selling a plan at $100 a month. Gross margin is 80%, so each customer leaves $80 a month after delivery costs. Monthly churn is 2%, which gives an average lifespan of about 50 months.</p>
+  <h2>A lifetime value you can use without a full model</h2>
+  <p>Start with payback: how many months of margin it takes to earn back what a customer cost to win. Here, $3,000 ÷ $200 = 15 months. No guess about how long customers stay is needed. With 2% leaving each month, about three customers in four are still there after 15 months.</p>
+  <p>Then calculate a capped LTV: the margin customers produce over two or three years, nothing beyond. Base it on what customers actually paid, not on the upgrades you expect. For contracts, use the renewal rates you've already seen. And decide once whether a customer who moves to another plan or product still counts, then stick to it.</p>
+  <p>As history builds up, extend the horizon. A capped LTV that turns out too cautious costs you a little growth. An optimistic one costs you the budget spent on customers who never pay it back.</p>
 
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>LTV = ($100 × 0.80) ÷ 0.02 = $4,000</p>
-  </div>
+  <h2>How much more can you spend to acquire a customer?</h2>
+  <p>This is the question the ratio is for. With the 36-month LTV of $5,170, a customer can cost up to $5,170 before you lose money over three years. Today's CAC is $3,000, so it can rise by about 70% before that line.</p>
+  <p>Acquisition costs tend to rise as you spend more on a channel: the extra budget reaches people a little further from your target, at a higher price. So the room left before that line matters more than the ratio itself. A channel with a modest ratio and a stable cost can be a safer place to add budget than one with a high ratio on a lifetime nobody has observed.</p>
 
-  <p>Last quarter the team spent $30,000 on sales and marketing, fully loaded, and won 25 new paying customers.</p>
+  <h2>Read it by channel, and separate self-serve from sales-led</h2>
+  <p>CAC differs from one channel to the next, and so does how long customers stay and grow: <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention by source</a> shows how wide that gap can be. A blended ratio averages a channel you should grow with one you should cut. Calculate self-serve and sales-led customers separately as well, since both their acquisition costs and their lifetimes differ.</p>
 
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>CAC = $30,000 ÷ 25 = $1,200</p>
-    <p>LTV:CAC = $4,000 ÷ $1,200 ≈ 3.3</p>
-  </div>
-
-  <p>These numbers are illustrative, not a benchmark. A ratio of 3.3 clears the usual 3:1 bar, and the section on payback below shows why that isn't the whole story for this team.</p>
-
-  <h2>How to read the result</h2>
   <table class="data-table">
     <caption>LTV:CAC ratio ranges</caption>
     <thead>
-      <tr><th scope="col">Ratio</th><th scope="col">What it means</th></tr>
+      <tr><th scope="col">Ratio</th><th scope="col">What it usually means</th></tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Below 1:1</th><td>You spend more winning a customer than that customer will ever leave you after delivery costs.</td></tr>
-      <tr><th scope="row">1:1 to 3:1</th><td>The business works, but growth is expensive relative to what it returns.</td></tr>
-      <tr><th scope="row">3:1 to 5:1</th><td>Acquisition is generally considered healthy.</td></tr>
-      <tr><th scope="row">Above 5:1</th><td>You may be able to grow faster by spending more on acquisition. Check the measurement first.</td></tr>
+      <tr><th scope="row">Below 1:1</th><td>A customer costs more to win than they will ever leave you.</td></tr>
+      <tr><th scope="row">1:1 to 3:1</th><td>Acquisition pays for itself, with little left for the rest of the business.</td></tr>
+      <tr><th scope="row">3:1 to 5:1</th><td>Generally considered healthy.</td></tr>
+      <tr><th scope="row">Above 5:1</th><td>Room to spend more, or an LTV stretched over years nobody has seen. Check which.</td></tr>
     </tbody>
   </table>
-  <p>The reason the bar sits at 3 and not at 1.5 is that LTV is built on gross margin, which hasn't yet paid for product development, management, office space or any support cost beyond the direct ones. The surplus above 1:1 is the cushion that covers them.</p>
-  <p>A very high ratio isn't automatically good news. Before concluding that you can spend more, check the measurement: a ratio that looks too good is more often a CAC missing its salaries, or an LTV stretched over a lifespan nobody has observed yet.</p>
-  <p>When the ratio is low, find out which side is responsible before acting. On the LTV side, the levers are lower churn, better pricing, expansion revenue from existing customers and a higher gross margin. On the CAC side, they are better conversion from visit to signup and from signup to paid, more budget on the channels that actually produce customers, and a shorter sales cycle. Churn deserves particular attention because its effect is large: cutting monthly churn from 3% to 2% stretches the average lifespan from about 33 months to 50 and raises LTV by half.</p>
-  <p>The ratio is a snapshot, not a verdict. Published benchmarks differ by segment and sources don't agree on exact figures, so read them as a range. Your own trend tells you more than a comparison with someone else's number: a ratio that climbs from 2:1 to 3:1 over a year says something specific about your business.</p>
+  <p>The bar sits at 3 rather than 1 because gross margin still has to pay for product development, management and everything else that isn't acquisition or the direct cost of serving customers. Read the ranges against the horizon you used: 1.7:1 over 36 months says more than 3.3:1 over a lifetime you can't observe.</p>
 
-  <h2>Payback period: how long until a customer pays for themselves</h2>
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>CAC payback period in months = CAC ÷ (monthly revenue per customer × gross margin)</p>
-  </div>
-  <p>The ratio tells you what a customer is worth in the end. Payback tells you how long you wait to get your acquisition spend back, which matters because you pay for acquisition today and collect over years. A business can post a solid ratio and still run short of cash if payback is long and growth keeps demanding new spending.</p>
-  <p>In the example above, $1,200 ÷ $80 gives 15 months. With 2% monthly churn, about one customer in four has left by then. The ratio says this team is healthy over the long run, and payback says it waits more than a year to see the cash. Both statements are true, and they lead to different decisions.</p>
-  <p>Many teams like to see payback within about 12 months. The acceptable window stretches with the business model: a self-serve product with monthly plans usually recovers its costs faster than an enterprise deal with a long sales cycle. Customers who pay annually up front pull cash forward, which is one reason some teams offer a discount on annual plans.</p>
-
-  <h2>Getting started without a full LTV model</h2>
-  <p>You don't need the full model on day one. Four numbers are enough for a first pass: total sales and marketing spend for a recent period, the number of new paying customers in that period, average monthly revenue per customer, and a rough gross margin. From them you get CAC, payback, and a conservative LTV: the gross profit one customer produces in their first 12 months, with no prediction involved. If that figure already exceeds CAC, you recover your acquisition cost within about a year. Add churn and a proper lifespan once you have enough history to trust them.</p>
-  <p>If you have never calculated gross margin, you're in good company. It lives with finance, and marketing teams rarely see it. Ask whoever produces your profit and loss statement for a figure, or estimate hosting, support and payment fees per customer yourself. A rough margin, labeled as rough, is far better than using revenue.</p>
-  <p>CAC and retention data usually sit in separate systems, with spend in finance and ad platforms, usage and churn signals in the product, and revenue in billing. Funnelsight's <a href="/glossary/what-is-a-single-source-of-truth-saas">single source of truth</a> approach keeps usage, retention, and revenue data in one shared view, which is what LTV:CAC tracking depends on once you move past a one-time spreadsheet calculation.</p>
-
-  <h2>Why it matters for PLG and hybrid motions</h2>
-  <p>In a self-serve or hybrid PLG motion, CAC is easy to undercount when free trial and marketing costs aren't fully attributed, and LTV is easy to overstate when expansion revenue isn't tracked separately from new business. Expansion works in your favor here: customers who add seats or move to a higher plan raise LTV without any extra acquisition cost. Follow it on its own line with <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">net revenue retention</a>, so a few large upgrades don't hide weak retention among the other accounts.</p>
-  <p>Teams running a <a href="/playbooks/self-serve-revenue-vs-sales-assisted-crm">self-serve motion alongside a sales-assisted one</a> should calculate the ratio per motion, not blended, since the two usually have very different acquisition costs and retention profiles.</p>
+  <h2>How Funnelsight helps</h2>
+  <p>Funnelsight brings the inputs of the ratio together by acquisition source: what each channel cost, its <a href="/features/revenue-attribution-payback-by-source">payback</a>, and the revenue of the customers it brought, month after month, including those who left. That gives you a lifetime value by channel based on what customers actually paid, instead of one projected for the whole base.</p>
 
   <div class="article-cta">
-    <p>See usage, retention, and revenue data in one view instead of piecing LTV and CAC together from separate exports.</p>
+    <p>See what each channel costs, how fast it pays back, and what its customers bring over time.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
-  <div class="article-faq">
-    <details>
-      <summary>What is a good LTV:CAC ratio?</summary>
-      <p>3:1 is a commonly cited benchmark, meaning a customer is worth about three times what it cost to acquire them. The right target depends on your business model, sales cycle, and margin structure, so treat it as a starting reference, not a fixed rule.</p>
-    </details>
-    <details>
-      <summary>Can the LTV:CAC ratio be too high?</summary>
-      <p>Yes. A very high ratio can mean you're underspending on acquisition and leaving growth on the table. It can also mean the calculation is off, for example a CAC that leaves out salaries. Review it alongside your growth targets and check the inputs before celebrating.</p>
-    </details>
-    <details>
-      <summary>Should I use revenue or gross margin to calculate LTV?</summary>
-      <p>Gross margin. Revenue includes money you spend delivering the product, so using it overstates what a customer is worth. If you don't know your margin yet, use a rough estimate and label it as one.</p>
-    </details>
-    <details>
-      <summary>What is the difference between LTV:CAC and CAC payback?</summary>
-      <p>The ratio measures how much a customer is worth compared with what they cost to acquire, over their whole lifetime. Payback measures how many months it takes to earn that acquisition cost back. A business can have a healthy ratio and a slow payback, which is why teams track both.</p>
-    </details>
-    <details>
-      <summary>Do I need a full data pipeline to calculate this?</summary>
-      <p>No. You can start with a spreadsheet and four numbers: sales and marketing spend, new paying customers, average monthly revenue per customer, and a rough gross margin. Refine it once churn data is in better shape.</p>
-    </details>
-  </div>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a good LTV:CAC ratio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "3:1 is a commonly cited benchmark, meaning a customer is worth about three times what it cost to acquire them. The right target depends on your business model, sales cycle, and margin structure, so treat it as a starting reference, not a fixed rule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can the LTV:CAC ratio be too high?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. A very high ratio can mean you're underspending on acquisition and leaving growth on the table. It can also mean the calculation is off, for example a CAC that leaves out salaries. Review it alongside your growth targets and check the inputs before celebrating."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I use revenue or gross margin to calculate LTV?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gross margin. Revenue includes money you spend delivering the product, so using it overstates what a customer is worth. If you don't know your margin yet, use a rough estimate and label it as one."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between LTV:CAC and CAC payback?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The ratio measures how much a customer is worth compared with what they cost to acquire, over their whole lifetime. Payback measures how many months it takes to earn that acquisition cost back. A business can have a healthy ratio and a slow payback, which is why teams track both."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need a full data pipeline to calculate this?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. You can start with a spreadsheet and four numbers: sales and marketing spend, new paying customers, average monthly revenue per customer, and a rough gross margin. Refine it once churn data is in better shape."
-        }
-      }
-    ]
-  }
-  </script>
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">
