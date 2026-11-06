@@ -283,8 +283,26 @@
   <p>What falls outside isn't an error, and its size depends on your rules. Some deals have no marketing touch at all, such as deals opened by outbound prospecting. Others have touches the rules leave out: older than the window, or recorded on someone the rules don't tie to the deal. A team that reads touches at account level credits activity from anyone at the account; one that counts only the contacts named on the opportunity credits less, often by choice, to keep opportunity creation light for sales.</p>
   <p>A mistagged campaign is a different problem: it doesn't shrink the total, it credits the wrong source, often Direct. The same happens when someone discovers you in an AI assistant's answer: nothing links the answer to the visit that follows, which is credited to branded search or Direct. Funnelsight shows both totals side by side and explains what sits in the gap, with the CRM as the reference for revenue. <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">Why marketing and sales pipeline numbers don't match</a> goes further into the two readings.</p>
 
+  <h2>What is an attribution model, and which one should you use?</h2>
+  <p>An attribution model is the rule that decides which marketing touches get credit for a deal. Before asking for a demo, a buyer may see an ad, read an article, join a webinar and search for your name. The model decides how the deal's revenue is split between them.</p>
+  <p>Single-touch models give all the credit to one touch: the first one (first touch) or the last one before the buyer converts (last touch). Multi-touch attribution shares the credit: equally across every touch (linear), or with more weight on the first and the last (U-shaped, also called position-based).</p>
+  <table class="data-table data-table-dense">
+    <caption>One $25k deal, four touches, four models. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Touch</th><th scope="col">First touch</th><th scope="col">Last touch</th><th scope="col">Linear</th><th scope="col">U-shaped</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">LinkedIn ad</th><td>$25k</td><td>0</td><td>$6.25k</td><td>$10k</td></tr>
+      <tr><th scope="row">Blog article</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
+      <tr><th scope="row">Webinar</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
+      <tr><th scope="row">Brand search</th><td>0</td><td>$25k</td><td>$6.25k</td><td>$10k</td></tr>
+    </tbody>
+  </table>
+  <p>No model is the true one. Each answers a different question. First touch shows which channels find new buyers. Last touch shows which ones turn interest into a request. For a B2B sale with several touches over weeks or months, a multi-touch model such as U-shaped is a good place to start: it credits the channel that opened the path and the one that closed it, without ignoring the rest.</p>
+  <p>Then compare two models. If a channel ranks near the top under one and near the bottom under the other, decide what you expect from it before moving its budget. And keep the same model when you compare periods, or a change of model will look like a change in results.</p>
+
   <h2>How it works</h2>
-  <p>Your team picks an attribution model, first touch, last touch, linear or U-shaped (also called position-based), and can adjust its weights, for example from 40-20-40 to 20-60-20. Putting two models side by side shows how much a ranking depends on the model rather than on the sources. Your team also sets what counts as a first touch and how far back touches are counted, often the length of your sales cycle.</p>
+  <p>Your team picks the attribution model and can adjust its weights, for example from 40-20-40 to 20-60-20, with two models side by side. Your team also sets what counts as a first touch and how far back touches are counted, often the length of your sales cycle.</p>
   <p>Terms such as "sourced" or "influenced" vary from one company to another, so Funnelsight doesn't impose a definition: each reading your team names shows its rule. When a rule changes, the change is logged and past periods are recalculated or the break is marked, the principle behind <a href="/glossary/what-is-a-single-source-of-truth-saas">a single source of truth</a>.</p>
 
   <h2>What it does, and what it doesn't</h2>
@@ -324,10 +342,6 @@
       <summary>Can we include costs that no ad platform holds?</summary>
       <p>Yes. Partner commissions, events or content production can be imported from a spreadsheet or entered by hand. A source with no cost entered counts as zero, so it's worth checking which sources still have none.</p>
     </details>
-    <details>
-      <summary>Which attribution model should we start with?</summary>
-      <p>The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as U-shaped. Keep the same model when you compare periods.</p>
-    </details>
   </div>
   <script type="application/ld+json">
   {
@@ -348,14 +362,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes. Partner commissions, events or content production can be imported from a spreadsheet or entered by hand. A source with no cost entered counts as zero, so it's worth checking which sources still have none."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which attribution model should we start with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The one that fits your sales cycle. A short cycle with one or two touches is easy to read with first or last touch, while a longer cycle with many touches is better served by a model that shares credit, such as U-shaped. Keep the same model when you compare periods."
         }
       }
     ]
