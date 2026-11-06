@@ -60,16 +60,16 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>When activation drops: what time to value tells you: Funnelsight</title>
+<title>Time to value: what it tells you when activation drops: Funnelsight</title>
 <meta name="description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="When activation drops: what time to value tells you: Funnelsight">
+<meta property="og:title" content="Time to value: what it tells you when activation drops: Funnelsight">
 <meta property="og:description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/time-to-value-tracking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="When activation drops: what time to value tells you: Funnelsight">
+<meta name="twitter:title" content="Time to value: what it tells you when activation drops: Funnelsight">
 <meta name="twitter:description" content="A drop in activation can come from who signs up or from the product. How time to value tells the two apart, how to measure it, and what each cause calls for.">
 <link rel="stylesheet" href="/styles.css?v=2026-11-07">
 </head>
@@ -167,12 +167,12 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">When activation drops: what time to value tells you</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Time to value: what it tells you when activation drops</span>
 </nav>
 
 <article class="article wrap">
-  <h1>When activation drops: what time to value tells you</h1>
-  <p class="lede-intro">The activation rate fell from 34% to 29% this month. Before anyone changes the onboarding or the campaign mix, a second number shows where to look: how long the users who did activate took to get there.</p>
+  <h1>Time to value: what it tells you when activation drops</h1>
+  <p class="lede-intro">The activation rate fell from 34% to 29% this month. Before anyone changes the onboarding or the campaign mix, a second number shows where to look: time to value, how long the users who did activate took to see what the product does for them.</p>
 
   <h2>The same drop, two causes</h2>
   <table class="data-table data-table-dense">
@@ -182,14 +182,22 @@
     </thead>
     <tbody>
       <tr><th scope="row">Activation rate</th><td>34%</td><td>29%</td><td>29%</td></tr>
-      <tr><th scope="row">Days to activate</th><td>2</td><td>2</td><td><strong>4</strong></td></tr>
+      <tr><th scope="row">Days to activate, usual sources</th><td>2</td><td>2</td><td><strong>4</strong></td></tr>
       <tr><th scope="row">Cause</th><td>&nbsp;</td><td>New campaign</td><td>New setup step</td></tr>
     </tbody>
   </table>
-  <p>In the first case, the users who activate do it as fast as before, so the product works as it did and the change is in who signs up. In the second, the users who activate take twice as long, which points to something in the product that got harder.</p>
+  <p>The time to value row only counts users from the sources you already had. In the first case, they activate as fast as before. The product works as it did, and the drop comes from the people the new campaign brought. In the second case, the same users take twice as long. Their profile didn't change, so something in the product got harder.</p>
+  <p>Comparing within the same sources matters. A new audience that is less familiar with tools like yours can take longer to activate on a product that works fine.</p>
 
-  <h2>Two measures, one stage</h2>
-  <p>The activation rate is the share of sign-ups that reach the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a> within the trial. Time to value is the number of days between sign-up and that same event, so two dates per user are enough to calculate it. The moment someone understands why the product is worth using can't be timestamped, and the activation event is the measurable action that shows they got there.</p>
+  <h2>What is time to value, and how do you measure it?</h2>
+  <p>Time to value is how long a new user takes to see what the product does for them. That moment is often called the aha moment.</p>
+  <p>You can't record the aha moment itself. So teams measure up to the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a> instead: the action that shows a user got there, such as connecting a data source and viewing a first report.</p>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Time to value (days) = activation date − sign-up date</p>
+  </div>
+  <p>For a group of users, take the median rather than the average. Otherwise a few users who activate weeks later pull the figure up.</p>
+  <p>The activation rate tells you how many users get there. Time to value tells you how fast.</p>
   <p>Read both per weekly or monthly cohort, over several periods. A shift that shows in one cohort is often noise, while a shift that holds over several cohorts is a trend.</p>
 
   <h2>Where the problem starts</h2>
@@ -207,7 +215,7 @@
         <p class="dt-next"><span class="dt-ans">No</span> Next question.</p>
       </li>
       <li class="dt-step">
-        <p class="dt-q">Do the users who activate take longer than before?</p>
+        <p class="dt-q">Do users from your usual sources take longer to activate than before?</p>
         <p class="dt-out"><span class="dt-ans">Yes</span> The product got harder. Find the step where users stall, starting with recent releases.</p>
         <p class="dt-out"><span class="dt-ans">No</span> The audience shifted across sources. Check what changed in positioning, pricing or targeting.</p>
       </li>
