@@ -618,7 +618,8 @@ footer a {
    5. Trial page
    ========================================================================== */
 .trial-hero {
-  padding: 80px 0 56px;
+  padding-top: 80px;
+  padding-bottom: 56px;
   text-align: left;
 }
 .trial-hero h1 { font-size: 42px; max-width: 15ch; }
@@ -692,7 +693,8 @@ footer a {
 .trial-faq {
   margin-top: 56px;
   margin-bottom: 64px;
-  padding: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -881,8 +883,8 @@ footer a {
 
 /* Article FAQ: same accordion pattern as the resources hub */
 .article-faq { margin-top: 48px; border-top: 1px solid var(--line); padding-top: 32px; }
-.article-faq details { border-bottom: 1px solid var(--line); }
-.article-faq summary {
+.article-faq details, .trial-faq details { border-bottom: 1px solid var(--line); }
+.article-faq summary, .trial-faq summary {
   list-style: none;
   cursor: pointer;
   display: flex;
@@ -895,11 +897,11 @@ footer a {
   font-weight: 500;
   transition: background 0.1s ease;
 }
-.article-faq summary:hover { background: var(--line); }
-.article-faq summary:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
-.article-faq summary::-webkit-details-marker { display: none; }
-.article-faq summary::marker { content: ''; }
-.article-faq summary::after {
+.article-faq summary:hover, .trial-faq summary:hover { background: var(--line); }
+.article-faq summary:focus-visible, .trial-faq summary:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+.article-faq summary::-webkit-details-marker, .trial-faq summary::-webkit-details-marker { display: none; }
+.article-faq summary::marker, .trial-faq summary::marker { content: ''; }
+.article-faq summary::after, .trial-faq summary::after {
   content: '+'; content: '+' / '';
   font-size: 20px;
   font-weight: 600;
@@ -907,8 +909,8 @@ footer a {
   color: var(--indigo);
   flex-shrink: 0;
 }
-.article-faq details[open] summary::after { content: '\2212'; content: '\2212' / ''; }
-.article-faq details p { margin: 0; padding: 0 0 16px; color: #454A5B; }
+.article-faq details[open] summary::after, .trial-faq details[open] summary::after { content: '\2212'; content: '\2212' / ''; }
+.article-faq details p, .trial-faq details p { margin: 0; padding: 0 0 16px; color: #454A5B; }
 
 /* Read next card, end of article pages.
    Must stay after ".article a:not(.btn-primary)": both selectors have the
