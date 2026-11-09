@@ -1588,3 +1588,34 @@ footer a {
   .fade-stage:nth-child(5) { width: 82%; }
   .fade-break { width: 90%; }
 }
+
+/* Trend card (activation dashboard): a weekly line in the style people
+   know from analytics tools, with the usual range shaded and a dated note
+   pinned on the week that dropped. */
+.trend-card { margin: 24px 0 20px; }
+.trend-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding: 4px 16px 0; }
+.trend-value { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; line-height: 1; color: var(--ink); }
+.trend-sub { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); }
+.trend-tabs { display: flex; gap: 2px; padding: 2px; background: #F1F2F6; border-radius: 6px; font-size: 12px; font-weight: 600; color: var(--muted); }
+.trend-tabs span { padding: 4px 10px; border-radius: 4px; }
+.trend-tabs .is-on { background: var(--white); color: var(--ink); box-shadow: 0 1px 2px rgba(20,22,31,0.08); }
+.trend-plot { padding: 8px 8px 0; }
+.trend-chart { display: block; width: 100%; height: auto; }
+.tc-narrow { display: none; }
+.trend-card .ui-note { margin: 0; }
+@media (max-width: 600px) { .tc-wide { display: none; } .tc-narrow { display: block; } }
+.tc-grid { stroke: #EEF0F4; stroke-width: 1; }
+.tc-axis { fill: var(--muted); font-family: Inter, sans-serif; }
+.tc-band { fill: #EDEBF6; }
+.tc-band-label { fill: #5E56A8; font-family: Inter, sans-serif; }
+.tc-line { fill: none; stroke: var(--indigo); stroke-width: 2.5; stroke-linejoin: round; }
+.tc-dot { fill: var(--white); stroke: var(--indigo); stroke-width: 2; }
+.tc-partial { stroke-dasharray: 5 4; }
+.tc-dot-partial { stroke-dasharray: 2 2; }
+.tc-flag { fill: var(--accent); stroke: var(--white); stroke-width: 2; }
+.tc-marker { stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 3 3; }
+.tc-pin rect { fill: var(--accent); }
+.tc-pin text { font-size: 11px; fill: var(--ink); font-family: Inter, sans-serif; }
+.trend-callout { margin: 4px 16px 12px; font-size: 14px; color: #2A2D3B; }
+.trend-flag { display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 4px; background: #FBEAD0; color: #7A4F00; font-size: 12px; font-weight: 700; }
+@media (max-width: 600px) { .trend-value { font-size: 28px; } .trend-callout { font-size: 13px; } }
