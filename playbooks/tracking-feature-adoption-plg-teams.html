@@ -60,18 +60,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feature adoption rate: what it doesn't tell you: Funnelsight</title>
-<meta name="description" content="The feature adoption rate works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
+<title>Feature adoption rate: how to calculate it, and what it means for revenue: Funnelsight</title>
+<meta name="description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Feature adoption rate: what it doesn't tell you: Funnelsight">
-<meta property="og:description" content="The feature adoption rate works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
+<meta property="og:title" content="Feature adoption rate: how to calculate it, and what it means for revenue: Funnelsight">
+<meta property="og:description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Feature adoption rate: what it doesn't tell you: Funnelsight">
-<meta name="twitter:description" content="The feature adoption rate works like channel measurement: usage alone isn't enough. What brought trial users in, what convinced them to pay and what keeps them, and what usage signals mean account by account.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-09">
+<meta name="twitter:title" content="Feature adoption rate: how to calculate it, and what it means for revenue: Funnelsight">
+<meta name="twitter:description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-10">
 </head>
 <body>
 
@@ -167,33 +167,107 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Feature adoption rate: what it doesn't tell you</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Feature adoption rate: how to calculate it, and what it means for revenue</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Feature adoption rate: what it doesn't tell you</h1>
-  <p class="lede-intro">The feature adoption rate is the share of active users who use a given feature. Tracking it works like measuring channels. It shows where to invest, what to develop and what to stop, and as with channels, volume and frequency of use don't say enough on their own.</p>
+  <h1>Feature adoption rate: how to calculate it, and what it means for revenue</h1>
+  <p class="lede-intro">Feature adoption rate is the share of users, or accounts, who use a given feature over a period. It answers a question many SaaS companies can't: which features do customers actually use, and which ones made them buy or stay?</p>
+  <p>The usual report ranks features by the share of all users who touched them. It's the easiest number to pull, and it misleads in two ways. A paid add-on looks like a failure because most customers never bought it, and the feature everyone opens isn't always the one people pay for.</p>
 
-  <h2>Feature adoption metrics: three questions usage can't answer alone</h2>
-  <table class="data-table data-table-text data-table-compare">
-    <caption>What feature adoption answers once it's read with acquisition, sales and billing data</caption>
-    <thead>
-      <tr><th scope="col">Question</th><th scope="col">Read usage with</th><th scope="col">What it helps decide</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">What brought people to the trial?</th><td data-label="Read usage with">Their acquisition source and what they did first</td><td data-label="What it helps decide">Which features to put forward in campaigns and on the site</td></tr>
-      <tr><th scope="row">What convinced them to pay?</th><td data-label="Read usage with">Trial outcomes in the CRM</td><td data-label="What it helps decide">Where onboarding should lead, and what belongs in the trial</td></tr>
-      <tr><th scope="row">What keeps them, and grows what they pay?</th><td data-label="Read usage with">Renewals, churn and billing</td><td data-label="What it helps decide">What to protect and develop, and what can stop</td></tr>
-    </tbody>
-  </table>
-  <p>A feature's role isn't always the one it was built for. Some are must-haves, because they carry the value proposition or keep the product level with competitors. Others turn out to keep customers when they were expected to convert them, or the reverse. The answers also differ by persona, job to be done or company segment, so it's worth reading each question segment by segment before deciding.</p>
+  <h2>How to calculate feature adoption rate</h2>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Feature adoption rate (%) = accounts that used the feature in the period ÷ accounts that could use it × 100</p>
+  </div>
+  <p>Replace accounts with users for a user-level rate. Most teams track both: the account rate says how many customers rely on the feature, the user rate how far it has spread inside them.</p>
+  <p>Before you calculate it, decide three things.</p>
+  <ul>
+    <li><strong>Which accounts to count.</strong> Count only the accounts that have access to the feature: those whose plan includes it, or that bought the add-on. If you count every account, a shift between plans will look like a change in adoption.</li>
+    <li><strong>What counts as use.</strong> Opening a feature once means someone tried it. Whether they adopted it depends on how often the feature is meant to be used. A monthly report used every month is adopted. A daily dashboard opened once is not. Track tried and adopted separately.</li>
+    <li><strong>Who to exclude.</strong> Remove your own team and your test accounts. They are often the heaviest users of a new feature.</li>
+  </ul>
+  <p>Say 40 of your 1,600 customers bought a reporting add-on, and 22 of them use it every month. Against all customers, adoption is 1.4%. Against the accounts that bought it, adoption is 55%. That's the figure to track, and it raises a second question: 18 accounts pay for something they don't use, and each one is a renewal at risk.</p>
 
-  <p>Read account by account, the same usage data also shows which customers are growing and which ones are drifting away (see <a href="/playbooks/tracking-expansion-revenue-signals-plg">expansion or churn: reading the signals in an account</a>).</p>
+  <h2>Where feature adoption fits in the customer lifecycle</h2>
+  <p>The rate is calculated the same way at every stage. What changes is who you count, and who acts on the answer.</p>
+  <figure class="lifecycle" aria-labelledby="lifecycle-caption">
+    <ol class="lifecycle-steps">
+      <li class="lifecycle-step">
+        <span class="lifecycle-stage">1. Acquisition</span>
+        <p class="lifecycle-q">Which features bring people in?</p>
+        <dl><dt>Measure</dt><dd>Sign-ups from a feature's campaign or page who then use that feature</dd><dt>Who acts</dt><dd>Marketing</dd></dl>
+      </li>
+      <li class="lifecycle-step">
+        <span class="lifecycle-stage">2. Trial</span>
+        <p class="lifecycle-q">Which features lead to a purchase?</p>
+        <dl><dt>Measure</dt><dd>Trial-to-paid rate, for users and non-users of the feature</dd><dt>Who acts</dt><dd>Product, growth</dd></dl>
+      </li>
+      <li class="lifecycle-step">
+        <span class="lifecycle-stage">3. Onboarding</span>
+        <p class="lifecycle-q">Are customers using what they paid for?</p>
+        <dl><dt>Measure</dt><dd>Accounts using a module ÷ accounts that bought it</dd><dt>Who acts</dt><dd>Customer success</dd></dl>
+      </li>
+      <li class="lifecycle-step">
+        <span class="lifecycle-stage">4. Renewal</span>
+        <p class="lifecycle-q">What's paid for but unused?</p>
+        <dl><dt>Measure</dt><dd>Unused modules or seats, checked well before the renewal date</dd><dt>Who acts</dt><dd>Customer success, account manager</dd></dl>
+      </li>
+      <li class="lifecycle-step">
+        <span class="lifecycle-stage">5. Expansion</span>
+        <p class="lifecycle-q">Who's outgrowing their plan?</p>
+        <dl><dt>Measure</dt><dd>Use of higher-plan features, accounts near a plan limit</dd><dt>Who acts</dt><dd>Sales</dd></dl>
+      </li>
+    </ol>
+    <p class="lifecycle-loop">↺ Every stage feeds the roadmap: build, improve or retire</p>
+    <figcaption id="lifecycle-caption">Feature adoption across the customer lifecycle. <a href="/assets/feature-adoption-lifecycle.png" download>Download as image (PNG)</a></figcaption>
+  </figure>
+  <p>In the first two stages, adoption shows which features attract people and which ones convince them to buy. That shapes your campaigns and what goes into the trial. Usage alone can be misleading here. In <a href="/case-studies/most-used-feature-vs-retention">this illustrative example</a>, the feature almost every trial user runs does little to make them pay.</p>
+  <p>In the last three stages, the question is whether customers use what they bought. A paid module nobody uses is an early sign that the renewal is at risk. Customers who use features from a higher plan, during a preview for example, show where an upgrade conversation can start. It's one of several <a href="/playbooks/tracking-expansion-revenue-signals-plg">expansion signals</a>, and the one feature adoption measures directly.</p>
+
+  <h2>Which feature requests are worth building?</h2>
+  <p>Requests reach the product team through sales, support, customer success and surveys. Counting them favours the customers who speak loudest. Following the biggest customer favours a single contract. Neither says how many accounts would use the result.</p>
+  <p>Weigh each request by the accounts behind it: how many there are, how much revenue they represent, and whether similar accounts that never asked would use it too. Before writing a spec, ask what the customer is trying to get done. As <a href="https://businessofsoftware.org/talks/customers-are-not-the-source-of-innovation/" target="_blank" rel="noopener">Marty Cagan argues</a>, customers are a better source of problems than of solutions. A request for a spreadsheet export often points to a report that's missing.</p>
+  <p>Adoption then checks the decision. A few weeks after release, do the accounts that asked for the feature use it? Tracked from one release to the next, that rate shows how much a request is worth in your product. If requested features are rarely adopted, requests describe problems well and solutions badly, and the team should dig further before building.</p>
+  <p>The same data helps decide what to stop. <a href="https://www.intercom.com/blog/before-you-plan-your-product-roadmap" target="_blank" rel="noopener">Intercom's feature audit</a> plots each feature by how many customers use it and how often. A feature few customers use, and rarely, can be improved, brought to the customers who need it, or retired. Each one kept adds maintenance, support and onboarding work.</p>
+
+  <h2>What a useful feature adoption report shows</h2>
+  <p>Each of these decisions needs usage read next to something a product analytics tool doesn't hold.</p>
+  <ul>
+    <li><strong>By account, with what it pays.</strong> The plan, the add-ons bought, the revenue and the renewal date, so an unused module shows up well before the renewal.</li>
+    <li><strong>Next to what customers asked for and said.</strong> Feature requests and survey answers, such as NPS, attached to the account. A score is easy to count, but the comment and the account's usage explain it.</li>
+    <li><strong>Before and after each release.</strong> A dated note on the release, and the accounts that asked for the feature, with their use 30 and 60 days later.</li>
+    <li><strong>By acquisition source.</strong> Marketing then sees whether the features its campaigns promise are the ones new customers use.</li>
+  </ul>
+  <p>Funnelsight builds that view from the tools you already have: product usage, the CRM and billing. When a requested feature ships, a flag in the CRM tells each account owner, who can let the customer know it's live.</p>
 
   <div class="article-cta">
-    <p>See how each feature is used, next to what each account buys and when it renews.</p>
+    <p>See which features each account uses, next to what it pays and when it renews.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
+
+  <div class="article-faq">
+    <details>
+      <summary>What's the difference between feature adoption and product adoption?</summary>
+      <p>Product adoption rate looks at the product as a whole: the share of new users or customers who become regular users. Feature adoption rate looks at one feature, among the users or accounts that can use it. A product can be well adopted while some of its features are barely used, which is what a feature audit brings out.</p>
+    </details>
+  </div>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between feature adoption and product adoption?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Product adoption rate looks at the product as a whole: the share of new users or customers who become regular users. Feature adoption rate looks at one feature, among the users or accounts that can use it. A product can be well adopted while some of its features are barely used, which is what a feature audit brings out."
+      }
+    }
+  ]
+}
+  </script>
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/case-studies/most-used-feature-vs-retention">

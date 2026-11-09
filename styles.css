@@ -1470,3 +1470,69 @@ footer a {
   .journey li { padding-left: 40px; }
   .journey-card { padding: 16px; }
 }
+
+/* Lifecycle figure (feature adoption playbook): five stages read left to
+   right like a sales cycle, with a loop back to the roadmap. Wider than
+   the text column on desktop so each stage stays readable; stacks
+   vertically below 860px. A PNG version is offered for slides. */
+.lifecycle {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1016px, calc(100vw - 64px));
+  margin: 28px 0 32px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.lifecycle-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.lifecycle-step { padding: 0 12px 4px; border-left: 1px solid var(--line); }
+.lifecycle-step:first-child { border-left: 0; }
+.lifecycle-stage {
+  display: block;
+  margin: 0 -12px 16px;
+  padding: 12px 26px 12px 22px;
+  background: var(--indigo);
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 14px 50%);
+}
+.lifecycle-step:first-child .lifecycle-stage { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%); padding-left: 14px; }
+.lifecycle-step:nth-child(3) .lifecycle-stage { background: #4B4396; }
+.lifecycle-step:nth-child(n+4) .lifecycle-stage { background: #5E56A8; }
+.article .lifecycle-q { font-weight: 700; font-size: 15px; color: var(--ink); margin: 0 0 12px; line-height: 1.4; }
+.lifecycle-step dl { margin: 0; }
+.lifecycle-step dt { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
+.lifecycle-step dd { margin: 2px 0 0; font-size: 14px; line-height: 1.45; color: #2A2D3B; }
+.article .lifecycle-loop {
+  margin: 20px 0 0;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: #FFF7E6;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+.lifecycle figcaption { margin-top: 14px; font-size: 14px; color: #454A5B; }
+.article .lifecycle figcaption a { margin-left: 6px; }
+@media (max-width: 860px) {
+  .lifecycle { left: auto; transform: none; width: auto; padding: 16px; }
+  .lifecycle-steps { grid-template-columns: 1fr; gap: 18px; }
+  .lifecycle-step { border-left: 0; padding: 0; }
+  .lifecycle-stage, .lifecycle-step:first-child .lifecycle-stage { margin: 0 0 10px; padding: 10px 14px; clip-path: none; border-radius: 4px; }
+}
+/* Churn page: wider label column for "Real change". */
+.churn-checks li { grid-template-columns: 92px 1fr; }
+@media (max-width: 600px) { .churn-checks li { grid-template-columns: 1fr; } .churn-checks .check-status { justify-self: start; } }
