@@ -75,7 +75,6 @@
 </head>
 <body>
 
-
 <div class="consent-banner" id="consent-banner">
   <div class="wrap">
     <p>We use Google Analytics to see which pages are useful. No ads, no data shared beyond this account. This is a demo site for a fictional company: no real visitor data is collected beyond this test.</p>
@@ -174,8 +173,16 @@
   <h1>What is a single source of truth in SaaS</h1>
   <p class="lede-intro">Asked how many customers the company has, finance says 1,240, sales says 860 and the product team says 2,100. A single source of truth is where the definitions behind each figure are written down, so anyone can see why they differ.</p>
 
+  <h2>Signs your definitions aren't shared</h2>
+  <ul>
+    <li>Meetings start by reconciling numbers instead of discussing them.</li>
+    <li>A customer renews with more seats, and one team books it as an upsell while another books it as a renewal.</li>
+    <li>A metric's name says one thing and its formula another, like a "monthly recurring revenue" that includes one-off setup fees.</li>
+    <li>A definition changed, nobody knows when, and this quarter is compared with the last one across the break.</li>
+  </ul>
+
   <h2>One set of definitions, several right numbers</h2>
-  <p>The finance, sales and product figures are all correct. Finance counts each entity it invoices, so the subsidiaries of one group count separately. Sales counts the accounts it owns in the CRM, grouped under the parent company. The product team counts paid instances, and one customer can run several, for different teams or regions. The real problem is one word, customer, for three different counts. Deciding which one the company reports, and giving the others their own names, ends the debate. Pipeline works the same way, with sales reading it deal by deal and marketing through an attribution model that splits each deal across the touches before it (see <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>).</p>
+  <p>Back to the customer count: finance's 1,240, sales' 860 and product's 2,100 are all correct. Finance counts each entity it invoices, so the subsidiaries of one group count separately. Sales counts the accounts it owns in the CRM, grouped under the parent company. The product team counts paid instances, and one customer can run several, for different teams or regions. The real problem is one word, customer, for three different counts. Deciding which one the company reports, and giving the others their own names, ends the debate. Pipeline works the same way, with sales reading it deal by deal and marketing through an attribution model that splits each deal across the touches before it (see <a href="/playbooks/marketing-sales-funnel-numbers-dont-match">why marketing and sales pipeline numbers don't match</a>).</p>
   <div class="scope-lists">
     <div class="scope-list scope-yes">
       <h3>Keep it single</h3>
@@ -199,25 +206,17 @@
   <p>Product usage, CRM activity and billing usually live in different tools, and each team reads the one it knows best. When the figures don't line up, the meeting turns from "what should we do?" to "whose number is right?". A shared dashboard doesn't settle that while the definitions behind it stay unclear.</p>
   <p>An AI assistant doesn't settle it either. Ask it how many customers you have and it will answer with the finance, sales or product count, without saying which. Written-down definitions are what make its answer comparable with everyone else's.</p>
 
-  <h2>Signs the definitions aren't shared</h2>
-  <ul>
-    <li>Meetings start by reconciling numbers instead of discussing them.</li>
-    <li>A customer renews with more seats, and one team books it as an upsell while another books it as a renewal.</li>
-    <li>A metric's name says one thing and its formula another, like a "monthly recurring revenue" that includes one-off setup fees.</li>
-    <li>A definition changed, nobody knows when, and this quarter is compared with the last one across the break.</li>
-  </ul>
-
   <h2>How to start without overengineering it</h2>
   <p>Write down the definitions of the few metrics that drive decisions, name the reference system for each one, and log every change with its date and reason. Start with the sources that cause the most disagreement, usually product usage and CRM data. Agreement matters more than speed at this stage: the people who own activation, retention and revenue reporting sign off on each definition before it gets automated. For a first view built from exports, see <a href="/playbooks/tracking-plg-funnel-without-data-team">starting to track your PLG funnel</a>.</p>
 
-  <h2>How Funnelsight fits</h2>
-  <p>Funnelsight keeps these definitions in one place. Rules such as the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a>, what makes a <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> or the attribution model are set once and apply to every view a team builds. When a rule changes, the change is logged, and past periods are either recalculated or the break is clearly marked. The CRM stays the reference for pipeline and revenue, and Funnelsight shows where its own figures differ from it, and why.</p>
+  <h2>How to keep definitions applied</h2>
+  <p>A written definition only helps if every report uses it. Once each tool calculates "active user" or "MQL" its own way, the document and the numbers drift apart. What keeps them together is a single place where each rule is set once and applies to every view.</p>
+  <p>Funnelsight works that way. Rules such as the <a href="/glossary/what-counts-as-activation-in-plg">activation event</a>, what makes a <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> or the attribution model are set once and apply to every view a team builds. When a rule changes, past periods are recalculated or the break is clearly marked. The CRM stays the reference for pipeline and revenue, and Funnelsight shows where its own figures differ from it, and why.</p>
 
   <div class="article-cta">
     <p>Set your definitions once, and let every team build its own views on them.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
-
 
   <section class="read-next" aria-label="Read next">
     <a class="read-next-card" href="/playbooks/marketing-sales-funnel-numbers-dont-match">
