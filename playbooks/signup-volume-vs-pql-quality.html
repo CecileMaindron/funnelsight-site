@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The hidden cost of chasing signup volume: Funnelsight">
 <meta name="twitter:description" content="A shorter form or a new channel raises sign-ups. Here's why that doesn't always bring more customers, and what to check after each change.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-09">
+<link rel="stylesheet" href="/styles.css?v=2026-11-11">
 </head>
 <body>
 
@@ -176,19 +176,17 @@
 
   <h2>A shorter form, one quarter later</h2>
   <p>A SaaS team with a free trial cuts its sign-up form from six fields to three, removing phone number, company and job title. The acquisition budget, paid and content together, stays at $75k a quarter. Sign-ups go up, and the quarterly report calls it a win. To check whether the win holds, the team follows those sign-ups in Funnelsight, all the way to the customers sales signed.</p>
-  <table class="data-table data-table-dense nowrap-values">
-    <caption>The quarter before and the quarter after the change. Customers who buy online without sales aren't included. Illustrative data</caption>
-    <thead>
-      <tr><th scope="col"></th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Change</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">Sign-ups</th><td>3,000</td><td>3,300</td><td><strong>+10%</strong></td></tr>
-      <tr><th scope="row">Product qualified leads</th><td>600</td><td>645</td><td>+8%</td></tr>
-      <tr><th scope="row">Accepted by sales</th><td>330</td><td>323</td><td>&minus;2%</td></tr>
-      <tr><th scope="row">New customers through sales</th><td>66</td><td>65</td><td><strong>&minus;2%</strong></td></tr>
-      <tr><th scope="row">Cost per sign&#8209;up</th><td>$25</td><td>$23</td><td>&minus;9%</td></tr>
-    </tbody>
-  </table>
+  <figure class="fade-funnel" aria-labelledby="fade-caption">
+    <ol>
+      <li class="fade-stage"><span class="fade-name">Sign-ups</span><span class="fade-vals">3,000 → 3,300</span><span class="fade-chg fade-up">+10%</span></li>
+      <li class="fade-stage"><span class="fade-name">Product qualified leads</span><span class="fade-vals">600 → 645</span><span class="fade-chg fade-up">+8%</span></li>
+      <li class="fade-break">The gain stops here</li>
+      <li class="fade-stage"><span class="fade-name">Accepted by sales</span><span class="fade-vals">330 → 323</span><span class="fade-chg fade-down">−2%</span></li>
+      <li class="fade-stage"><span class="fade-name">New customers through sales</span><span class="fade-vals">66 → 65</span><span class="fade-chg fade-down">−2%</span></li>
+    </ol>
+    <p class="fade-report">What the quarterly report showed: cost per sign-up down from $25 to $23 (−9%).</p>
+    <figcaption id="fade-caption">The quarter before and the quarter after the change. Customers who buy online without sales aren't included. Illustrative data.</figcaption>
+  </figure>
   <p>A shorter form lowers the bar to entry, so the extra sign-ups include more people who just want to look. And without a phone number, reps reached fewer PQLs.</p>
 
   <h2>What chasing sign-ups does to the rest of the funnel</h2>
