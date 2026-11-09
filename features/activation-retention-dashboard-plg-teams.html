@@ -71,7 +71,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activation and retention dashboard for PLG: Funnelsight">
 <meta name="twitter:description" content="Activation, trial conversion and retention signals in one dashboard, by acquisition source and weekly cohort, built on the activation event your team defines.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-09">
+<link rel="stylesheet" href="/styles.css?v=2026-11-12">
 </head>
 <body>
 
@@ -198,20 +198,68 @@
   <p>Paid search brings the most sign-ups. Partner referrals bring the fewest, and the trials most likely to become paying customers. Linking usage to revenue can also change a roadmap: see <a href="/case-studies/most-used-feature-vs-retention">why the most-used feature isn't the one that keeps customers</a>.</p>
 
   <h3>Is this week's cohort activating more slowly than the last?</h3>
-  <p>Each week's sign-ups form a cohort. The share that activates should stay fairly stable from one week to the next, so a drop stands out, and Funnelsight flags it. A dated note on that week keeps the explanation next to the number.</p>
-  <table class="data-table data-table-dense">
-    <caption>Weekly sign-up cohorts. Illustrative data</caption>
-    <thead>
-      <tr><th scope="col">Cohort</th><th scope="col">Sign-ups</th><th scope="col">Activated within 7 days</th><th scope="col">Median days to activate</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">4 weeks ago</th><td>280</td><td>44%</td><td>2.1</td></tr>
-      <tr><th scope="row">3 weeks ago</th><td>300</td><td>45%</td><td>2.0</td></tr>
-      <tr><th scope="row">2 weeks ago</th><td>290</td><td>36% (⚑ flagged)</td><td>3.4</td></tr>
-      <tr><th scope="row">Last week</th><td>310</td><td>43%</td><td>2.2</td></tr>
-    </tbody>
-  </table>
-  <p><strong>Note on the cohort from 2 weeks ago:</strong> an extra setup step was tested in onboarding that week, then removed. Without the note, the dip would be debated at the next review. When a cohort drops, <a href="/playbooks/time-to-value-tracking">splitting it by source and checking time to value</a> tells you whether the cause is who signed up or what happened next.</p>
+  <p>Each week's sign-ups form a cohort. The share that activates should stay fairly stable from one week to the next, so a drop stands out, and Funnelsight flags it when it falls outside the range your team sets. A dated note on that week keeps the explanation next to the number.</p>
+  <figure class="ui-card trend-card" role="img" aria-label="Share of each weekly sign-up cohort activated within 7 days, over 12 weeks. It stays between 43% and 46%, inside the usual range of 42% to 47%, except for the cohort from 2 weeks ago at 36%, which is flagged and carries a dated note. Last week is back at 43%. Illustrative data">
+    <div class="ui-card-head"><span class="source-card-title">Activated within 7 days, by weekly cohort</span><span class="tag-illustrative">Illustrative data</span></div>
+    <div class="trend-top" aria-hidden="true">
+      <div><span class="trend-value">43%</span><span class="trend-sub">Last week's cohort, so far</span></div>
+      <div class="trend-tabs"><span>8W</span><span class="is-on">12W</span><span>6M</span></div>
+    </div>
+    <div class="trend-plot" aria-hidden="true">
+      <svg class="trend-chart tc-wide" viewBox="0 0 640 220" aria-hidden="true" focusable="false" font-size="12">
+      <line x1="36" x2="628" y1="194.0" y2="194.0" class="tc-grid"/><text x="30" y="198.2" class="tc-axis" text-anchor="end">30%</text>
+      <line x1="36" x2="628" y1="108.0" y2="108.0" class="tc-grid"/><text x="30" y="112.2" class="tc-axis" text-anchor="end">40%</text>
+      <line x1="36" x2="628" y1="22.0" y2="22.0" class="tc-grid"/><text x="30" y="26.2" class="tc-axis" text-anchor="end">50%</text>
+      <rect x="36" y="47.8" width="592" height="43.0" class="tc-band"/>
+      <text x="42" y="42.8" class="tc-band-label">Usual range</text>
+      <polyline points="36.0,73.6 89.8,56.4 143.6,82.2 197.5,65.0 251.3,73.6 305.1,56.4 358.9,65.0 412.7,82.2 466.5,73.6 520.4,65.0 574.2,142.4" class="tc-line"/><polyline points="574.2,142.4 628.0,82.2" class="tc-line tc-partial"/>
+      <line x1="574.2" x2="574.2" y1="22" y2="194" class="tc-marker"/>
+      <circle cx="36.0" cy="73.6" r="3.5" class="tc-dot"/>
+      <circle cx="89.8" cy="56.4" r="3.5" class="tc-dot"/>
+      <circle cx="143.6" cy="82.2" r="3.5" class="tc-dot"/>
+      <circle cx="197.5" cy="65.0" r="3.5" class="tc-dot"/>
+      <circle cx="251.3" cy="73.6" r="3.5" class="tc-dot"/>
+      <circle cx="305.1" cy="56.4" r="3.5" class="tc-dot"/>
+      <circle cx="358.9" cy="65.0" r="3.5" class="tc-dot"/>
+      <circle cx="412.7" cy="82.2" r="3.5" class="tc-dot"/>
+      <circle cx="466.5" cy="73.6" r="3.5" class="tc-dot"/>
+      <circle cx="520.4" cy="65.0" r="3.5" class="tc-dot"/>
+      <circle cx="574.2" cy="142.4" r="6" class="tc-dot tc-flag"/>
+      <circle cx="628.0" cy="82.2" r="3.5" class="tc-dot tc-dot-partial"/>
+      <g class="tc-pin"><rect x="563.2" y="2" width="22" height="18" rx="4"/><text x="574.2" y="15" text-anchor="middle">⚑</text></g>
+      <text x="36.0" y="214" class="tc-axis" text-anchor="start">12 weeks ago</text>
+      <text x="305.1" y="214" class="tc-axis" text-anchor="middle">6 weeks ago</text>
+      <text x="628.0" y="214" class="tc-axis" text-anchor="end">Last week, in progress</text>
+      </svg>
+      <svg class="trend-chart tc-narrow" viewBox="0 0 340 200" aria-hidden="true" focusable="false" font-size="13">
+      <line x1="39" x2="328" y1="172.0" y2="172.0" class="tc-grid"/><text x="33" y="176.6" class="tc-axis" text-anchor="end">30%</text>
+      <line x1="39" x2="328" y1="97.0" y2="97.0" class="tc-grid"/><text x="33" y="101.5" class="tc-axis" text-anchor="end">40%</text>
+      <line x1="39" x2="328" y1="22.0" y2="22.0" class="tc-grid"/><text x="33" y="26.6" class="tc-axis" text-anchor="end">50%</text>
+      <rect x="39" y="44.5" width="289" height="37.5" class="tc-band"/>
+      <text x="45" y="39.5" class="tc-band-label">Usual range</text>
+      <polyline points="39.0,67.0 65.3,52.0 91.5,74.5 117.8,59.5 144.1,67.0 170.4,52.0 196.6,59.5 222.9,74.5 249.2,67.0 275.5,59.5 301.7,127.0" class="tc-line"/><polyline points="301.7,127.0 328.0,74.5" class="tc-line tc-partial"/>
+      <line x1="301.7" x2="301.7" y1="22" y2="172" class="tc-marker"/>
+      <circle cx="39.0" cy="67.0" r="3.5" class="tc-dot"/>
+      <circle cx="65.3" cy="52.0" r="3.5" class="tc-dot"/>
+      <circle cx="91.5" cy="74.5" r="3.5" class="tc-dot"/>
+      <circle cx="117.8" cy="59.5" r="3.5" class="tc-dot"/>
+      <circle cx="144.1" cy="67.0" r="3.5" class="tc-dot"/>
+      <circle cx="170.4" cy="52.0" r="3.5" class="tc-dot"/>
+      <circle cx="196.6" cy="59.5" r="3.5" class="tc-dot"/>
+      <circle cx="222.9" cy="74.5" r="3.5" class="tc-dot"/>
+      <circle cx="249.2" cy="67.0" r="3.5" class="tc-dot"/>
+      <circle cx="275.5" cy="59.5" r="3.5" class="tc-dot"/>
+      <circle cx="301.7" cy="127.0" r="6" class="tc-dot tc-flag"/>
+      <circle cx="328.0" cy="74.5" r="3.5" class="tc-dot tc-dot-partial"/>
+      <g class="tc-pin"><rect x="290.7" y="2" width="22" height="18" rx="4"/><text x="301.7" y="15" text-anchor="middle">⚑</text></g>
+      <text x="39.0" y="194" class="tc-axis" text-anchor="start">12 wks ago</text>
+      <text x="328.0" y="194" class="tc-axis" text-anchor="end">Last week</text>
+      </svg>
+    </div>
+    <div class="trend-callout" aria-hidden="true"><span class="trend-flag">⚑ Flagged · 2 weeks ago</span> 36% activated, below the usual range. Median time to activate: 3.4 days, against about 2.</div>
+    <p class="ui-note"><strong>Note, onboarding team:</strong> an extra setup step was tested in onboarding that week, then removed.</p>
+  </figure>
+  <p>Without the note, the dip would be debated at the next review. When a cohort drops, <a href="/playbooks/time-to-value-tracking">splitting it by source and checking time to value</a> tells you whether the cause is who signed up or what happened next.</p>
 
   <h3>Do larger companies behave differently in the trial?</h3>
   <p>The same cohorts can be filtered by segment, for example by company size when a team starts targeting larger accounts, or by country when it <a href="/playbooks/expanding-self-serve-plg-to-new-country">opens a new market</a>. It shows both how many sign-ups come from those accounts and whether they use the trial differently.</p>
