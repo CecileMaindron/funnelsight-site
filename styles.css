@@ -1536,3 +1536,55 @@ footer a {
 /* Churn page: wider label column for "Real change". */
 .churn-checks li { grid-template-columns: 92px 1fr; }
 @media (max-width: 600px) { .churn-checks li { grid-template-columns: 1fr; } .churn-checks .check-status { justify-self: start; } }
+
+/* Split figure (numbers don't match): the same total read by deal and by
+   channel, on two aligned bars. Segments use flex-grow proportional to
+   the amount, and inset borders instead of gaps so both rows line up. */
+.split-figure { margin: 24px 0 28px; padding: 20px; background: var(--white); border: 1px solid var(--line); border-radius: 6px; }
+.split-row + .split-row { margin-top: 18px; }
+.split-label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.split-bar { display: flex; height: 44px; border-radius: 4px; overflow: hidden; }
+.split-seg { display: flex; flex-direction: column; justify-content: center; padding: 0 8px; min-width: 0; color: var(--white); font-size: 13px; line-height: 1.2; white-space: nowrap; overflow: hidden; box-shadow: inset -2px 0 0 var(--white); }
+.split-seg:last-child { box-shadow: none; }
+.split-seg strong { font-weight: 700; }
+.split-deal-a { background: #5F6475; }
+.split-deal-b { background: #14161F; }
+.split-trial { background: #372F72; }
+.split-paid { background: #5E56A8; }
+.split-organic { background: #8F89BF; }
+.split-email { background: #B9B5DA; }
+.split-webinar { background: #D9A441; color: var(--ink); }
+.split-brace { position: relative; display: flex; margin-top: 4px; font-size: 12px; color: var(--muted); }
+.split-legend { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.split-legend li { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #2A2D3B; }
+.split-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; }
+.split-figure figcaption { margin-top: 14px; font-size: 14px; color: #454A5B; }
+@media (max-width: 600px) { .split-figure { padding: 14px; } .split-seg { font-size: 12px; padding: 0 5px; } .split-hide-sm { display: none; } }
+
+/* Narrowing funnel (signup volume): each stage a centered band, narrower
+   at every step, with before -> after and the change. The gain fades on
+   the way down. */
+.fade-funnel { margin: 24px 0 28px; padding: 20px; background: var(--white); border: 1px solid var(--line); border-radius: 6px; }
+.fade-funnel ol { list-style: none; margin: 0; padding: 0; }
+.fade-stage { margin: 0 auto 6px; padding: 10px 16px; background: #EDEBF6; border-radius: 4px; display: grid; grid-template-columns: 1fr auto auto; gap: 12px; align-items: center; font-size: 14px; color: var(--ink); }
+.fade-stage:nth-child(1) { width: 100%; }
+.fade-stage:nth-child(2) { width: 88%; }
+.fade-stage:nth-child(4) { width: 76%; }
+.fade-stage:nth-child(5) { width: 64%; }
+.fade-name { font-weight: 600; }
+.fade-vals { color: #454A5B; white-space: nowrap; }
+.fade-chg { font-weight: 700; border-radius: 4px; padding: 2px 8px; white-space: nowrap; }
+.fade-up { background: #DDEFE3; color: #1E6B3A; }
+.fade-down { background: #FBE9CC; color: #7A4E00; }
+.fade-break { list-style: none; margin: 4px auto 10px; width: 82%; text-align: center; font-size: 13px; color: #7A4E00; border-top: 1px dashed var(--accent); padding-top: 6px; }
+.fade-report { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: #2A2D3B; }
+.fade-funnel figcaption { margin-top: 10px; font-size: 14px; color: #454A5B; }
+@media (max-width: 600px) {
+  .fade-funnel { padding: 14px; }
+  .fade-stage { grid-template-columns: 1fr auto; padding: 8px 10px; font-size: 13px; }
+  .fade-vals { grid-column: 1 / -1; grid-row: 2; }
+  .fade-stage:nth-child(2) { width: 94%; }
+  .fade-stage:nth-child(4) { width: 88%; }
+  .fade-stage:nth-child(5) { width: 82%; }
+  .fade-break { width: 90%; }
+}
