@@ -6,3 +6,6 @@
 
 /styles.css
   Cache-Control: no-cache, must-revalidate
+
+/assets/site.js
+  Cache-Control: no-cache, must-revalidate
