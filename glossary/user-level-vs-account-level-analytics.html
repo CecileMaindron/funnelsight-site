@@ -1,62 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) + Consent Mode v2 -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'wait_for_update': 500
-  });
-  gtag('js', new Date());
-</script>
-
-<script>
-  gtag('config', 'G-NG2EK7DNXQ');
-</script>
-<style>
-  /* Consent banner. Move into styles.css whenever convenient. */
-  .consent-banner {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background: #14161F;
-    color: #FFFFFF;
-    padding: 16px;
-  }
-  .consent-banner .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  .consent-banner p {
-    margin: 0;
-    font-size: 14px;
-    max-width: 60ch;
-  }
-  .consent-banner a { color: #FFFFFF; text-decoration: underline; }
-  .consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
-  .consent-actions button {
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: 1px solid #FFFFFF;
-    cursor: pointer;
-  }
-  #consent-accept { background: #FFFFFF; color: #14161F; }
-  #consent-decline { background: transparent; color: #FFFFFF; }
-</style>
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -71,7 +15,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="User-level vs account-level analytics: Funnelsight">
 <meta name="twitter:description" content="Account or user level? Start from what you want to know. How sales and marketing move between the two to pick accounts, find the right person to call and shape the message.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-09">
+<link rel="stylesheet" href="/styles.css?v=2026-11-15">
+<script src="/assets/site.js?v=2026-11-15" defer></script>
 </head>
 <body>
 
@@ -85,54 +30,6 @@
     </div>
   </div>
 </div>
-<script>
-(function () {
-  var CONSENT_KEY = 'fs_consent';
-  var stored = localStorage.getItem(CONSENT_KEY);
-  var banner = document.getElementById('consent-banner');
-
-  function setConsent(granted) {
-    gtag('consent', 'update', {
-      'analytics_storage': granted ? 'granted' : 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
-    localStorage.setItem(CONSENT_KEY, granted ? 'granted' : 'denied');
-    if (granted && !document.getElementById('ga-loader')) {
-      var s = document.createElement('script');
-      s.id = 'ga-loader';
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG2EK7DNXQ';
-      document.head.appendChild(s);
-    }
-    if (!granted) {
-      document.cookie.split(';').forEach(function (c) {
-        var name = c.split('=')[0].trim();
-        if (name.indexOf('_ga') === 0) {
-          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.funnelsight.dev';
-          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
-        }
-      });
-    }
-    if (banner) banner.style.display = 'none';
-  }
-
-  if (stored === 'granted' || stored === 'denied') {
-    setConsent(stored === 'granted');
-  } else if (banner) {
-    banner.style.display = 'flex';
-  }
-
-  var acceptBtn = document.getElementById('consent-accept');
-  var declineBtn = document.getElementById('consent-decline');
-  if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent(true); });
-  if (declineBtn) declineBtn.addEventListener('click', function () { setConsent(false); });
-  document.addEventListener('click', function (e) {
-    if (e.target && e.target.id === 'consent-reopen' && banner) banner.style.display = 'flex';
-  });
-})();
-</script>
 <nav class="nav">
   <div class="wrap">
     <a href="/" class="logo">funnel<span>sight</span></a>

@@ -252,6 +252,44 @@ footer a {
   padding: 0;
   cursor: pointer;
 }
+/* Consent banner (moved from the inline style of each page, 2026-11-15).
+   Hidden by default; /assets/site.js shows it until a choice is made. */
+.consent-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #14161F;
+  color: #FFFFFF;
+  padding: 16px;
+}
+.consent-banner .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.consent-banner p {
+  margin: 0;
+  font-size: 14px;
+  max-width: 60ch;
+}
+.consent-banner a { color: #FFFFFF; text-decoration: underline; }
+.consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.consent-actions button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+}
+#consent-accept { background: #FFFFFF; color: #14161F; }
+#consent-decline { background: transparent; color: #FFFFFF; }
 
 /* ==========================================================================
    4. Homepage

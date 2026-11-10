@@ -152,7 +152,7 @@ The prompts, page templates and product facts the workflows read live in a separ
 
 ### Privacy
 
-Google Analytics only loads after a visitor accepts it in the consent banner. Until then, no request reaches Google, and fonts are self-hosted for the same reason. A "Cookie settings" link in the footer reopens the banner, and withdrawing consent clears the analytics cookies.
+Google Analytics only loads after a visitor accepts it in the consent banner. Until then, no request reaches Google, and fonts are self-hosted for the same reason. A "Cookie settings" link in the footer reopens the banner, and withdrawing consent clears the analytics cookies. The banner, Google Analytics and click tracking on calls to action share one script, `/assets/site.js`, so every page behaves the same way.
 
 Search Console access is read-only, and Claude only receives aggregated metrics per page, never data about individual visitors.
 
