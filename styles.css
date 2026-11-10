@@ -647,6 +647,10 @@ footer a {
   margin-top: 7px;
   flex-shrink: 0;
 }
+.trial-points-title { font-size: 18px; margin: 0 0 14px; color: var(--ink); }
+.trial-reassure { list-style: none; margin: 20px 0 0; padding: 0; }
+.trial-reassure li { position: relative; padding: 0 0 8px 22px; font-size: 14px; color: #454A5B; }
+.trial-reassure li::before { content: '\2713'; position: absolute; left: 0; top: 0; color: var(--indigo); font-weight: 700; }
 .trial-proof { margin-top: 24px; font-size: 14px; color: var(--muted); }
 .trial-proof a { color: var(--indigo); text-decoration: underline; }
 
@@ -1361,7 +1365,7 @@ footer a {
 @media (max-width: 860px) {
   .hero, .trial-layout, .audience-grid, .trust-grid, .proof-row { grid-template-columns: 1fr; }
   .hero h1, .trial-hero h1 { font-size: 26px; max-width: none; }
-  .hero.wrap, .trial-hero.wrap, .resources-hero.wrap, .article.wrap, .breadcrumb.wrap { padding-left: 40px; padding-right: 40px; }
+  .hero.wrap, .resources-hero.wrap, .article.wrap, .breadcrumb.wrap { padding-left: 40px; padding-right: 40px; }
   .problem .wrap, .proofs .wrap, .trust .wrap, .audience .wrap, .cta-band .wrap, .faq-section .wrap { padding-left: 40px; padding-right: 40px; }
   .cta-panel { padding: 40px 24px; }
   .cta-panel h2 { font-size: 26px; }
@@ -1619,3 +1623,16 @@ footer a {
 .trend-callout { margin: 4px 16px 12px; font-size: 14px; color: #2A2D3B; }
 .trend-flag { display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 4px; background: #FBEAD0; color: #7A4F00; font-size: 12px; font-weight: 700; }
 @media (max-width: 600px) { .trend-value { font-size: 28px; } .trend-callout { font-size: 13px; } }
+
+/* Trial page, small screens: the form comes right after the three
+   outcomes, before the reassurance lines and the case study link. */
+@media (max-width: 860px) {
+  .trial-main { display: contents; }
+  .trial-layout { row-gap: 0; }
+  .trial-layout .form-card { margin: 28px 0; }
+  .trial-points-title { order: 1; }
+  .trial-points { order: 2; }
+  .trial-layout .form-card { order: 3; }
+  .trial-reassure { order: 4; margin-top: 0; }
+  .trial-proof { order: 5; margin-top: 12px; }
+}
