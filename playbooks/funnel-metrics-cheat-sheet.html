@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) + Consent Mode v2 -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+  gtag('js', new Date());
+</script>
+
+<script>
+  gtag('config', 'G-NG2EK7DNXQ');
+</script>
+<style>
+  /* Consent banner. Move into styles.css whenever convenient. */
+  .consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #14161F;
+    color: #FFFFFF;
+    padding: 16px;
+  }
+  .consent-banner .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .consent-banner p {
+    margin: 0;
+    font-size: 14px;
+    max-width: 60ch;
+  }
+  .consent-banner a { color: #FFFFFF; text-decoration: underline; }
+  .consent-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .consent-actions button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+  }
+  #consent-accept { background: #FFFFFF; color: #14161F; }
+  #consent-decline { background: transparent; color: #FFFFFF; }
+</style>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheat sheet: 10 funnel metrics to track first</title>
+<meta name="description" content="Which funnel metrics to track first, who owns each one, what it's used for, and how long a change takes to show up. A one-page cheat sheet for SaaS teams.">
+<link rel="canonical" href="https://funnelsight.dev/playbooks/funnel-metrics-cheat-sheet">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Funnelsight">
+<meta property="og:title" content="Cheat sheet: 10 funnel metrics to track first">
+<meta property="og:description" content="Which funnel metrics to track first, who owns each one, what it's used for, and how long a change takes to show up. A one-page cheat sheet for SaaS teams.">
+<meta property="og:url" content="https://funnelsight.dev/playbooks/funnel-metrics-cheat-sheet">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cheat sheet: 10 funnel metrics to track first">
+<meta name="twitter:description" content="Which funnel metrics to track first, who owns each one, what it's used for, and how long a change takes to show up. A one-page cheat sheet for SaaS teams.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-14">
+</head>
+<body>
+
+
+<div class="consent-banner" id="consent-banner">
+  <div class="wrap">
+    <p>We use Google Analytics to see which pages are useful. No ads, no data shared beyond this account. This is a demo site for a fictional company: no real visitor data is collected beyond this test.</p>
+    <div class="consent-actions">
+      <button id="consent-accept">Accept</button>
+      <button id="consent-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var CONSENT_KEY = 'fs_consent';
+  var stored = localStorage.getItem(CONSENT_KEY);
+  var banner = document.getElementById('consent-banner');
+
+  function setConsent(granted) {
+    gtag('consent', 'update', {
+      'analytics_storage': granted ? 'granted' : 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    localStorage.setItem(CONSENT_KEY, granted ? 'granted' : 'denied');
+    if (granted && !document.getElementById('ga-loader')) {
+      var s = document.createElement('script');
+      s.id = 'ga-loader';
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-NG2EK7DNXQ';
+      document.head.appendChild(s);
+    }
+    if (!granted) {
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') === 0) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.funnelsight.dev';
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+        }
+      });
+    }
+    if (banner) banner.style.display = 'none';
+  }
+
+  if (stored === 'granted' || stored === 'denied') {
+    setConsent(stored === 'granted');
+  } else if (banner) {
+    banner.style.display = 'flex';
+  }
+
+  var acceptBtn = document.getElementById('consent-accept');
+  var declineBtn = document.getElementById('consent-decline');
+  if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent(true); });
+  if (declineBtn) declineBtn.addEventListener('click', function () { setConsent(false); });
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'consent-reopen' && banner) banner.style.display = 'flex';
+  });
+})();
+</script>
+<nav class="nav">
+  <div class="wrap">
+    <a href="/" class="logo">funnel<span>sight</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">Menu</label>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Product</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/product">Overview</a></li>
+          <li><a href="/features/revenue-attribution-payback-by-source">Attribution and payback</a></li>
+          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown-label">Solutions</button>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/solutions/marketing">For Marketing</a></li>
+          <li><a href="/solutions/sales">For Sales</a></li>
+          <li><a href="/solutions/customer-success">For Customer Success</a></li>
+        </ul>
+      </li>
+      <li class="is-current"><a href="/resources">Resources</a></li>
+      <li><a href="/trial">Start trial</a></li>
+    </ul>
+    <a href="/trial" class="nav-cta">Start free trial</a>
+  </div>
+</nav>
+
+<div class="demo-banner">
+  <strong>Funnelsight is a fictional company.</strong> This site was built as a training project and does not offer a real product.
+</div>
+
+<nav class="breadcrumb wrap" aria-label="Breadcrumb">
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Cheat sheet: 10 funnel metrics to track first</span>
+</nav>
+
+<article class="article wrap">
+  <h1>Cheat sheet: 10 funnel metrics to track first, and when to read them</h1>
+  <p class="lede-intro">Most teams end up in one of two places. Either nobody is sure what to track, or the dashboard holds forty metrics in no particular order. In both cases, nobody knows which number to look at on Monday, or when a change can be judged.</p>
+  <p>This cheat sheet sorts ten funnel metrics by when they become readable, who owns each one and what it's used for. It works for a new product, and just as well for a new channel, a new audience or a new market.</p>
+
+  <h2>The cheat sheet</h2>
+  <figure class="fm-sheet" aria-labelledby="fm-sheet-caption">
+    <div class="fm-legend"><span class="fm-legend-label">Used for:</span><span class="fm-u u-d">Daily work</span><span class="fm-u u-t">Tests</span><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></div>
+    <div class="fm-band">
+      <p class="fm-band-head"><span class="fm-step">Track from day 1</span> <span class="fm-note">For a new product, channel, audience or market. Set the attribution rule and the activation definition now.</span></p>
+      <table class="fm-table">
+        <thead><tr><th scope="col"><span class="visually-hidden">Number</span></th><th scope="col">Metric</th><th scope="col">What it tells you</th><th scope="col">Owner</th><th scope="col">Used for</th><th scope="col">Read it with</th></tr></thead>
+        <tbody>
+          <tr><td class="fm-n">1</td><th scope="row" class="fm-m">Sign-ups or leads, by source</th><td data-label="Tells you">Which channels bring people in</td><td data-label="Owner">Marketing, growth</td><td data-label="Used for"><span class="fm-u u-d">Daily work</span><span class="fm-u u-t">Tests</span></td><td data-label="Read it with">New customers by source</td></tr>
+          <tr><td class="fm-n">2</td><th scope="row" class="fm-m">New customers and new recurring revenue</th><td data-label="Tells you">Whether the business is moving at all</td><td data-label="Owner">Growth, finance</td><td data-label="Used for"><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Sign-ups</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fm-band">
+      <p class="fm-band-head"><span class="fm-step">Readable within weeks</span> <span class="fm-note">Once the first cohorts have gone through a trial or a sales cycle.</span></p>
+      <table class="fm-table">
+        <thead><tr><th scope="col"><span class="visually-hidden">Number</span></th><th scope="col">Metric</th><th scope="col">What it tells you</th><th scope="col">Owner</th><th scope="col">Used for</th><th scope="col">Read it with</th></tr></thead>
+        <tbody>
+          <tr><td class="fm-n">3</td><th scope="row" class="fm-m"><a href="/glossary/what-counts-as-activation-in-plg">Activation rate, by source</a></th><td data-label="Tells you">How many new users reach real use</td><td data-label="Owner">Growth</td><td data-label="Used for"><span class="fm-u u-d">Daily work</span><span class="fm-u u-t">Tests</span></td><td data-label="Read it with">Time to value (days to activate)</td></tr>
+          <tr><td class="fm-n">4</td><th scope="row" class="fm-m"><a href="/glossary/what-is-a-product-qualified-lead-pql">PQL rate</a></th><td data-label="Tells you">Which trials show they are ready to buy</td><td data-label="Owner">Growth, sales</td><td data-label="Used for"><span class="fm-u u-d">Daily work</span><span class="fm-u u-t">Tests</span></td><td data-label="Read it with">Trial-to-paid rate</td></tr>
+          <tr><td class="fm-n">5</td><th scope="row" class="fm-m">Trial-to-paid rate</th><td data-label="Tells you">Which trials turn into revenue</td><td data-label="Owner">Growth</td><td data-label="Used for"><span class="fm-u u-t">Tests</span><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Sign-ups</td></tr>
+          <tr><td class="fm-n">6</td><th scope="row" class="fm-m">Lead-to-opportunity rate, by source</th><td data-label="Tells you">Which leads sales can work with</td><td data-label="Owner">Marketing, sales</td><td data-label="Used for"><span class="fm-u u-d">Daily work</span><span class="fm-u u-r">Reporting</span></td><td data-label="Read it with">Lead volume</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fm-band">
+      <p class="fm-band-head"><span class="fm-step">Readable after a quarter</span> <span class="fm-note">Once enough deals and renewals are in.</span></p>
+      <table class="fm-table">
+        <thead><tr><th scope="col"><span class="visually-hidden">Number</span></th><th scope="col">Metric</th><th scope="col">What it tells you</th><th scope="col">Owner</th><th scope="col">Used for</th><th scope="col">Read it with</th></tr></thead>
+        <tbody>
+          <tr><td class="fm-n">7</td><th scope="row" class="fm-m">Cost per paying customer, by source</th><td data-label="Tells you">What a customer really costs from each channel</td><td data-label="Owner">Marketing</td><td data-label="Used for"><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Sign-ups by source</td></tr>
+          <tr><td class="fm-n">8</td><th scope="row" class="fm-m"><a href="/features/revenue-attribution-payback-by-source">CAC payback, by channel</a></th><td data-label="Tells you">How fast each channel earns back what it cost</td><td data-label="Owner">Marketing, finance</td><td data-label="Used for"><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Churn of that channel</td></tr>
+          <tr><td class="fm-n">9</td><th scope="row" class="fm-m"><a href="/glossary/how-to-calculate-churn-rate-b2b-saas">Customer churn</a></th><td data-label="Tells you">Who leaves, and from which source</td><td data-label="Owner">Customer success</td><td data-label="Used for"><span class="fm-u u-d">Daily work</span><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Net revenue retention</td></tr>
+          <tr><td class="fm-n">10</td><th scope="row" class="fm-m"><a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">Net revenue retention</a></th><td data-label="Tells you">Whether the base grows on its own: new, expansion, churn</td><td data-label="Owner">Customer success, finance</td><td data-label="Used for"><span class="fm-u u-r">Reporting</span><span class="fm-u u-f">Forecast &amp; budget</span></td><td data-label="Read it with">Customer churn</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption id="fm-sheet-caption">Ten funnel metrics, in the order they become readable. Illustrative guidance: timings depend on your sales cycle and plans. Download the cheat sheet: <a href="/assets/funnel-metrics-cheat-sheet.pdf" download>PDF</a> · <a href="/assets/funnel-metrics-cheat-sheet.png" download>PNG</a></figcaption>
+  </figure>
+
+  <h2>How to read it</h2>
+  <p>The three blocks follow the time each metric needs. Sign-ups by source mean something on day one. Trial-to-paid needs at least one full trial. Churn and payback need a quarter of deals.</p>
+  <p>"Used for" separates four needs. Daily work is what a team acts on during the week. Tests tell you whether a change worked. Reporting goes into a quarterly review or a leadership update. Forecast and budget is what finance plans with. A metric can serve several of them, but no one needs all ten at the same pace. Leadership doesn't need sign-ups per day, and a growth team can't steer its week on net revenue retention.</p>
+  <p>Activation and PQL are easy to confuse. <a href="/glossary/what-counts-as-activation-in-plg">Activation</a> means a new user has done once what they came for. A <a href="/glossary/what-is-a-product-qualified-lead-pql">PQL</a> means their usage shows they're more likely to buy than the average user. <a href="/playbooks/time-to-value-tracking">Time to value</a> comes from the same event as activation: the number of days it took to get there.</p>
+
+  <h2>What to set up before you can read anything</h2>
+  <p>Most of these numbers are already collected somewhere, so there's no need to start from scratch. Traffic and on-page conversion are in Google Analytics and Search Console. Sign-ups, activation and PQLs are in the product's own data. MQLs, nurturing and lead-to-opportunity are in the marketing automation tool and the CRM. Trial-to-paid, churn and revenue are in billing or the CRM. What's usually missing is the link between them, and a few written rules. <a href="/playbooks/tracking-plg-funnel-without-data-team">Start tracking your PLG funnel</a> shows a first version built from two exports.</p>
+  <p>You can't judge a channel before it brings paying customers. But if its sources aren't recorded the same way from the first day, you won't be able to judge it when they come. Write down which touch counts and how each source is named, and the date of each change. Do the same for the activation event.</p>
+  <p>Expect the first months of a channel to cost more than they bring back while it ramps up. A <a href="/features/revenue-attribution-payback-by-source">payback</a> read after three weeks says more about the timing than about the channel.</p>
+
+  <h2>How long before a change shows up</h2>
+  <p>Every change has its own delay. Launch paid search on Monday, and sign-ups from it show the same day. Whether those users activate shows within a few days. Send a webinar invitation and most registrations arrive within 48 hours. Rewrite an SEO page and you may wait weeks.</p>
+  <figure class="fm-timeline" aria-labelledby="fm-timeline-caption">
+    <div class="fm-tl-axis" aria-hidden="true"><span class="fm-tl-axis-pad"></span><span class="fm-tl-scale"><span class="fm-tick fm-tick-0" style="left:0">Day 0</span><span class="fm-tick" style="left:9%">Day 1</span><span class="fm-tick" style="left:18%">Day 3</span><span class="fm-tick" style="left:28%">Week 1</span><span class="fm-tick" style="left:42%">Day 14</span><span class="fm-tick" style="left:58%">Month 1</span><span class="fm-tick" style="left:84%">Quarter</span></span></div>
+    <ol class="fm-tl-rows">
+      <li class="fm-tl-row"><span class="fm-tl-label">Traffic from paid, email or social</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:0%"></span><span class="fm-tl-ready" style="left:0%"><span>Right away</span></span></span><span class="fm-tl-text">Right away</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Conversion on the page (visit to sign-up or form)</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:3%"></span><span class="fm-tl-ready" style="left:3%"><span>Within a day</span></span></span><span class="fm-tl-text">Within a day</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Activation rate</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:12%"></span><span class="fm-tl-ready" style="left:12%"><span>Within the first days</span></span></span><span class="fm-tl-text">Within the first days</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Trial-to-paid, change during the trial</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:14%"></span><span class="fm-tl-ready" style="left:14%"><span>As running trials reach the purchase step</span></span></span><span class="fm-tl-text">As running trials reach the purchase step</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">PQL rate</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:28%"></span><span class="fm-tl-ready" style="left:28%"><span>Around the end of the first week</span></span></span><span class="fm-tl-text">Around the end of the first week</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">MQL rate</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:36%"></span><span class="fm-tl-ready" style="left:36%"><span>After a few touches. Demo requests: right away</span></span></span><span class="fm-tl-text">After a few marketing touches. Demo and contact requests show right away</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Trial-to-paid, change for new sign-ups only</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:42%"></span><span class="fm-tl-ready" style="left:42%"><span>After one full trial, for new sign-ups</span></span></span><span class="fm-tl-text">After one full trial, for those who signed up after the change</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Lead-to-opportunity rate</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:50%"></span><span class="fm-tl-ready" style="left:50%"><span>After one follow-up cycle</span></span></span><span class="fm-tl-text">After one follow-up cycle</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Traffic from SEO</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:62%"></span><span class="fm-tl-ready fm-right" style="left:62%"><span>Weeks to months</span></span></span><span class="fm-tl-text">Weeks to months</span></li>
+      <li class="fm-tl-row"><span class="fm-tl-label">Revenue, churn and net revenue retention</span><span class="fm-tl-track" aria-hidden="true"><span class="fm-tl-wait" style="width:84%"></span><span class="fm-tl-ready fm-right" style="left:84%"><span>After a quarter or a renewal cycle</span></span></span><span class="fm-tl-text">After a quarter or a renewal cycle</span></li>
+    </ol>
+    <figcaption id="fm-timeline-caption">Day 0 is the day of the change. Illustrative timings for a 14-day trial: your sales cycle and plans set the real ones. Download: <a href="/assets/funnel-metrics-timeline.png" download>PNG</a></figcaption>
+  </figure>
+
+  <p>Three things change the delay. The first is where the change happens. A new prompt or offer during the trial reaches trials that are already running, so trial-to-paid moves within days. A change before sign-up only reaches people who sign up after it, so you wait one full trial. Even then, users who are already convinced often keep their 14 free days before they pay.</p>
+  <p>The second is volume. A new third email in a nurturing sequence, or a new step in a sales sequence, only shows once enough people have reached it.</p>
+  <p>The third is the window you compare. A change made on the 25th barely shows in that month's figures, and one week of effect gets lost in a quarter. Start the comparison on the day of the change, and compare the people who came after it with those who came just before.</p>
+
+  <h2>Three traps when you build the dashboard</h2>
+  <ul>
+    <li><strong>Alerts on the dashboard.</strong> Sign-ups per day, traffic without a source or a broken sync are there to catch a bug. Set an alert for them and keep them off the dashboard.</li>
+    <li><strong>A strategic metric read every week.</strong> Net revenue retention moves with renewals. Read weekly, it mostly shows noise.</li>
+    <li><strong>One average for every source.</strong> A blended activation rate can stay flat while one source improves and another drops. Read the first six metrics by source.</li>
+  </ul>
+
+  <h2>What the dashboard needs to show</h2>
+  <p>To follow this order without rebuilding the numbers each month, a dashboard needs four things. Each volume metric next to the one that completes it, such as sign-ups next to cost per paying customer. Each channel read on its own timeline, paid search over days and SEO over months. A dated note on the day of each change. And one definition of each metric, used in every view, as in a <a href="/glossary/what-is-a-single-source-of-truth-saas">single source of truth</a>.</p>
+  <p>Funnelsight is built around those four points, with acquisition, product usage, CRM and billing in one view of the funnel.</p>
+
+  <div class="article-cta">
+    <p>See your funnel metrics in the order they become readable, source by source.</p>
+    <a href="/trial" class="btn-primary accent">Start free trial</a>
+  </div>
+
+  <div class="article-faq">
+    <details>
+      <summary>What are the most important SaaS metrics?</summary>
+      <p>Finance teams usually start with recurring revenue, churn and net revenue retention. For marketing and growth teams, the useful starting set sits earlier in the funnel: sign-ups by source, activation, PQL or lead-to-opportunity rate, and trial-to-paid. Revenue metrics follow once enough deals are in.</p>
+    </details>
+    <details>
+      <summary>What is a funnel metric?</summary>
+      <p>A funnel metric measures how people move from one stage of the journey to the next, such as visit to sign-up or trial to paid, or how long that takes. Read by source, it shows which channels bring people who go further, not just more people.</p>
+    </details>
+  </div>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the most important SaaS metrics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Finance teams usually start with recurring revenue, churn and net revenue retention. For marketing and growth teams, the useful starting set sits earlier in the funnel: sign-ups by source, activation, PQL or lead-to-opportunity rate, and trial-to-paid. Revenue metrics follow once enough deals are in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a funnel metric?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A funnel metric measures how people move from one stage of the journey to the next, such as visit to sign-up or trial to paid, or how long that takes. Read by source, it shows which channels bring people who go further, not just more people."
+      }
+    }
+  ]
+}
+  </script>
+
+  <section class="read-next" aria-label="Read next">
+    <a class="read-next-card" href="/playbooks/tracking-plg-funnel-without-data-team">
+      <span class="read-next-label">Read next</span>
+      <span class="read-next-title">Start tracking your PLG funnel</span>
+      <span class="read-next-desc">A first view of the funnel from two exports, and when a spreadsheet stops being enough.</span>
+    </a>
+  </section>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <span>Funnelsight, Nantes, France</span>
+      <span>© 2026</span>
+    </div>
+    <div class="footer-links">
+      <a href="/about">About the author</a>
+      <span class="footer-credit">Built by Cécile Maindron:
+        <a href="https://www.linkedin.com/in/cmaindron/" target="_blank" rel="me noopener" aria-label="Cécile Maindron on LinkedIn">LinkedIn</a> ·
+        <a href="https://github.com/CecileMaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on GitHub">GitHub</a> ·
+        <a href="https://medium.com/@cmaindron" target="_blank" rel="me noopener" aria-label="Cécile Maindron on Medium">Medium</a>
+      </span>
+      <button type="button" class="footer-consent" id="consent-reopen">Cookie settings</button>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
