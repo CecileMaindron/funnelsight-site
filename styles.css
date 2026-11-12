@@ -720,12 +720,28 @@ footer a {
   outline: 2px solid var(--indigo);
   outline-offset: 1px;
 }
-.field input:disabled {
+.field input:disabled,
+.field select:disabled {
   background: #F1F2F5;
-  color: #9CA0B0;
+  color: #6B6F7E;
   cursor: not-allowed;
 }
-.form-card .btn-primary { width: 100%; margin-top: 6px; }
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  background: var(--white);
+}
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.check { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; font-size: 13px; line-height: 1.45; color: #454A5B; }
+.check input { margin-top: 2px; flex-shrink: 0; }
+.check label { cursor: not-allowed; }
+.link-off { text-decoration: underline; color: #454A5B; cursor: not-allowed; }
+.form-privacy { margin-top: 12px; font-size: 12px; color: var(--muted); }
+.form-card .btn-primary { width: 100%; margin-top: 6px; font-family: inherit; }
 .form-note { margin-top: 14px; font-size: 12px; color: var(--muted); }
 
 /* Standalone FAQ block (trial page): the article layout's own 64px bottom
