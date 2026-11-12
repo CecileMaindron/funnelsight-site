@@ -114,11 +114,26 @@
     if (!link || !isCta(link)) return;
     var url;
     try { url = new URL(link.href, location.href); } catch (err) { return; }
-    gtag('event', 'cta_click', {
+    var params = {
       'cta_location': locationOf(link),
       'cta_text': textOf(link),
       'cta_destination': url.origin === location.origin ? url.pathname : url.href,
       'transport_type': 'beacon'
-    });
+    };
+    /* A click that opens the link in a new tab, or a link to another site
+       opened in place, leaves this page alive: send the event and stop. */
+    var newTab = e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0 || link.target === '_blank';
+    if (newTab || e.defaultPrevented) { gtag('event', 'cta_click', params); return; }
+    /* Same tab: the page is about to unload. If Google's script hasn't
+       finished loading (a visitor who has just accepted the banner), the
+       event would be lost. Hold the navigation until the event is sent,
+       for one second at most. */
+    e.preventDefault();
+    var done = false;
+    function go() { if (!done) { done = true; location.href = link.href; } }
+    params.event_callback = go;
+    params.event_timeout = 1000;
+    gtag('event', 'cta_click', params);
+    setTimeout(go, 1200);
   });
 })();
