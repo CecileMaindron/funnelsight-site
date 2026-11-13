@@ -1056,6 +1056,18 @@ footer a {
 .rl-key { display: inline-block; width: 14px; height: 10px; border-radius: 2px; }
 .rl-narrow { display: none; }
 .cs-decisions-3 { grid-template-columns: repeat(3, 1fr); }
+.mu-stages { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; counter-reset: mu; }
+.mu-stages li { position: relative; background: var(--white); border: 1px solid var(--line); border-top: 4px solid #9AA0B2; border-radius: 8px; padding: 12px 10px 14px; display: flex; flex-direction: column; gap: 6px; }
+.mu-stages li + li::before { content: ""; position: absolute; left: -10px; top: 22px; width: 10px; height: 2px; background: var(--line); }
+.mu-ok { border-top-color: #2F8F57 !important; }
+.mu-fix { border-top-color: #C98A16 !important; }
+.mu-later { border-top-color: #9AA0B2 !important; }
+.mu-verdict { align-self: flex-start; white-space: nowrap; font-size: 10px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; }
+.mu-ok .mu-verdict { background: #E6F2EA; color: #1E6B3A; }
+.mu-fix .mu-verdict { background: #FBEAD0; color: #7A4F00; }
+.mu-later .mu-verdict { background: #EEF0F4; color: #4A4F5E; }
+.mu-q { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.3; color: var(--ink); }
+.mu-fig { font-size: 13px; line-height: 1.45; color: #5F6475; }
 .cs-ch { display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; margin-bottom: 2px; }
 .cs-was { display: block; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
 .cs-decisions p { font-size: 15px !important; margin: 0 !important; }
@@ -1712,6 +1724,12 @@ footer a {
   .rl-wide { display: none; }
   .rl-narrow { display: block; }
   .article .rl-legend { display: flex; }
+  .mu-stages { grid-template-columns: 1fr; gap: 8px; }
+  .mu-stages li { border-top-width: 1px; border-left: 4px solid #9AA0B2; }
+  .mu-stages li + li::before { left: 22px; top: -9px; width: 2px; height: 8px; }
+  .mu-ok { border-left-color: #2F8F57 !important; border-top-color: var(--line) !important; }
+  .mu-fix { border-left-color: #C98A16 !important; border-top-color: var(--line) !important; }
+  .mu-later { border-left-color: #9AA0B2 !important; border-top-color: var(--line) !important; }
   .fade-funnel { padding: 14px; }
   .fade-stage { grid-template-columns: 1fr auto; padding: 8px 10px; font-size: 13px; }
   .fade-vals { grid-column: 1 / -1; grid-row: 2; }
