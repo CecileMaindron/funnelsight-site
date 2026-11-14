@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What counts as user activation in product-led growth">
 <meta name="twitter:description" content="Activation isn&#x27;t sign-up or first login. Here&#x27;s what actually counts as activation in product-led growth, and how to define it for your own product.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-15">
+<link rel="stylesheet" href="/styles.css?v=2026-11-20">
 <script src="/assets/site.js?v=2026-11-15" defer></script>
 </head>
 <body>
@@ -85,25 +85,20 @@
 
   <h2>How to define activation for your product</h2>
   <p>Definitions vary from one company to the next, and some teams use the word for the whole path from sign-up to regular use. This page uses the most common meaning, the first time the product does its job for the user. It helps to place it between what comes before and what comes after:</p>
-  <ol class="step-list">
-    <li>
-      <span class="step-title">Setup</span>
-      <p>Creating an account, connecting a tool, importing data. These steps are needed, but the product hasn't done anything for the user yet.</p>
-    </li>
-    <li>
-      <span class="step-title">Activation</span>
-      <p>The product does its job once, end to end: a first report built from connected data, or a first project with a task assigned to a teammate. Many teams call it the aha moment, though the user may only be convinced a little later.</p>
-    </li>
-    <li>
-      <span class="step-title">Later signals</span>
-      <p>Regular use, more colleagues, more features. They show whether the user stays and whether the account might buy.</p>
-    </li>
-  </ol>
+  <figure class="act-path">
+    <p class="act-onb" aria-hidden="true">Onboarding</p>
+    <ol class="act-steps">
+      <li><span class="act-t">Setup</span><span class="act-d">Account created, a tool connected, data imported. The product hasn't done anything for the user yet.</span></li>
+      <li class="act-key"><span class="act-t">Activation</span><span class="act-d">The product does its job once, end to end. Often called the aha moment, though the user may be convinced a little later.</span></li>
+      <li><span class="act-t">Regular use</span><span class="act-d">The user comes back and uses more of the product. That's adoption.</span></li>
+      <li><span class="act-t">Buying signals</span><span class="act-d">An account in your target, more colleagues, visits to the pricing page. That's where a product qualified lead sits.</span></li>
+    </ol>
+  </figure>
   <p>To choose the event, ask what your product can't do for anyone without it, and pick the first time it does that, end to end. Every new user should be able to reach it in the first days, whatever they came for. Then check it against the users who left. If those who reach it don't stay more often than the others, look for a better event. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
 
   <h2>Where activation numbers go wrong</h2>
-  <p><strong>Each team counts its own.</strong> Product tracks feature use in the analytics tool, growth builds cohorts from exports, sales watches logins. None of the numbers agree, and the definition, written once in a slide, is never revisited.</p>
-  <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy or that a call would help. Many convinced users buy on their own, and some have no budget at all. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> adds what activation doesn't show: an account that fits your target, and signs of buying intent such as several colleagues invited or repeated visits to the pricing page.</p>
+  <p><strong>No one owns the step.</strong> Product counts an event in its analytics tool. Marketing reports trial-to-paid and skips the step between sign-up and payment. Sales sees new trials in the CRM, when it sees them at all. Activation ends up with several definitions, or none, and the one written in a slide is never revisited.</p>
+  <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy or that a call would help. Many convinced users buy on their own, and some have no budget at all. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> adds what activation doesn't show: an account that fits your target, and signs of buying intent.</p>
   <p><strong>The definition changes without a date.</strong> A feature moves, onboarding changes, a new plan adds a different first step, and the event that made sense a year ago no longer fits. Revisit it when the product changes, not every time the rate dips. When it does dip, <a href="/playbooks/time-to-value-tracking">time to value</a> helps tell a change in who signs up from a product that got harder. Date each change, so the break isn't read as a trend.</p>
 
   <h2>Following activation week by week</h2>
@@ -117,7 +112,7 @@
   <div class="article-faq">
     <details>
       <summary>Is activation the same as completing onboarding?</summary>
-      <p>No. Onboarding completion measures whether someone finished a set of steps you designed. Activation measures whether they experienced real value. A user can finish onboarding and never activate.</p>
+      <p>No. Onboarding is wider. It should get users to activation, then help them use more of the product. If many users start onboarding but never activate, the flow needs rework. Some skip it and activate anyway, which is fine.</p>
     </details>
     <details>
       <summary>What's the difference between activation and adoption?</summary>
@@ -125,7 +120,7 @@
     </details>
     <details>
       <summary>How soon after sign-up should activation happen?</summary>
-      <p>In the first days of the trial. Activation is the first step, not the end of the journey, so users who reach it usually do so early. A user still not there after a few days has run into something, whether it's the message that brought them, the fit with what they need, or the onboarding.</p>
+      <p>Ideally in the first session, or at least in the first few days. A self-serve trial assumes the product is simple enough to start alone. When activation takes longer, the user is usually stuck in setup, waiting for access they don't have yet, or on a configuration that takes more than one session.</p>
     </details>
     <details>
       <summary>Do I need engineering help to track activation?</summary>
@@ -142,7 +137,7 @@
         "name": "Is activation the same as completing onboarding?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Onboarding completion measures whether someone finished a set of steps you designed. Activation measures whether they experienced real value. A user can finish onboarding and never activate."
+          "text": "No. Onboarding is wider. It should get users to activation, then help them use more of the product. If many users start onboarding but never activate, the flow needs rework. Some skip it and activate anyway, which is fine."
         }
       },
       {
@@ -158,7 +153,7 @@
         "name": "How soon after sign-up should activation happen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "In the first days of the trial. Activation is the first step, not the end of the journey, so users who reach it usually do so early. A user still not there after a few days has run into something, whether it's the message that brought them, the fit with what they need, or the onboarding."
+          "text": "Ideally in the first session, or at least in the first few days. A self-serve trial assumes the product is simple enough to start alone. When activation takes longer, the user is usually stuck in setup, waiting for access they don't have yet, or on a configuration that takes more than one session."
         }
       },
       {
