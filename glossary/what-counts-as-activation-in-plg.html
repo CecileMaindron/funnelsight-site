@@ -69,7 +69,7 @@
 
 <article class="article wrap">
   <h1>What counts as user activation in product-led growth</h1>
-  <p class="lede-intro">Activation is the moment a new user experiences the value your product promised, not the moment they create an account. Sign-up and first login are the usual defaults, because they are easy to count. Neither tells you whether the product actually worked for that person.</p>
+  <p class="lede-intro">Activation is the moment a new user first gets real value from the product, when it does the job they came for. It isn't the moment they create an account. Sign-up and first login are the usual defaults, because they are easy to count. Neither tells you whether the product actually worked for that person.</p>
 
   <h2>How to calculate the activation rate</h2>
   <p>Once the activation event is chosen, the calculation is simple:</p>
@@ -84,30 +84,26 @@
   <p>Activation doesn't guarantee a sale. Some customers buy without touching the trial, and some contracts renew with little use. But users who never activate are much less likely to pay or stay.</p>
 
   <h2>How to define activation for your product</h2>
-  <p>No event counts as activation across every product. For a project management tool, it might mean inviting a teammate and assigning a task. For an analytics tool, connecting a data source and viewing a first real report. Start from retention, not from your onboarding flow, and work backward:</p>
+  <p>Definitions vary from one company to the next, and some teams use the word for the whole path from sign-up to regular use. This page uses the most common meaning, the first time the product does its job for the user. It helps to place it between what comes before and what comes after:</p>
   <ol class="step-list">
     <li>
-      <span class="step-title">Start from the users who stayed</span>
-      <p>Take the accounts that kept using the product and became customers, not the ones who finished onboarding.</p>
+      <span class="step-title">Setup</span>
+      <p>Creating an account, connecting a tool, importing data. These steps are needed, but the product hasn't done anything for the user yet.</p>
     </li>
     <li>
-      <span class="step-title">Find the action they share</span>
-      <p>Look for the action, or short sequence of actions, that shows up consistently among them in their first days.</p>
+      <span class="step-title">Activation</span>
+      <p>The product does its job once, end to end: a first report built from connected data, or a first project with a task assigned to a teammate. Many teams call it the aha moment, though the user may only be convinced a little later.</p>
     </li>
     <li>
-      <span class="step-title">Check it against the users who left</span>
-      <p>A good activation event is rare among accounts that churned. If everyone does it, it doesn't separate anything.</p>
-    </li>
-    <li>
-      <span class="step-title">Prefer a repeated action to a single step</span>
-      <p>A completed setup step is rarely enough. The first action that resembles everyday use of the product is usually a better signal, and <a href="/playbooks/tracking-feature-adoption-plg-teams">feature adoption rate</a> shows how to read each feature against revenue, from trial to renewal.</p>
+      <span class="step-title">Later signals</span>
+      <p>Regular use, more colleagues, more features. They show whether the user stays and whether the account might buy.</p>
     </li>
   </ol>
-  <p>Slack is the best-known example. Its team found that almost all the teams that had exchanged around 2,000 messages kept using the product. A strong activation event is something your best-retained accounts do repeatedly, not something everyone does once during sign-up. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
+  <p>To choose the event, ask what your product can't do for anyone without it, and pick the first time it does that, end to end. Every new user should be able to reach it in the first days, whatever they came for. Then check it against the users who left. If those who reach it don't stay more often than the others, look for a better event. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
 
   <h2>Where activation numbers go wrong</h2>
   <p><strong>Each team counts its own.</strong> Product tracks feature use in the analytics tool, growth builds cohorts from exports, sales watches logins. None of the numbers agree, and the definition, written once in a slide, is never revisited.</p>
-  <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy. Sending every activated user to sales floods reps with people who are simply using the product. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> usually adds signs of buying intent, such as several colleagues invited or repeated visits to the pricing page.</p>
+  <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy or that a call would help. Many convinced users buy on their own, and some have no budget at all. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> adds what activation doesn't show: an account that fits your target, and signs of buying intent such as several colleagues invited or repeated visits to the pricing page.</p>
   <p><strong>The definition changes without a date.</strong> A feature moves, onboarding changes, a new plan adds a different first step, and the event that made sense a year ago no longer fits. Revisit it when the product changes, not every time the rate dips. When it does dip, <a href="/playbooks/time-to-value-tracking">time to value</a> helps tell a change in who signs up from a product that got harder. Date each change, so the break isn't read as a trend.</p>
 
   <h2>Following activation week by week</h2>
@@ -129,7 +125,7 @@
     </details>
     <details>
       <summary>How soon after sign-up should activation happen?</summary>
-      <p>Before the trial ends. Look at when your retained accounts reached the event. If most did it within three days, a user still not there by day seven needs attention, and a trial much shorter than that window cuts off users who would have activated.</p>
+      <p>In the first days of the trial. Activation is the first step, not the end of the journey, so users who reach it usually do so early. A user still not there after a few days has run into something, whether it's the message that brought them, the fit with what they need, or the onboarding.</p>
     </details>
     <details>
       <summary>Do I need engineering help to track activation?</summary>
@@ -162,7 +158,7 @@
         "name": "How soon after sign-up should activation happen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Before the trial ends. Look at when your retained accounts reached the event. If most did it within three days, a user still not there by day seven needs attention, and a trial much shorter than that window cuts off users who would have activated."
+          "text": "In the first days of the trial. Activation is the first step, not the end of the journey, so users who reach it usually do so early. A user still not there after a few days has run into something, whether it's the message that brought them, the fit with what they need, or the onboarding."
         }
       },
       {
