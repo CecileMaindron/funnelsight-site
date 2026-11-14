@@ -71,12 +71,20 @@
   <h1>What counts as user activation in product-led growth</h1>
   <p class="lede-intro">Activation is the moment a new user experiences the value your product promised, not the moment they create an account. Sign-up and first login are the usual defaults, because they are easy to count. Neither tells you whether the product actually worked for that person.</p>
 
-  <h2>Why "activation" resists a single definition</h2>
-  <p>A project management tool and an analytics tool don't activate the same way. For one, activation might mean inviting a teammate and assigning a task. For the other, connecting a data source and viewing a first real report. No event counts as activation across every product, which is why so many teams end up tracking the wrong one by default.</p>
-  <p>Login counts are easy to pull from any system, so they become the fallback metric. On their own, they say almost nothing: a user can log in five times without ever touching the feature that makes your product worth paying for.</p>
+  <h2>How to calculate the activation rate</h2>
+  <p>Once the activation event is chosen, the calculation is simple:</p>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Activation rate (%) = (number of users who completed the activation event ÷ total new sign-ups) × 100</p>
+  </div>
+  <p>Teams rarely disagree on the formula. They disagree on the event in the numerator.</p>
+
+  <h2>Why track activation</h2>
+  <p>Before a trial can convert, the user has to use the product. A low activation rate is an early warning, weeks before conversion figures are in. The message may have brought the wrong people, the product may not fit that segment, or onboarding may lose users before their first useful result.</p>
+  <p>Activation doesn't guarantee a sale. Some customers buy without touching the trial, and some contracts renew with little use. But users who never activate are much less likely to pay or stay.</p>
 
   <h2>How to define activation for your product</h2>
-  <p>Start from retention, not from your onboarding flow, and work backward:</p>
+  <p>No event counts as activation across every product. For a project management tool, it might mean inviting a teammate and assigning a task. For an analytics tool, connecting a data source and viewing a first real report. Start from retention, not from your onboarding flow, and work backward:</p>
   <ol class="step-list">
     <li>
       <span class="step-title">Start from the users who stayed</span>
@@ -95,25 +103,15 @@
       <p>A completed setup step is rarely enough. The first action that resembles everyday use of the product is usually a better signal, and <a href="/playbooks/tracking-feature-adoption-plg-teams">feature adoption rate</a> shows how to read each feature against revenue, from trial to renewal.</p>
     </li>
   </ol>
+  <p>Slack is the best-known example. Its team found that almost all the teams that had exchanged around 2,000 messages kept using the product. A strong activation event is something your best-retained accounts do repeatedly, not something everyone does once during sign-up. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
 
-  <h2>What this looks like for real products</h2>
-  <p>Slack is the best-known example: its team found that almost all the teams that had exchanged around 2,000 messages kept using the product. The principle carries over: a strong activation event is something your best-retained accounts do repeatedly, not something everyone does once during sign-up. <a href="https://productled.com/book/playbook/chapter-7-actionable-data" target="_blank" rel="noopener">Wes Bush's ProductLed Playbook</a> breaks this down further if you want the full framework.</p>
+  <h2>Where activation numbers go wrong</h2>
+  <p><strong>Each team counts its own.</strong> Product tracks feature use in the analytics tool, growth builds cohorts from exports, sales watches logins. None of the numbers agree, and the definition, written once in a slide, is never revisited.</p>
+  <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy. Sending every activated user to sales floods reps with people who are simply using the product. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> usually adds signs of buying intent, such as several colleagues invited or repeated visits to the pricing page.</p>
+  <p><strong>The definition changes without a date.</strong> A feature moves, onboarding changes, a new plan adds a different first step, and the event that made sense a year ago no longer fits. Revisit it when the product changes, not every time the rate dips. When it does dip, <a href="/playbooks/time-to-value-tracking">time to value</a> helps tell a change in who signs up from a product that got harder. Date each change, so the break isn't read as a trend.</p>
 
-  <h2>Why teams end up with three activation numbers</h2>
-  <p>A product manager tracks feature adoption in the analytics tool. A growth marketer builds cohort views in a spreadsheet from raw exports. Sales watches login frequency as a rough proxy for interest. None of these numbers agree. Activation then gets defined once, in a slide, and isn't revisited as the product changes.</p>
-  <p>Once a team agrees on one event, the calculation is simple:</p>
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>Activation rate (%) = (number of users who completed the activation event ÷ total new sign-ups) × 100</p>
-  </div>
-  <p>The formula isn't the hard part. Getting three tools to agree on the numerator is.</p>
-
-  <h2>Keep the definition stable as the product changes</h2>
-  <p>An activation event that made sense a year ago can drift: a feature moves, onboarding changes, a new plan adds a different first step. Revisit the definition when the product changes, not every time the rate dips. When the rate does dip, <a href="/playbooks/time-to-value-tracking">time to value</a> helps tell a change in who signs up from a product that got harder. When you do change the definition, write down the date and the reason, and compare the old and new rates over the same weeks before reading a trend across the break.</p>
-
-  <h2>How Funnelsight fits</h2>
-  <p>In Funnelsight, you define the activation event once from product usage data, and every report uses that same definition, including the activation and retention dashboard. You can follow it through to trial conversion and revenue without exporting anything to a spreadsheet. When the definition changes, the change is logged, and past periods are either recalculated or the break is clearly marked.</p>
-  <p>Say a team decides activation means a new account has connected at least one data source and invited a second teammate within five days. In Funnelsight, that is one funnel step, not a formula split across two tools and reconciled by hand. The team can see each week what share of trials reach it, and whether that share is moving. The same event is often the first signal behind a product qualified lead.</p>
+  <h2>Following activation week by week</h2>
+  <p>In Funnelsight, the activation event you define becomes one step of the funnel, and every report uses it. Each week, the share of new sign-ups that reach it is compared with its usual range, and flagged when it falls outside. Because activation sits in the same funnel as paid conversion and revenue, you see what happens to the users who activated, not only how many did.</p>
 
   <div class="article-cta">
     <p>See how Funnelsight tracks the activation event you define, not a default metric that happens to be easy to pull.</p>
@@ -131,7 +129,7 @@
     </details>
     <details>
       <summary>How soon after sign-up should activation happen?</summary>
-      <p>It depends on the product, and no fixed window applies everywhere. What matters more than timing is whether the event you chose actually separates the users who stay from the ones who leave.</p>
+      <p>Before the trial ends. Look at when your retained accounts reached the event. If most did it within three days, a user still not there by day seven needs attention, and a trial much shorter than that window cuts off users who would have activated.</p>
     </details>
     <details>
       <summary>Do I need engineering help to track activation?</summary>
@@ -164,7 +162,7 @@
         "name": "How soon after sign-up should activation happen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It depends on the product, and no fixed window applies everywhere. What matters more than timing is whether the event you chose actually separates the users who stay from the ones who leave."
+          "text": "Before the trial ends. Look at when your retained accounts reached the event. If most did it within three days, a user still not there by day seven needs attention, and a trial much shorter than that window cuts off users who would have activated."
         }
       },
       {
