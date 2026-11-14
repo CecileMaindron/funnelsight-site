@@ -123,7 +123,7 @@
   <p>Take 100 customers paying $100 a month: $10,000 in total. Raise the price by 10%, and if nobody leaves, you make $11,000. If 9 customers leave, the 91 who stay pay $10,010, about what you made before. So with a 10% increase, you can lose up to about 9% of the customers concerned and still come out even. With a 20% increase, about 17%.</p>
   <p>Agree on that margin before the change, then compare the departures that follow with it. On annual contracts, wait for the renewals to see the effect. Changing how you charge, from a price per user to a price based on usage for example, raises some bills and lowers others. The customers whose bill goes up are the ones likely to leave, so look at them account by account before the switch.</p>
 
-  <h2>When churn rises, check the mix before the strategy</h2>
+  <h2>What to check first in a churn analysis</h2>
   <p>Before concluding that something is wrong, check whether one of these explains the rise.</p>
   <ul class="check-list churn-checks">
     <li><span class="check-status check-ok">Mix</span><span class="check-name">You won more new customers than usual. New customers leave more often in their first months, so churn rises with them.</span></li>
@@ -140,15 +140,15 @@
 
   <div class="article-faq">
     <details>
-      <summary>How do I calculate an annual churn rate from a monthly one?</summary>
-      <p>Compound it rather than multiplying by twelve: annual churn ≈ 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, against 36% if you multiply, because customers who have already left can't leave a second time. Once you have twelve months of real data, calculate the annual rate directly.</p>
+      <summary>How do you calculate an annual churn rate?</summary>
+      <p>Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%.</p>
     </details>
     <details>
       <summary>What's the average churn rate in B2B SaaS?</summary>
       <p>Recent surveys measure it in revenue. <a href="https://www.saas-capital.com/research/saas-retention-benchmarks-for-private-b2b-companies/" target="_blank" rel="noopener">SaaS Capital's 2025 survey</a> of more than 1,000 private B2B SaaS companies puts median gross revenue retention at 91%, so about 9% of revenue lost in a year, and 95% for companies whose contracts exceed $250k a year. Customer churn usually runs higher than revenue churn, since small customers leave more often. Compare yourself with companies selling at a similar contract size, and above all with your own trend.</p>
     </details>
     <details>
-      <summary>Is churn rate the same as retention rate?</summary>
+      <summary>What's the difference between churn rate and retention rate?</summary>
       <p>They are two sides of the same measure. Over the same period and on the same base, churn rate is 100% minus retention rate. Net revenue retention is different: it adds expansion, so it can go above 100%.</p>
     </details>
   </div>
@@ -159,10 +159,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I calculate an annual churn rate from a monthly one?",
+        "name": "How do you calculate an annual churn rate?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Compound it rather than multiplying by twelve: annual churn ≈ 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, against 36% if you multiply, because customers who have already left can't leave a second time. Once you have twelve months of real data, calculate the annual rate directly."
+          "text": "Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%."
         }
       },
       {
@@ -175,7 +175,7 @@
       },
       {
         "@type": "Question",
-        "name": "Is churn rate the same as retention rate?",
+        "name": "What's the difference between churn rate and retention rate?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "They are two sides of the same measure. Over the same period and on the same base, churn rate is 100% minus retention rate. Net revenue retention is different: it adds expansion, so it can go above 100%."
