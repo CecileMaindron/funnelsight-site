@@ -762,6 +762,7 @@ footer a {
    ========================================================================== */
 .article { padding: 96px 0 64px; max-width: 720px; }
 .article h1 { font-size: 40px; margin-bottom: 20px; }
+.article .article-meta { font-size: 14px; color: var(--muted); margin: -8px 0 20px; }
 .article .lede-intro { font-size: 18px; color: #454A5B; margin-bottom: 40px; }
 .article h2 { font-size: 26px; margin: 40px 0 16px; }
 .article h3 { font-size: 19px; margin: 28px 0 10px; }
@@ -1011,6 +1012,7 @@ footer a {
 .cs-hero { background: var(--indigo); color: var(--white); border-radius: 12px; padding: 36px 36px 30px; margin-bottom: 20px; }
 .cs-hero h1 { color: var(--white); margin-bottom: 14px; }
 .cs-eyebrow { font-size: 13px !important; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #E8C67F !important; margin-bottom: 12px !important; }
+.article .cs-hero .article-meta { color: #C9C6E0; margin: -4px 0 14px; }
 .cs-summary { font-size: 18px !important; color: #E9E8F3 !important; margin-bottom: 14px !important; }
 .cs-fiction { font-size: 13px !important; color: #C9C6E0 !important; margin: 0 !important; }
 .cs-results { list-style: none; padding: 0; margin: 0 0 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
