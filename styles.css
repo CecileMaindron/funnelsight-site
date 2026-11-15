@@ -1283,6 +1283,27 @@ footer a {
 .lm-stage { display: block; background: var(--indigo); color: var(--white); font-weight: 600; font-size: 14px; border-radius: 6px; padding: 8px 10px; text-align: center; }
 .lm-step:not(:last-child) .lm-stage::after { content: "\203A"; position: absolute; top: 5px; right: -10px; font-size: 18px; line-height: 1; color: var(--muted); }
 .lm-source { display: block; flex: 1; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 13.5px; line-height: 1.4; color: #2A2D3B; }
+.lm-steps-3 { grid-template-columns: repeat(3, 1fr); }
+.lm-when { display: block; margin-top: 8px; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+.plg-table th.num, .plg-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.plg-table .row-total th, .plg-table .row-total td { font-weight: 700; border-top: 2px solid var(--line); }
+.article .slope-card { margin: 16px 0 24px; padding: 16px; }
+@media (max-width: 600px) {
+  .plg-table { font-size: 13px; }
+  .plg-table th, .plg-table td { padding: 8px 6px; }
+  .plg-table th.num, .plg-table td.num { white-space: normal; }
+  .article .slope-card { padding: 8px; }
+}
+.slope { display: block; width: 100%; max-width: 460px; margin: 0 auto; height: auto; font-family: inherit; }
+.slope .sl-head { font-size: 12.5px; font-weight: 600; fill: var(--muted); }
+.slope .sl-axis { stroke: var(--line); stroke-width: 1.5; }
+.slope line.sl-hi, .slope line.sl-hi2, .slope line.sl-lo { stroke-width: 2.5; }
+.slope .sl-hi { stroke: var(--indigo); fill: var(--indigo); }
+.slope .sl-hi2 { stroke: var(--accent); fill: var(--accent); }
+.slope .sl-lo { stroke: #B9BCC8; fill: #B9BCC8; }
+.slope .sl-name { font-size: 14px; fill: var(--ink); }
+.slope .sl-hit, .slope .sl-hi2t { font-weight: 700; }
+.slope .sl-lot { fill: var(--muted); }
 .lm-source-decision { background: var(--white); border: 1.5px dashed var(--accent); }
 .lm-tag { display: block; width: fit-content; font-size: 11px; font-weight: 700; color: #7A4F00; background: #FBEAD0; border-radius: 4px; padding: 1px 6px; margin-bottom: 4px; }
 @media (max-width: 600px) {
@@ -1854,14 +1875,19 @@ footer a {
 .act-path { margin: 28px 0; display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 10px; row-gap: 8px; }
 .act-path .act-onb { grid-column: 1 / 4; grid-row: 1; margin: 0; padding-top: 6px; border-top: 3px solid var(--indigo); font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--indigo); }
 .act-steps { display: contents; list-style: none; }
-.act-steps li { grid-row: 2; background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 6px; }
-.act-steps li.act-key { border: 2px solid var(--indigo); }
-.act-t { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; color: var(--ink); }
-.act-d { font-size: 13px; line-height: 1.45; color: var(--muted); }
+.act-steps li { grid-row: 2; display: flex; flex-direction: column; gap: 8px; position: relative; }
+.article .act-steps li { margin: 0; }
+.act-t { display: block; background: var(--indigo); color: var(--white); font-weight: 600; font-size: 14px; border-radius: 6px; padding: 8px 10px; text-align: center; }
+.act-steps li:not(:last-child) .act-t::after { content: "\203A"; position: absolute; top: 5px; right: -9px; font-size: 18px; line-height: 1; color: var(--muted); }
+.act-d { display: block; flex: 1; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 13.5px; line-height: 1.4; color: #2A2D3B; }
+.act-steps li.act-key .act-d { background: var(--white); border: 1.5px dashed var(--accent); }
 @media (max-width: 600px) {
   .act-path { grid-template-columns: 22px 1fr; column-gap: 10px; }
   .act-path .act-onb { grid-column: 1; grid-row: 1 / 4; padding: 0 0 0 4px; border-top: 0; border-left: 3px solid var(--indigo); writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; }
   .act-steps li { grid-column: 2; grid-row: auto; }
+  .act-steps li { gap: 4px; }
+  .act-t { background: none; color: var(--indigo); text-align: left; padding: 0; }
+  .act-steps li:not(:last-child) .act-t::after { content: none; }
 }
 
 /* PQL glossary: signals list and routing in dots */
