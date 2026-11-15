@@ -5,17 +5,17 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Start tracking your PLG funnel</title>
-<meta name="description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
+<meta name="description" content="Start tracking your PLG funnel with three metrics read by source: sign-ups, activation and trial-to-paid. Where each one lives, and how to link activation to the source.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Start tracking your PLG funnel">
-<meta property="og:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
+<meta property="og:description" content="Start tracking your PLG funnel with three metrics read by source: sign-ups, activation and trial-to-paid. Where each one lives, and how to link activation to the source.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-plg-funnel-without-data-team">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start tracking your PLG funnel">
-<meta name="twitter:description" content="Start tracking your PLG funnel from two exports: which sources bring users who activate, where each step's data lives, what you'll need help with, and when a spreadsheet stops being enough.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-15">
+<meta name="twitter:description" content="Start tracking your PLG funnel with three metrics read by source: sign-ups, activation and trial-to-paid. Where each one lives, and how to link activation to the source.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-22">
 <script src="/assets/site.js?v=2026-11-15" defer></script>
 </head>
 <body>
@@ -68,45 +68,75 @@
 
 <article class="article wrap">
   <h1>Start tracking your PLG funnel</h1>
-  <p class="lede-intro">A first funnel view takes two exports and one definition your team agrees on. With access to the right data, it can be ready the same day.</p>
+  <p class="lede-intro">To start tracking a PLG funnel, three metrics are enough: sign-ups, activation and trial-to-paid conversion, each read by source. A channel can bring plenty of sign-ups and few paying customers, and only the three together show it. The other metrics in the <a href="/playbooks/funnel-metrics-cheat-sheet">funnel metrics cheat sheet</a> can wait until these are in place.</p>
 
-  <h2>A first view, built in an afternoon</h2>
-  <p>A growth marketer exports last month's sign-ups from the CRM, with the source of each one, and a usage export from the product. The team has agreed that a user is activated once they share a first project with a teammate within 14 days. Both files go into Funnelsight as a spreadsheet and are matched on each user's email. When the usage export has no email, which is common for privacy reasons, the match runs on the user ID the product assigns, as long as the CRM stores it too. Sign-ups with no recorded source stay in the view, labelled as such, rather than disappearing. The view below is ready before the end of the afternoon.</p>
-  <table class="data-table bar-table lifetime-table">
-    <caption>Last month's sign-ups by source, and how many activated within 14 days. Illustrative data</caption>
-    <thead>
-      <tr><th scope="col">Source</th><th scope="col">Users<span class="lifetime-key"><span class="key key-leads" aria-hidden="true"></span>Signed up <span class="key key-revenue key-inline" aria-hidden="true"></span>Activated</span></th><th scope="col">Activation rate</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">Organic search</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 100%"></span></span><span class="bar-value">480</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 38%"></span></span><span class="bar-value bar-value-strong">182</span></span></span></td><td class="num">38%</td></tr>
-      <tr><th scope="row">Paid search</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 62%"></span></span><span class="bar-value">300</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 12%"></span></span><span class="bar-value bar-value-strong">60</span></span></span></td><td class="num">20%</td></tr>
-      <tr><th scope="row">Social</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 50%"></span></span><span class="bar-value">240</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 8%"></span></span><span class="bar-value bar-value-strong">36</span></span></span></td><td class="num">15%</td></tr>
-      <tr><th scope="row">Referrals</th><td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 38%"></span></span><span class="bar-value">180</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" style="width: 19%"></span></span><span class="bar-value bar-value-strong">90</span></span></span></td><td class="num">50%</td></tr>
-    </tbody>
-  </table>
-  <p>Paid search brings more sign-ups than referrals, yet fewer of its users activate: 60 against 90. Ad platforms learn to find the people most likely to sign up, who aren't always the ones who go on to use the product. A report that stops at sign-ups would send more of next month's budget to paid search. Referrals, where half the users activate, would get none of the attention. The same usage export, taken again a few weeks later, shows whether those activated users stay. The <a href="/playbooks/funnel-metrics-cheat-sheet">funnel metrics cheat sheet</a> lists what to add next, and how long each metric takes to read.</p>
-
-  <h2>Where each step's data lives</h2>
+  <h2>The three metrics to start with</h2>
   <div class="layer-map">
-    <p class="lm-title">Each step of the funnel, and where its data comes from</p>
-    <ol class="lm-steps">
-      <li class="lm-step"><span class="lm-stage">Visit</span><span class="lm-source">Campaign tags on each link, saved with the sign-up</span></li>
-      <li class="lm-step"><span class="lm-stage">Sign-up</span><span class="lm-source">The CRM or the sign-up database, with each user's source</span></li>
-      <li class="lm-step"><span class="lm-stage">Activation</span><span class="lm-source lm-source-decision"><span class="lm-tag">Your decision</span>A usage export, read against the event your team chose</span></li>
-      <li class="lm-step"><span class="lm-stage">Still active</span><span class="lm-source">The same usage export, a few weeks later</span></li>
-      <li class="lm-step"><span class="lm-stage">Paying</span><span class="lm-source">Billing, or the CRM</span></li>
+    <p class="lm-title">Three metrics, each read by source</p>
+    <ol class="lm-steps lm-steps-3">
+      <li class="lm-step"><span class="lm-stage">Sign-ups</span><span class="lm-source">The CRM or the sign-up database, with the source of each user<span class="lm-when">Readable from day one</span></span></li>
+      <li class="lm-step"><span class="lm-stage">Activation</span><span class="lm-source lm-source-decision"><span class="lm-tag">Needs a link to the source</span>Product analytics, on the event your team chose<span class="lm-when">Readable after the first week</span></span></li>
+      <li class="lm-step"><span class="lm-stage">Trial-to-paid</span><span class="lm-source">Billing or the CRM, in customers and in new MRR<span class="lm-when">Readable once a full trial has ended</span></span></li>
     </ol>
   </div>
-  <p>Activation is the one step you can't export. It's a decision, and the one most likely to cause arguments later, so it's worth settling first. <a href="/glossary/what-counts-as-activation-in-plg">What counts as activation in PLG</a> walks through how to choose it.</p>
+  <p>Sign-ups and paying customers usually sit in the CRM, next to the source of each user. Activation sits in the product, which rarely knows where a user came from. That makes it the step that takes the most work.</p>
+  <p>The activation event is also a decision your team has to agree on before reading anything. <a href="/glossary/what-counts-as-activation-in-plg">What counts as activation in PLG</a> walks through how to choose it.</p>
 
-  <h2>No product analytics tool yet?</h2>
-  <p>A product analytics tool isn't a prerequisite, and it comes with its own work. Someone has to instrument the product so it sends clean events, and depending on the country, users may have to consent before they're tracked. Until then, other signals can stand in for usage.</p>
+  <h2>Why read each metric by source</h2>
+  <p>Take September's sign-ups, read in mid-October once every 14-day trial has ended. A user counts as activated once they complete a first project within 7 days.</p>
+  <table class="data-table plg-table">
+    <caption>September's sign-ups by source, followed to the end of their trial. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Source</th><th scope="col" class="num">Sign-ups</th><th scope="col" class="num">Activated</th><th scope="col" class="num">Paying customers</th><th scope="col" class="num">New MRR</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Paid search</th><td class="num">450</td><td class="num">171 (38%)</td><td class="num">45 (10%)</td><td class="num">$9,000</td></tr>
+      <tr><th scope="row">Organic search</th><td class="num">380</td><td class="num">198 (52%)</td><td class="num">68 (18%)</td><td class="num">$16,320</td></tr>
+      <tr><th scope="row">LinkedIn ads</th><td class="num">120</td><td class="num">40 (33%)</td><td class="num">10 (8%)</td><td class="num">$3,000</td></tr>
+      <tr><th scope="row">Referrals</th><td class="num">120</td><td class="num">78 (65%)</td><td class="num">34 (28%)</td><td class="num">$9,520</td></tr>
+      <tr class="row-total"><th scope="row">All sources</th><td class="num">1,070</td><td class="num">487 (46%)</td><td class="num">157 (15%)</td><td class="num">$37,840</td></tr>
+    </tbody>
+  </table>
+  <figure class="ui-card slope-card" role="img" aria-label="Share of sign-ups and share of new MRR by source. Paid search falls from 42% of sign-ups to 24% of new MRR, referrals rise from 11% to 25%, organic search rises from 36% to 43%, LinkedIn ads fall from 11% to 8%.">
+    <svg viewBox="0 0 450 252" class="slope">
+      <text class="sl-head" x="156" y="18" text-anchor="middle">Share of sign-ups</text>
+      <text class="sl-head" x="288" y="18" text-anchor="middle">Share of new MRR</text>
+      <line class="sl-axis" x1="156" y1="30" x2="156" y2="240"/>
+      <line class="sl-axis" x1="288" y1="30" x2="288" y2="240"/>
+      <line class="sl-lo" x1="156" y1="72.0" x2="288" y2="40.9"/>
+      <circle class="sl-lo" cx="156" cy="72.0" r="4"/><circle class="sl-lo" cx="288" cy="40.9" r="4"/>
+      <line class="sl-lo" x1="156" y1="183.1" x2="288" y2="196.4"/>
+      <circle class="sl-lo" cx="156" cy="183.1" r="4"/><circle class="sl-lo" cx="288" cy="196.4" r="4"/>
+      <line class="sl-hi" x1="156" y1="45.3" x2="288" y2="125.3"/>
+      <circle class="sl-hi" cx="156" cy="45.3" r="4"/><circle class="sl-hi" cx="288" cy="125.3" r="4"/>
+      <line class="sl-hi2" x1="156" y1="183.1" x2="288" y2="120.9"/>
+      <circle class="sl-hi2" cx="156" cy="183.1" r="4"/><circle class="sl-hi2" cx="288" cy="120.9" r="4"/>
+      <text class="sl-name sl-hit" x="144" y="49.3" text-anchor="end">Paid search 42%</text>
+      <text class="sl-name sl-hit" x="300" y="137.3">24% Paid search</text>
+      <text class="sl-name sl-lot" x="144" y="76.0" text-anchor="end">Organic search 36%</text>
+      <text class="sl-name sl-lot" x="300" y="44.9">43% Organic search</text>
+      <text class="sl-name sl-lot" x="144" y="180.1" text-anchor="end">LinkedIn ads 11%</text>
+      <text class="sl-name sl-lot" x="300" y="200.4">8% LinkedIn ads</text>
+      <text class="sl-name sl-hi2t" x="144" y="196.1" text-anchor="end">Referrals 11%</text>
+      <text class="sl-name sl-hi2t" x="300" y="119.9">25% Referrals</text>
+    </svg>
+  </figure>
+  <p>Paid search brings 42% of the month's sign-ups and 24% of its new MRR, slightly less than referrals, which brought about a quarter as many sign-ups. Ad platforms learn to find the people most likely to sign up, who aren't always the ones who go on to use the product. A report that stopped at sign-ups would move next month's budget toward paid search.</p>
+  <p>Activation shows the gap within a week, long before the first payments. Trial-to-paid confirms it once the trials have ended.</p>
+
+  <h2>Linking activation to the source</h2>
+  <p>The source is recorded when a user signs up. Activation is recorded in the product, a few days later. To read one by the other, both records need a key they share.</p>
   <ul>
-    <li><strong>The product's own database,</strong> which already records what accounts create, connect or configure.</li>
-    <li><strong>Light tracking on the web app,</strong> when the product runs online.</li>
-    <li><strong>Requests that can only come from inside the product,</strong> such as a form that only appears after a few days of use. When one arrives, it confirms the user got that far.</li>
-    <li><strong>A thank-you page after a download,</strong> where a visit confirms the download started and a short form can tell you who it was.</li>
+    <li><strong>Save the source with the sign-up.</strong> The campaign tags on the link the user clicked are stored with the new account, not only in web analytics. Otherwise the source is lost before the product ever sees the user.</li>
+    <li><strong>Keep the same user ID on both sides.</strong> The product assigns an ID at sign-up. When the CRM stores it too, every product event can be traced back to a source. The email can serve instead, but product analytics tools often avoid storing it for privacy reasons.</li>
+    <li><strong>Attach each user to their company.</strong> In B2B, several people from the same company can sign up from different sources. <a href="/glossary/user-level-vs-account-level-analytics">Matching users to accounts</a> lets you read activation and trial-to-paid per company as well as per user.</li>
   </ul>
+  <p>Sign-ups with no recorded source stay in the view, labelled as such. If their share grows, a tag is missing somewhere upstream.</p>
+  <p>Without a product analytics tool, the product's own database already records what each account creates, connects or configures. An extract with the user ID is enough to read activation until the product sends clean events.</p>
+
+  <h2>Reading trial-to-paid in customers and in revenue</h2>
+  <p>Trial-to-paid is the share of trials that become paying customers. Read it only once every trial in the period has ended. With a 14-day trial, users who signed up on 30 September decide in mid-October. Read earlier, the rate looks lower than it is, and lowest for the sources that grew late in the month.</p>
+  <p>Count new MRR next to customers, because plans differ from one source to another. In the example, LinkedIn ads bring the fewest customers, on plans worth $300 a month on average against $200 for paid search. Per sign-up, they bring in more revenue than paid search. Whether that makes them the better channel depends on what each sign-up costs, the next metric to add.</p>
 
   <h2>What you can do alone, and where you'll need help</h2>
   <p>You can start alone, but the data belongs to several teams and comes with rules, so part of the work needs someone else.</p>
@@ -114,36 +144,36 @@
     <div class="scope-list scope-yes">
       <h3>You can do yourself</h3>
       <ul>
-        <li>Lay out the funnel steps and propose an activation event</li>
-        <li>Import the exports and check how they match</li>
+        <li>Choose the sources to compare</li>
+        <li>Propose an activation event</li>
+        <li>Connect the CRM, product analytics and billing once you have access</li>
         <li>Read the view and compare sources</li>
-        <li>List what the view can't see yet</li>
       </ul>
     </div>
     <div class="scope-list scope-help">
       <h3>You'll need someone else for</h3>
       <ul>
-        <li>Access to the CRM and product exports, often granted by an admin</li>
-        <li>Knowing which fields to export, such as the user ID the product assigns, and what each one means</li>
+        <li>Access to the CRM, product analytics and billing, often granted by an admin</li>
         <li>Agreement on the activation event from the teams that use it</li>
+        <li>Saving the campaign tags and the user ID with each sign-up, if the form doesn't yet</li>
         <li>Recording an event the product doesn't capture yet</li>
-        <li>The data rules: an export holds personal data, so keep only the columns you need, store it where access is limited, and delete it once imported</li>
+        <li>The data rules: user records hold personal data, so bring in only the fields the view needs and limit who can see it</li>
       </ul>
     </div>
   </div>
 
   <h2>From a first view to a weekly one</h2>
-  <p>You could get a similar first view from a spreadsheet or a one-off import. It stops being enough once several teams report on the same funnel every week, and a few signs point to that moment:</p>
+  <p>A first view can come from a spreadsheet. It stops being enough once several teams report on the same funnel every week, and a few signs point to that moment:</p>
   <ul>
     <li>Someone spends a morning every week rebuilding the same view.</li>
     <li>Two people get two different activation numbers from the same file.</li>
     <li>A column moved and broke the formulas, and nobody noticed until a meeting.</li>
     <li>Leadership asks for a trend, and the history only goes back to the last rebuild.</li>
   </ul>
-  <p>A dedicated tool doesn't fix the data it receives. Campaigns still need consistent tags, and the activation event still needs the teams' agreement. What changes is that those rules are written once and applied to every report, and that a live connection replaces the manual re-import. In Funnelsight, the activation and retention dashboard then updates on its own schedule.</p>
+  <p>A dedicated tool doesn't fix the data it receives. Campaigns still need consistent tags, and the activation event still needs the teams' agreement. What changes is that those rules are written once and applied to every report. In Funnelsight, the <a href="/features/activation-retention-dashboard-plg-teams">activation and retention dashboard</a> follows the three metrics by source every week. Once spend is connected or imported, cost per paying customer comes next.</p>
 
   <div class="article-cta">
-    <p>See which sources bring users who activate, from your first import.</p>
+    <p>See sign-ups, activation and trial-to-paid by source in one view.</p>
     <a href="/trial" class="btn-primary accent">Start free trial</a>
   </div>
 
