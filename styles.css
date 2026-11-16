@@ -1953,3 +1953,26 @@ footer a {
 /* Wide data tables scroll inside their own box on small screens, never the page */
 .table-scroll { overflow-x: auto; margin: 24px 0; }
 .table-scroll > .data-table { margin: 0; }
+
+/* User-level vs account-level: account view */
+.article .ui-card { margin: 24px 0; }
+.acct-section { padding: 6px 16px 12px; }
+.acct-people { border-top: 1px solid var(--line); padding-top: 12px; }
+.acct-level { display: block; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--indigo); margin-bottom: 6px; }
+.article .acct-name { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--ink); }
+.acct-stage { display: inline-block; margin-left: 8px; font-size: 12px; font-weight: 600; color: var(--muted); background: #F1F2F5; border-radius: 4px; padding: 1px 6px; vertical-align: 1px; }
+.acct-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.acct-stats li { background: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 13px; color: #454A5B; line-height: 1.35; }
+.acct-stats strong { display: block; font-size: 22px; color: var(--ink); line-height: 1.2; }
+.acct-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.acct-table thead th { text-align: left; font-size: 12px; font-weight: 600; color: var(--muted); padding: 6px 8px; border-bottom: 1px solid var(--line); }
+.acct-table tbody th, .acct-table td { text-align: left; padding: 10px 8px; border-top: 1px solid #EEF0F4; vertical-align: top; }
+.acct-table tbody th { font-weight: 500; white-space: nowrap; width: 38%; }
+.acct-table tr.acct-key th, .acct-table tr.acct-key td { background: #F4F3FA; }
+.acct-table tr.acct-key th { font-weight: 600; }
+.match-card .check-name { line-height: 1.35; }
+.article .ui-card .check-summary, .article .ui-card .ui-note { margin: 0; }
+@media (max-width: 600px) {
+  .acct-stats { grid-template-columns: repeat(2, 1fr); }
+  .acct-table tbody th { white-space: normal; }
+}
