@@ -4,25 +4,25 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAC payback period by channel: revenue attribution by source</title>
-<meta name="description" content="CAC payback period and marketing ROI by channel: the recurring revenue each source brings, how many months it takes to cover its cost, and how the total reconciles with your CRM.">
+<title>Marketing attribution models and CAC payback by channel</title>
+<meta name="description" content="Marketing attribution models explained, from first touch to multi-touch, and how to calculate CAC payback and marketing ROI by channel from the deals in your CRM.">
 <link rel="canonical" href="https://funnelsight.dev/features/revenue-attribution-payback-by-source">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="CAC payback period by channel: revenue attribution by source">
-<meta property="og:description" content="CAC payback period and marketing ROI by channel: the recurring revenue each source brings, how many months it takes to cover its cost, and how the total reconciles with your CRM.">
+<meta property="og:title" content="Marketing attribution models and CAC payback by channel">
+<meta property="og:description" content="Marketing attribution models explained, from first touch to multi-touch, and how to calculate CAC payback and marketing ROI by channel from the deals in your CRM.">
 <meta property="og:url" content="https://funnelsight.dev/features/revenue-attribution-payback-by-source">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CAC payback period by channel: revenue attribution by source">
-<meta name="twitter:description" content="CAC payback period and marketing ROI by channel: the recurring revenue each source brings, how many months it takes to cover its cost, and how the total reconciles with your CRM.">
+<meta name="twitter:title" content="Marketing attribution models and CAC payback by channel">
+<meta name="twitter:description" content="Marketing attribution models explained, from first touch to multi-touch, and how to calculate CAC payback and marketing ROI by channel from the deals in your CRM.">
 <link rel="stylesheet" href="/styles.css?v=2026-11-25">
 <script src="/assets/site.js?v=2026-11-15" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "CAC payback by channel: what each source is worth, and how fast it pays back",
-  "description": "CAC payback period and marketing ROI by channel: the recurring revenue each source brings, how many months it takes to cover its cost, and how the total reconciles with your CRM.",
+  "headline": "Marketing attribution and CAC payback by channel",
+  "description": "Marketing attribution models explained, from first touch to multi-touch, and how to calculate CAC payback and marketing ROI by channel from the deals in your CRM.",
   "datePublished": "2026-10-25",
   "dateModified": "2026-11-16",
   "author": {
@@ -93,32 +93,35 @@
 </nav>
 
 <article class="article wrap">
-  <h1>CAC payback by channel: what each source is worth, and how fast it pays back</h1>
+  <h1>Marketing attribution and CAC payback by channel</h1>
   <p class="article-meta">Updated <time datetime="2026-11-16">November 16, 2026</time></p>
-  <p class="lede-intro">A source that brings a lot of leads doesn't necessarily bring a lot of revenue. Funnelsight shows, for each source, the recurring revenue its customers generate and how many months that revenue takes to cover what the source cost, so budget discussions start from what a channel is worth rather than how loud it is.</p>
+  <p class="lede-intro">Paid search generates three times as many leads as partner referrals. Yet partners return more revenue for each dollar spent. Funnelsight follows every source through to the deals signed in your CRM, so you see the revenue each one brings and how quickly it earns back what it cost.</p>
+
+  <h2 id="attribution-model">What is an attribution model, and which one should you use?</h2>
+  <p>Before asking for a demo, a buyer may see a LinkedIn ad, read a blog article, join a webinar, then search for your name. Marketing attribution decides how much of the deal each of these touches gets. The rule you choose is called an attribution model.</p>
+  <p>Some models give all the credit to a single touch: the first one (first touch) or the last one before the request (last touch, also called last click). Multi-touch attribution shares it, equally between all touches (linear) or with more weight on the first and the last (U-shaped, also called position-based).</p>
+  <table class="data-table data-table-dense">
+    <caption>One $25k deal, four touches, four models. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Touch</th><th scope="col">First touch</th><th scope="col">Last touch</th><th scope="col">Linear</th><th scope="col">U-shaped</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">LinkedIn ad</th><td>$25k</td><td>0</td><td>$6.25k</td><td>$10k</td></tr>
+      <tr><th scope="row">Blog article</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
+      <tr><th scope="row">Webinar</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
+      <tr><th scope="row">Brand search</th><td>0</td><td>$25k</td><td>$6.25k</td><td>$10k</td></tr>
+    </tbody>
+  </table>
+  <p>No model is right or wrong. First touch shows which channels bring in new buyers. Last touch shows which ones trigger the request. In B2B, where a deal takes several touches over weeks or months, U-shaped is a good default. It credits the channel that started the path and the one that closed it, without ignoring the rest.</p>
+  <p>Then compare two models side by side. In the table, the LinkedIn ad started the path but gets nothing under last touch. When a channel looks strong under one model and weak under the other, decide what you expect from it before you move its budget. And keep the same model from one period to the next, or a change of model will look like a change in results.</p>
 
   <h2>How to calculate CAC payback period by channel</h2>
-  <p>CAC payback is the number of months it takes for the recurring revenue a customer brings to cover what it cost to win them.</p>
+  <p>CAC payback is the number of months a source takes to earn back what it cost.</p>
   <div class="formula-box">
     <span class="formula-label">Formula</span>
     <p>CAC payback period (months) = cost of the source over the period ÷ new monthly recurring revenue from the customers it brought</p>
   </div>
-  <p>Revenue comes from the deals recorded in your CRM, whether monthly plans, multi-year contracts or renewals. The cost is what the source took to run: media, commissions, content production or the tools a channel runs on, not salaries or overhead. That keeps sources comparable with each other, and explains why the figures are much shorter than the company-wide acquisition payback benchmarks, which count the whole sales and marketing budget. The formula stays visible and adjustable, for example to apply gross margin, so finance can check every figure.</p>
-
-  <h2>How to calculate marketing ROI by channel</h2>
-  <p>Payback and ROI start from the same revenue and cost, but answer different questions. Payback: how many months until a channel has earned back what it cost? ROI: over a year, how much did it earn beyond what it cost? Each deal is split across channels by your <a href="#attribution-model">attribution model</a>.</p>
-  <div class="formula-box">
-    <span class="formula-label">Formula</span>
-    <p>Marketing ROI (%) = (new revenue from the channel − what the channel cost) ÷ what the channel cost × 100</p>
-  </div>
-  <p>Say a channel cost $100,000 over a year, and the customers it brought signed $300,000 of yearly contracts. ROI = ($300,000 − $100,000) ÷ $100,000 = 200%. Put simply, each dollar spent came back as three: the one you spent, plus two. The same channel pays back in four months: $300,000 a year is $25,000 a month, and it cost $100,000.</p>
-  <h3>Is a 200% ROI good?</h3>
-  <p>It sounds huge, but channel ROIs often look this high. The calculation usually counts only what the channel itself costs, such as media or commissions, not the people who run it or the sales team who close the deals. It counts revenue, not profit, and part of every dollar goes to hosting, support and payment fees. And it stops at the first year. In the illustrative company on this page, channels range from 100% to nearly 600%. Counting every salary and tool in sales and marketing, the same company gets about $1.40 of new yearly revenue for each dollar spent: an ROI of about 40%.</p>
-  <p>So use channel ROI to compare your channels with each other, calculated the same way, rather than against a figure from another company. A channel below 0% doesn't cover its cost in the first year, which can still be fine if its customers stay for several years.</p>
-
-  <h2>Questions it answers</h2>
-  <h3>Which sources pay back, and how fast?</h3>
-  <p>Each source shows what it cost next to the new annual recurring revenue its customers bring, credited according to the attribution model your team chose.</p>
+  <p>Revenue comes from the deals in your CRM. Cost is what the source took to run: ad spend, partner commissions, content, tools. Salaries and overhead are left out, so sources can be compared with each other. That's why payback here is much shorter than company-wide benchmarks, which count the whole sales and marketing budget. Finance can check every figure, or adjust the formula, for example to use gross margin.</p>
   <figure class="source-card payback-card">
     <div class="source-card-bar">
       <ul class="view-tabs" aria-label="Dashboard views (illustration)">
@@ -181,17 +184,27 @@
         </tbody>
       </table>
     </div>
-    <figcaption><strong>Organic search brings about six times its cost in new ARR, paid search a little over three times.</strong> Direct brings $2.5M but has no cost recorded, so its payback isn't calculated rather than shown as instant. Organic search and email look fast because the people behind them sit in other budgets, and email also relies on a CRM and data shared with other teams. Email mostly works on leads that other sources brought in.</figcaption>
+    <figcaption><strong>Organic search brings about six times its cost in new ARR, paid search a little over three times.</strong> Direct has no cost recorded, so its payback isn't calculated. Organic search and email look cheap partly because the people who run them are paid from other budgets, and email mostly converts leads that other sources brought in.</figcaption>
   </figure>
-  <p>Neither payback nor ROI shows how each cost behaves. Content costs what you decide to produce. Paid search prices move with competition and the season, so the same budget buys more or fewer clicks from one quarter to the next. A commission-based partner program costs nothing until a deal closes. Two sources with the same payback can carry very different risks.</p>
+  <p>Two sources with the same payback can still carry different risks. Paid search prices rise and fall with competition and the season. A partner paid on commission costs nothing until a deal closes.</p>
 
-  <h3>Is a slow source a bad one?</h3>
-  <p>Not necessarily. A multi-year contract signed with sales can take longer to cover its cost than a monthly plan, then keep paying for years. Whether 6 months is acceptable depends on how long those customers stay, which the same view shows by source.</p>
-  <p>The attribution model can also make a source look slower than it is. A LinkedIn ad can reach buyers before they search, and the deal then comes in through search or Direct. Under last touch, the ad gets little or no credit for that deal. Comparing last touch with first touch or U-shaped shows whether a channel opens paths that others close.</p>
-  <p>Timing matters too. Organic search looks inexpensive over 12 months partly because it also earns from content published in earlier years, while paid search brings customers the day its budget is switched on and stops when it's switched off. One is cheaper per customer, the other can be scaled at will. Funnelsight reads each source on its own timeline, so a channel isn't cut for being slower to show results. See how one team used this reading to <a href="/case-studies/cutting-marketing-budget-without-emptying-pipeline">cut its budget without emptying its pipeline</a>.</p>
+  <h2>How to calculate marketing ROI by channel</h2>
+  <p>ROI uses the same revenue and cost as payback. Payback tells you how long a channel takes to earn back its cost. ROI tells you how much it earned on top of that cost over a year.</p>
+  <div class="formula-box">
+    <span class="formula-label">Formula</span>
+    <p>Marketing ROI (%) = (new revenue from the channel − what the channel cost) ÷ what the channel cost × 100</p>
+  </div>
+  <p>Say a channel cost $100,000 over a year, and its customers signed $300,000 of yearly contracts. ROI = ($300,000 − $100,000) ÷ $100,000 = 200%. Each dollar spent came back as three. The same channel pays back in four months, since $300,000 a year is $25,000 a month.</p>
+  <h3>Is a 200% ROI good?</h3>
+  <p>Channel ROIs often look this high, because the calculation leaves a lot out. It counts the channel's own costs, not the team that runs it or the salespeople who close the deals. It counts revenue, not profit. And it stops after the first year. On this page, channels range from 100% to nearly 600%. Counting every salary and tool in sales and marketing, the same company's ROI is about 40%.</p>
+  <p>So compare your channels with each other, calculated the same way, rather than with another company's figure. A channel below 0% hasn't covered its cost in the first year. That can still be fine if its customers stay for several years.</p>
 
-  <h3>Why doesn't the attributed total match the CRM?</h3>
-  <p>The CRM counts every deal closed in the period. Attribution can only credit a deal that has at least one touch your rules count.</p>
+  <h2>Is a slow source a bad one?</h2>
+  <p>Not necessarily. A multi-year contract signed by sales can take longer to cover its cost than a monthly plan, then keep paying for years. Whether 6 months is acceptable depends on how long those customers stay, which the same view shows by source.</p>
+  <p>Timing plays a part too. Organic search looks cheap over 12 months partly because it still earns from content published in earlier years. Paid search brings customers as soon as the budget is on, and stops when it's off. Funnelsight reads each source over its own timeline, so a channel isn't cut just because it's slower to show results. See how one team <a href="/case-studies/cutting-marketing-budget-without-emptying-pipeline">cut its budget without emptying its pipeline</a>.</p>
+
+  <h2>Why doesn't the attributed total match the CRM?</h2>
+  <p>The CRM counts every deal closed in the period. Attribution can only credit a deal that has at least one marketing touch your rules count.</p>
   <figure class="share-figure">
     <figcaption class="share-title">New ARR closed in the CRM, last 12 months: $14.0M <span class="tag-illustrative">Illustrative data</span></figcaption>
     <div class="share-bar" aria-hidden="true"><span class="share-part share-attributed" style="width: 71%"></span><span class="share-part share-rest" style="width: 29%"></span></div>
@@ -200,30 +213,12 @@
       <li><span class="key key-rest" aria-hidden="true"></span><strong>$4.0M (29%)</strong> has no touch your rules count</li>
     </ul>
   </figure>
-  <p>What falls outside isn't an error, and its size depends on your rules. Some deals have no marketing touch at all, such as deals opened by outbound prospecting. Others have touches the rules leave out: older than the window, or recorded on someone the rules don't tie to the deal. A team that reads touches at account level credits activity from anyone at the account; one that counts only the contacts named on the opportunity credits less, often by choice, to keep opportunity creation light for sales.</p>
-  <p>A mistagged campaign is a different problem: it doesn't shrink the total, it credits the wrong source, often Direct. The same happens when someone discovers you in an AI assistant's answer: nothing links the answer to the visit that follows, which is credited to branded search or Direct. Funnelsight shows both totals side by side and explains what sits in the gap, with the CRM as the reference for revenue.</p>
-
-  <h2 id="attribution-model">What is an attribution model, and which one should you use?</h2>
-  <p>An attribution model is the rule that decides which marketing touches get credit for a deal. Before asking for a demo, a buyer may see an ad, read an article, join a webinar and search for your name. The model decides how the deal's revenue is split between them.</p>
-  <p>Single-touch models give all the credit to one touch: the first one (first touch) or the last one before the buyer converts (last touch). Multi-touch attribution shares the credit: equally across every touch (linear), or with more weight on the first and the last (U-shaped, also called position-based).</p>
-  <table class="data-table data-table-dense">
-    <caption>One $25k deal, four touches, four models. Illustrative data</caption>
-    <thead>
-      <tr><th scope="col">Touch</th><th scope="col">First touch</th><th scope="col">Last touch</th><th scope="col">Linear</th><th scope="col">U-shaped</th></tr>
-    </thead>
-    <tbody>
-      <tr><th scope="row">LinkedIn ad</th><td>$25k</td><td>0</td><td>$6.25k</td><td>$10k</td></tr>
-      <tr><th scope="row">Blog article</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
-      <tr><th scope="row">Webinar</th><td>0</td><td>0</td><td>$6.25k</td><td>$2.5k</td></tr>
-      <tr><th scope="row">Brand search</th><td>0</td><td>$25k</td><td>$6.25k</td><td>$10k</td></tr>
-    </tbody>
-  </table>
-  <p>No model is the true one. Each answers a different question. First touch shows which channels find new buyers. Last touch shows which ones turn interest into a request. For a B2B sale with several touches over weeks or months, a multi-touch model such as U-shaped is a good place to start: it credits the channel that opened the path and the one that closed it, without ignoring the rest.</p>
-  <p>Then compare two models. If a channel ranks near the top under one and near the bottom under the other, decide what you expect from it before moving its budget. And keep the same model when you compare periods, or a change of model will look like a change in results.</p>
+  <p>The rest isn't an error. Some deals have no marketing touch at all, such as those opened by outbound prospecting. Others have touches your rules leave out, because they're older than the attribution window or come from a contact who isn't on the deal. A wrong or missing UTM parameter is a different case. The total stays the same, but the deal lands under the wrong source, usually Direct.</p>
+  <p>The question rarely comes from marketing. It tends to come up when someone compares marketing's figures with the CRM, for example in a pipeline review. Funnelsight shows both totals side by side and explains the gap, with the CRM as the reference for revenue.</p>
 
   <h2>How it works</h2>
-  <p>Your team picks the attribution model and can adjust its weights, for example from 40-20-40 to 20-60-20, with two models side by side. Your team also decides what counts as a touch and sets the attribution window: how far back touches are counted. If you're not sure how long it should be, start with the length of your average sales cycle.</p>
-  <p>Terms such as "sourced" or "influenced" vary from one company to another, so Funnelsight doesn't impose a definition: each reading your team names shows its rule. When a rule changes, the change is logged and past periods are recalculated or the break is marked, the principle behind <a href="/glossary/what-is-a-single-source-of-truth-saas">a single source of truth</a>.</p>
+  <p>Your team picks the attribution model, can change its weights, for example from 40-20-40 to 20-60-20, and can compare two models side by side. It also decides what counts as a touch, and how far back touches are counted (the attribution window). If you're not sure, start with the length of your average sales cycle.</p>
+  <p>Terms such as "sourced" or "influenced" mean different things from one company to another, so Funnelsight doesn't impose a definition. Each figure shows the rule behind it. When a rule changes, the change is logged, and past periods are recalculated or the break is marked. That's the principle behind <a href="/glossary/what-is-a-single-source-of-truth-saas">a single source of truth</a>.</p>
 
   <h2>What's included</h2>
   <div class="scope-lists scope-single">
@@ -250,7 +245,7 @@
     </details>
     <details>
       <summary>What's the difference between ROI and ROAS?</summary>
-      <p>ROAS (return on ad spend) divides the revenue from your ads by what they cost: $300,000 for $100,000 of ads is a ROAS of 3. ROI looks at what you earned beyond the cost, and can count every cost of the channel, not only the ads: the same campaign has an ROI of 200%. In B2B, ad platforms usually see leads, not signed contracts. Use ROAS to compare ads, and ROI from your CRM to compare channels.</p>
+      <p>ROAS (return on ad spend) divides the revenue from your ads by what they cost: $300,000 for $100,000 of ads is a ROAS of 3. ROI looks at what you earned beyond the cost, and can include every cost of the channel, not only the ads. The same campaign has an ROI of 200%. In B2B, ad platforms usually see leads, not signed contracts. Use ROAS to compare ads, and ROI from your CRM to compare channels.</p>
     </details>
     <details>
       <summary>Can we include costs that no ad platform holds?</summary>
@@ -275,7 +270,7 @@
         "name": "What's the difference between ROI and ROAS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ROAS (return on ad spend) divides the revenue from your ads by what they cost: $300,000 for $100,000 of ads is a ROAS of 3. ROI looks at what you earned beyond the cost, and can count every cost of the channel, not only the ads: the same campaign has an ROI of 200%. In B2B, ad platforms usually see leads, not signed contracts. Use ROAS to compare ads, and ROI from your CRM to compare channels."
+          "text": "ROAS (return on ad spend) divides the revenue from your ads by what they cost: $300,000 for $100,000 of ads is a ROAS of 3. ROI looks at what you earned beyond the cost, and can include every cost of the channel, not only the ads. The same campaign has an ROI of 200%. In B2B, ad platforms usually see leads, not signed contracts. Use ROAS to compare ads, and ROI from your CRM to compare channels."
         }
       },
       {
