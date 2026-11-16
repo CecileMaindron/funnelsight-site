@@ -1935,3 +1935,17 @@ footer a {
   .pd .pd-name, .pd .pd-val { font-size: 22px; }
   .pd .pd-basel { font-size: 19px; }
 }
+
+/* Product page: leads to customers by source */
+.journey-table td.num { width: auto; text-align: right; vertical-align: top; font-variant-numeric: tabular-nums; font-weight: 600; }
+.journey-table thead th:not(:first-child) { text-align: right; }
+.journey-table .jt-rate { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+.journey-table td.jt-stall { background: #FDF5E7; }
+.journey-table td.jt-stall .source-flag { margin-left: auto; }
+.feature-text p + p { margin-top: 12px; }
+.ui-note.jt-foot { background: none; color: var(--muted); font-size: 12px; }
+@media (max-width: 600px) {
+  .journey-table { font-size: 13px; }
+  .journey-table thead th, .journey-table tbody th, .journey-table td { padding: 10px 8px; }
+  .journey-table tbody th { white-space: normal; }
+}
