@@ -1170,6 +1170,10 @@ footer a {
 /* Scope lists: what a feature does and doesn't, side by side on desktop.
    The marks are decorative: each heading says "It does" / "It doesn't" */
 .scope-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 24px 0; }
+.scope-lists.scope-single { grid-template-columns: 1fr; }
+.scope-single ul { columns: 2; column-gap: 32px; }
+.scope-single li { break-inside: avoid; }
+@media (max-width: 600px) { .scope-single ul { columns: 1; } }
 .scope-list { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
 .scope-yes { border-top: 4px solid var(--indigo); }
 .scope-no { border-top: 4px solid var(--muted); }
