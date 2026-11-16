@@ -1949,3 +1949,7 @@ footer a {
   .journey-table thead th, .journey-table tbody th, .journey-table td { padding: 10px 8px; }
   .journey-table tbody th { white-space: normal; }
 }
+
+/* Wide data tables scroll inside their own box on small screens, never the page */
+.table-scroll { overflow-x: auto; margin: 24px 0; }
+.table-scroll > .data-table { margin: 0; }
