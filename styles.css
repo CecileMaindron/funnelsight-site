@@ -1907,3 +1907,31 @@ footer a {
   .pq-wide { display: none; }
   .pq-narrow { display: block; }
 }
+
+/* NRR: revenue bridge and per-$100 chart */
+.wf, .pd { display: block; width: 100%; height: auto; padding: 8px 16px 0; box-sizing: border-box; font-family: inherit; }
+.wf .wf-grid { stroke: #EEF0F4; stroke-width: 1; }
+.wf .wf-axis { font-size: 12px; fill: var(--muted); }
+.wf .wf-total { fill: var(--indigo); }
+.wf .wf-up { fill: #8F86C9; }
+.wf .wf-down { fill: var(--accent); }
+.wf .wf-link { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; }
+.wf .wf-val { font-size: 14px; font-weight: 600; fill: var(--ink); }
+.wf .wf-lab { font-size: 13px; fill: var(--ink); }
+.wf .wf-break { stroke: var(--muted); stroke-width: 1.5; fill: none; }
+.pd .pd-base { stroke: var(--ink); stroke-width: 1.5; }
+.pd .pd-basel { font-size: 12.5px; font-weight: 600; fill: var(--muted); }
+.pd .pd-name { font-size: 14px; fill: var(--ink); }
+.pd .pd-key { font-weight: 700; }
+.pd .pd-up { fill: #8F86C9; }
+.pd .pd-down { fill: var(--accent); }
+.pd .pd-flat { fill: var(--muted); }
+.pd .pd-val { font-size: 14px; font-weight: 600; fill: var(--ink); }
+@media (max-width: 600px) {
+  .wf, .pd { padding: 8px 4px 0; }
+  .wf .wf-val { font-size: 21px; }
+  .wf .wf-lab { font-size: 17px; }
+  .wf .wf-axis { font-size: 17px; }
+  .pd .pd-name, .pd .pd-val { font-size: 22px; }
+  .pd .pd-basel { font-size: 19px; }
+}
