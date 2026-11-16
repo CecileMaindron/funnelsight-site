@@ -1,6 +1,7 @@
 /* Funnelsight site script, shared by every page.
    1. Consent banner and GA4: Google's script loads only after "Accept".
    2. CTA tracking: a cta_click event in GA4, sent only with consent.
+      A same-tab click to another page of the site is sent from that page.
    Structured data (JSON-LD) and page-specific scripts stay in each page. */
 (function () {
   var GA_ID = 'G-NG2EK7DNXQ';
@@ -108,32 +109,50 @@
     return text.replace(/\s+/g, ' ').trim().slice(0, 100);
   }
 
+  /* A click that leaves the page in the same tab used to lose its event:
+     the page unloaded before Google sent it, even when navigation waited
+     for Google's callback. Such a click is now saved for the length of the
+     visit (sessionStorage, only after consent) and sent from the next page,
+     with the page it came from, so reports still show where the click
+     happened. Clicks that open a new tab, or go to another site, keep the
+     page alive and are sent at once. */
+  var PENDING_KEY = 'fs_pending_cta';
+
+  function sendPending() {
+    if (consent !== 'granted') return;
+    var raw = null;
+    try { raw = sessionStorage.getItem(PENDING_KEY); sessionStorage.removeItem(PENDING_KEY); } catch (err) { return; }
+    if (!raw) return;
+    var saved;
+    try { saved = JSON.parse(raw); } catch (err) { return; }
+    if (!saved || !saved.params || Date.now() - saved.time > 60000) return;
+    gtag('event', 'cta_click', saved.params);
+  }
+  sendPending();
+
   document.addEventListener('click', function (e) {
     if (consent !== 'granted') return;
     var link = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!link || !isCta(link)) return;
     var url;
     try { url = new URL(link.href, location.href); } catch (err) { return; }
+    var internal = url.origin === location.origin;
     var params = {
       'cta_location': locationOf(link),
       'cta_text': textOf(link),
-      'cta_destination': url.origin === location.origin ? url.pathname : url.href,
-      'transport_type': 'beacon'
+      'cta_destination': internal ? url.pathname : url.href,
+      'page_location': location.href,
+      'page_title': document.title,
+      'page_referrer': document.referrer
     };
-    /* A click that opens the link in a new tab, or a link to another site
-       opened in place, leaves this page alive: send the event and stop. */
     var newTab = e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0 || link.target === '_blank';
-    if (newTab || e.defaultPrevented) { gtag('event', 'cta_click', params); return; }
-    /* Same tab: the page is about to unload. If Google's script hasn't
-       finished loading (a visitor who has just accepted the banner), the
-       event would be lost. Hold the navigation until the event is sent,
-       for one second at most. */
-    e.preventDefault();
-    var done = false;
-    function go() { if (!done) { done = true; location.href = link.href; } }
-    params.event_callback = go;
-    params.event_timeout = 1000;
-    gtag('event', 'cta_click', params);
-    setTimeout(go, 1200);
+    var samePage = internal && url.pathname === location.pathname;
+    if (newTab || !internal || samePage || e.defaultPrevented) { gtag('event', 'cta_click', params); return; }
+    /* Same tab, same site: save the click for the next page. */
+    try {
+      sessionStorage.setItem(PENDING_KEY, JSON.stringify({ time: Date.now(), params: params }));
+    } catch (err) {
+      gtag('event', 'cta_click', params);
+    }
   });
 })();
