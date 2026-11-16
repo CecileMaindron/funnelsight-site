@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How Funnelsight connects every source to revenue</title>
-<meta name="description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
+<title>Marketing analytics from first visit to revenue: Funnelsight</title>
+<meta name="description" content="Marketing analytics for B2B SaaS: follow each source through the customer journey, see where its leads stall, and how fast it pays back.">
 <link rel="canonical" href="https://funnelsight.dev/product">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="How Funnelsight connects every source to revenue">
-<meta property="og:description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
+<meta property="og:title" content="Marketing analytics from first visit to revenue: Funnelsight">
+<meta property="og:description" content="Marketing analytics for B2B SaaS: follow each source through the customer journey, see where its leads stall, and how fast it pays back.">
 <meta property="og:url" content="https://funnelsight.dev/product">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How Funnelsight connects every source to revenue">
-<meta name="twitter:description" content="How Funnelsight works: connect your tools, check your data, and see what each source brings in and how fast it pays back, under the model you choose.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-25">
+<meta name="twitter:title" content="Marketing analytics from first visit to revenue: Funnelsight">
+<meta name="twitter:description" content="Marketing analytics for B2B SaaS: follow each source through the customer journey, see where its leads stall, and how fast it pays back.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-27">
 <script src="/assets/site.js?v=2026-11-15" defer></script>
 </head>
 <body>
@@ -74,12 +74,12 @@
 <main id="main">
 <header class="hero wrap product-hero">
   <div>
-    <p class="eyebrow">Marketing attribution platform for B2B SaaS</p>
+    <p class="eyebrow">Marketing analytics for B2B SaaS</p>
     <h1>Every source, from first visit to revenue, in one view you can check.</h1>
-    <p class="lede">Funnelsight connects your web analytics, ad spend, product data and CRM, so you can follow each source stage by stage and see where its leads stall before they turn into revenue.</p>
+    <p class="lede">See what each source brings at every stage, from the first visit to the signed deal and its renewal. Funnelsight brings your web analytics, ad platforms, product data and CRM into one view.</p>
     <div class="hero-actions">
       <a href="/trial" class="btn-primary accent">Start free trial</a>
-      <a href="#first-day" class="btn-ghost">See how it works</a>
+      <a href="#how-it-works" class="btn-ghost">See how it works</a>
     </div>
   </div>
 
@@ -94,72 +94,87 @@
       <span class="tag-illustrative">Illustrative data</span>
     </div>
     <div class="source-card-head">
-      <span class="source-card-title" id="demo-title">Cost vs new ARR, by source</span>
+      <span class="source-card-title" id="demo-title">New ARR credited to each source</span>
       <span class="source-card-period">Last 12 months · <span id="demo-model-label">U-shaped</span></span>
     </div>
     <p class="demo-def" id="demo-def">40% of each deal to the touch that created the lead, 40% to the last touch before the opportunity, 20% shared by the touches in between.</p>
     <div class="source-table-wrap">
       <table class="source-table">
-        <caption class="visually-hidden">Cost and new annual recurring revenue for seven acquisition sources over the last 12 months, under the selected way of counting credit (illustrative data)</caption>
+        <caption class="visually-hidden">New annual recurring revenue credited to seven acquisition sources over the last 12 months, under the selected way of counting credit, sorted from highest to lowest (illustrative data)</caption>
         <thead>
           <tr>
             <th scope="col">Source</th>
-            <th scope="col"><span class="key key-leads" aria-hidden="true"></span>Cost <span class="key key-revenue key-inline" aria-hidden="true"></span>New ARR</th>
+            <th scope="col">New ARR credited</th>
           </tr>
         </thead>
         <tbody id="demo-rows">
         <tr data-source="organic">
           <th scope="row">Organic search</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 12%"></span></span><span class="bar-value">$450k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 73%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$2.7M</span></span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 73%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$2.7M</span></span></td>
+        </tr>
+        <tr data-source="direct">
+          <th scope="row">Direct</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 68%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$2.5M</span></span></td>
         </tr>
         <tr data-source="paid">
           <th scope="row">Paid search</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 15%"></span></span><span class="bar-value">$550k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 49%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$1.8M</span></span></span></td>
-        </tr>
-        <tr data-source="linkedin">
-          <th scope="row">LinkedIn ads</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 4%"></span></span><span class="bar-value">$160k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 11%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$400k</span></span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 49%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$1.8M</span></span></td>
         </tr>
         <tr data-source="partner">
           <th scope="row">Partner referrals</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 8%"></span></span><span class="bar-value">$300k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 32%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$1.2M</span></span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 32%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$1.2M</span></span></td>
         </tr>
         <tr data-source="events">
           <th scope="row">Events and webinars</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 11%"></span></span><span class="bar-value">$400k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 22%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$800k</span></span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 22%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$800k</span></span></td>
         </tr>
         <tr data-source="email">
           <th scope="row">Email</th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"><span class="bar bar-leads" style="width: 2%"></span></span><span class="bar-value">$90k</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 16%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$600k</span></span></span></td>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 16%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$600k</span></span></td>
         </tr>
-        <tr data-source="direct">
-          <th scope="row">Direct<span class="source-flag">No cost recorded</span></th>
-          <td><span class="pair-bars"><span class="bar-cell"><span class="bar-track"></span><span class="bar-value">$0</span></span><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 68%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$2.5M</span></span></span></td>
+        <tr data-source="linkedin">
+          <th scope="row">LinkedIn ads</th>
+          <td><span class="bar-cell"><span class="bar-track"><span class="bar bar-revenue" data-bar="arr" style="width: 11%"></span></span><span class="bar-value bar-value-strong" data-value="arr">$400k</span></span></td>
         </tr>
         </tbody>
       </table>
     </div>
     <figcaption>
       <span id="demo-caption" aria-live="polite"><strong>Both ends count, and the middle gets a share:</strong> webinars and email, which keep leads warm until the opportunity, start to show.</span>
-      <span class="demo-total">The seven sources add up to $10.0M in every model: changing the model moves credit between sources, it doesn't create revenue. Costs cover media, commissions, content production and the tools each channel runs on, not salaries.</span>
+      <span class="demo-total">The seven sources add up to $10.0M in every model. Changing the model moves credit from one source to another, and the total stays the same.</span>
     </figcaption>
   </figure>
 </header>
 
-<section class="steps-section" id="first-day">
+<section class="feature-rows" id="how-it-works">
   <div class="wrap">
-    <h2>Your first day with Funnelsight.</h2>
-    <ul class="day-one">
-      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18l-7 8v5l-4 2v-7z"/></svg></span><h3>Your whole funnel in one view</h3><p>From anonymous visit to paying and renewing customer.</p></li>
-      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/></svg></span><h3>A first read of your data</h3><p>What Funnelsight sees, what's missing, and what to fix first.</p></li>
-      <li><span class="day-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span><h3>Ready-made views</h3><p>The questions teams ask first, answered from templates you adjust.</p></li>
-    </ul>
-    <p class="day-foot">Revenue and payback by source follow once your costs are in: Google Ads, LinkedIn Ads, Meta Ads and Microsoft Ads connect directly, and costs like partner commissions or events come from a spreadsheet or are entered by hand.</p>
-  </div>
-</section>
 
-<section class="feature-rows">
-  <div class="wrap">
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="feature-pain">"Where do our leads stall?"</p>
+        <h2>See where each source's leads drop off.</h2>
+        <p>Funnelsight follows each lead from its first visit to the deal signed in your CRM. For every source, you see how many leads became opportunities, how many became customers, and the step where most of them stop.</p>
+        <p>Paid search brings plenty of leads that rarely turn into opportunities. Events bring opportunities that rarely close. The two problems call for different fixes, and a lead count alone shows neither.</p>
+      </div>
+      <figure class="ui-card">
+        <div class="ui-card-head"><span class="source-card-title">Leads to customers, by source</span><span class="tag-illustrative">Illustrative data</span></div>
+        <p class="check-summary">Leads created in Q2 · followed for 120 days</p>
+        <div class="source-table-wrap">
+        <table class="source-table journey-table">
+          <caption class="visually-hidden">Leads, opportunities and customers for five sources, with the conversion rate at each step and the step where each source loses the most (illustrative data)</caption>
+          <thead><tr><th scope="col">Source</th><th scope="col">Leads</th><th scope="col">Opportunities</th><th scope="col">Customers</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Organic search</th><td class="num">2,000</td><td class="num">200<span class="jt-rate">10%</span></td><td class="num">50<span class="jt-rate">25%</span></td></tr>
+            <tr><th scope="row">Partner referrals</th><td class="num">380</td><td class="num">91<span class="jt-rate">24%</span></td><td class="num">32<span class="jt-rate">35%</span></td></tr>
+            <tr><th scope="row">Paid search</th><td class="num">1,300</td><td class="num jt-stall">78<span class="jt-rate">6%</span><span class="source-flag">Stalls here</span></td><td class="num">16<span class="jt-rate">21%</span></td></tr>
+            <tr><th scope="row">Events and webinars</th><td class="num">600</td><td class="num">54<span class="jt-rate">9%</span></td><td class="num jt-stall">8<span class="jt-rate">15%</span><span class="source-flag">Stalls here</span></td></tr>
+            <tr><th scope="row">LinkedIn ads</th><td class="num">200</td><td class="num">19<span class="jt-rate">9.5%</span></td><td class="num">4<span class="jt-rate">21%</span></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="ui-note jt-foot">Each percentage is the share of the step before: leads that became opportunities, then opportunities that became customers.</p>
+      </figure>
+    </div>
 
     <div class="feature-row">
       <div class="feature-text">
@@ -203,8 +218,9 @@
     <div class="feature-row">
       <div class="feature-text">
         <p class="feature-pain">"Why did sign-ups drop that week?"</p>
-        <h2>One set of numbers, a view for each use, and context that stays.</h2>
-        <p>The team works from a daily view, the planning view compares results with your targets, and leadership gets a summary, all on the same data. Anyone can add a dated note to a chart: a campaign launch, a site migration, a tracking bug and its fix. The note stays with that period, so the explanation is still there months later. Some errors can be fixed after the fact: when a rule excludes bot sign-ups or renames a mistagged campaign, past weeks are corrected too, the corrected bar is hatched and the change is logged. What can't be rebuilt, like two days without tracking, keeps its note.</p>
+        <h2>Notes that keep the context.</h2>
+        <p>Anyone can add a dated note to a chart, such as a campaign launch, a site migration or a tracking bug and its fix. The note stays with that week, so the explanation is still there months later.</p>
+        <p>When a rule fixes an error after the fact, such as bot sign-ups or a mistagged campaign, past weeks are corrected, the bar is hatched and the change is logged. The daily, planning and leadership views all read the same numbers.</p>
       </div>
       <figure class="ui-card">
         <div class="source-card-bar">
@@ -237,15 +253,15 @@
 <section class="scope-section">
   <div class="wrap">
     <h2>What's in Funnelsight.</h2>
-    <p class="section-lede">Help reading the numbers, not a black box: Funnelsight points out what deserves a look and shows the rule behind every figure. The decisions stay with your team.</p>
+    <p class="section-lede">Funnelsight points out what deserves a look and shows the rule behind every figure. The decisions stay with your team.</p>
     <div class="feature-grid">
       <div class="feature-group">
         <h3>See the whole funnel</h3>
         <ul>
-          <li>One view from anonymous visit to paying and renewing customer</li>
-          <li>Each source's effect at every stage: sign-up, <a href="/features/activation-retention-dashboard-plg-teams">activation and retention</a>, deal, renewal</li>
+          <li>The whole customer journey, from anonymous visit to paying and renewing customer</li>
+          <li>Each source at every stage: sign-up, <a href="/features/activation-retention-dashboard-plg-teams">activation and retention</a>, deal, renewal</li>
           <li>Filters by segment, such as company size, plan or country</li>
-          <li>The real path to conversion: entry page, call to action clicked, content downloaded</li>
+          <li>The entry pages, calls to action and content that lead to conversion</li>
         </ul>
       </div>
       <div class="feature-group">
@@ -263,15 +279,14 @@
           <li>A sudden drop that may be a tracking issue rather than a real change</li>
           <li>A metric that rises while nothing that matters follows</li>
           <li>One large deal carrying a whole source</li>
-          <li>A share that falls because credit is spread over more touches, not because the source got worse</li>
         </ul>
       </div>
       <div class="feature-group">
         <h3>Work as one team</h3>
         <ul>
-          <li>Shared rules with a change log, views for each use and dated notes</li>
+          <li>Shared rules with a change log, and dated notes on every chart</li>
           <li>Admin, editor and viewer levels</li>
-          <li>Alerts by email or in your CRM, and clear activities written to your CRM records, updated daily</li>
+          <li>Alerts by email or in your CRM, with activities written to CRM records every day</li>
           <li>PQL rate and PQL-to-customer path for <a href="/solutions/sales">sales</a>, churn-risk and expansion signals for <a href="/solutions/customer-success">customer success</a></li>
         </ul>
       </div>
@@ -296,7 +311,7 @@
     <div class="faq-list">
     <details class="faq-item">
       <summary>What do I need to get started?</summary>
-      <p>The tools you already use, or even a spreadsheet. GA4, your CRM, your product analytics tool and the main ad platforms (Google Ads, LinkedIn Ads, Meta Ads, Microsoft Ads) connect natively, and costs no connected tool holds can be imported or entered by hand. The data check then shows what is missing, such as campaigns without tags.</p>
+      <p>Your CRM, GA4, your product analytics tool and your ad platforms, or even a spreadsheet to start. The first views and the data check are ready on the first day. Google Ads, LinkedIn Ads, Meta Ads and Microsoft Ads connect natively, and costs such as partner commissions or events are imported from a spreadsheet or entered by hand. Revenue and payback by source follow once your costs are in.</p>
     </details>
     <details class="faq-item">
       <summary>Can we change the attribution model later?</summary>
@@ -420,6 +435,10 @@
         else { p.textContent = v[1]; }
       }
     });
+    var tb = document.getElementById('demo-rows');
+    Object.keys(d.rows).sort(function (a, b) { return d.rows[b][0] - d.rows[a][0]; }).forEach(function (key) {
+      tb.appendChild(tb.querySelector('tr[data-source="' + key + '"]'));
+    });
     document.getElementById('demo-model-label').textContent = d.label;
     document.getElementById('demo-def').textContent = d.def;
     document.getElementById('demo-caption').innerHTML = d.caption;
@@ -439,7 +458,7 @@
       "name": "What do I need to get started?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The tools you already use, or even a spreadsheet. GA4, your CRM, your product analytics tool and the main ad platforms (Google Ads, LinkedIn Ads, Meta Ads, Microsoft Ads) connect natively, and costs no connected tool holds can be imported or entered by hand. The data check then shows what is missing, such as campaigns without tags."
+        "text": "Your CRM, GA4, your product analytics tool and your ad platforms, or even a spreadsheet to start. The first views and the data check are ready on the first day. Google Ads, LinkedIn Ads, Meta Ads and Microsoft Ads connect natively, and costs such as partner commissions or events are imported from a spreadsheet or entered by hand. Revenue and payback by source follow once your costs are in."
       }
     },
     {
