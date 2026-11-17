@@ -1992,3 +1992,35 @@ footer a {
 .ltv-scale { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 6px; }
 @media (prefers-reduced-motion: reduce) { .ltv-bar, .ltv-beyond { transition: none; } }
 @media (max-width: 600px) { .ltv-value { font-size: 22px; } .ltv-switch { flex-wrap: nowrap; } .ltv-switch button { padding: 5px 6px; white-space: nowrap; } }
+
+/* Churn: price increase and departures calculator */
+.pc-body { padding: 4px 16px 8px; }
+.pc-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; margin-bottom: 16px; }
+.pc-control { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: #454A5B; }
+.pc-control output { font-weight: 700; color: var(--ink); margin-left: 4px; }
+.pc-control input[type=range] { width: 100%; accent-color: var(--indigo); }
+.pc-grid { display: grid; grid-template-columns: repeat(20, 1fr); gap: 6px; max-width: 520px; margin-top: 4px; }
+.pc-dot { aspect-ratio: 1; border-radius: 50%; background: var(--indigo); box-sizing: border-box; transition: background-color .2s ease; }
+.pc-dot.pc-room { background: transparent; border: 2px dashed #8A84C2; }
+.pc-dot.pc-leave { background: #F2B661; }
+.pc-dot.pc-over { background: #C2410C; }
+.article .pc-legend { margin: 10px 0 0; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.pc-key { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--indigo); box-sizing: border-box; }
+.pc-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; margin-right: 10px; }
+.pc-key.pc-leave { background: #F2B661; }
+.pc-key.pc-over { background: #C2410C; }
+.pc-key.pc-room { background: transparent; border: 2px dashed #8A84C2; }
+@media (prefers-reduced-motion: reduce) { .pc-dot { transition: none; } }
+@media (max-width: 600px) { .pc-controls { grid-template-columns: 1fr; } .pc-grid { gap: 4px; } }
+
+/* Churn: ARR after a price increase (curve) */
+.pe-chart { display: block; width: 100%; height: auto; margin-top: 8px; }
+.pe-chart text { font-size: 12px; fill: var(--muted); }
+.pe-grid { stroke: #EEF0F4; stroke-width: 1; }
+.pe-grid.pe-today { stroke: #9CA3AF; stroke-dasharray: 4 4; }
+.pe-chart .pe-today-label { font-size: 11px; }
+.pe-line { fill: none; stroke: var(--indigo); stroke-width: 2.5; }
+.pe-guide { stroke: #C7C4E4; stroke-width: 1; stroke-dasharray: 3 3; }
+.pe-dot { fill: var(--white); stroke: var(--indigo); stroke-width: 3; }
+.article .pc-card .ltv-read { gap: 24px; flex-wrap: wrap; }
+@media (max-width: 600px) { .pe-chart text { font-size: 22px; } .pe-chart .pe-today-label { font-size: 20px; } .pe-dot { r: 9; } }

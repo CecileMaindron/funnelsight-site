@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to calculate churn rate for B2B SaaS">
 <meta name="twitter:description" content="Why a monthly customer total isn't enough to calculate churn, the formula, how to compare self-serve and sales-led churn, what a good rate looks like, and how much churn a price increase can afford.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-23">
+<link rel="stylesheet" href="/styles.css?v=2026-11-17c">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
@@ -24,7 +24,7 @@
   "headline": "How to calculate churn rate for B2B SaaS",
   "description": "Why a monthly customer total isn't enough to calculate churn, the formula, how to compare self-serve and sales-led churn, what a good rate looks like, and how much churn a price increase can afford.",
   "datePublished": "2026-09-17",
-  "dateModified": "2026-11-14",
+  "dateModified": "2026-11-17",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,7 +89,7 @@
 
 <article class="article wrap">
   <h1>How to calculate churn rate for B2B SaaS</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-14">November 14, 2026</time></p>
+  <p class="article-meta">Updated <time datetime="2026-11-17">November 17, 2026</time></p>
   <p class="lede-intro">The monthly customer count in your dashboard can't give you a churn rate. Going from 1,005 to 1,100 customers could mean 30 left, or 130: it depends on how many new customers came in.</p>
 
   <h2>Churn in customers</h2>
@@ -140,9 +140,77 @@
   </figure>
   <p>At 3%, customers keep paying long after they've covered their cost. At 6%, the average customer leaves before you've earned back what you spent to win them. That's why self-serve, where customers cost far less to win, can live with a higher churn rate. The <a href="/glossary/what-is-ltv-cac-ratio">LTV:CAC ratio</a> builds on the same idea.</p>
 
-  <h2>Before a price increase, agree on the churn you can afford</h2>
-  <p>Take 100 customers paying $100 a month: $10,000 in total. Raise the price by 10%, and if nobody leaves, you make $11,000. If 9 customers leave, the 91 who stay pay $10,010, about what you made before. So with a 10% increase, you can lose up to about 9% of the customers concerned and still come out even. With a 20% increase, about 17%.</p>
-  <p>Agree on that margin before the change, then compare the departures that follow with it. On annual contracts, wait for the renewals to see the effect. Changing how you charge, from a price per user to a price based on usage for example, raises some bills and lowers others. The customers whose bill goes up are the ones likely to leave, so look at them account by account before the switch.</p>
+  <h2>Before a price increase, estimate the ARR you end up with</h2>
+  <p>A price increase is meant to raise ARR, and some customers will leave because of it. How many depends on how sensitive they are to price, which you can only estimate: from past increases, from what similar products charge, or by trying the new price on new customers first. In the example below, departures grow faster than the increase, so ARR rises at first, peaks, then falls. These departures come on top of your usual churn, as a one-off loss: in the weeks after the change on monthly plans, at renewal on annual contracts.</p>
+  <figure class="ui-card pc-card" id="pc-demo" aria-labelledby="pc-title">
+    <div class="ui-card-head"><span class="source-card-title" id="pc-title">ARR after a price increase</span><span class="tag-illustrative">Illustrative data</span></div>
+    <p class="card-ctx">100 customers at $100 a month · $120,000 ARR today · extra departures caused by the increase, estimated from price sensitivity</p>
+    <div class="pc-body">
+      <div class="pc-controls" id="pc-controls" hidden>
+        <label class="pc-control" for="pc-price"><span>Price increase <output id="pc-price-out" for="pc-price">+10%</output></span>
+          <input type="range" id="pc-price" min="0" max="30" step="1" value="10"></label>
+        <div class="pc-control"><span id="pc-sens-label">Price sensitivity</span>
+          <div class="model-switch" role="group" aria-labelledby="pc-sens-label" id="pc-sens">
+            <button type="button" data-s="low" aria-pressed="false">Low</button>
+            <button type="button" data-s="med" aria-pressed="true">Medium</button>
+            <button type="button" data-s="high" aria-pressed="false">High</button>
+          </div>
+        </div>
+      </div>
+      <p class="ltv-read" aria-hidden="true"><span class="ltv-fig"><span class="ltv-value" id="pc-dep">5</span><span class="ltv-unit">extra departures out of 100 customers</span></span><span class="ltv-fig"><span class="ltv-value" id="pc-rev">$125,400</span><span class="ltv-unit">ARR after the change</span></span><span class="ltv-fig"><span class="ltv-value" id="pc-chg">+4.5%</span><span class="ltv-unit">vs today</span></span></p>
+      <svg class="pe-chart" viewBox="0 0 600 220" aria-hidden="true"><line x1="72" x2="586" y1="164.6" y2="164.6" class="pe-grid"/><text x="64" y="168.6" text-anchor="end">$80k</text><line x1="72" x2="586" y1="113.7" y2="113.7" class="pe-grid"/><text x="64" y="117.7" text-anchor="end">$100k</text><line x1="72" x2="586" y1="62.9" y2="62.9" class="pe-grid pe-today"/><text x="64" y="66.9" text-anchor="end">$120k</text><line x1="72" x2="586" y1="12.0" y2="12.0" class="pe-grid"/><text x="64" y="16.0" text-anchor="end">$140k</text><text x="72.0" y="212" text-anchor="start">+0%</text><text x="243.3" y="212" text-anchor="middle">+10%</text><text x="414.7" y="212" text-anchor="middle">+20%</text><text x="586.0" y="212" text-anchor="end">+30%</text><text x="80" y="80.9" text-anchor="start" class="pe-today-label">ARR today</text><path id="pe-line" class="pe-line" d="M72.0,62.9 L89.1,60.8 L106.3,58.9 L123.4,57.1 L140.5,55.5 L157.7,54.0 L174.8,52.7 L191.9,51.6 L209.1,50.6 L226.2,49.8 L243.3,49.1 L260.5,48.7 L277.6,48.4 L294.7,48.3 L311.9,48.4 L329.0,48.7 L346.1,49.1 L363.3,49.8 L380.4,50.7 L397.5,51.8 L414.7,53.1 L431.8,54.6 L448.9,56.3 L466.1,58.3 L483.2,60.5 L500.3,62.9 L517.5,65.5 L534.6,68.4 L551.7,71.5 L568.9,74.8 L586.0,78.4"/><line id="pe-guide" class="pe-guide" x1="243.3" x2="243.3" y1="12" y2="190"/><circle id="pe-dot" class="pe-dot" cx="243.3" cy="49.1" r="6"/></svg>
+    </div>
+    <p class="ui-note jt-foot" id="pc-note" aria-live="polite">With a 10% increase and medium price sensitivity, about 5 more customers leave and ARR reaches $125,400, 4.5% more than today. ARR peaks around +13%.</p>
+  </figure>
+  <script>
+  (function () {
+    var box = document.getElementById('pc-controls'); if (!box) return;
+    var S = { low: [0.15, 0.01], med: [0.3, 0.02], high: [0.6, 0.04] };
+    var NAMES = { low: 'low', med: 'medium', high: 'high' };
+    var sens = 'med', price = document.getElementById('pc-price');
+    var buttons = document.querySelectorAll('#pc-sens button');
+    var W = 600, H = 220, L = 72, R = 14, T = 12, B = 30;
+    function X(p) { return L + (W - L - R) * p / 30; }
+    function Y(v) { return T + (H - T - B) * (140000 - v) / 70000; }
+    function dep(p) { var s = S[sens]; return Math.min(100, s[0] * p + s[1] * p * p); }
+    function arr(p) { return (100 - dep(p)) * 1200 * (1 + p / 100); }
+    function money(n) { return '$' + (Math.round(n / 100) * 100).toLocaleString('en-US'); }
+    function pct(x) { return (Math.round(Math.abs(x) * 10) / 10) + '%'; }
+    function update() {
+      var p = +price.value, a = arr(p), d = dep(p), chg = (a - 120000) / 1200;
+      var pts = [], best = 0;
+      for (var q = 0; q <= 30; q++) { pts.push(X(q).toFixed(1) + ',' + Y(arr(q)).toFixed(1)); if (arr(q) > arr(best)) best = q; }
+      document.getElementById('pe-line').setAttribute('d', 'M' + pts.join(' L'));
+      var dot = document.getElementById('pe-dot'), guide = document.getElementById('pe-guide');
+      dot.setAttribute('cx', X(p)); dot.setAttribute('cy', Y(a)); guide.setAttribute('x1', X(p)); guide.setAttribute('x2', X(p));
+      document.getElementById('pc-price-out').textContent = '+' + p + '%';
+      document.getElementById('pc-dep').textContent = Math.round(d);
+      document.getElementById('pc-rev').textContent = money(a);
+      var c = Math.abs(chg) < 0.05 ? '0%' : (chg > 0 ? '+' : '\u2212') + pct(chg);
+      document.getElementById('pc-chg').textContent = c;
+      var head = p === 0 ? 'With no increase, ARR stays at $120,000.' :
+        'With a ' + p + '% increase and ' + NAMES[sens] + ' price sensitivity, about ' + Math.round(d) + ' more customer' + (Math.round(d) === 1 ? '' : 's') + ' leave and ARR ' + (chg >= 0 ? 'reaches ' : 'drops to ') + money(a) + ', ' + (Math.abs(chg) < 0.05 ? 'the same as today.' : pct(chg) + (chg > 0 ? ' more' : ' less') + ' than today.');
+      var peak = best >= 30 ? ' ARR keeps rising up to +30%.' : ' ARR peaks around +' + best + '%.';
+      document.getElementById('pc-note').textContent = head + peak;
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-s') === sens ? 'true' : 'false'); });
+    }
+    price.addEventListener('input', update);
+    buttons.forEach(function (b) { b.addEventListener('click', function () { sens = b.getAttribute('data-s'); update(); }); });
+    box.hidden = false; update();
+  })();
+  </script>
+  <table class="visually-hidden">
+    <caption>ARR after a price increase for 100 customers at $100 a month, by price increase and price sensitivity (illustrative assumption)</caption>
+    <thead><tr><th scope="col">Price increase</th><th scope="col">Low sensitivity</th><th scope="col">Medium sensitivity</th><th scope="col">High sensitivity</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">+5%</th><td>1 leave, $124,700</td><td>2 leave, $123,500</td><td>4 leave, $121,000</td></tr>
+      <tr><th scope="row">+10%</th><td>2 leave, $128,700</td><td>5 leave, $125,400</td><td>10 leave, $118,800</td></tr>
+      <tr><th scope="row">+15%</th><td>4 leave, $131,800</td><td>9 leave, $125,600</td><td>18 leave, $113,200</td></tr>
+      <tr><th scope="row">+20%</th><td>7 leave, $133,900</td><td>14 leave, $123,800</td><td>28 leave, $103,700</td></tr>
+      <tr><th scope="row">+30%</th><td>14 leave, $134,900</td><td>27 leave, $113,900</td><td>54 leave, $71,800</td></tr>
+    </tbody>
+  </table>
+  <p>Agree on the departures you expect before the change, then compare what actually happens with that estimate. On annual contracts, wait for the renewals to see the effect. Changing how you charge, from a price per user to a price based on usage for example, raises some bills and lowers others. The customers whose bill goes up are the ones likely to leave, so look at them account by account before the switch.</p>
 
   <h2>What to check first in a churn analysis</h2>
   <p>Before concluding that something is wrong, check whether one of these explains the rise.</p>
