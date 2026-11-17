@@ -2079,3 +2079,13 @@ footer a {
 .cm-alert { margin: 10px 0 0; padding: 8px 10px; border-left: 3px solid #C2650A; background: #FCEFD9; font-size: 13px; color: #5C2E05; }
 @media (prefers-reduced-motion: reduce) { .cm-dot { transition: none; } }
 @media (max-width: 600px) { .cm-stats { grid-template-columns: 1fr 1fr; } .cm-map { padding: 4px 4px 0; } }
+/* Interactive switches: one style for every visual (segmented control) */
+.model-switch, .view-switch { display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px; background: #EEF0F4; border-radius: 8px; }
+.model-switch button, .view-switch button { font: inherit; font-size: 13px; font-weight: 500; color: #3A3F50; background: transparent; border: 0; border-radius: 6px; padding: 6px 11px; cursor: pointer; }
+.model-switch button:hover, .view-switch button:hover { color: var(--ink); background: rgba(255, 255, 255, .8); }
+.model-switch button[aria-pressed="true"], .view-switch button[aria-pressed="true"] { color: var(--white); background: var(--indigo); font-weight: 600; box-shadow: 0 1px 2px rgba(20, 22, 31, .12); }
+.model-switch button:focus-visible, .view-switch button:focus-visible { outline: 2px solid var(--indigo); outline-offset: 2px; }
+.source-card-bar .tag-illustrative { margin-left: auto; }
+.trend-period { font-size: 12px; font-weight: 600; color: var(--muted); }
+/* Timeline markers: filled = happened, orange = warning, hollow = planned */
+.atl-new .atl-text { color: var(--indigo); font-weight: 600; }
