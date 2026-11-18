@@ -5,26 +5,26 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How to calculate feature adoption rate</title>
-<meta name="description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
+<meta name="description" content="How to calculate feature adoption rate, read the feature adoption funnel from first try to repeat use, and use it for renewals and the roadmap.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="How to calculate feature adoption rate">
-<meta property="og:description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
+<meta property="og:description" content="How to calculate feature adoption rate, read the feature adoption funnel from first try to repeat use, and use it for renewals and the roadmap.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-feature-adoption-plg-teams">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to calculate feature adoption rate">
-<meta name="twitter:description" content="How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-17i">
+<meta name="twitter:description" content="How to calculate feature adoption rate, read the feature adoption funnel from first try to repeat use, and use it for renewals and the roadmap.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-18d">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Feature adoption rate: how to calculate it, and what it means for revenue",
-  "description": "How to calculate feature adoption rate without the usual traps, where it fits from trial to renewal, and how it helps decide which feature requests to build.",
+  "description": "How to calculate feature adoption rate, read the feature adoption funnel from first try to repeat use, and use it for renewals and the roadmap.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-11-09",
+  "dateModified": "2026-11-18",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,8 +89,8 @@
 
 <article class="article wrap">
   <h1>Feature adoption rate: how to calculate it, and what it means for revenue</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-09">November 9, 2026</time></p>
-  <p class="lede-intro">Feature adoption rate is the share of users, or accounts, who use a given feature over a period. It answers a question many SaaS companies can't: which features do customers actually use, and which ones made them buy or stay?</p>
+  <p class="article-meta">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+  <p class="lede-intro">Feature adoption rate is the share of users, or accounts, who use a given feature over a period. It answers two questions: which features customers actually use, and which ones made them buy or stay.</p>
   <p>The usual report ranks features by the share of all users who touched them. It's the easiest number to pull, and it misleads in two ways. A paid add-on looks like a failure because most customers never bought it, and the feature everyone opens isn't always the one people pay for.</p>
 
   <h2>How to calculate feature adoption rate</h2>
@@ -106,6 +106,68 @@
     <li><strong>Who to exclude.</strong> Remove your own team and your test accounts. They are often the heaviest users of a new feature.</li>
   </ul>
   <p>Say 40 of your 1,600 customers bought a reporting add-on, and 22 of them use it every month. Against all customers, adoption is 1.4%. Against the accounts that bought it, adoption is 55%. That's the figure to track, and it raises a second question: 18 accounts pay for something they don't use, and each one is a renewal at risk.</p>
+  <p>The adoption rate tells you how widely a feature is used, not how much. For that, look at depth: how often each account uses the feature, and how many users in the account use it.</p>
+
+  <h2>The feature adoption funnel</h2>
+  <p>A single adoption rate doesn't show at which step accounts stop using a feature. Among the accounts that have access, count how many tried it, how many adopted it (they use it as often as it's meant to be used), and how many still use it three months later. Also track how long accounts take to adopt it.</p>
+  <p>The step where accounts stop tells you what to fix. If accounts never try the feature, they probably haven't found it, so look at onboarding and in-product prompts. If they try it and stop, it didn't do enough for them, so look at what it delivers and how easy it is to use. If they stop after a few months, they needed it once, or found another way to get the job done.</p>
+
+  <figure class="ui-card af-card" id="af-demo" aria-labelledby="af-title">
+    <p class="demo-hint" id="af-hint" hidden>Try it: switch features to compare the step where accounts stop.</p>
+    <div class="ui-card-head"><span class="source-card-title" id="af-title">Feature adoption funnel</span><span class="tag-illustrative">Illustrative data</span></div>
+    <div class="af-body">
+      <div class="model-switch af-switch" role="group" aria-label="Feature" id="af-switch" hidden>
+        <button type="button" data-f="a" aria-pressed="true">Scheduled reports</button>
+        <button type="button" data-f="b" aria-pressed="false">Forecasting add-on</button>
+      </div>
+      <p class="card-ctx af-ctx" id="af-ctx">Included in the Pro plan · median time to adopt: 24 days</p>
+      <div class="af-rows" aria-hidden="true">
+        <div class="af-row"><span class="af-name">Have access</span><span class="af-track"><span class="af-fill" data-k="0" style="width: 100%"></span></span><span class="af-val" data-k="0">600</span></div>
+        <div class="af-drop" data-k="1">−65% · discovery</div>
+        <div class="af-row"><span class="af-name">Tried it</span><span class="af-track"><span class="af-fill" data-k="1" style="width: 35%"></span></span><span class="af-val" data-k="1">210 · 35%</span></div>
+        <div class="af-drop" data-k="2">−29% · value</div>
+        <div class="af-row"><span class="af-name">Adopted</span><span class="af-track"><span class="af-fill" data-k="2" style="width: 25%"></span></span><span class="af-val" data-k="2">150 · 25%</span></div>
+        <div class="af-drop" data-k="3">−10% · habit</div>
+        <div class="af-row"><span class="af-name">Still using after 90 days</span><span class="af-track"><span class="af-fill" data-k="3" style="width: 22.5%"></span></span><span class="af-val" data-k="3">135 · 23%</span></div>
+      </div>
+    </div>
+    <p class="ui-note" id="af-note" aria-live="polite"><strong>Most accounts never try it, so the problem is discovery.</strong> Accounts that do try it mostly keep using it: the feature works once people find it.</p>
+    <table class="visually-hidden">
+      <caption>Feature adoption funnel for two features, among the accounts that have access: accounts that tried the feature, adopted it, and still use it after 90 days (illustrative data). For scheduled reports, included in the Pro plan, most accounts stop before trying it. The forecasting add-on is tried by almost every account that bought it, but only 22 of 40 use it every month, leaving 18 renewals at risk worth $108,000 ARR.</caption>
+      <thead><tr><th scope="col">Step</th><th scope="col">Scheduled reports</th><th scope="col">Forecasting add-on</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Have access</th><td>600</td><td>40</td></tr>
+        <tr><th scope="row">Tried it</th><td>210 (35%)</td><td>36 (90%)</td></tr>
+        <tr><th scope="row">Adopted</th><td>150 (25%)</td><td>22 (55%)</td></tr>
+        <tr><th scope="row">Still using after 90 days</th><td>135 (23%)</td><td>20 (50%)</td></tr>
+        <tr><th scope="row">Median time to adopt</th><td>24 days</td><td>6 days</td></tr>
+      </tbody>
+    </table>
+  </figure>
+  <script>
+  (function () {
+    var fig = document.getElementById('af-demo'); if (!fig) return;
+    var D = {
+      a: { ctx: 'Included in the Pro plan · median time to adopt: 24 days', w: [100, 35, 25, 22.5], v: ['600', '210 · 35%', '150 · 25%', '135 · 23%'], d: ['', '−65% · discovery', '−29% · value', '−10% · habit'], hot: 1,
+           note: '<strong>Most accounts never try it, so the problem is discovery.</strong> Accounts that do try it mostly keep using it: the feature works once people find it.' },
+      b: { ctx: 'Paid add-on · median time to adopt: 6 days', w: [100, 90, 55, 50], v: ['40', '36 · 90%', '22 · 55%', '20 · 50%'], d: ['', '−10% · discovery', '−39% · value', '−9% · habit'], hot: 2,
+           note: '<strong>Almost every account tries it, but only 22 of 40 use it every month, so the problem is value or ease of use.</strong> 18 accounts pay for something they don\'t use regularly: $108,000 of ARR up for renewal.' }
+    };
+    var sw = document.getElementById('af-switch'), buttons = sw.querySelectorAll('button');
+    function show(k) {
+      var d = D[k];
+      document.getElementById('af-ctx').textContent = d.ctx;
+      fig.querySelectorAll('.af-fill').forEach(function (e) { e.style.width = d.w[+e.getAttribute('data-k')] + '%'; });
+      fig.querySelectorAll('.af-val').forEach(function (e) { e.textContent = d.v[+e.getAttribute('data-k')]; });
+      fig.querySelectorAll('.af-drop').forEach(function (e) { var i = +e.getAttribute('data-k'); e.textContent = d.d[i]; e.classList.toggle('af-hot', i === d.hot); });
+      document.getElementById('af-note').innerHTML = d.note;
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-f') === k ? 'true' : 'false'); });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-f')); }); });
+    sw.hidden = false; document.getElementById('af-hint').hidden = false; show('a');
+  })();
+  </script>
+
 
   <h2>Where feature adoption fits in the customer lifecycle</h2>
   <p>The rate is calculated the same way at every stage. What changes is who you count, and who acts on the answer.</p>
@@ -157,7 +219,7 @@
     <li><strong>Before and after each release.</strong> A dated note on the release, and the accounts that asked for the feature, with their use 30 and 60 days later.</li>
     <li><strong>By acquisition source.</strong> Marketing then sees whether the features its campaigns promise are the ones new customers use.</li>
   </ul>
-  <p>Funnelsight builds that view from the tools you already have: product usage, the CRM and billing. When a requested feature ships, a flag in the CRM tells each account owner, who can let the customer know it's live.</p>
+  <p>Funnelsight brings product usage, your CRM and billing together in that view. When a requested feature ships, a flag in the CRM tells each account owner, who can let the customer know it's live.</p>
 
   <div class="article-cta">
     <p>See which features each account uses, next to what it pays and when it renews.</p>
@@ -168,6 +230,10 @@
     <details>
       <summary>What's the difference between feature adoption and product adoption?</summary>
       <p>Product adoption rate looks at the product as a whole: the share of new users or customers who become regular users. Feature adoption rate looks at one feature, among the users or accounts that can use it. A product can be well adopted while some of its features are barely used, which is what a feature audit brings out.</p>
+    </details>
+    <details>
+      <summary>What's a good feature adoption rate?</summary>
+      <p>It depends on the feature. A core feature should reach most of the accounts that have it. A niche feature or an add-on for a specific need won't, and doesn't have to. Compare each feature with the accounts that can use it, and with your other features of the same kind, rather than with a market average that mixes products and plans.</p>
     </details>
   </div>
   <script type="application/ld+json">
@@ -181,6 +247,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Product adoption rate looks at the product as a whole: the share of new users or customers who become regular users. Feature adoption rate looks at one feature, among the users or accounts that can use it. A product can be well adopted while some of its features are barely used, which is what a feature audit brings out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's a good feature adoption rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the feature. A core feature should reach most of the accounts that have it. A niche feature or an add-on for a specific need won't, and doesn't have to. Compare each feature with the accounts that can use it, and with your other features of the same kind, rather than with a market average that mixes products and plans."
       }
     }
   ]

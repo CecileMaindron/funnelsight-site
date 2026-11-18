@@ -2116,6 +2116,15 @@ footer a {
 .wk-key.wk-up { background: #E6E9F7; color: #2A2470; }
 .wk-changes { list-style: none; margin: 10px 18px 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #3A3F50; }
 .wk-day { display: inline-block; min-width: 32px; font-weight: 600; color: var(--indigo); }
+/* Product: pipeline coverage */
+.cov-table th[scope="row"] { width: 30%; font-weight: 500; }
+.cov-value { width: 52px; }
+.bar-need { background: repeating-linear-gradient(135deg, #D9D6EC 0 6px, #EEEDF6 6px 12px); }
+.cov-sub { margin: 14px 18px 4px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.cov-sources td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.cov-sources td.muted { color: var(--muted); }
+.cov-sources thead th:not(:first-child) { text-align: right; }
+.bar-pace { background: #9C95D3; }
 /* LTV:CAC: blended CAC and customer mix */
 .mix-control { margin-bottom: 8px; max-width: 420px; }
 .mix-scale { position: relative; height: 112px; margin: 8px 8px 4px; }
@@ -2142,3 +2151,16 @@ footer a {
 @media (prefers-reduced-motion: reduce) { .mix-bl, .mix-seg { transition: none; } }
 @media (max-width: 600px) { .mix-row { grid-template-columns: 1fr; gap: 4px; } .mix-lab { font-size: 11px; } }
 .mix-card .mix-keys, .mix-card .mix-keys .pc-item { font-size: 12px; line-height: 1.4; }
+/* Feature adoption funnel */
+.af-body { padding: 4px 16px 8px; }
+.af-switch { margin-bottom: 10px; flex-wrap: wrap; }
+.af-card .af-ctx { margin: 0 0 12px; padding: 0; }
+.af-row { display: grid; grid-template-columns: 170px 1fr 92px; align-items: center; gap: 12px; }
+.af-name { font-size: 13px; color: #3A3F50; }
+.af-track { height: 22px; border-radius: 4px; background: repeating-linear-gradient(135deg, #E3E1F1 0 6px, #F3F2F9 6px 12px); overflow: hidden; }
+.af-fill { display: block; height: 100%; background: var(--indigo); border-radius: 4px; transition: width .35s ease; }
+.af-val { font-size: 13px; font-weight: 600; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.af-drop { margin: 3px 0 3px 182px; font-size: 12px; color: var(--muted); }
+.af-drop.af-hot { color: #7A3B06; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .af-fill { transition: none; } }
+@media (max-width: 600px) { .af-row { grid-template-columns: 1fr 76px; } .af-name { grid-column: 1 / -1; margin-top: 4px; } .af-drop { margin-left: 0; } }
