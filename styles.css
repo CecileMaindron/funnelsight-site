@@ -2116,3 +2116,12 @@ footer a {
 .wk-key.wk-up { background: #E6E9F7; color: #2A2470; }
 .wk-changes { list-style: none; margin: 10px 18px 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: #3A3F50; }
 .wk-day { display: inline-block; min-width: 32px; font-weight: 600; color: var(--indigo); }
+/* Product: pipeline coverage */
+.cov-table th[scope="row"] { width: 30%; font-weight: 500; }
+.cov-value { width: 52px; }
+.bar-need { background: repeating-linear-gradient(135deg, #D9D6EC 0 6px, #EEEDF6 6px 12px); }
+.cov-sub { margin: 14px 18px 4px; font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.cov-sources td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.cov-sources td.muted { color: var(--muted); }
+.cov-sources thead th:not(:first-child) { text-align: right; }
+.bar-pace { background: #9C95D3; }

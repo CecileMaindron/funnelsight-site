@@ -9,3 +9,6 @@
 
 /assets/site.js
   Cache-Control: no-cache, must-revalidate
+
+/assets/funnel-metrics-cheat-sheet.pdf
+  Link: <https://funnelsight.dev/playbooks/funnel-metrics-cheat-sheet>; rel="canonical"
