@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cheat sheet: 10 funnel metrics to track first">
 <meta name="twitter:description" content="Which funnel metrics to track first, who owns each one, what it's used for, and how long a change takes to show up. A one-page cheat sheet for SaaS teams.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-17i">
+<link rel="stylesheet" href="/styles.css?v=2026-11-18a">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
@@ -24,7 +24,7 @@
   "headline": "Cheat sheet: 10 funnel metrics to track first, and when to read them",
   "description": "Which funnel metrics to track first, who owns each one, what it's used for, and how long a change takes to show up. A one-page cheat sheet for SaaS teams.",
   "datePublished": "2026-11-10",
-  "dateModified": "2026-11-11",
+  "dateModified": "2026-11-18",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,9 +89,9 @@
 
 <article class="article wrap">
   <h1>Cheat sheet: 10 funnel metrics to track first, and when to read them</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-11">November 11, 2026</time></p>
-  <p class="lede-intro">Teams often end up in one of two places. Either nobody is sure what to track, or the dashboard holds forty metrics in no particular order. In both cases, nobody knows which number to look at on Monday, or when a change can be judged.</p>
-  <p>This cheat sheet sorts ten funnel metrics by when they become readable, who owns each one and what it's used for. It works for a new product, and just as well for a new channel, a new audience or a new market.</p>
+  <p class="article-meta">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+  <p class="lede-intro">Start with ten funnel metrics, in the order they become readable. Sign-ups and new customers by source mean something from day one. Activation, PQL, trial-to-paid and lead-to-opportunity rates need a few weeks. Cost per customer, CAC payback, churn and net revenue retention need a quarter.</p>
+  <p>For each one, the cheat sheet says who owns it, what it's used for, and how long a change takes to show up. It works for a new product, and just as well for a new channel, a new audience or a new market.</p>
 
   <h2>The cheat sheet</h2>
   <figure class="fm-sheet" aria-labelledby="fm-sheet-caption">
@@ -173,8 +173,96 @@
     <li><strong>One average for every source.</strong> A blended activation rate can stay flat while one source improves and another drops. Read the first six metrics by source.</li>
   </ul>
 
-  <h2>What the dashboard needs to show</h2>
-  <p>To follow this order without rebuilding the numbers each month, a dashboard needs four things. Each volume metric next to the one that completes it, such as sign-ups next to cost per paying customer. Each channel read on its own timeline, paid search over days and SEO over months. A dated note on the day of each change. And one definition of each metric, used in every view, as in a <a href="/glossary/what-is-a-single-source-of-truth-saas">single source of truth</a>.</p>
+  <h2>Which metrics go on which dashboard</h2>
+  <p>The ten metrics don't belong on one screen. They fit three views of the same numbers, each read at its own pace.</p>
+  <ul>
+    <li><strong>The quarterly review</strong> checks results against target: MQLs or sign-ups, conversion to opportunity, pipeline, new customers, churn. If every line is on track, the review can stop there.</li>
+    <li><strong>The monthly review</strong> starts when a target is missed. It goes back up the funnel one stage at a time, this month against last, to find where the drop starts. A channel only comes into it when it moves well beyond its usual range.</li>
+    <li><strong>The team view</strong> is read every day or every week by the people who run campaigns and onboarding. It shows each source against its usual range, with every change dated.</li>
+  </ul>
+
+  <figure class="source-card home-views cadence-views" id="cadence-views">
+    <div class="source-card-bar">
+      <div class="view-switch" role="group" aria-label="Dashboard">
+        <button type="button" data-view="q" aria-pressed="true">Quarterly review</button>
+        <button type="button" data-view="m" aria-pressed="false">Monthly review</button>
+        <button type="button" data-view="w" aria-pressed="false">Team, every week</button>
+      </div>
+      <span class="tag-illustrative">Illustrative data</span>
+    </div>
+    <div class="view-panel" data-view="q">
+      <div class="source-card-head"><span class="source-card-title">Quarter against target</span><span class="source-card-period">Q3</span></div>
+      <div class="source-table-wrap">
+        <table class="source-table score-table">
+          <caption class="visually-hidden">Quarterly review: results against target for MQLs, MQL to SQL conversion, pipeline created, new customers and monthly customer churn (illustrative data)</caption>
+          <thead><tr><th scope="col">Metric</th><th scope="col">Q3</th><th scope="col">Target</th><th scope="col"><span class="visually-hidden">Status</span></th></tr></thead>
+          <tbody>
+            <tr><th scope="row">MQLs</th><td class="num">1,380</td><td class="num muted">1,400</td><td><span class="status status-ok">On track</span></td></tr>
+            <tr><th scope="row">MQL to SQL conversion</th><td class="num">26%</td><td class="num muted">30%</td><td><span class="status status-low">Below target</span></td></tr>
+            <tr><th scope="row">Pipeline created</th><td class="num">$6.8M</td><td class="num muted">$8.0M</td><td><span class="status status-low">Below target</span></td></tr>
+            <tr><th scope="row">New customers</th><td class="num">71</td><td class="num muted">80</td><td><span class="status status-low">Below target</span></td></tr>
+            <tr><th scope="row">Customer churn, monthly</th><td class="num">1.1%</td><td class="num muted">1.2%</td><td><span class="status status-ok">On track</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="view-caption"><strong>MQLs are on target, but fewer of them become SQLs.</strong> That's where the pipeline gap starts, so the monthly review starts there.</p>
+    </div>
+    <div class="view-panel" data-view="m" hidden>
+      <div class="source-card-head"><span class="source-card-title">Funnel this month</span><span class="source-card-period">October vs September</span></div>
+      <div class="source-table-wrap">
+        <table class="source-table score-table">
+          <caption class="visually-hidden">Monthly review: each funnel stage in October and its change against September (illustrative data)</caption>
+          <thead><tr><th scope="col">Stage</th><th scope="col">October</th><th scope="col">vs September</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Website visits</th><td class="num">42,300</td><td class="num muted">+3%</td></tr>
+            <tr><th scope="row">Leads</th><td class="num">1,520</td><td class="num muted">+1%</td></tr>
+            <tr><th scope="row">MQLs</th><td class="num">468</td><td class="num muted">−2%</td></tr>
+            <tr><th scope="row">SQLs</th><td class="num">112</td><td class="num chg-down">−14%</td></tr>
+            <tr><th scope="row">Pipeline created</th><td class="num">$2.1M</td><td class="num chg-down">−12%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="view-caption"><strong>Traffic and leads hold. The drop starts between MQL and SQL,</strong> so the next step is to look at which MQLs sales turned down, and why.</p>
+    </div>
+    <div class="view-panel" data-view="w" hidden>
+      <div class="source-card-head"><span class="source-card-title">Funnel this week, by source</span><span class="source-card-period">vs a usual week</span></div>
+      <div class="table-scroll">
+        <table class="source-table wk-table">
+          <caption class="visually-hidden">Team view: visits, visit-to-lead rate, leads, lead-to-MQL rate and MQLs this week by source, each compared with its usual weekly range (illustrative data)</caption>
+          <thead><tr><th scope="col">Source</th><th scope="col">Visits</th><th scope="col">Visit to lead</th><th scope="col">Leads</th><th scope="col">Lead to MQL</th><th scope="col">MQLs</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Organic search</th><td>6,200<span class="visually-hidden"> (usual 5,800–6,600)</span></td><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>1.7%<span class="visually-hidden"> (below its usual range, usual 1.8–2.2%)</span></td><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>105<span class="visually-hidden"> (below its usual range, usual 108–130)</span></td><td>31%<span class="visually-hidden"> (usual 28–34%)</span></td><td>33<span class="visually-hidden"> (usual 30–42)</span></td></tr>
+            <tr><th scope="row">Paid search</th><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>1,450<span class="visually-hidden"> (below its usual range, usual 2,000–2,400)</span></td><td>3.3%<span class="visually-hidden"> (usual 3.0–3.6%)</span></td><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>48<span class="visually-hidden"> (below its usual range, usual 65–80)</span></td><td>35%<span class="visually-hidden"> (usual 32–38%)</span></td><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>17<span class="visually-hidden"> (below its usual range, usual 21–30)</span></td></tr>
+            <tr><th scope="row">LinkedIn ads</th><td class="wk-up"><span class="wk-arrow" aria-hidden="true">▲</span>1,900<span class="visually-hidden"> (above its usual range, usual 700–1,100)</span></td><td>2.0%<span class="visually-hidden"> (usual 1.6–2.4%)</span></td><td class="wk-up"><span class="wk-arrow" aria-hidden="true">▲</span>38<span class="visually-hidden"> (above its usual range, usual 8–15)</span></td><td class="wk-down"><span class="wk-arrow" aria-hidden="true">▼</span>13%<span class="visually-hidden"> (below its usual range, usual 25–35%)</span></td><td>5<span class="visually-hidden"> (usual 2–5)</span></td></tr>
+            <tr><th scope="row">Direct</th><td>2,100<span class="visually-hidden"> (usual 1,900–2,300)</span></td><td>1.6%<span class="visually-hidden"> (usual 1.4–1.9%)</span></td><td>34<span class="visually-hidden"> (usual 30–40)</span></td><td>30%<span class="visually-hidden"> (usual 27–35%)</span></td><td>10<span class="visually-hidden"> (usual 8–13)</span></td></tr>
+            <tr><th scope="row">Partners</th><td>400<span class="visually-hidden"> (usual 350–480)</span></td><td>5.3%<span class="visually-hidden"> (usual 4.5–6.0%)</span></td><td>21<span class="visually-hidden"> (usual 15–25)</span></td><td>48%<span class="visually-hidden"> (usual 40–55%)</span></td><td>10<span class="visually-hidden"> (usual 7–12)</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="wk-legend"><span class="wk-key wk-up">▲ Above its usual range</span><span class="wk-key wk-down">▼ Below</span></p>
+      <ul class="wk-changes" aria-label="Changes this week">
+        <li><span class="wk-day">Mon</span> New LinkedIn campaign</li>
+        <li><span class="wk-day">Tue</span> Paid search campaign paused</li>
+        <li><span class="wk-day">Day 14</span> A/B test on blog pages: sign-up form moved from right to left</li>
+      </ul>
+      <p class="view-caption"><strong>Organic visits hold, but visit to lead dips to 1.7%.</strong> The A/B test on blog pages explains it: over 14 days, the version with the form on the left converts at 1.4%, against 2.0% for the original, which stays stable. LinkedIn brings more leads, but fewer of them become MQLs. Paid search is down because a campaign was paused.</p>
+    </div>
+  </figure>
+  <script>
+  (function () {
+    var fig = document.getElementById('cadence-views'); if (!fig) return;
+    var buttons = fig.querySelectorAll('.view-switch button'), panels = fig.querySelectorAll('.view-panel');
+    buttons.forEach(function (b) { b.addEventListener('click', function () {
+      var v = b.getAttribute('data-view');
+      buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-view') !== v; });
+    }); });
+  })();
+  </script>
+
+  <p>Product adoption is often followed in a view of its own, from the first days of a trial to the renewal: see <a href="/playbooks/tracking-feature-adoption-plg-teams">feature adoption across the customer lifecycle</a>.</p>
+
+  <p>To keep the three views consistent without rebuilding the numbers each month, a dashboard needs four things. Each volume metric next to the one that completes it, such as sign-ups next to cost per paying customer. Each channel read on its own timeline, paid search over days and SEO over months. A dated note on the day of each change. And one definition of each metric, used in every view, as in a <a href="/glossary/what-is-a-single-source-of-truth-saas">single source of truth</a>.</p>
   <p>Funnelsight is built around those four points, with acquisition, product usage, CRM and billing in one view of the funnel.</p>
 
   <div class="article-cta">
