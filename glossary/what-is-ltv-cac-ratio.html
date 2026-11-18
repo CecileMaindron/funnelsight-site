@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LTV:CAC ratio and how much to spend to acquire a customer">
 <meta name="twitter:description" content="The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-17i">
+<link rel="stylesheet" href="/styles.css?v=2026-11-18c">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
@@ -24,7 +24,7 @@
   "headline": "What is the LTV:CAC ratio?",
   "description": "The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.",
   "datePublished": "2026-09-25",
-  "dateModified": "2026-11-17",
+  "dateModified": "2026-11-18",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,7 +89,7 @@
 
 <article class="article wrap">
   <h1>What is the LTV:CAC ratio?</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-17">November 17, 2026</time></p>
+  <p class="article-meta">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
   <p class="lede-intro">The LTV:CAC ratio compares what a customer brings in over the time they stay, their lifetime value (LTV), with what it cost to win them, the customer acquisition cost (CAC). A ratio of 3:1 means a customer brings in three times what they cost. It answers a practical question: how much can you spend to win a customer, on a given channel or in a given segment?</p>
 
   <div class="formula-box">
@@ -193,8 +193,67 @@
   <p>Costs tend to rise as you spend more on a channel, because the extra budget reaches people further from your target. So the room left matters more than the ratio itself. A channel with a modest ratio and a stable cost can be a safer place for more budget than one with a high ratio on a lifetime nobody has observed.</p>
 
   <h2>Where LTV:CAC goes wrong</h2>
-  <p><strong>CAC and LTV don't count the same costs.</strong> Ad spend alone on one side, every month of margin on the other, and the ratio looks better than it is. Compare LTV with the full CAC, and keep the ad-only figure for comparing campaigns.</p>
+  <p><strong>CAC and LTV don't count the same costs.</strong> Ad spend alone on one side, every month of margin on the other, and the ratio looks better than it is. Say which costs CAC includes, and keep the same ones from one period to the next.</p>
   <p><strong>One ratio covers every channel.</strong> Each channel has its own CAC, and its customers stay and grow differently. <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">Net revenue retention by source</a> shows how wide that gap can be. A blended ratio averages a channel you should grow with one you should cut. Self-serve and sales-led customers need separate ratios too.</p>
+
+  <h2>Blended CAC vs paid CAC, and the split B2B needs</h2>
+  <p>Blended CAC divides all acquisition spend by all new customers, whatever brought them in. Paid CAC divides paid media spend by the customers that paid channels brought. The gap between the two shows how much organic search, referrals and word of mouth hold the average down.</p>
+  <p>In B2B, both are usually calculated on program spend: ads, events, content, tools. Sales salaries and commission plans vary by rep and by deal, so they're rarely in the number. Customers signed by sales cost more than any of these figures shows.</p>
+  <p>In a hybrid model, the split that matters is between self-serve and sales-assisted customers. When the self-serve share grows, blended CAC falls, even though no customer got cheaper to acquire.</p>
+
+  <figure class="ui-card mix-card" id="mix-demo" aria-labelledby="mix-title">
+    <p class="demo-hint" id="mix-hint" hidden>Try it: move the slider. Blended CAC falls, while each motion costs the same.</p>
+    <div class="ui-card-head"><span class="source-card-title" id="mix-title">Blended CAC and the customer mix</span><span class="tag-illustrative">Illustrative data</span></div>
+    <p class="card-ctx">Program spend per new customer · self-serve $400 · sales-assisted $4,000</p>
+    <div class="pc-body">
+      <label class="pc-control mix-control" id="mix-control" for="mix-share" hidden><span>Self-serve share of new customers <output id="mix-out" for="mix-share">30%</output></span>
+        <input type="range" id="mix-share" min="10" max="90" step="10" value="30"></label>
+      <div class="mix-scale" aria-hidden="true">
+        <div class="mix-axis"></div>
+        <div class="mix-mark mix-ss" style="left: 8.9%"><span class="mix-dot"></span><span class="mix-lab">Self-serve<br><b>$400</b></span></div>
+        <div class="mix-mark mix-sa" style="left: 88.9%"><span class="mix-dot"></span><span class="mix-lab">Sales-assisted<br><b>$4,000</b></span></div>
+        <div class="mix-mark mix-bl" id="mix-bl" style="left: 64.9%"><span class="mix-lab mix-lab-top">Blended<br><b id="mix-bl-val">$2,920</b></span><span class="mix-dot"></span></div>
+      </div>
+      <div class="mix-bars" aria-hidden="true">
+        <div class="mix-row"><span class="mix-name">New customers</span><span class="mix-bar"><span class="mix-seg mix-seg-ss" id="mix-c-ss" style="width: 30%">30%</span><span class="mix-seg mix-seg-sa" id="mix-c-sa" style="width: 70%">70%</span></span></div>
+        <div class="mix-row"><span class="mix-name">Program spend</span><span class="mix-bar"><span class="mix-seg mix-seg-ss" id="mix-s-ss" style="width: 4%"></span><span class="mix-seg mix-seg-sa" id="mix-s-sa" style="width: 96%">96%</span></span></div>
+        <p class="mix-keys"><span class="pc-item"><span class="pc-key mix-k-ss"></span>Self-serve</span><span class="pc-item"><span class="pc-key mix-k-sa"></span>Sales-assisted</span></p>
+      </div>
+    </div>
+    <p class="ui-note" id="mix-note" aria-live="polite"><strong>Blended CAC: $2,920.</strong> Self-serve still costs $400 and sales-assisted $4,000. Only the mix changed.</p>
+    <table class="visually-hidden">
+      <caption>Blended CAC for three customer mixes, with program spend of $400 per self-serve customer and $4,000 per sales-assisted customer (illustrative data)</caption>
+      <thead><tr><th scope="col">Self-serve share of new customers</th><th scope="col">Blended CAC</th><th scope="col">Self-serve share of program spend</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">30%</th><td>$2,920</td><td>4%</td></tr>
+        <tr><th scope="row">60%</th><td>$1,840</td><td>13%</td></tr>
+        <tr><th scope="row">90%</th><td>$760</td><td>47%</td></tr>
+      </tbody>
+    </table>
+  </figure>
+  <script>
+  (function () {
+    var fig = document.getElementById('mix-demo'); if (!fig) return;
+    var ctl = document.getElementById('mix-control'), inp = document.getElementById('mix-share');
+    var SS = 400, SA = 4000, MAX = 4500;
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function seg(id, v) { var e = document.getElementById(id); e.style.width = v + '%'; e.textContent = v >= 8 ? v + '%' : ''; }
+    function show() {
+      var s = +inp.value / 100, b = s * SS + (1 - s) * SA, sp = Math.round(s * SS / b * 100);
+      document.getElementById('mix-out').textContent = Math.round(s * 100) + '%';
+      document.getElementById('mix-bl').style.left = (b / MAX * 100) + '%';
+      document.getElementById('mix-bl-val').textContent = fmt(b);
+      seg('mix-c-ss', Math.round(s * 100)); seg('mix-c-sa', 100 - Math.round(s * 100));
+      seg('mix-s-ss', sp); seg('mix-s-sa', 100 - sp);
+      document.getElementById('mix-note').innerHTML = '<strong>Blended CAC: ' + fmt(b) + '.</strong> Self-serve still costs $400 and sales-assisted $4,000. Only the mix changed.';
+    }
+    inp.addEventListener('input', show);
+    ctl.hidden = false; document.getElementById('mix-hint').hidden = false; show();
+  })();
+  </script>
+
+  <p>To calculate CAC by sales motion, decide which spend belongs to each motion. Split what serves both, such as trial campaigns that bring self-serve customers and leads for sales, by a rule you keep from one quarter to the next.</p>
+  <p>Keep in mind that salaries aren't included, and they make a big difference between self-serve and sales-assisted customers. So does LTV, which tends to be higher for sales-assisted customers.</p>
 
   <h2>Following LTV:CAC by channel</h2>
   <p>Funnelsight brings the inputs of the ratio together by acquisition source: what each channel cost, its payback, and the revenue of the customers it brought, month after month, including those who left. That gives you a lifetime value by channel based on what customers actually paid, instead of one projected for the whole base.</p>
