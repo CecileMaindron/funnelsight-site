@@ -5,26 +5,26 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What counts as user activation in product-led growth</title>
-<meta name="description" content="Activation isn't sign-up or first login. Here's what actually counts as activation in product-led growth, and how to define it for your own product.">
+<meta name="description" content="What user activation means in product-led growth, how to calculate the activation rate, how to choose the event for your product, and where the numbers go wrong.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/what-counts-as-activation-in-plg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="What counts as user activation in product-led growth">
-<meta property="og:description" content="Activation isn&#x27;t sign-up or first login. Here&#x27;s what actually counts as activation in product-led growth, and how to define it for your own product.">
+<meta property="og:description" content="What user activation means in product-led growth, how to calculate the activation rate, how to choose the event for your product, and where the numbers go wrong.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/what-counts-as-activation-in-plg">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What counts as user activation in product-led growth">
-<meta name="twitter:description" content="Activation isn&#x27;t sign-up or first login. Here&#x27;s what actually counts as activation in product-led growth, and how to define it for your own product.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-17i">
+<meta name="twitter:description" content="What user activation means in product-led growth, how to calculate the activation rate, how to choose the event for your product, and where the numbers go wrong.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-17j">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What counts as user activation in product-led growth",
-  "description": "Activation isn't sign-up or first login. Here's what actually counts as activation in product-led growth, and how to define it for your own product.",
+  "description": "What user activation means in product-led growth, how to calculate the activation rate, how to choose the event for your product, and where the numbers go wrong.",
   "datePublished": "2026-09-11",
-  "dateModified": "2026-11-14",
+  "dateModified": "2026-11-17",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,7 +89,7 @@
 
 <article class="article wrap">
   <h1>What counts as user activation in product-led growth</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-14">November 14, 2026</time></p>
+  <p class="article-meta">Updated <time datetime="2026-11-17">November 17, 2026</time></p>
   <p class="lede-intro">Activation is the moment a new user first gets real value from the product, when it does the job they came for. It isn't the moment they create an account. Sign-up and first login are the usual defaults, because they are easy to count. Neither tells you whether the product actually worked for that person.</p>
 
   <h2>How to calculate the activation rate</h2>
@@ -121,6 +121,72 @@
   <p><strong>No one owns the step.</strong> Product counts an event in its analytics tool. Marketing reports trial-to-paid and skips the step between sign-up and payment. Sales sees new trials in the CRM, when it sees them at all. Activation ends up with several definitions, or none, and the one written in a slide is never revisited.</p>
   <p><strong>Activation becomes the sales signal.</strong> Reaching the activation event shows the product worked for someone, not that they're ready to buy or that a call would help. Many convinced users buy on their own, and some have no budget at all. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> adds what activation doesn't show: an account that fits your target, and signs of buying intent.</p>
   <p><strong>The definition changes without a date.</strong> A feature moves, onboarding changes, a new plan adds a different first step, and the event that made sense a year ago no longer fits. Revisit it when the product changes, not every time the rate dips. When it does dip, <a href="/playbooks/time-to-value-tracking">time to value</a> helps tell a change in who signs up from a product that got harder. Date each change, so the break isn't read as a trend.</p>
+
+  <p><strong>The tracking undercounts.</strong> Some users activate and are never counted. A funnel that requires the steps in a set order drops anyone who took them in a different one. When a step can only happen after another, the order changes nothing. When two steps can happen either way, such as linking two tools, the users who started with the other one disappear from the funnel. A conversion window that's too short misses users who activate later than it allows. And accounts created before tracking started never fired the first step, so they vanish too. Before reading a drop, check how it's counted.</p>
+
+  <figure class="ui-card fn-card" id="fn-demo" aria-labelledby="fn-title">
+    <p class="demo-hint" id="fn-hint" hidden>Try it: switch to strict order and watch activation drop.</p>
+    <div class="ui-card-head"><span class="source-card-title" id="fn-title">Activation funnel, last 30 days</span><span class="tag-illustrative">Illustrative data</span></div>
+    <p class="card-ctx">A first report needs both the CRM and GA4. Onboarding suggests the CRM first.</p>
+    <div class="fn-body">
+      <div class="model-switch fn-switch" role="group" aria-label="How the funnel counts steps" id="fn-switch" hidden>
+        <button type="button" data-m="strict" aria-pressed="false">Strict order</button>
+        <button type="button" data-m="any" aria-pressed="true">Any order</button>
+      </div>
+      <div class="fn-chart" aria-hidden="true">
+        <div class="fn-col">
+          <div class="fn-track"><span class="fn-fill" data-any="100" data-strict="100" style="height:100%"></span></div>
+          <p class="fn-num"><span class="fn-pct" data-any="100%" data-strict="100%">100%</span><span class="fn-n" data-any="1,000" data-strict="1,000">1,000</span></p>
+          <p class="fn-step">Signed up</p>
+        </div>
+        <div class="fn-col">
+          <div class="fn-track"><span class="fn-fill" data-any="64" data-strict="64" style="height:64%"></span></div>
+          <p class="fn-num"><span class="fn-pct" data-any="64%" data-strict="64%">64%</span><span class="fn-n" data-any="640" data-strict="640">640</span></p>
+          <p class="fn-step">Linked the CRM</p>
+        </div>
+        <div class="fn-col">
+          <div class="fn-track"><span class="fn-fill" data-any="52" data-strict="43" style="height:52%"></span></div>
+          <p class="fn-num"><span class="fn-pct" data-any="52%" data-strict="43%">52%</span><span class="fn-n" data-any="520" data-strict="430">520</span></p>
+          <p class="fn-step">Linked GA4</p>
+        </div>
+        <div class="fn-col fn-act">
+          <div class="fn-track"><span class="fn-fill" data-any="41" data-strict="34" style="height:41%"></span></div>
+          <p class="fn-num"><span class="fn-pct" data-any="41%" data-strict="34%">41%</span><span class="fn-n" data-any="410" data-strict="340">410</span></p>
+          <p class="fn-step">Built a first report<span class="fn-tag">Activation</span></p>
+        </div>
+      </div>
+    </div>
+    <p class="ui-note" id="fn-note" aria-live="polite"><strong>41% activated.</strong> An account counts once it has done every step, whichever tool it linked first.</p>
+    <table class="visually-hidden">
+      <caption>Accounts reaching each step of the activation funnel over the last 30 days, counted in any order and in strict order (illustrative data). A first report needs both the CRM and GA4. In strict order, the 90 accounts that linked GA4 before the CRM, 70 of whom built a first report, are dropped from that step on.</caption>
+      <thead><tr><th scope="col">Step</th><th scope="col">Any order</th><th scope="col">Strict order</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Signed up</th><td>1,000 (100%)</td><td>1,000 (100%)</td></tr>
+        <tr><th scope="row">Linked the CRM</th><td>640 (64%)</td><td>640 (64%)</td></tr>
+        <tr><th scope="row">Linked GA4</th><td>520 (52%)</td><td>430 (43%)</td></tr>
+        <tr><th scope="row">Built a first report</th><td>410 (41%)</td><td>340 (34%)</td></tr>
+      </tbody>
+    </table>
+  </figure>
+  <script>
+  (function () {
+    var fig = document.getElementById('fn-demo'); if (!fig) return;
+    var sw = document.getElementById('fn-switch'), note = document.getElementById('fn-note');
+    var buttons = sw.querySelectorAll('button');
+    var notes = {
+      any: '<strong>41% activated.</strong> An account counts once it has done every step, whichever tool it linked first.',
+      strict: '<strong>34% activated.</strong> 90 accounts linked GA4 before the CRM, and 70 of them built a first report. A funnel that expects the CRM first drops them all from that step on.'
+    };
+    function show(m) {
+      fig.querySelectorAll('.fn-fill').forEach(function (e) { e.style.height = e.getAttribute('data-' + m) + '%'; });
+      fig.querySelectorAll('.fn-pct, .fn-n').forEach(function (e) { e.textContent = e.getAttribute('data-' + m); });
+      note.innerHTML = notes[m];
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-m') === m ? 'true' : 'false'); });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-m')); }); });
+    sw.hidden = false; document.getElementById('fn-hint').hidden = false;
+  })();
+  </script>
 
   <h2>Following activation week by week</h2>
   <p>In Funnelsight, the activation event you define becomes one step of the funnel, and every report uses it. Each week, the share of new sign-ups that reach it is compared with its usual range, and flagged when it falls outside. Because activation sits in the same funnel as paid conversion and revenue, you see what happens to the users who activated, not only how many did.</p>
