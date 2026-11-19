@@ -2164,3 +2164,26 @@ footer a {
 .af-drop.af-hot { color: #7A3B06; font-weight: 600; }
 @media (prefers-reduced-motion: reduce) { .af-fill { transition: none; } }
 @media (max-width: 600px) { .af-row { grid-template-columns: 1fr 76px; } .af-name { grid-column: 1 / -1; margin-top: 4px; } .af-drop { margin-left: 0; } }
+
+/* Activation definitions demo (glossary activation, lot 68) */
+.ad-card { position: relative; }
+.ad-body { padding: 4px 16px 12px; }
+.ad-switch { margin-bottom: 10px; }
+.article .ad-card .ad-def { margin: 0 0 16px; font-size: 14px; color: #3A3F50; }
+.ad-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.article .ad-card .ad-label { margin: 0 0 6px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.article .ad-card .ad-l2 { margin-top: 16px; }
+.article .ad-card .ad-big { margin: 0 0 8px; font-family: 'Space Grotesk', sans-serif; font-size: 30px; line-height: 1.1; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ad-scale, .ad-bar, .ad-days { position: relative; display: block; height: 10px; border-radius: 5px; background: #EEF0F4; }
+.ad-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--indigo); border-radius: 5px; transition: width .35s ease; }
+.ad-ref { position: absolute; top: -4px; bottom: -4px; width: 2px; background: #8A8FA0; }
+.article .ad-card .ad-small { margin: 6px 0 0; font-size: 12px; color: var(--muted); }
+.ad-row { display: grid; grid-template-columns: 76px minmax(0, 1fr) 40px; align-items: center; gap: 8px; margin: 4px 0 12px; font-size: 13px; color: #3A3F50; }
+.ad-row .ad-bar { height: 16px; border-radius: 4px; }
+.ad-row .ad-fill { border-radius: 4px; }
+.ad-off .ad-fill { background: #B9B4DA; }
+.ad-v { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.ad-dmark { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--indigo); box-shadow: 0 0 0 2px var(--white); transition: left .35s ease; }
+.ad-dtxt span { font-weight: 600; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .ad-fill, .ad-dmark { transition: none; } }
+@media (max-width: 700px) { .ad-body { padding: 4px 12px 12px; } .ad-grid { grid-template-columns: 1fr; gap: 20px; } .article .ad-card .ad-big { font-size: 26px; } }
