@@ -2299,3 +2299,13 @@ footer a {
 .mix-card { position: relative; }
 .ltv-cac.lc-flip span { left: auto; right: 6px; }
 @media (max-width: 700px) { .article .lc-card .ltv-read { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; } .lc-card .ltv-value { font-size: 20px; } .lc-card .ltv-unit { font-size: 12px; } }
+
+/* Churn calculator */
+.cr-card { position: relative; }
+.cr-switch { margin-bottom: 12px; }
+.cr-inputs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 700px) { .cr-inputs { grid-template-columns: 1fr 1fr; } .cr-inputs .lc-field:last-child { grid-column: 1 / -1; } }
+.pc-card { position: relative; }
+.lc-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
+.lc-row .ltv-switch, .lc-row .cr-switch { margin-bottom: 0; }
+.lc-row .fs-reset { align-self: center; margin-top: 0; }
