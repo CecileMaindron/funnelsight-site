@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to calculate churn rate for B2B SaaS</title>
-<meta name="description" content="The churn rate formula in customers and in revenue, with a worked example, what a good B2B SaaS churn rate looks like, and the ARR left after a price increase.">
+<title>How to calculate churn rate in B2B SaaS, with a calculator</title>
+<meta name="description" content="The churn rate formula in customers and in revenue, a calculator for monthly and annual churn, what a good B2B SaaS churn rate is, and price increases.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/how-to-calculate-churn-rate-b2b-saas">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="How to calculate churn rate for B2B SaaS">
-<meta property="og:description" content="The churn rate formula in customers and in revenue, with a worked example, what a good B2B SaaS churn rate looks like, and the ARR left after a price increase.">
+<meta property="og:title" content="How to calculate churn rate in B2B SaaS, with a calculator">
+<meta property="og:description" content="The churn rate formula in customers and in revenue, a calculator for monthly and annual churn, what a good B2B SaaS churn rate is, and price increases.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/how-to-calculate-churn-rate-b2b-saas">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to calculate churn rate for B2B SaaS">
-<meta name="twitter:description" content="The churn rate formula in customers and in revenue, with a worked example, what a good B2B SaaS churn rate looks like, and the ARR left after a price increase.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-17i">
+<meta name="twitter:title" content="How to calculate churn rate in B2B SaaS, with a calculator">
+<meta name="twitter:description" content="The churn rate formula in customers and in revenue, a calculator for monthly and annual churn, what a good B2B SaaS churn rate is, and price increases.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-23c">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to calculate churn rate for B2B SaaS",
-  "description": "The churn rate formula in customers and in revenue, with a worked example, what a good B2B SaaS churn rate looks like, and the ARR left after a price increase.",
+  "description": "The churn rate formula in customers and in revenue, a calculator for monthly and annual churn, what a good B2B SaaS churn rate is, and price increases.",
   "datePublished": "2026-09-17",
-  "dateModified": "2026-11-17",
+  "dateModified": "2026-11-23",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,8 +89,8 @@
 
 <article class="article wrap">
   <h1>How to calculate churn rate for B2B SaaS</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-17">November 17, 2026</time></p>
-  <p class="lede-intro">Churn rate is the share of the customers you had at the start of a month who left during it. A monthly customer total won't show it: going from 1,005 to 1,100 customers could hide 30 departures or 130, depending on how many new customers came in.</p>
+  <p class="article-meta">Updated <time datetime="2026-11-23">November 23, 2026</time></p>
+  <p class="lede-intro">Churn rate is the share of the customers you had at the start of a month who left during it. A monthly customer total won't show it: going from 1,005 to 1,100 customers could hide 30 departures or 130, depending on how many new customers came in. The <a href="#cr-demo">calculator below</a> turns your numbers into a monthly and an annual rate, and into how long customers stay.</p>
 
   <h2>Churn in customers</h2>
   <p>Add the customers who joined or came back during the month, and the ones who left fall out of the difference.</p>
@@ -130,14 +130,82 @@
 
   <h2>What is a good churn rate for SaaS?</h2>
   <p>It depends on what a customer costs to win. Say a new customer costs $3,600 to win, through ads, events and sales time, and brings in $200 of margin a month. It takes 18 months to earn that $3,600 back. Churn decides whether customers stay that long. If 3% of customers leave each month, the average customer stays about 33 months (1 ÷ 3%). If 6% leave, about 17 months.</p>
-  <figure class="ui-card lifetime-bars" role="img" aria-label="At 3% monthly churn, customers stay about 33 months on average, beyond the 18 months needed to earn back their acquisition cost. At 6%, about 17 months, short of it. Illustrative data">
-    <div class="ui-card-head"><span class="source-card-title">How long the average customer stays</span> <span class="tag-illustrative">Illustrative data</span></div>
-    <div class="lt-chart" aria-hidden="true">
-      <div class="lt-row"><span class="lt-name">3% leave each month</span><span class="lt-track"><span class="lt-bar" style="width:92%"></span><span class="lt-mark" style="left:50%"></span></span><span class="lt-val">33 months</span></div>
-      <div class="lt-row"><span class="lt-name">6% leave each month</span><span class="lt-track"><span class="lt-bar lt-short" style="width:47%"></span><span class="lt-mark" style="left:50%"></span></span><span class="lt-val">17 months</span></div>
+  <figure class="ui-card ltv-demo lc-card cr-card" id="cr-demo" aria-labelledby="cr-title">
+    <p class="demo-hint" id="cr-hint" hidden>Try it: enter your own numbers, or switch to a year to see what an annual rate means.</p>
+    <div class="ui-card-head"><span class="source-card-title" id="cr-title">Churn rate calculator</span> <span class="tag-illustrative">Example values</span></div>
+    <p class="card-ctx">Filled in with the October example above. Replace any value with your own.</p>
+    <div class="ltv-body">
+      <div class="lc-row">
+        <div class="model-switch ltv-switch cr-switch" role="group" aria-label="Period" id="cr-switch" hidden>
+          <button type="button" data-p="m" aria-pressed="true">Over a month</button>
+          <button type="button" data-p="y" aria-pressed="false">Over a year</button>
+        </div>
+        <button type="button" class="fs-reset" id="cr-reset" hidden>Reset</button>
+      </div>
+      <div class="lc-inputs cr-inputs" id="cr-inputs" hidden>
+        <label class="lc-field"><span>Customers at the start</span><span class="lc-box"><input type="number" id="cr-start" value="1005" min="0" step="1" inputmode="numeric"></span></label>
+        <label class="lc-field"><span>Customers lost during the period</span><span class="lc-box"><input type="number" id="cr-lost" value="30" min="0" step="1" inputmode="numeric"></span></label>
+        <label class="lc-field"><span>Months to earn back what a customer cost (optional)</span><span class="lc-box"><input type="number" id="cr-pay" value="18" min="0" step="1" inputmode="numeric"></span></label>
+      </div>
+      <p class="ltv-read" aria-hidden="true"><span class="ltv-fig"><span class="ltv-value" id="cr-m">3.0%</span><span class="ltv-unit">churn per month</span></span><span class="ltv-fig"><span class="ltv-value" id="cr-y">31%</span><span class="ltv-unit">churn per year</span></span><span class="ltv-fig"><span class="ltv-value" id="cr-life">33</span><span class="ltv-unit">months on average</span></span></p>
+      <div class="ltv-track" aria-hidden="true">
+        <span class="ltv-bar" id="cr-bar" style="width: 55%"></span>
+        <span class="ltv-cac" id="cr-mark" style="left: 30%"><span id="cr-mark-l">Paid back at month 18</span></span>
+      </div>
+      <div class="ltv-scale" aria-hidden="true"><span>0</span><span id="cr-max">60 months</span></div>
     </div>
-    <p class="ui-note">The line marks month 18, when a customer has paid back what it cost to win. At 6%, the average customer leaves just before.</p>
+    <p class="ui-note jt-foot" id="cr-note" aria-live="polite">At 3.0% a month, the average customer stays about 33 months, well beyond the 18 months it takes to earn back what they cost.</p>
+    <p class="lc-privacy">Nothing you enter is saved or sent. The calculation runs in your browser.</p>
+    <table class="visually-hidden">
+      <caption>Monthly churn, annual churn and average customer lifetime for two monthly churn rates, against 18 months to earn back a customer's acquisition cost (illustrative data)</caption>
+      <thead><tr><th scope="col">Monthly churn</th><th scope="col">Annual churn</th><th scope="col">Average customer lifetime</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">3%</th><td>about 31%</td><td>about 33 months, beyond the 18 months</td></tr>
+        <tr><th scope="row">6%</th><td>about 52%</td><td>about 17 months, short of the 18 months</td></tr>
+      </tbody>
+    </table>
   </figure>
+  <script>
+  (function () {
+    var fig = document.getElementById('cr-demo'); if (!fig) return;
+    var period = 'm', sw = document.getElementById('cr-switch'), btns = sw.querySelectorAll('button');
+    function val(id) { var v = parseFloat(document.getElementById(id).value); return isFinite(v) && v >= 0 ? v : 0; }
+    function pc(x, d) { return (x * 100).toFixed(d) + '%'; }
+    function show() {
+      var start = val('cr-start'), lost = Math.min(val('cr-lost'), start), pay = val('cr-pay');
+      var note = document.getElementById('cr-note');
+      if (start <= 0) { note.textContent = 'Enter the number of customers at the start of the period.'; return; }
+      var r = lost / start, m = period === 'm' ? r : 1 - Math.pow(1 - r, 1 / 12), y = period === 'y' ? r : 1 - Math.pow(1 - m, 12);
+      m = Math.round(m * 1000) / 1000; y = 1 - Math.pow(1 - m, 12);
+      var life = m > 0 ? 1 / m : Infinity;
+      document.getElementById('cr-m').textContent = pc(m, 1);
+      document.getElementById('cr-y').textContent = pc(y, 0);
+      document.getElementById('cr-life').textContent = isFinite(life) ? Math.round(life) : '–';
+      var raw = Math.max(isFinite(life) ? life : 0, pay, 12) * 1.1, max = Math.ceil(raw / 12) * 12;
+      document.getElementById('cr-bar').style.width = (isFinite(life) ? Math.min(life, max) / max * 100 : 100) + '%';
+      var mk = document.getElementById('cr-mark'); mk.style.display = pay > 0 ? 'block' : 'none';
+      mk.style.left = (pay / max * 100) + '%'; mk.classList.toggle('lc-flip', pay / max > 0.6);
+      document.getElementById('cr-mark-l').textContent = 'Paid back at month ' + Math.round(pay);
+      document.getElementById('cr-max').textContent = max + ' months';
+      var rate = period === 'm' ? pc(m, 1) + ' a month' : pc(y, 0) + ' a year';
+      var txt;
+      if (!isFinite(life)) txt = 'With no customers lost, there is no churn to measure over this period.';
+      else if (pay <= 0) txt = 'At ' + rate + ', the average customer stays about ' + Math.round(life) + ' months.';
+      else if (life >= pay * 1.1) txt = 'At ' + rate + ', the average customer stays about ' + Math.round(life) + ' months, well beyond the ' + Math.round(pay) + ' months it takes to earn back what they cost.';
+      else if (life >= pay) txt = 'At ' + rate + ', the average customer stays about ' + Math.round(life) + ' months, just past the ' + Math.round(pay) + ' months it takes to earn back what they cost.';
+      else if (life >= pay * 0.9) txt = 'At ' + rate + ', the average customer leaves after about ' + Math.round(life) + ' months, just before you have earned back what they cost (' + Math.round(pay) + ' months).';
+      else txt = 'At ' + rate + ', the average customer leaves after about ' + Math.round(life) + ' months, well before you have earned back what they cost (' + Math.round(pay) + ' months).';
+      note.textContent = txt;
+    }
+    var D = { 'cr-start': 1005, 'cr-lost': 30, 'cr-pay': 18 };
+    function setP(k) { period = k; btns.forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-p') === k ? 'true' : 'false'); }); }
+    document.getElementById('cr-reset').addEventListener('click', function () { Object.keys(D).forEach(function (id) { document.getElementById(id).value = D[id]; }); setP('m'); show(); });
+    ['cr-start', 'cr-lost', 'cr-pay'].forEach(function (id) { document.getElementById(id).addEventListener('input', show); });
+    btns.forEach(function (b) { b.addEventListener('click', function () { period = b.getAttribute('data-p'); btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); show(); }); });
+    sw.hidden = false; document.getElementById('cr-reset').hidden = false; document.getElementById('cr-inputs').hidden = false; document.getElementById('cr-hint').hidden = false;
+    show();
+  })();
+  </script>
   <p>At 3%, customers keep paying long after they've covered their cost. At 6%, the average customer leaves before you've earned back what you spent to win them. That's why self-serve, where customers cost far less to win, can live with a higher churn rate. The <a href="/glossary/what-is-ltv-cac-ratio">LTV:CAC ratio</a> builds on the same idea.</p>
 
   <h2>Before a price increase, estimate the ARR you end up with</h2>
@@ -161,6 +229,17 @@
       <svg class="pe-chart" viewBox="0 0 600 220" aria-hidden="true"><line x1="72" x2="586" y1="164.6" y2="164.6" class="pe-grid"/><text x="64" y="168.6" text-anchor="end">$80k</text><line x1="72" x2="586" y1="113.7" y2="113.7" class="pe-grid"/><text x="64" y="117.7" text-anchor="end">$100k</text><line x1="72" x2="586" y1="62.9" y2="62.9" class="pe-grid pe-today"/><text x="64" y="66.9" text-anchor="end">$120k</text><line x1="72" x2="586" y1="12.0" y2="12.0" class="pe-grid"/><text x="64" y="16.0" text-anchor="end">$140k</text><text x="72.0" y="212" text-anchor="start">+0%</text><text x="243.3" y="212" text-anchor="middle">+10%</text><text x="414.7" y="212" text-anchor="middle">+20%</text><text x="586.0" y="212" text-anchor="end">+30%</text><text x="80" y="80.9" text-anchor="start" class="pe-today-label">ARR today</text><path id="pe-line" class="pe-line" d="M72.0,62.9 L89.1,60.8 L106.3,58.9 L123.4,57.1 L140.5,55.5 L157.7,54.0 L174.8,52.7 L191.9,51.6 L209.1,50.6 L226.2,49.8 L243.3,49.1 L260.5,48.7 L277.6,48.4 L294.7,48.3 L311.9,48.4 L329.0,48.7 L346.1,49.1 L363.3,49.8 L380.4,50.7 L397.5,51.8 L414.7,53.1 L431.8,54.6 L448.9,56.3 L466.1,58.3 L483.2,60.5 L500.3,62.9 L517.5,65.5 L534.6,68.4 L551.7,71.5 L568.9,74.8 L586.0,78.4"/><line id="pe-guide" class="pe-guide" x1="243.3" x2="243.3" y1="12" y2="190"/><circle id="pe-dot" class="pe-dot" cx="243.3" cy="49.1" r="6"/></svg>
     </div>
     <p class="ui-note jt-foot" id="pc-note" aria-live="polite">With a 10% increase and medium price sensitivity, about 5 more customers leave and ARR reaches $125,400, 4.5% more than today. ARR peaks around +13%.</p>
+    <table class="visually-hidden">
+    <caption>ARR after a price increase for 100 customers at $100 a month, by price increase and price sensitivity (illustrative assumption)</caption>
+    <thead><tr><th scope="col">Price increase</th><th scope="col">Low sensitivity</th><th scope="col">Medium sensitivity</th><th scope="col">High sensitivity</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">+5%</th><td>1 leave, $124,700</td><td>2 leave, $123,500</td><td>4 leave, $121,000</td></tr>
+      <tr><th scope="row">+10%</th><td>2 leave, $128,700</td><td>5 leave, $125,400</td><td>10 leave, $118,800</td></tr>
+      <tr><th scope="row">+15%</th><td>4 leave, $131,800</td><td>9 leave, $125,600</td><td>18 leave, $113,200</td></tr>
+      <tr><th scope="row">+20%</th><td>7 leave, $133,900</td><td>14 leave, $123,800</td><td>28 leave, $103,700</td></tr>
+      <tr><th scope="row">+30%</th><td>14 leave, $134,900</td><td>27 leave, $113,900</td><td>54 leave, $71,800</td></tr>
+    </tbody>
+  </table>
   </figure>
   <script>
   (function () {
@@ -199,17 +278,6 @@
     box.hidden = false; update();
   })();
   </script>
-  <table class="visually-hidden">
-    <caption>ARR after a price increase for 100 customers at $100 a month, by price increase and price sensitivity (illustrative assumption)</caption>
-    <thead><tr><th scope="col">Price increase</th><th scope="col">Low sensitivity</th><th scope="col">Medium sensitivity</th><th scope="col">High sensitivity</th></tr></thead>
-    <tbody>
-      <tr><th scope="row">+5%</th><td>1 leave, $124,700</td><td>2 leave, $123,500</td><td>4 leave, $121,000</td></tr>
-      <tr><th scope="row">+10%</th><td>2 leave, $128,700</td><td>5 leave, $125,400</td><td>10 leave, $118,800</td></tr>
-      <tr><th scope="row">+15%</th><td>4 leave, $131,800</td><td>9 leave, $125,600</td><td>18 leave, $113,200</td></tr>
-      <tr><th scope="row">+20%</th><td>7 leave, $133,900</td><td>14 leave, $123,800</td><td>28 leave, $103,700</td></tr>
-      <tr><th scope="row">+30%</th><td>14 leave, $134,900</td><td>27 leave, $113,900</td><td>54 leave, $71,800</td></tr>
-    </tbody>
-  </table>
   <p>Agree on the departures you expect before the change, then compare what actually happens with that estimate. On annual contracts, wait for the renewals to see the effect. Changing how you charge, from a price per user to a price based on usage for example, raises some bills and lowers others. The customers whose bill goes up are the ones likely to leave, so look at them account by account before the switch.</p>
 
   <h2>What to check first in a churn analysis</h2>
@@ -229,8 +297,12 @@
 
   <div class="article-faq">
     <details>
-      <summary>How do you calculate an annual churn rate?</summary>
-      <p>Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%.</p>
+      <summary>How do you calculate annual churn rate from monthly churn?</summary>
+      <p>Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%. The calculator above converts both ways.</p>
+    </details>
+    <details>
+      <summary>Is a 5% churn rate good?</summary>
+      <p>It depends on the period. A 5% monthly rate means losing about 46% of customers in a year, and an average stay of about 20 months. That's enough only if a customer earns back what it cost to win in less time. A 5% annual rate means an average stay of about 20 years. The calculator above shows both.</p>
     </details>
     <details>
       <summary>What's the average churn rate in B2B SaaS?</summary>
@@ -248,10 +320,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do you calculate an annual churn rate?",
+        "name": "How do you calculate annual churn rate from monthly churn?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%."
+          "text": "Annual churn rate = customers lost during the year ÷ customers at the start of the year. Count only the customers you had on day one, not those who joined during the year. If you only have a monthly rate, don't multiply it by twelve: each month, churn applies to fewer customers, because those who have left can't leave again. Compound it instead: annual churn = 1 − (1 − monthly churn)^12. A 3% monthly rate gives about 31% a year, not 36%. The calculator above converts both ways."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a 5% churn rate good?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on the period. A 5% monthly rate means losing about 46% of customers in a year, and an average stay of about 20 months. That's enough only if a customer earns back what it cost to win in less time. A 5% annual rate means an average stay of about 20 years. The calculator above shows both."
         }
       },
       {

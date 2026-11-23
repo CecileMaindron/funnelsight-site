@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LTV:CAC ratio calculator for SaaS, and what a good ratio is">
 <meta name="twitter:description" content="Calculate your LTV:CAC ratio, lifetime value and CAC payback, see what a good ratio is in SaaS, and why the months you count change the answer.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-23b">
+<link rel="stylesheet" href="/styles.css?v=2026-11-23c">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
@@ -113,10 +113,13 @@
         <label class="lc-field"><span>Customers who leave each month</span><span class="lc-box"><input type="number" id="lc-churn" value="2" min="0" max="100" step="0.1" inputmode="decimal"><i>%</i></span></label>
         <label class="lc-field"><span>Customer acquisition cost (CAC)</span><span class="lc-box"><i>$</i><input type="number" id="lc-cac" value="3000" min="0" step="100" inputmode="decimal"></span></label>
       </div>
-      <div class="model-switch ltv-switch" role="group" aria-label="Months counted in lifetime value" id="ltv-switch" hidden>
-        <button type="button" data-h="24" aria-pressed="false">24 months</button>
-        <button type="button" data-h="36" aria-pressed="true">36 months</button>
-        <button type="button" data-h="all" aria-pressed="false">No limit</button>
+      <div class="lc-row">
+        <div class="model-switch ltv-switch" role="group" aria-label="Months counted in lifetime value" id="ltv-switch" hidden>
+          <button type="button" data-h="24" aria-pressed="false">24 months</button>
+          <button type="button" data-h="36" aria-pressed="true">36 months</button>
+          <button type="button" data-h="all" aria-pressed="false">No limit</button>
+        </div>
+        <button type="button" class="fs-reset" id="ltv-reset" hidden>Reset</button>
       </div>
       <p class="ltv-read" aria-hidden="true"><span class="ltv-fig"><span class="ltv-value" id="ltv-value">$5,170</span><span class="ltv-unit">lifetime value</span></span><span class="ltv-fig"><span class="ltv-value" id="ltv-ratio">1.7:1</span><span class="ltv-unit">LTV:CAC ratio</span></span><span class="ltv-fig"><span class="ltv-value" id="ltv-pay">15</span><span class="ltv-unit">months to pay back CAC</span></span></p>
       <div class="ltv-track" aria-hidden="true">
@@ -169,9 +172,11 @@
       else txt = 'Over ' + h + ' months, each customer brings ' + fmt10(cur) + ', ' + (cur / cac).toFixed(1) + ' times what they cost. Their margin pays back the CAC after ' + Math.round(pay) + ' months.';
       note.textContent = txt;
     }
+    var D = { 'lc-rev': 250, 'lc-margin': 80, 'lc-churn': 2, 'lc-cac': 3000 };
+    document.getElementById('ltv-reset').addEventListener('click', function () { ids.forEach(function (id) { document.getElementById(id).value = D[id]; }); h = '36'; buttons.forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-h') === '36' ? 'true' : 'false'); }); show(); });
     ids.forEach(function (id) { document.getElementById(id).addEventListener('input', show); });
     buttons.forEach(function (b) { b.addEventListener('click', function () { h = b.getAttribute('data-h'); buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); show(); }); });
-    document.getElementById('lc-inputs').hidden = false; sw.hidden = false; document.getElementById('ltv-hint').hidden = false;
+    document.getElementById('lc-inputs').hidden = false; sw.hidden = false; document.getElementById('ltv-reset').hidden = false; document.getElementById('ltv-hint').hidden = false;
     show();
   })();
   </script>
