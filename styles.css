@@ -2309,3 +2309,20 @@ footer a {
 .lc-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; }
 .lc-row .ltv-switch, .lc-row .cr-switch { margin-bottom: 0; }
 .lc-row .fs-reset { align-self: center; margin-top: 0; }
+
+/* NRR calculator */
+.nr-card { position: relative; }
+.nr-inputs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.nr-reset-cell { justify-content: flex-end; }
+.nr-reset-cell .fs-reset { align-self: flex-start; margin-top: 0; }
+.nr-bridge { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; height: 170px; margin-top: 18px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.nr-col { position: relative; height: 100%; }
+.nr-bar { position: absolute; left: 0; right: 0; border-radius: 3px; transition: height .3s ease, bottom .3s ease; }
+.nr-start, .nr-end { background: var(--indigo); }
+.nr-up { background: #4A9E7A; }
+.nr-down { background: #E39B2E; }
+.nr-lab { position: absolute; left: 0; right: 0; bottom: -22px; text-align: center; font-size: 12px; color: var(--muted); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .nr-bar { transition: none; } }
+@media (max-width: 700px) { .nr-inputs { grid-template-columns: 1fr 1fr; } .nr-bridge { gap: 4px; height: 140px; } .nr-lab { font-size: 10.5px; white-space: normal; line-height: 1.1; bottom: -26px; } .nr-bridge { padding-bottom: 28px; } }
+.lc-box i { white-space: nowrap; }
+.article .nr-card .nr-axis { margin: 10px 0 0; font-size: 12px; color: var(--muted); min-height: 1.2em; }
