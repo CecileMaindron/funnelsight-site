@@ -90,16 +90,16 @@
 <article class="article wrap">
   <h1>How to calculate churn rate for B2B SaaS</h1>
   <p class="article-meta">Updated <time datetime="2026-11-23">November 23, 2026</time></p>
-  <p class="lede-intro">Churn rate is the share of the customers you had at the start of a month who left during it. A monthly customer total won't show it: going from 1,005 to 1,100 customers could hide 30 departures or 130, depending on how many new customers came in. The <a href="#cr-demo">calculator below</a> turns your numbers into a monthly and an annual rate, and into how long customers stay.</p>
+  <p class="lede-intro">Churn rate is the share of the customers you had at the start of a month who left during it. A monthly customer total won't show it: going from 1,000 to 1,100 customers could hide 30 departures or 130, depending on how many new customers came in. The <a href="#cr-demo">calculator below</a> turns your numbers into a monthly and an annual rate, and into how long customers stay.</p>
 
   <h2>Churn in customers</h2>
   <p>Add the customers who joined or came back during the month, and the ones who left fall out of the difference.</p>
   <figure class="churn-bridge" aria-label="Customer bridge for October (illustrative data)">
-    <div class="cb-step"><span class="cb-value">1,005</span><span class="cb-label">customers on 1 Oct</span></div>
-    <div class="cb-step"><span class="cb-value">+ 125</span><span class="cb-label">new or reactivated</span></div>
+    <div class="cb-step"><span class="cb-value">1,000</span><span class="cb-label">customers on 1 Oct</span></div>
+    <div class="cb-step"><span class="cb-value">+ 130</span><span class="cb-label">new or reactivated</span></div>
     <div class="cb-step cb-step-key"><span class="cb-value">− 30</span><span class="cb-label">lost</span></div>
     <div class="cb-step"><span class="cb-value">= 1,100</span><span class="cb-label">customers on 1 Nov</span></div>
-    <figcaption>Customer churn = lost ÷ customers at the start = 30 ÷ 1,005 = <strong>3%</strong>. Illustrative data</figcaption>
+    <figcaption>Customer churn = lost ÷ customers at the start = 30 ÷ 1,000 = <strong>3%</strong>. Illustrative data</figcaption>
   </figure>
 
   <h2>Churn in revenue</h2>
@@ -143,7 +143,7 @@
         <button type="button" class="fs-reset" id="cr-reset" hidden>Reset</button>
       </div>
       <div class="lc-inputs cr-inputs" id="cr-inputs" hidden>
-        <label class="lc-field"><span>Customers at the start</span><span class="lc-box"><input type="number" id="cr-start" value="1005" min="0" step="1" inputmode="numeric"></span></label>
+        <label class="lc-field"><span>Customers at the start</span><span class="lc-box"><input type="number" id="cr-start" value="1000" min="0" step="1" inputmode="numeric"></span></label>
         <label class="lc-field"><span>Customers lost during the period</span><span class="lc-box"><input type="number" id="cr-lost" value="30" min="0" step="1" inputmode="numeric"></span></label>
         <label class="lc-field"><span>Months to earn back what a customer cost (optional)</span><span class="lc-box"><input type="number" id="cr-pay" value="18" min="0" step="1" inputmode="numeric"></span></label>
       </div>
@@ -176,7 +176,6 @@
       var note = document.getElementById('cr-note');
       if (start <= 0) { note.textContent = 'Enter the number of customers at the start of the period.'; return; }
       var r = lost / start, m = period === 'm' ? r : 1 - Math.pow(1 - r, 1 / 12), y = period === 'y' ? r : 1 - Math.pow(1 - m, 12);
-      m = Math.round(m * 1000) / 1000; y = 1 - Math.pow(1 - m, 12);
       var life = m > 0 ? 1 / m : Infinity;
       document.getElementById('cr-m').textContent = pc(m, 1);
       document.getElementById('cr-y').textContent = pc(y, 0);
@@ -197,7 +196,7 @@
       else txt = 'At ' + rate + ', the average customer leaves after about ' + Math.round(life) + ' months, well before you have earned back what they cost (' + Math.round(pay) + ' months).';
       note.textContent = txt;
     }
-    var D = { 'cr-start': 1005, 'cr-lost': 30, 'cr-pay': 18 };
+    var D = { 'cr-start': 1000, 'cr-lost': 30, 'cr-pay': 18 };
     function setP(k) { period = k; btns.forEach(function (x) { x.setAttribute('aria-pressed', x.getAttribute('data-p') === k ? 'true' : 'false'); }); }
     document.getElementById('cr-reset').addEventListener('click', function () { Object.keys(D).forEach(function (id) { document.getElementById(id).value = D[id]; }); setP('m'); show(); });
     ['cr-start', 'cr-lost', 'cr-pay'].forEach(function (id) { document.getElementById(id).addEventListener('input', show); });
