@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LTV:CAC ratio and how much to spend to acquire a customer</title>
-<meta name="description" content="The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.">
+<title>LTV:CAC ratio calculator for SaaS, and what a good ratio is</title>
+<meta name="description" content="Calculate your LTV:CAC ratio, lifetime value and CAC payback, see what a good ratio is in SaaS, and why the months you count change the answer.">
 <link rel="canonical" href="https://funnelsight.dev/glossary/what-is-ltv-cac-ratio">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="LTV:CAC ratio and how much to spend to acquire a customer">
-<meta property="og:description" content="The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.">
+<meta property="og:title" content="LTV:CAC ratio calculator for SaaS, and what a good ratio is">
+<meta property="og:description" content="Calculate your LTV:CAC ratio, lifetime value and CAC payback, see what a good ratio is in SaaS, and why the months you count change the answer.">
 <meta property="og:url" content="https://funnelsight.dev/glossary/what-is-ltv-cac-ratio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LTV:CAC ratio and how much to spend to acquire a customer">
-<meta name="twitter:description" content="The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-18c">
+<meta name="twitter:title" content="LTV:CAC ratio calculator for SaaS, and what a good ratio is">
+<meta name="twitter:description" content="Calculate your LTV:CAC ratio, lifetime value and CAC payback, see what a good ratio is in SaaS, and why the months you count change the answer.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-23b">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What is the LTV:CAC ratio?",
-  "description": "The LTV:CAC ratio, the CLV and CAC formulas, what a good ratio is, and how much you can spend to acquire a new customer.",
+  "description": "Calculate your LTV:CAC ratio, lifetime value and CAC payback, see what a good ratio is in SaaS, and why the months you count change the answer.",
   "datePublished": "2026-09-25",
-  "dateModified": "2026-11-18",
+  "dateModified": "2026-11-23",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -89,51 +89,49 @@
 
 <article class="article wrap">
   <h1>What is the LTV:CAC ratio?</h1>
-  <p class="article-meta">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+  <p class="article-meta">Updated <time datetime="2026-11-23">November 23, 2026</time></p>
   <p class="lede-intro">The LTV:CAC ratio compares what a customer brings in over the time they stay, their lifetime value (LTV), with what it cost to win them, the customer acquisition cost (CAC). A ratio of 3:1 means a customer brings in three times what they cost. It answers a practical question: how much can you spend to win a customer, on a given channel or in a given segment?</p>
 
+  <h2>How to calculate the LTV:CAC ratio</h2>
   <div class="formula-box">
     <span class="formula-label">Formulas</span>
     <p><strong>LTV:CAC ratio</strong> = lifetime value ÷ customer acquisition cost</p>
     <p><strong>Customer lifetime value (CLV or LTV)</strong> = monthly revenue per customer × gross margin × months a customer stays</p>
     <p><strong>Customer acquisition cost (CAC)</strong> = sales and marketing spend ÷ new paying customers, over the same period</p>
   </div>
-  <p>Two of these inputs usually come from finance. Gross margin is what's left of a customer's payment once the cost of serving them is paid, such as hosting, support and payment fees. The full CAC includes salaries, tools and events, not only ads. If finance can't share them, use rough estimates and say so. The reasoning below still works.</p>
+  <p>Two of these inputs usually come from finance. Gross margin is what's left of a customer's payment once the cost of serving them is paid, such as hosting, support and payment fees. The full CAC includes salaries, tools and events, not only ads. If finance can't share them, use rough estimates and say so.</p>
+  <p>Say a new customer costs $3,000 to win. They pay $250 a month, and $200 of that is left once the cost of serving them is paid. Each month, 2% of customers leave. The usual shortcut divides the monthly margin by <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">the share of customers who leave each month</a>: $200 ÷ 2% = $10,000, a ratio of 3.3:1. That counts every month a customer might ever stay. Count only the months you can observe, and the answer changes.</p>
 
-  <h2>Why lifetime value is the hard half</h2>
-  <p>CAC comes from money you've already spent. LTV depends on how long customers will stay, and on a new product or a new segment, nobody knows that yet. What makes it hard also depends on how you sell.</p>
-  <ul>
-    <li><strong>Self-serve and small accounts.</strong> Customers move up plans at their own pace. Some grow into a contract handled by sales, or into another of your products, and their revenue ends up counted somewhere else.</li>
-    <li><strong>Contracts with an account team.</strong> Revenue changes mostly at renewal, and you only learn the renewal rate as contracts come up for renewal.</li>
-  </ul>
-
-  <h2>How the time horizon changes LTV</h2>
-  <p>Say a new customer costs $3,000 to win. They pay $250 a month, and $200 of that is left once the cost of serving them is paid. Each month, 2% of customers leave. The usual shortcut divides the monthly margin by <a href="/glossary/how-to-calculate-churn-rate-b2b-saas">the share of customers who leave each month</a>, so $200 ÷ 2% = $10,000, a ratio of 3.3. That counts every month a customer might ever stay. Count only the months you can actually observe, and the answer changes.</p>
-
-  <figure class="ui-card ltv-demo" id="ltv-demo" aria-labelledby="ltv-title">
-    <div class="ui-card-head"><span class="source-card-title" id="ltv-title">Lifetime value of the same customers</span> <span class="tag-illustrative">Illustrative data</span></div>
-    <p class="card-ctx">CAC $3,000 · $200 margin a month · 2% leave each month</p>
+  <figure class="ui-card ltv-demo lc-card" id="ltv-demo" aria-labelledby="ltv-title">
+    <p class="demo-hint" id="ltv-hint" hidden>Try it: enter your own numbers, or change how many months you count.</p>
+    <div class="ui-card-head"><span class="source-card-title" id="ltv-title">LTV:CAC calculator</span> <span class="tag-illustrative">Example values</span></div>
+    <p class="card-ctx">Filled in with the example above. Replace any value with your own.</p>
     <div class="ltv-body">
+      <div class="lc-inputs" id="lc-inputs" hidden>
+        <label class="lc-field"><span>Monthly revenue per customer</span><span class="lc-box"><i>$</i><input type="number" id="lc-rev" value="250" min="0" step="10" inputmode="decimal"></span></label>
+        <label class="lc-field"><span>Gross margin</span><span class="lc-box"><input type="number" id="lc-margin" value="80" min="0" max="100" step="1" inputmode="decimal"><i>%</i></span></label>
+        <label class="lc-field"><span>Customers who leave each month</span><span class="lc-box"><input type="number" id="lc-churn" value="2" min="0" max="100" step="0.1" inputmode="decimal"><i>%</i></span></label>
+        <label class="lc-field"><span>Customer acquisition cost (CAC)</span><span class="lc-box"><i>$</i><input type="number" id="lc-cac" value="3000" min="0" step="100" inputmode="decimal"></span></label>
+      </div>
       <div class="model-switch ltv-switch" role="group" aria-label="Months counted in lifetime value" id="ltv-switch" hidden>
-        <button type="button" data-h="12" aria-pressed="false">12 months</button>
         <button type="button" data-h="24" aria-pressed="false">24 months</button>
         <button type="button" data-h="36" aria-pressed="true">36 months</button>
         <button type="button" data-h="all" aria-pressed="false">No limit</button>
       </div>
-      <p class="ltv-read" aria-hidden="true"><span class="ltv-fig"><span class="ltv-value" id="ltv-value">$5,170</span><span class="ltv-unit">lifetime value</span></span><span class="ltv-fig"><span class="ltv-value" id="ltv-ratio">1.7:1</span><span class="ltv-unit">LTV:CAC ratio</span></span></p>
+      <p class="ltv-read" aria-hidden="true"><span class="ltv-fig"><span class="ltv-value" id="ltv-value">$5,170</span><span class="ltv-unit">lifetime value</span></span><span class="ltv-fig"><span class="ltv-value" id="ltv-ratio">1.7:1</span><span class="ltv-unit">LTV:CAC ratio</span></span><span class="ltv-fig"><span class="ltv-value" id="ltv-pay">15</span><span class="ltv-unit">months to pay back CAC</span></span></p>
       <div class="ltv-track" aria-hidden="true">
         <span class="ltv-bar" id="ltv-bar" style="width: 51.7%"></span>
         <span class="ltv-beyond" id="ltv-beyond" style="left: 51.7%; width: 0%"></span>
-        <span class="ltv-cac" style="left: 30%"><span>CAC $3,000</span></span>
+        <span class="ltv-cac" id="ltv-cac" style="left: 30%"><span id="ltv-cac-l">CAC $3,000</span></span>
       </div>
-      <div class="ltv-scale" aria-hidden="true"><span>$0</span><span>$10,000</span></div>
+      <div class="ltv-scale" aria-hidden="true"><span>$0</span><span id="ltv-max">$10,000</span></div>
     </div>
-    <p class="ui-note jt-foot" id="ltv-note" aria-live="polite">Over three years, a ratio of 1.7:1, based on months you can actually observe.</p>
+    <p class="ui-note jt-foot" id="ltv-note" aria-live="polite">Over 36 months, each customer brings $5,170, 1.7 times what they cost. Their margin pays back the CAC after 15 months.</p>
+    <p class="lc-privacy">Nothing you enter is saved or sent. The calculation runs in your browser.</p>
     <table class="visually-hidden">
-      <caption>Lifetime value and LTV:CAC ratio of the same customers by number of months counted, with a CAC of $3,000 (illustrative data)</caption>
+      <caption>Lifetime value and LTV:CAC ratio for the example (CAC $3,000, $250 a month, 80% gross margin, 2% of customers leaving each month), by number of months counted</caption>
       <thead><tr><th scope="col">Months counted</th><th scope="col">Lifetime value</th><th scope="col">LTV:CAC</th></tr></thead>
       <tbody>
-        <tr><th scope="row">12 months</th><td>$2,150</td><td>0.7:1</td></tr>
         <tr><th scope="row">24 months</th><td>$3,840</td><td>1.3:1</td></tr>
         <tr><th scope="row">36 months</th><td>$5,170</td><td>1.7:1</td></tr>
         <tr><th scope="row">No limit</th><td>$10,000</td><td>3.3:1</td></tr>
@@ -142,30 +140,41 @@
   </figure>
   <script>
   (function () {
-    var data = {
-      "12": [ "$2,150", "0.7:1", 21.5, 'After a year, customers have paid back $2,150 of the $3,000 they cost.' ],
-      "24": [ "$3,840", "1.3:1", 38.4, 'Two years in, customers have covered what they cost, with little to spare.' ],
-      "36": [ "$5,170", "1.7:1", 51.7, 'Over three years, a ratio of 1.7:1, based on months you can actually observe.' ],
-      "all": [ "$10,000", "3.3:1", 100, 'Almost half of the $10,000 comes after the third year, from customers nobody has watched stay that long yet.' ]
-    };
-    var sw = document.getElementById('ltv-switch'); if (!sw) return;
-    var bar = document.getElementById('ltv-bar'), beyond = document.getElementById('ltv-beyond');
-    var buttons = sw.querySelectorAll('button');
-    function show(k) {
-      var d = data[k];
-      document.getElementById('ltv-value').textContent = d[0];
-      document.getElementById('ltv-ratio').textContent = d[1];
-      document.getElementById('ltv-note').textContent = d[3];
-      if (k === 'all') { bar.style.width = '51.7%'; beyond.style.width = '48.3%'; }
-      else { bar.style.width = d[2] + '%'; beyond.style.width = '0%'; }
-      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-h') === k ? 'true' : 'false'); });
+    var fig = document.getElementById('ltv-demo'); if (!fig) return;
+    var sw = document.getElementById('ltv-switch'), buttons = sw.querySelectorAll('button'), h = '36';
+    var ids = ['lc-rev', 'lc-margin', 'lc-churn', 'lc-cac'];
+    function val(id) { var v = parseFloat(document.getElementById(id).value); return isFinite(v) && v >= 0 ? v : 0; }
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function fmt10(n) { return '$' + (Math.round(n / 10) * 10).toLocaleString('en-US'); }
+    function ltv(m, c, n) { return c > 0 ? m * (1 - Math.pow(1 - c, n)) / c : m * n; }
+    function show() {
+      var m = val('lc-rev') * Math.min(val('lc-margin'), 100) / 100, c = Math.min(val('lc-churn'), 100) / 100, cac = val('lc-cac');
+      var bar = document.getElementById('ltv-bar'), beyond = document.getElementById('ltv-beyond'), note = document.getElementById('ltv-note');
+      var l36 = ltv(m, c, 36), lAll = c > 0 ? m / c : Infinity, cur = h === 'all' ? lAll : ltv(m, c, +h);
+      var pay = m > 0 ? cac / m : Infinity;
+      document.getElementById('ltv-value').textContent = isFinite(cur) ? fmt10(cur) : 'No limit';
+      document.getElementById('ltv-ratio').textContent = cac > 0 && isFinite(cur) ? (cur / cac).toFixed(1) + ':1' : '–';
+      document.getElementById('ltv-pay').textContent = isFinite(pay) ? Math.round(pay) : '–';
+      var raw = Math.max(isFinite(lAll) ? lAll : l36, cac, 1) * 1.05, step = raw > 20000 ? 5000 : 1000, max = Math.ceil(raw / step) * step;
+      if (h === 'all' && isFinite(lAll)) { bar.style.width = (l36 / max * 100) + '%'; beyond.style.left = (l36 / max * 100) + '%'; beyond.style.width = ((lAll - l36) / max * 100) + '%'; }
+      else { bar.style.width = (Math.min(cur, max) / max * 100) + '%'; beyond.style.width = '0%'; }
+      var cl = document.getElementById('ltv-cac'); cl.style.left = (cac / max * 100) + '%'; cl.classList.toggle('lc-flip', cac / max > 0.6);
+      document.getElementById('ltv-cac-l').textContent = 'CAC ' + fmt(cac);
+      document.getElementById('ltv-max').textContent = fmt(max);
+      var txt;
+      if (m <= 0 || cac <= 0) txt = 'Enter a monthly revenue, a gross margin and a CAC above zero.';
+      else if (h === 'all' && !isFinite(lAll)) txt = 'With no customers leaving, lifetime value has no limit. Pick a number of months instead.';
+      else if (h === 'all') txt = 'With no limit, ' + fmt10(lAll - l36) + ' of the ' + fmt10(lAll) + ' comes after the third year, from customers nobody has watched stay that long yet.';
+      else if (cur < cac) txt = 'Over ' + h + ' months, each customer brings ' + fmt10(cur) + ', less than the ' + fmt(cac) + ' they cost.';
+      else txt = 'Over ' + h + ' months, each customer brings ' + fmt10(cur) + ', ' + (cur / cac).toFixed(1) + ' times what they cost. Their margin pays back the CAC after ' + Math.round(pay) + ' months.';
+      note.textContent = txt;
     }
-    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.getAttribute('data-h')); }); });
-    sw.hidden = false;
+    ids.forEach(function (id) { document.getElementById(id).addEventListener('input', show); });
+    buttons.forEach(function (b) { b.addEventListener('click', function () { h = b.getAttribute('data-h'); buttons.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); show(); }); });
+    document.getElementById('lc-inputs').hidden = false; sw.hidden = false; document.getElementById('ltv-hint').hidden = false;
+    show();
   })();
   </script>
-
-  <p>None of these figures is wrong. They answer different questions, and the ratio that reaches 3:1 rests on the part you can't check yet.</p>
 
   <h2>What is a good LTV:CAC ratio?</h2>
   <p>A ratio of 3:1 or higher is generally considered good, as long as you know how many months the LTV counts.</p>
@@ -183,18 +192,18 @@
   </table>
   <p>The bar sits at 3 rather than 1 because the margin also has to pay for building the product, running the company and everything else that isn't winning or serving customers. Read the ranges against the horizon you used. In the example, 1.7:1 over three years says more than 3.3:1 over a lifetime nobody has seen.</p>
 
-  <h2>How to calculate LTV without years of history</h2>
-  <p>Start with payback, the number of months of margin it takes to earn back what a customer cost. Here, $3,000 ÷ $200 = 15 months. It needs no guess about how long customers stay. With 2% leaving each month, about three customers in four are still there after 15 months.</p>
-  <p>Then calculate a capped LTV, the margin customers bring over two or three years and nothing beyond. Base it on what customers actually paid, not on the upgrades you expect. For contracts, use the renewal rates you've already seen.</p>
-  <p>As history builds up, extend the horizon. A cautious LTV costs you a little growth. An optimistic one costs you the budget spent on customers who never pay it back.</p>
-
-  <h2>How much more can you spend to acquire a customer?</h2>
-  <p>This is the question the ratio is for. With the three-year LTV of $5,170, a customer can cost up to $5,170 before you lose money over three years. Today's CAC is $3,000, so it can rise by about 70% before that line.</p>
-  <p>Costs tend to rise as you spend more on a channel, because the extra budget reaches people further from your target. So the room left matters more than the ratio itself. A channel with a modest ratio and a stable cost can be a safer place for more budget than one with a high ratio on a lifetime nobody has observed.</p>
+  <h2>Why lifetime value is the hard half</h2>
+  <p>CAC comes from money you've already spent. LTV depends on how long customers will stay, and on a new product or a new segment, nobody knows that yet. What makes it hard also depends on how you sell.</p>
+  <ul>
+    <li><strong>Self-serve and small accounts.</strong> Customers move up plans at their own pace. Some grow into a contract handled by sales, or into another of your products, and their revenue ends up counted somewhere else.</li>
+    <li><strong>Contracts with an account team.</strong> Revenue changes mostly at renewal, and you only learn the renewal rate as contracts come up for renewal.</li>
+  </ul>
+  <p>Start with payback, the months of margin it takes to earn back what a customer cost. It needs no guess about how long customers stay. Then use a capped LTV, two or three years of margin based on what customers actually paid, and extend the horizon as history builds up. A cautious LTV costs you a little growth. An optimistic one costs you the budget spent on customers who never pay it back.</p>
+  <p>The capped LTV is also the most a customer can cost before you lose money over that period. In the example, CAC could rise from $3,000 to $5,170 over three years. Costs tend to rise as you spend more on a channel, because the extra budget reaches people further from your target, so the room left matters more than the ratio itself.</p>
 
   <h2>Where LTV:CAC goes wrong</h2>
   <p><strong>CAC and LTV don't count the same costs.</strong> Ad spend alone on one side, every month of margin on the other, and the ratio looks better than it is. Say which costs CAC includes, and keep the same ones from one period to the next.</p>
-  <p><strong>One ratio covers every channel.</strong> Each channel has its own CAC, and its customers stay and grow differently. <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">Net revenue retention by source</a> shows how wide that gap can be. A blended ratio averages a channel you should grow with one you should cut. Self-serve and sales-led customers need separate ratios too.</p>
+  <p><strong>One ratio covers every channel.</strong> Each channel has its own CAC, and its customers stay and grow differently. <a href="/glossary/how-to-calculate-net-revenue-retention-b2b-saas">Net revenue retention by source</a> shows how wide that gap can be. A single ratio averages a channel you should grow with one you should cut.</p>
 
   <h2>Blended CAC vs paid CAC, and the split B2B needs</h2>
   <p>Blended CAC divides all acquisition spend by all new customers, whatever brought them in. Paid CAC divides paid media spend by the customers that paid channels brought. The gap between the two shows how much organic search, referrals and word of mouth hold the average down.</p>
