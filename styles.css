@@ -2259,3 +2259,27 @@ footer a {
   .fs-ghost, .fs-step .ff-bar { min-width: 180px; }
   .article .fs-card .fs-total #fs-cust { font-size: 28px; }
 }
+
+/* Time to value: activation timing vs buying */
+.tvb-body { padding: 8px 16px 6px; }
+.tvb-head { display: grid; grid-template-columns: 150px 1fr 96px; gap: 12px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+.tvb-head span:last-child { grid-column: 2 / 4; }
+.tvb-row { display: grid; grid-template-columns: 150px 1fr 96px; gap: 12px; align-items: center; padding: 8px 0; }
+.tvb-lab { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.tvb-lab small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+.tvb-track { height: 18px; background: #F1F0F8; border-radius: 4px; overflow: hidden; }
+.tvb-bar { display: block; height: 100%; border-radius: 4px; background: var(--indigo); }
+.tvb-late .tvb-bar { background: #E39B2E; }
+.tvb-never .tvb-bar { background: #A9ADBA; }
+.tvb-never .tvb-lab { color: #3A3F50; }
+.tvb-val { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.tvb-val small { display: block; font-family: Inter, sans-serif; font-size: 12px; font-weight: 400; color: var(--muted); }
+.tvb-card { position: relative; }
+.article .tvb-card .tvb-mark { display: flex; align-items: center; gap: 8px; margin: 4px 0; padding-left: 162px; font-size: 11.5px; font-weight: 700; color: #9A5B00; text-transform: uppercase; letter-spacing: .05em; }
+.article .tvb-card .tvb-mark::after { content: ""; flex: 1; border-top: 1.5px dashed #E3B46E; }
+@media (max-width: 700px) {
+  .tvb-body { padding: 8px 12px 6px; }
+  .tvb-head, .tvb-row { grid-template-columns: 96px 1fr 84px; gap: 8px; }
+  .tvb-lab { font-size: 13px; }
+  .article .tvb-card .tvb-mark { padding-left: 104px; }
+}
