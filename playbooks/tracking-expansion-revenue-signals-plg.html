@@ -4,27 +4,27 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expansion or churn: reading the signals in an account</title>
-<meta name="description" content="A drop in seats or usage can mean growth, a pause or a departure. Expansion and churn signals, their false alarms, and how to read them in context.">
+<title>Expansion or churn? Reading a customer health score</title>
+<meta name="description" content="A drop in usage can mean a pause or a departure. Expansion and churn signals, their false alarms, and how to read them behind a customer health score.">
 <link rel="canonical" href="https://funnelsight.dev/playbooks/tracking-expansion-revenue-signals-plg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
-<meta property="og:title" content="Expansion or churn: reading the signals in an account">
-<meta property="og:description" content="A drop in seats or usage can mean growth, a pause or a departure. Expansion and churn signals, their false alarms, and how to read them in context.">
+<meta property="og:title" content="Expansion or churn? Reading a customer health score">
+<meta property="og:description" content="A drop in usage can mean a pause or a departure. Expansion and churn signals, their false alarms, and how to read them behind a customer health score.">
 <meta property="og:url" content="https://funnelsight.dev/playbooks/tracking-expansion-revenue-signals-plg">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Expansion or churn: reading the signals in an account">
-<meta name="twitter:description" content="A drop in seats or usage can mean growth, a pause or a departure. Expansion and churn signals, their false alarms, and how to read them in context.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-25a">
+<meta name="twitter:title" content="Expansion or churn? Reading a customer health score">
+<meta name="twitter:description" content="A drop in usage can mean a pause or a departure. Expansion and churn signals, their false alarms, and how to read them behind a customer health score.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-26a">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Expansion or churn: reading the signals in an account",
-  "description": "A drop in seats or usage can mean growth, a pause or a departure. Expansion and churn signals, their false alarms, and how to read them in context.",
+  "headline": "Expansion or churn? Reading the signals behind a customer health score",
+  "description": "A drop in usage can mean a pause or a departure. Expansion and churn signals, their false alarms, and how to read them behind a customer health score.",
   "datePublished": "2026-09-23",
-  "dateModified": "2026-10-31",
+  "dateModified": "2026-11-26",
   "author": {
     "@type": "Organization",
     "name": "Funnelsight",
@@ -62,7 +62,6 @@
         <ul class="nav-dropdown-menu">
           <li><a href="/product">Overview</a></li>
           <li><a href="/features/pipeline-planning-by-channel">Pipeline planning</a></li>
-          <li><a href="/features/activation-retention-dashboard-plg-teams">Activation and retention</a></li>
         </ul>
       </li>
       <li class="nav-dropdown">
@@ -84,12 +83,12 @@
 </div>
 
 <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Expansion or churn: reading the signals in an account</span>
+  <a href="/">Home</a> / <a href="/resources">Resources</a> / <span class="current">Expansion or churn? Reading the signals behind a customer health score</span>
 </nav>
 
 <article class="article wrap">
-  <h1>Expansion or churn: reading the signals in an account</h1>
-  <p class="article-meta">Updated <time datetime="2026-10-31">October 31, 2026</time></p>
+  <h1>Expansion or churn? Reading the signals behind a customer health score</h1>
+  <p class="article-meta">Updated <time datetime="2026-11-26">November 26, 2026</time></p>
   <p class="lede-intro">An account drops from 25 seats to 18. The team may be cleaning up before it leaves, or settling into steady use after a busy rollout, and the usage data looks the same in both cases.</p>
 
   <h2>The same curve, different stories</h2>
@@ -145,10 +144,30 @@
   <p>One pattern deserves its own watch: customers who buy at the end of a trial without having really used the product, then cancel soon after their first payment. Paying didn't mean they had adopted it.</p>
 
   <h2>What tells a pause from a departure</h2>
-  <p>No single signal settles it, which is why many teams combine several into a customer health score. Compare each account with its own history rather than with an average, read several signals together, and check them against the contract and the renewal date. The last piece is what the customer success manager knows. An account that slows down while it waits for a new integrator looks exactly like one that's about to leave, until someone writes it down. Below a certain contract size, many accounts have no customer success manager at all, and the signals are the only view anyone has of them. In Funnelsight, that note sits on the period it explains, and the rules your team sets turn usage, contract and notes into churn-risk and expansion flags in the CRM.</p>
+  <p>No single signal settles it, which is why signals are often combined into a customer health score. Compare each account with its own history rather than with an average, read several signals together, and check them against the contract and the renewal date. The last piece is what the customer success manager knows. An account that slows down while it waits for a new integrator looks exactly like one that's about to leave, until someone writes it down. Below a certain contract size, many accounts have no customer success manager at all, and the signals are the only view anyone has of them.</p>
+
+  <h2>When a health score averages two stories</h2>
+  <p>A health score usually adds up the signals of a whole account. When two teams in the same company move in opposite directions, the total can stay flat.</p>
+  <table class="data-table spark-table">
+    <caption>One customer account over the last 8 weeks: weekly active users for each team, health score for the account. Illustrative data</caption>
+    <thead>
+      <tr><th scope="col">Team</th><th scope="col">Last 8 weeks</th><th scope="col">What it signals</th></tr>
+    </thead>
+    <tbody>
+      <tr><th scope="row">Marketing team, 24 of 25 seats</th><td><span class="spark" aria-hidden="true"><i style="height: 40%"></i><i style="height: 48%"></i><i style="height: 55%"></i><i style="height: 62%"></i><i style="height: 70%"></i><i style="height: 80%"></i><i style="height: 90%"></i><i style="height: 100%"></i></span><span class="visually-hidden">Rising every week, close to the seat limit</span></td><td><strong>Expansion.</strong> New projects every week, one seat left on the plan.</td></tr>
+      <tr><th scope="row">Finance team, 10 seats</th><td><span class="spark" aria-hidden="true"><i style="height: 100%"></i><i style="height: 95%"></i><i style="height: 85%"></i><i style="height: 70%"></i><i style="height: 50%"></i><i style="height: 30%"></i><i style="height: 15%"></i><i style="height: 8%"></i></span><span class="visually-hidden">Falling every week, almost no one left</span></td><td><strong>Churn risk.</strong> The monthly report stopped, renewal in three months.</td></tr>
+      <tr><th scope="row">Account health score</th><td><span class="spark" aria-hidden="true"><i style="height: 70%"></i><i style="height: 72%"></i><i style="height: 70%"></i><i style="height: 68%"></i><i style="height: 66%"></i><i style="height: 68%"></i><i style="height: 70%"></i><i style="height: 68%"></i></span><span class="visually-hidden">Flat over the eight weeks</span></td><td><strong>Looks steady.</strong> The score stays around 70 out of 100.</td></tr>
+    </tbody>
+  </table>
+  <p>Neither movement shows in the account's score. The marketing team is ready for a bigger plan, and the finance team is likely to drop its seats at renewal. When the product records teams or workspaces, read the signals at that level first, then the account.</p>
 
   <h2>Calibrate on the accounts you already know</h2>
   <p>Before setting a threshold, look at what the accounts that upgraded did in the two or three months before, and the same for the accounts that left. Keep the signals that separated them, and drop the ones that looked the same in both groups. Check again after a change in pricing, packaging or the product, since a signal that held last year may not hold now.</p>
+
+  <h2>Who acts on which signal</h2>
+  <p>An expansion signal and a churn signal don't call for the same conversation. A team close to its plan's limit needs someone who can talk about a bigger plan, usually the account owner in sales. A team drifting away needs help with the product, usually from customer success.</p>
+  <p>Accounts without a customer success manager are where signals get lost: the flag exists, but no one is named to act on it. Route it as you would a lead, with a task for the account owner, a message from the product, or a weekly list a small team works through. A <a href="/glossary/what-is-a-product-qualified-lead-pql">product qualified lead</a> works the same way: the signal only counts once someone follows it up.</p>
+  <p>In Funnelsight, a note sits on the period it explains, and the rules your team sets turn usage, contract and notes into expansion and churn-risk flags on the account in the CRM, where its owner already works.</p>
 
   <div class="article-cta">
     <p>See usage next to each account's plan, renewal date and notes, in one view.</p>
