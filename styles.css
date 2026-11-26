@@ -2406,3 +2406,28 @@ footer a {
 .article .pf-row dt { margin: 0; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; padding-top: 2px; }
 .article .pf-row dd { margin: 0; font-size: 14.5px; color: var(--ink); }
 @media (max-width: 560px) { .pf-row { grid-template-columns: 1fr; gap: 2px; } }
+
+/* Sales and marketing alignment: pipeline by sales team */
+.sa-table th[scope="col"]:first-child { text-align: left; }
+.sa-team { display: flex; gap: 6px; }
+.sa-txt input { width: 150px; text-align: left; font-weight: 500; }
+.sa-low { color: #B23A48; font-weight: 700; }
+.sa-high { color: #9A6A12; font-weight: 700; }
+.sa-actions { margin: 8px 0 0; }
+.sa-actions .fs-reset[hidden] { display: none; }
+.sa-views { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0 0; }
+.article .sa-card .sa-view { margin: 0; padding: 8px 10px; background: #F6F6FA; border-radius: 6px; font-size: 13px; line-height: 1.4; }
+.sa-view span { display: block; font-size: 11.5px; color: var(--muted); }
+.sa-view b { font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) {
+  .sa-views { grid-template-columns: 1fr; }
+  .sa-team { width: 100%; }
+  .sa-txt { flex: 1 1 0; }
+  .sa-txt input { width: 100%; }
+}
+.sa-actions { display: flex; gap: 8px; }
+.sa-table .pp-cell-r input { width: 34px; }
+.sa-inputs { grid-template-columns: minmax(0, 220px); margin: 0 0 10px; }
+.sa-below { color: #B23A48; font-weight: 600; }
+.sa-table .pp-delta { text-align: right; }
+@media (max-width: 760px) { .sa-table .pp-delta { text-align: left; } }
