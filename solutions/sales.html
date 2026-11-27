@@ -5,18 +5,50 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Funnelsight for sales teams</title>
-<meta name="description" content="Clear, tested signals on the contact, account and deal records in your CRM, so sales reps and BDRs know who to reach out to and what to say.">
+<meta name="description" content="Show marketing's share of each sales team's pipeline, prove a signal works before reps act on it, and write activities reps understand in the CRM.">
 <link rel="canonical" href="https://funnelsight.dev/solutions/sales">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Funnelsight for sales teams">
-<meta property="og:description" content="Clear, tested signals on the contact, account and deal records in your CRM, so sales reps and BDRs know who to reach out to and what to say.">
+<meta property="og:description" content="Show marketing's share of each sales team's pipeline, prove a signal works before reps act on it, and write activities reps understand in the CRM.">
 <meta property="og:url" content="https://funnelsight.dev/solutions/sales">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Funnelsight for sales teams">
-<meta name="twitter:description" content="Clear, tested signals on the contact, account and deal records in your CRM, so sales reps and BDRs know who to reach out to and what to say.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-26a">
+<meta name="twitter:description" content="Show marketing's share of each sales team's pipeline, prove a signal works before reps act on it, and write activities reps understand in the CRM.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-27a">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Funnelsight score or route leads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Routing stays in your CRM or your routing tool. Funnelsight writes activities and flags on the records once a day, and measures which of them turn into opportunities, so the rules you route on can be checked against results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will reps need to log into another tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They don't. The activities appear on contact, account and deal records in your CRM, in the views and filters reps already use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is marketing's share of the pipeline counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each opportunity is counted once, from the CRM. Your team sets the rule for what counts as marketing-sourced, for example the first touch or the touch that created the opportunity. The rule is shown next to the figure, and every change is logged."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -47,6 +79,7 @@
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/solutions/marketing">For Marketing</a></li>
+          <li><a href="/solutions/growth">For Growth</a></li>
           <li><a href="/solutions/sales" aria-current="page">For Sales</a></li>
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
@@ -66,8 +99,8 @@
 <header class="hero wrap solutions-hero">
   <div>
     <p class="eyebrow">For sales teams</p>
-    <h1>Signals your reps can act on, in the CRM they already use.</h1>
-    <p class="lede">Funnelsight writes a few clear activities on the contact, account and deal records in your CRM: what someone did, where, and what it's about. Reps and BDRs see them in their usual views and filters, without opening another tool. And each signal is tested before it reaches them.</p>
+    <h1>Give sales leads and signals they'll follow up.</h1>
+    <p class="lede">Funnelsight writes a few clear activities on the CRM records reps already use, so they see what a lead or an account did before they call. You see which of those signals turn into opportunities.</p>
     <div class="hero-actions">
       <a href="/trial" class="btn-primary accent">Start free trial</a>
       <a href="/product" class="btn-ghost">See the product</a>
@@ -92,9 +125,43 @@
 
     <div class="feature-row">
       <div class="feature-text">
+        <p class="feature-pain">"What are you doing for my quota?"</p>
+        <h2>Show marketing's share of each team's pipeline.</h2>
+        <p>Each sales team has its own quota. Marketing's target often arrives as one total for the region, and a region can be on plan while one team falls far behind. Funnelsight splits the pipeline marketing brings by the sales team that owns each account. Each team gets its own figure, and you see where the next campaigns are needed.</p>
+        <p><a href="/playbooks/sales-and-marketing-alignment">Sales and marketing alignment starts with how the target is split</a></p>
+      </div>
+      <figure class="ui-card" aria-label="Marketing-sourced pipeline this quarter against plan, by sales team: SMB 112%, mid-market 64%, enterprise 88%. The region as a whole is at 91%. Illustrative data">
+        <div class="ui-card-head"><span class="source-card-title">Marketing-sourced pipeline vs plan, by team</span> <span class="tag-illustrative">Illustrative data</span></div>
+        <p class="card-ctx">This quarter to date, week 8 of 13 · Updated today</p>
+        <ul class="tq-list" aria-hidden="true"><li class="tq-row"><span class="tq-label">SMB</span><span class="tq-track"><span class="tq-bar" style="width:93.3%"></span><span class="tq-plan" style="left:83.3%"></span></span><span class="tq-val">112%</span></li><li class="tq-row tq-low"><span class="tq-label">Mid-market</span><span class="tq-track"><span class="tq-bar" style="width:53.3%"></span><span class="tq-plan" style="left:83.3%"></span></span><span class="tq-val">64%</span></li><li class="tq-row"><span class="tq-label">Enterprise</span><span class="tq-track"><span class="tq-bar" style="width:73.3%"></span><span class="tq-plan" style="left:83.3%"></span></span><span class="tq-val">88%</span></li></ul>
+        <p class="ui-note">The region is at 91% of plan. Mid-market, at 64%, is where the next campaigns should go.</p>
+      </figure>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
+        <p class="feature-pain">"Should we set up PQLs? Will reps even follow them?"</p>
+        <h2>Prove a signal works before you ask reps to act on it.</h2>
+        <p>Before a signal reaches reps, check that it makes a difference. Funnelsight first compares the trials that show it with all trials, without telling anyone. Then a few reps get it, and the comparison runs again. If the gap holds, the whole team gets it, and it stays monitored: a signal that stops working is removed. Those numbers are what convinces sales leadership to ask every rep to act on it.</p>
+        <p><a href="/glossary/what-is-a-product-qualified-lead-pql">What is a product qualified lead (PQL)?</a></p>
+      </div>
+      <figure class="ui-card" aria-label="Trials that became opportunities last quarter: 10% of all trials; 18% of trials with a pricing page visit during the trial, before the signal was sent to anyone; 24% when the same signal was sent to a pilot group of reps (illustrative data)">
+        <div class="ui-card-head"><span class="source-card-title">Trials that became opportunities, last quarter</span> <span class="tag-illustrative">Illustrative data</span></div>
+        <p class="card-ctx">Signal tested: a pricing page visit during the trial</p>
+        <ul class="hb-list" aria-hidden="true">
+          <li class="hb-row" style="grid-template-columns:150px 1fr auto"><span class="hb-label">All trials</span><span class="hb-track"><span class="hb-bar" style="width:42%"></span></span><span class="hb-val">10%</span></li>
+          <li class="hb-row" style="grid-template-columns:150px 1fr auto"><span class="hb-label">Pricing visit, not sent to reps</span><span class="hb-track"><span class="hb-bar" style="width:75%"></span></span><span class="hb-val">18%</span></li>
+          <li class="hb-row hb-key" style="grid-template-columns:150px 1fr auto"><span class="hb-label">Sent to pilot reps</span><span class="hb-track"><span class="hb-bar" style="width:100%"></span></span><span class="hb-val">24%</span></li>
+        </ul>
+        <p class="ui-note">The gap held for the pilot group, so the signal went to the whole team.</p>
+      </figure>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-text">
         <p class="feature-pain">"I've been asked to follow up this lead. What do I need to know?"</p>
-        <h2>Every activity written so a rep understands it in five seconds.</h2>
-        <p>A raw event name means nothing to someone who joined the team last month. Funnelsight writes each activity in plain words, with where it happened (in the trial, on a form, at an event), the product it relates to and a link to the content. The product interest can then point to the email sequence your marketing ops team prepared for it.</p>
+        <h2>Write every activity so a rep understands it in five seconds.</h2>
+        <p>A raw event name means nothing to someone who joined the sales team last month. Funnelsight writes each activity in plain words, with where it happened (in the trial, on a form, at an event), the product it relates to and a link to the content. The product interest can then point to the email sequence your marketing ops team prepared for it.</p>
       </div>
       <figure class="ui-card" aria-label="From what the tool records to what the rep reads: a click on btn_ent_feat1 in the trial becomes asked for more information on multi-entity invoicing during the trial; a registration recorded as webinar_reg_1106 becomes registered for the webinar on closing the month faster on 11 June; a download of WP-0423 becomes downloaded the guide to e-invoicing rules in Europe, part of the invoicing offer. Product interest: invoicing, which points to the team's sequence for invoicing trial users (illustrative data)">
         <div class="ui-card-head"><span class="source-card-title">What the tool records, what the rep reads</span> <span class="tag-illustrative">Illustrative data</span></div>
@@ -110,43 +177,16 @@
       </figure>
     </div>
 
-    <div class="feature-row">
-      <div class="feature-text">
-        <p class="feature-pain">"Which accounts are moving that nobody has flagged?"</p>
-        <h2>Find the accounts waking up below the thresholds.</h2>
-        <p>Some accounts never reach the MQL or PQL bar, because each activity scores too low on its own. Others are parked in "not now" and can't change status for weeks. Funnelsight adds up the small signals at account level, such as several people from the same company on the site or more trial sign-ups than usual, and writes them on the account. A rep or BDR can reach out before the status catches up.</p>
-        <p><a href="/glossary/user-level-vs-account-level-analytics">User-level vs account-level analytics</a></p>
-      </div>
-      <figure class="ui-card" aria-label="Accounts moving this week, none of them an MQL or a PQL today: a retail chain in not now until 12 December, with 4 people on the site this week; a logistics group with no MQL yet and 2 new trial sign-ups; a software company in nurture, where 3 people downloaded the e-invoicing guide (illustrative data)">
-        <div class="ui-card-head"><span class="source-card-title">Accounts moving this week</span> <span class="tag-illustrative">Illustrative data</span></div>
-        <p class="card-ctx">None of them is an MQL or a PQL today</p>
-        <ul class="wl-list" aria-hidden="true">
-          <li><span class="wl-acct">Retail chain<span>Status: not now, until 12 Dec</span></span><span class="wl-chip wl-up">4 people on the site this week</span></li>
-          <li><span class="wl-acct">Logistics group<span>Status: no MQL yet</span></span><span class="wl-chip wl-up">2 new trial sign-ups</span></li>
-          <li><span class="wl-acct">Software company<span>Status: nurture</span></span><span class="wl-chip wl-up">3 people downloaded the e-invoicing guide</span></li>
-        </ul>
-      </figure>
-    </div>
+  </div>
+</section>
 
-    <div class="feature-row">
-      <div class="feature-text">
-        <p class="feature-pain">"Another alert nobody reads?"</p>
-        <h2>Fewer signals, each one proven.</h2>
-        <p>A signal reaches reps only once it has shown it changes something. Funnelsight first compares it with the average, before any rep sees it, then a few reps try it, then the whole team, and it stays monitored: a signal that stops making a difference is removed. That comparison is what sales leadership needs to see before asking every rep to act on it.</p>
-        <p><a href="/glossary/what-is-a-product-qualified-lead-pql">What is a product qualified lead (PQL) and how to get sales to follow up</a></p>
-      </div>
-      <figure class="ui-card" aria-label="Trials that became opportunities last quarter: 10% of all trials; 18% of trials with a pricing page visit during the trial, before the signal was sent to anyone; 24% when the same signal was sent to a pilot group of reps (illustrative data)">
-        <div class="ui-card-head"><span class="source-card-title">Trials that became opportunities, last quarter</span> <span class="tag-illustrative">Illustrative data</span></div>
-        <p class="card-ctx">Signal tested: a pricing page visit during the trial</p>
-        <ul class="hb-list" aria-hidden="true">
-          <li class="hb-row" style="grid-template-columns:150px 1fr auto"><span class="hb-label">All trials</span><span class="hb-track"><span class="hb-bar" style="width:42%"></span></span><span class="hb-val">10%</span></li>
-          <li class="hb-row" style="grid-template-columns:150px 1fr auto"><span class="hb-label">Pricing visit, not sent to reps</span><span class="hb-track"><span class="hb-bar" style="width:75%"></span></span><span class="hb-val">18%</span></li>
-          <li class="hb-row hb-key" style="grid-template-columns:150px 1fr auto"><span class="hb-label">Sent to pilot reps</span><span class="hb-track"><span class="hb-bar" style="width:100%"></span></span><span class="hb-val">24%</span></li>
-        </ul>
-        <p class="ui-note">The gap held for the pilot group, so the signal went to the whole team.</p>
-      </figure>
-    </div>
-
+<section class="proof-case">
+  <div class="wrap">
+    <a class="proof-card" href="/case-studies/moving-upmarket-enterprise-pipeline">
+      <span class="go-tag">Case study</span>
+      <span class="proof-num">30% → 75%</span>
+      <span class="proof-text"><strong>Why the pipeline stalls when you start selling to enterprise.</strong> Two quarters after moving upmarket, the pipeline fell short and the room blamed marketing. The biggest leak was further down: sales contacted 30% of target accounts in trial within two weeks, then 75% once they were routed.</span>
+    </a>
   </div>
 </section>
 
@@ -154,9 +194,29 @@
   <div class="wrap">
     <h2>Go further</h2>
     <div class="go-grid">
-      <a class="go-card" href="/playbooks/sales-and-marketing-alignment"><span class="go-tag">Playbook</span><span class="go-title">Sales and marketing alignment starts with how the target is split</span></a>
-      <a class="go-card" href="/case-studies/moving-upmarket-enterprise-pipeline"><span class="go-tag">Case study</span><span class="go-title">Why the pipeline stalls when you start selling to enterprise</span></a>
+      <a class="go-card" href="/features/pipeline-planning-by-channel"><span class="go-tag">Feature</span><span class="go-title">Pipeline coverage ratio: how much pipeline marketing needs, by channel</span></a>
       <a class="go-card" href="/playbooks/signup-volume-vs-pql-quality"><span class="go-tag">Playbook</span><span class="go-title">More sign-ups or better conversion: where your next customers come from</span></a>
+      <a class="go-card" href="/playbooks/funnel-metrics-cheat-sheet"><span class="go-tag">Playbook</span><span class="go-title">Cheat sheet: 10 funnel metrics to track first, and when to read them</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+      <summary>Does Funnelsight score or route leads?</summary>
+      <p>Routing stays in your CRM or your routing tool. Funnelsight writes activities and flags on the records once a day, and measures which of them turn into opportunities, so the rules you route on can be checked against results.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Will reps need to log into another tool?</summary>
+      <p>They don't. The activities appear on contact, account and deal records in your CRM, in the views and filters reps already use.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How is marketing's share of the pipeline counted?</summary>
+      <p>Each opportunity is counted once, from the CRM. Your team sets the rule for what counts as marketing-sourced, for example the first touch or the touch that created the opportunity. The rule is shown next to the figure, and every change is logged.</p>
+    </details>
     </div>
   </div>
 </section>
@@ -171,7 +231,6 @@
   </div>
 </section>
 </main>
-
 
 <footer>
   <div class="wrap">
