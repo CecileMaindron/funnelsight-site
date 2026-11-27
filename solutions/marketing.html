@@ -5,18 +5,50 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Funnelsight for marketing teams</title>
-<meta name="description" content="Judge each channel on the pipeline and revenue it brings, defend your budget with numbers finance accepts, and see what content does as clicks fall.">
+<meta name="description" content="See what each channel brings back, from spend to revenue, judge channels on the opportunities they create and defend the budget with finance.">
 <link rel="canonical" href="https://funnelsight.dev/solutions/marketing">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Funnelsight">
 <meta property="og:title" content="Funnelsight for marketing teams">
-<meta property="og:description" content="Judge each channel on the pipeline and revenue it brings, defend your budget with numbers finance accepts, and see what content does as clicks fall.">
+<meta property="og:description" content="See what each channel brings back, from spend to revenue, judge channels on the opportunities they create and defend the budget with finance.">
 <meta property="og:url" content="https://funnelsight.dev/solutions/marketing">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Funnelsight for marketing teams">
-<meta name="twitter:description" content="Judge each channel on the pipeline and revenue it brings, defend your budget with numbers finance accepts, and see what content does as clicks fall.">
-<link rel="stylesheet" href="/styles.css?v=2026-11-26a">
+<meta name="twitter:description" content="See what each channel brings back, from spend to revenue, judge channels on the opportunities they create and defend the budget with finance.">
+<link rel="stylesheet" href="/styles.css?v=2026-11-27a">
 <script src="/assets/site.js?v=2026-11-16" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which attribution model does Funnelsight use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "U-shaped by default: 40% of the credit goes to the first touch, 40% to the touch that created the opportunity, and 20% is shared among the touches in between. An admin can switch to first touch, last touch or linear, compare two models side by side before switching, and every change is logged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we add costs that aren't in ad platforms, like events or partners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Google Ads, LinkedIn Ads, Meta Ads and Microsoft Ads connect directly. Event budgets, partner commissions or agency fees are imported from a spreadsheet or entered by hand, and each channel's return then includes them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need to change how campaigns are tagged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not to start. Funnelsight reads the UTM parameters and click IDs you already use. The data check lists the visits and leads that arrive without a source, so tagging can be fixed where it changes the numbers most."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -47,6 +79,7 @@
         <button type="button" class="nav-dropdown-label">Solutions</button>
         <ul class="nav-dropdown-menu">
           <li><a href="/solutions/marketing" aria-current="page">For Marketing</a></li>
+          <li><a href="/solutions/growth">For Growth</a></li>
           <li><a href="/solutions/sales">For Sales</a></li>
           <li><a href="/solutions/customer-success">For Customer Success</a></li>
         </ul>
@@ -66,25 +99,20 @@
 <header class="hero wrap solutions-hero">
   <div>
     <p class="eyebrow">For marketing teams</p>
-    <h1>Show what your channels bring, well past the lead.</h1>
-    <p class="lede">Funnelsight follows every lead from first visit to signed deal and renewal, so budget, pipeline and campaign decisions rest on numbers that sales and finance accept.</p>
+    <h1>See what each channel brings back, from spend to revenue.</h1>
+    <p class="lede">Funnelsight follows every lead from the campaign that brought it to the signed deal, so you can plan, defend and adjust the budget channel by channel, on numbers sales and finance accept.</p>
     <div class="hero-actions">
       <a href="/trial" class="btn-primary accent">Start free trial</a>
       <a href="/product" class="btn-ghost">See the product</a>
     </div>
-    <p class="hero-note">Works with GA4, your CRM, your product analytics and the main ad platforms.</p>
+    <p class="hero-note">Works with GA4, your CRM and the main ad platforms.</p>
   </div>
-  <figure class="ui-card funnel-card" aria-label="All sources last quarter: 360,000 visits, 5,600 leads, 560 opportunities, 140 new customers and $3.5M of new annual recurring revenue (illustrative data)">
-    <div class="ui-card-head"><span class="source-card-title">All sources, last quarter</span> <span class="tag-illustrative">Illustrative data</span></div>
-    <p class="card-ctx">U-shaped credit · Updated today</p>
-    <ul class="fc-list" aria-hidden="true">
-      <li class="fc-row"><span class="fc-label">Visits</span><span class="fc-track"><span class="fc-bar" style="width:100%"></span></span><span class="fc-val">360,000</span></li>
-      <li class="fc-row"><span class="fc-label">Leads</span><span class="fc-track"><span class="fc-bar" style="width:55%"></span></span><span class="fc-val">5,600</span></li>
-      <li class="fc-row"><span class="fc-label">Opportunities</span><span class="fc-track"><span class="fc-bar" style="width:28%"></span></span><span class="fc-val">560</span></li>
-      <li class="fc-row"><span class="fc-label">New customers</span><span class="fc-track"><span class="fc-bar" style="width:12%"></span></span><span class="fc-val">140</span></li>
-    </ul>
-    <p class="ui-note fc-result"><strong>$3.5M of new ARR</strong>, traced back to the sources that brought it.</p>
-  </figure>
+  <figure class="ui-card" aria-label="New annual recurring revenue per dollar spent over the last 12 months, by channel: organic search $6.00 (36% of leads), partner referrals $4.00 (7% of leads), paid search $3.30 (23% of leads), LinkedIn ads $2.50 (4% of leads), events and webinars $2.00 (11% of leads). Program costs only, salaries excluded. Illustrative data">
+        <div class="ui-card-head"><span class="source-card-title">New ARR per $1 spent, last 12 months</span> <span class="tag-illustrative">Illustrative data</span></div>
+        <p class="card-ctx">U-shaped credit · Updated today</p>
+        <ul class="hb-list hb-wide" aria-hidden="true"><li class="hb-row hb-key"><span class="hb-label">Organic search</span><span class="hb-track"><span class="hb-bar" style="width:100%"></span><span class="hb-val">$6.00 · 36% of leads</span></span></li><li class="hb-row"><span class="hb-label">Partner referrals</span><span class="hb-track"><span class="hb-bar" style="width:67%"></span><span class="hb-val">$4.00 · 7% of leads</span></span></li><li class="hb-row"><span class="hb-label">Paid search</span><span class="hb-track"><span class="hb-bar" style="width:55%"></span><span class="hb-val">$3.30 · 23% of leads</span></span></li><li class="hb-row"><span class="hb-label">LinkedIn ads</span><span class="hb-track"><span class="hb-bar" style="width:42%"></span><span class="hb-val">$2.50 · 4% of leads</span></span></li><li class="hb-row"><span class="hb-label">Events and webinars</span><span class="hb-track"><span class="hb-bar" style="width:33%"></span><span class="hb-val">$2.00 · 11% of leads</span></span></li></ul>
+        <p class="ui-note">Program costs only, salaries excluded: channels run by your own team, like organic, look cheaper than they are.</p>
+      </figure>
 </header>
 </div>
 
@@ -95,30 +123,29 @@
       <div class="feature-text">
         <p class="feature-pain">"We hit the lead target. Sales says the leads are bad."</p>
         <h2>Judge each channel on the opportunities it creates.</h2>
-        <p>Funnelsight follows every lead into the CRM, so each source shows how many of its leads became opportunities and what each opportunity cost. The lead target and the pipeline target finally read from the same numbers.</p>
-        <p><a href="/features/pipeline-planning-by-channel">Plan next year's pipeline by channel</a></p>
+        <p>Funnelsight follows every lead into the CRM, so each channel shows how many of its leads became opportunities and what each opportunity cost. The lead target and the pipeline target finally read from the same numbers.</p>
       </div>
       <figure class="ui-card" aria-label="Last quarter, cost per opportunity by source: organic search $0.6k (2,000 leads, 10% became opportunities), partner referrals $0.8k (380 leads, 24%), paid search $1.8k (1,300 leads, 6%), events and webinars $1.9k (600 leads, 9%), LinkedIn ads $2.1k (200 leads, 9.5%). Illustrative data">
         <div class="ui-card-head"><span class="source-card-title">Cost per opportunity, last quarter</span> <span class="tag-illustrative">Illustrative data</span></div>
         <p class="card-ctx">Opportunities counted up to 120 days after the lead · Updated today</p>
         <ul class="kt-grid" aria-hidden="true"><li class="kt kt-good"><span class="kt-src">Organic search</span><span class="kt-big">$0.6k</span><span class="kt-lbl">per opportunity</span><span class="kt-sub">2,000 leads · 10% became opportunities</span></li><li class="kt kt-good"><span class="kt-src">Partner referrals</span><span class="kt-big">$0.8k</span><span class="kt-lbl">per opportunity</span><span class="kt-sub">380 leads · 24% became opportunities</span></li><li class="kt "><span class="kt-src">Paid search</span><span class="kt-big">$1.8k</span><span class="kt-lbl">per opportunity</span><span class="kt-sub">1,300 leads · 6% became opportunities</span></li><li class="kt kt-warn"><span class="kt-src">Events and webinars</span><span class="kt-big">$1.9k</span><span class="kt-lbl">per opportunity</span><span class="kt-sub">600 leads · 9% became opportunities</span></li><li class="kt kt-warn"><span class="kt-src">LinkedIn ads</span><span class="kt-big">$2.1k</span><span class="kt-lbl">per opportunity</span><span class="kt-sub">200 leads · 9.5% became opportunities</span></li></ul>
-        <p class="ui-note">Email isn't listed as a source: it nurtures the leads other channels bring, and its part shows in their opportunities. The most recent leads can't be judged yet: <a href="/playbooks/funnel-metrics-cheat-sheet">how long each funnel metric takes to read</a>.</p>
+        <p class="ui-note">The most recent leads can't be judged yet: <a href="/playbooks/funnel-metrics-cheat-sheet">how long each funnel metric takes to read</a>.</p>
       </figure>
     </div>
 
     <div class="feature-row">
       <div class="feature-text">
-        <p class="feature-pain">"Why doesn't sales see the same pipeline?"</p>
-        <h2>One pipeline, with the rule behind each figure.</h2>
-        <p>Sales counts each deal once, in the CRM. Your reports share it across the touches that came before. Funnelsight shows both readings side by side, with the CRM as the reference, so the pipeline review starts from the same total.</p>
-        <p><a href="/playbooks/sales-and-marketing-alignment">Sales and marketing alignment: marketing hit its target, sales didn't</a></p>
+        <p class="feature-pain">"Finance wants the budget cut by Friday."</p>
+        <h2>Defend the budget with what each channel brings back.</h2>
+        <p>The channels that look worst on this quarter's cost per lead are often the slowest, not the weakest. Funnelsight shows when each channel's spend turns into pipeline, so the conversation with finance, or the slide you prepare for your CMO, compares channels on what they bring back over a year.</p>
+        <p><a href="/features/pipeline-planning-by-channel">Plan next year's pipeline by channel</a></p>
       </div>
-      <figure class="ui-card" aria-label="Open pipeline this quarter: $22M in the CRM, of which $13.6M credited to marketing sources, $5.7M to sales outbound and $2.7M with no source recorded (illustrative data)">
-        <div class="ui-card-head"><span class="source-card-title">Open pipeline, this quarter: $22M</span> <span class="tag-illustrative">Illustrative data</span></div>
-        <p class="card-ctx">CRM total · U-shaped credit · Updated today</p>
-        <div class="stack-bar" aria-hidden="true"><span class="sb-seg sb-mkt" style="width:62%">$13.6M</span><span class="sb-seg sb-sales" style="width:26%">$5.7M</span><span class="sb-seg sb-none" style="width:12%">$2.7M</span></div>
-        <ul class="sb-legend" aria-hidden="true"><li><span class="key sb-mkt"></span>Marketing sources, $13.6M</li><li><span class="key sb-sales"></span>Sales outbound, $5.7M</li><li><span class="key sb-none"></span>No source recorded, $2.7M</li></ul>
-        <p class="ui-note">Every dollar is counted once. Deals with no source are listed, so they can be fixed rather than argued about.</p>
+      <figure class="ui-card" aria-label="Share of each channel&#x27;s pipeline created in the same quarter as the spend, and in the following quarters: paid search 75% and 25%, LinkedIn ads 60% and 40%, events and webinars 45% and 55%, partner referrals 35% and 65%, organic search 25% and 75%. Illustrative data">
+        <div class="ui-card-head"><span class="source-card-title">When spend turns into pipeline</span> <span class="tag-illustrative">Illustrative data</span></div>
+        <p class="card-ctx">Last four quarters · Updated today</p>
+        <ul class="lag-legend" aria-hidden="true"><li><span class="key lag-now"></span>Same quarter</li><li><span class="key lag-later"></span>Following quarters</li></ul>
+        <ul class="lag-list" aria-hidden="true"><li class="lag-row"><span class="lag-label">Paid search</span><span class="lag-bar"><span class="lag-now" style="width:75%">75%</span><span class="lag-later" style="width:25%">25%</span></span></li><li class="lag-row"><span class="lag-label">LinkedIn ads</span><span class="lag-bar"><span class="lag-now" style="width:60%">60%</span><span class="lag-later" style="width:40%">40%</span></span></li><li class="lag-row"><span class="lag-label">Events and webinars</span><span class="lag-bar"><span class="lag-now" style="width:45%">45%</span><span class="lag-later" style="width:55%">55%</span></span></li><li class="lag-row"><span class="lag-label">Partner referrals</span><span class="lag-bar"><span class="lag-now" style="width:35%">35%</span><span class="lag-later" style="width:65%">65%</span></span></li><li class="lag-row"><span class="lag-label">Organic search</span><span class="lag-bar"><span class="lag-now" style="width:25%">25%</span><span class="lag-later" style="width:75%">75%</span></span></li></ul>
+        <p class="ui-note">Cut on this quarter's cost per lead, and organic and partners go first, while most of their pipeline was due next year.</p>
       </figure>
     </div>
 
@@ -147,13 +174,43 @@
   </div>
 </section>
 
+<section class="proof-case">
+  <div class="wrap">
+    <a class="proof-card" href="/case-studies/cutting-marketing-budget-without-emptying-pipeline">
+      <span class="go-tag">Case study</span>
+      <span class="proof-num">−20%</span>
+      <span class="proof-text"><strong>Cutting the marketing budget without hurting future pipeline.</strong> How a team cut 20% from the rest of the year's budget by comparing channels on the revenue they bring back, not on their cost per lead.</span>
+    </a>
+  </div>
+</section>
+
 <section class="go-further">
   <div class="wrap">
     <h2>Go further</h2>
     <div class="go-grid">
-      <a class="go-card" href="/case-studies/cutting-marketing-budget-without-emptying-pipeline"><span class="go-tag">Case study</span><span class="go-title">Cutting the marketing budget without hurting future pipeline</span></a>
-      <a class="go-card" href="/playbooks/tracking-plg-funnel-without-data-team"><span class="go-tag">Playbook</span><span class="go-title">Start tracking your PLG funnel</span></a>
-      <a class="go-card" href="/case-studies/most-used-feature-vs-retention"><span class="go-tag">Case study</span><span class="go-title">Your most-used feature isn't the one that keeps customers</span></a>
+      <a class="go-card" href="/playbooks/signup-volume-vs-pql-quality"><span class="go-tag">Playbook</span><span class="go-title">More sign-ups or better conversion: where your next customers come from</span></a>
+      <a class="go-card" href="/glossary/what-is-ltv-cac-ratio"><span class="go-tag">Glossary</span><span class="go-title">What is the LTV:CAC ratio?</span></a>
+      <a class="go-card" href="/case-studies/moving-upmarket-enterprise-pipeline"><span class="go-tag">Case study</span><span class="go-title">Why the pipeline stalls when you start selling to enterprise</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">
+    <details class="faq-item">
+      <summary>Which attribution model does Funnelsight use?</summary>
+      <p>U-shaped by default: 40% of the credit goes to the first touch, 40% to the touch that created the opportunity, and 20% is shared among the touches in between. An admin can switch to first touch, last touch or linear, compare two models side by side before switching, and every change is logged.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can we add costs that aren't in ad platforms, like events or partners?</summary>
+      <p>Yes. Google Ads, LinkedIn Ads, Meta Ads and Microsoft Ads connect directly. Event budgets, partner commissions or agency fees are imported from a spreadsheet or entered by hand, and each channel's return then includes them.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Do we need to change how campaigns are tagged?</summary>
+      <p>Not to start. Funnelsight reads the UTM parameters and click IDs you already use. The data check lists the visits and leads that arrive without a source, so tagging can be fixed where it changes the numbers most.</p>
+    </details>
     </div>
   </div>
 </section>
